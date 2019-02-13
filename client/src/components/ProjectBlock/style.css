@@ -1,0 +1,65 @@
+.port-box::before{
+    content: "";
+    background-color: #A239CA;
+   
+}
+
+.port-box {
+    height: 500px;
+    width: 750px;
+    float: left;
+    margin: 20px;
+    margin-bottom: 100px;
+    -webkit-box-shadow: 3px 3px 5px 6px rgb(68, 68, 68);  
+    -moz-box-shadow:    3px 3px 5px 6px rgb(110, 110, 110); 
+    box-shadow:         3px 3px 5px 6px rgb(80, 79, 79);
+    z-index:1;
+    position: relative;
+    left: 20%;
+    padding-bottom: 30px;
+    opacity: 0;
+}
+
+.port-div{
+    position: relative;
+    top: 60%;
+    
+    transform-origin:bottom left;
+    transition: transform 0.2s 0.3s ease;
+}
+.port-title{
+    color: rgb(255, 245, 242);
+    font-family: 'Bree Serif', serif;
+    margin-left: 30px;
+    position: relative;
+    top:60%;
+  
+}
+.port-desc{
+    font-family: 'Bree Serif', serif;
+    font-style: italic;
+    margin-left: 35px;
+    
+    position: relative;
+    top:60%;
+ 
+}
+
+
+.port-box-cover{
+    content:"";
+    height: 100%;
+    background: linear-gradient(45deg, #1d1a1a94, #83003d);
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 0;
+    transition: .2s ease-out;
+}
+
+.port-box:hover .port-div{
+    transform: scale(1.30);
+    /*
+    animation: grow 0.2s 0.4s forwards;
+    */
+}

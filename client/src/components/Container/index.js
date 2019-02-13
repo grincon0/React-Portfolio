@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Container = (props) => {
+const Container = (props) => {
     return (
         <div>
             {props.children}
@@ -9,3 +9,5 @@ export const Container = (props) => {
     );
 
 }
+
+export default Container;
