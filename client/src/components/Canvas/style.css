@@ -1,0 +1,9 @@
+#canvas {
+    height:300px;
+    width:700px;
+    background-color: skyblue;
+    display: block;
+    z-index:10;
+    overflow: hidden;
+
+}
