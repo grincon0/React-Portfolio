@@ -4,21 +4,27 @@ import { CanvasSpace, Num,Rectangle,  Pt, Group } from "pts";
 export default class SpecialEffect {
     //Space provides the paper, Form provides the pencil, and Point provides the idea
 
-    initializeCanvas = () => {
+    initializeCanvas = (type) => {
         const space = new CanvasSpace("#canvas");
         space.setup({ bgcolor: "#e2097d" });
-        this.initializeForm(space);
+        this.initializeForm(space, type);
 
     }
-    initializeForm = (space) => {
+    initializeForm = (space, type) => {
         const form = space.getForm();
-        this.createTestPoint(space, form);
+        this.createTestPoint(space, form, type);
 
     }
-    createTestPoint = (space, form) => {
-        //space.add( () => form.point( space.pointer, 10 ) );
+    createTestPoint = (space, form, type) => {
+
         space.play().bindMouse().bindTouch();
-        this.createPointAnimation(space, form);
+
+        if(type === "poly"){
+            this.createPolyAnimation(space, form);
+        }else{
+            this.createPointAnimation(space, form);
+        }
+        
 
     }
     createPointAnimation = (space, form) => {
@@ -26,15 +32,19 @@ export default class SpecialEffect {
             let radius = Num.cycle((time % 1000) / 1000) * 20;
             form.fill("#09f").point(space.pointer, radius, "circle");
         });
-        //this.createTestPoly(space, form);
-    }
-    createTestPoly = (space, form, time) => {
-        let rect = Rectangle.fromCenter(space.center, space.size.$divide(2));
-        let poly = Rectangle.corners(rect);
-        poly.shear2D(Num.cycle(time % 5000 / 5000) - 0.5, space.center);
 
-        form.fillOnly("#123").polygon(poly);
-        form.strokeOnly("#fff", 3).rect(rect);
+    }
+    createPolyAnimation = (space, form) => {
+
+        space.add((time, ftime) => {
+            let rect = Rectangle.fromCenter(space.center, space.size.$divide(2));
+            let poly = Rectangle.corners(rect);
+            poly.shear2D(Num.cycle(time % 5000 / 5000) - 0.5, space.center);
+    
+            form.fillOnly("#123").polygon(poly);
+            form.strokeOnly("#fff", 3).rect(rect);
+        });
+
     }
 
 }
