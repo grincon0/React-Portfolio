@@ -1,11 +1,14 @@
 import React, { Component} from "react";
 import { CanvasSpace, Pt, Group } from "pts";
-import PtsCanvas from "react-pts-canvas"
 
 
-export class AnimatedCanvas extends Component{
+export default class AnimatedCanvas extends Component{
     state = {
-        text :"testing"
+        text :"testing",
+        init : false
+    }
+    componentDidMount = () =>{
+        this._initializeCanvas();
     }
     _initializeCanvas = () => {
         const space = new CanvasSpace("#canvas");
@@ -20,13 +23,19 @@ export class AnimatedCanvas extends Component{
     }
     _createTestPoint = (space, form) => {
 
-        space.add( () => form.point( space.pointer, 10)  )
+        space.add( () => form.point( space.pointer, 10));
+        if(!this.state.init){
+            this.setState({init: true});
+        }else{
+            return;
+        }
     }
     render(){
+
         return(
             <div>
                 <canvas id="canvas">
-                {this._initializeCanvas()}
+               
                 </canvas>
             </div>
         )
