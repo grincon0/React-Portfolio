@@ -13,7 +13,7 @@
     -webkit-box-shadow: 3px 3px 5px 6px rgb(68, 68, 68);  
     -moz-box-shadow:    3px 3px 5px 6px rgb(110, 110, 110); 
     box-shadow:         3px 3px 5px 6px rgb(80, 79, 79);
-    z-index:20;
+    z-index:40;
     position: relative;
     left: 20%;
     padding-bottom: 30px;
