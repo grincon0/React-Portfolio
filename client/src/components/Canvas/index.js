@@ -3,7 +3,7 @@ import "./style.css";
 
 const Canvas = (props) => {
     return (
-        <div>
+        <div className="canvasBlock">
             <canvas id="canvas">
                 {props.children}
             </canvas>

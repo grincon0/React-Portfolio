@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+h1,h2,h3,h4,h5,p{
+    color: #fcfcfc;
+}
+
+.center{
+    position: absolute;
+    left: 32%;
+    top: 43%;
+    z-index:22;
+}
+
+.center p, .center span{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size: 32pt;
+    line-height: 36pt;
+}
+.name{
+    font-weight: 300;
+    color: #5effff;
+}
