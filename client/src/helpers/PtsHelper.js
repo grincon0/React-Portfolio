@@ -6,7 +6,7 @@ export default class SpecialEffect {
 
     initializeCanvas = (type) => {
         const space = new CanvasSpace("#canvas");
-        space.setup({ bgcolor: "#dae0ea" });
+        space.setup({ bgcolor: "#000000" });
         this.initializeForm(space, type);
 
     }
@@ -51,10 +51,12 @@ export default class SpecialEffect {
         space.add((time, ftime) => {
 /*             let rect = Rectangle.fromTopLeft([50,50], 100, 50);
             form.fill("#003082").rect(rect);*/
+            let cycle = (off) => space.center.y * ( Num.cycle( (time+off)%2000/2000 ) - 0.5 );
 
-            let ln = Line.fromAngle( space.center,75, space.size.y/3 );
+            let ln = Line.fromAngle( space.center.$add( cycle(1000), 0 ), 75, space.size.y/3  );
+            //let ln = Line.fromAngle( space.center ,75, space.size.y/3 );
 
-            form.strokeOnly("#003082", 10, "round", "round").line( ln );
+            form.strokeOnly("#ed0b0b", 10, "round", "round").line( ln );
             
         });
     }
