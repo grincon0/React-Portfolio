@@ -1,4 +1,4 @@
-import { CanvasSpace, Num,Rectangle,  Pt, Group } from "pts";
+import { CanvasSpace, Num, Rectangle, Line, Tempo, Const,  Pt, Group } from "pts";
 
 
 export default class SpecialEffect {
@@ -6,7 +6,7 @@ export default class SpecialEffect {
 
     initializeCanvas = (type) => {
         const space = new CanvasSpace("#canvas");
-        space.setup({ bgcolor: "#e2097d" });
+        space.setup({ bgcolor: "#dae0ea" });
         this.initializeForm(space, type);
 
     }
@@ -21,18 +21,19 @@ export default class SpecialEffect {
 
         if(type === "poly"){
             this.createPolyAnimation(space, form);
-        }else{
+        }else if(type === "line"){
+            this.createVectors(space, form);
+        }
+        else{
             this.createPointAnimation(space, form);
         }
         
-
     }
     createPointAnimation = (space, form) => {
         space.add((time, ftime) => {
             let radius = Num.cycle((time % 1000) / 1000) * 20;
             form.fill("#09f").point(space.pointer, radius, "circle");
         });
-
     }
     createPolyAnimation = (space, form) => {
 
@@ -45,6 +46,17 @@ export default class SpecialEffect {
             form.strokeOnly("#fff", 3).rect(rect);
         });
 
+    }
+    createVectors = (space, form) => {
+        space.add((time, ftime) => {
+/*             let rect = Rectangle.fromTopLeft([50,50], 100, 50);
+            form.fill("#003082").rect(rect);*/
+
+            let ln = Line.fromAngle( space.center,75, space.size.y/3 );
+
+            form.strokeOnly("#003082", 10, "round", "round").line( ln );
+            
+        });
     }
 
 }

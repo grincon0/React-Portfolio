@@ -13,7 +13,7 @@ class Landing extends Component {
     }
     componentDidMount = () => {
         const Animater = new PtsHelper();
-        Animater.initializeCanvas("poly");
+        Animater.initializeCanvas("line");
 
         if(!this.state.canvasLoaded){
             this.setState({canvasLoaded : true});
