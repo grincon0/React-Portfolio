@@ -51,12 +51,32 @@ export default class SpecialEffect {
         space.add((time, ftime) => {
 /*             let rect = Rectangle.fromTopLeft([50,50], 100, 50);
             form.fill("#003082").rect(rect);*/
-            let cycle = (off) => space.center.y * ( Num.cycle( (time+off)%2000/2000 ) - 0.5 );
+            let cycle = (off) => space.center.x* ( Num.cycle( (time+off)%4000/5000 ) * 2);
+            let endpoint = space.center - 1;
+            let poin = new Pt([cycle(1000) ,300]);
+            let poin2 = new Pt([1100, 300]);
+            let ln = new Line(poin, poin2);
+            let kedo = Line.fromAngle( poin, 0, 40);
 
-            let ln = Line.fromAngle( space.center.$add( cycle(1000), 0 ), 75, space.size.y/3  );
+            form.strokeOnly( 0, 10, "round", "round" ).line(kedo);
+
+
+
+            //let ln = Line.fromAngle( space.center.$add( cycle(1000), 0 ), 75, space.size.y/3  );
             //let ln = Line.fromAngle( space.center ,75, space.size.y/3 );
 
-            form.strokeOnly("#ed0b0b", 10, "round", "round").line( ln );
+            //let ln = Line.fromAngle( space.center.$add( cycle(1000), 0 ), 75, space.size.y/3  );
+
+            //let radius = Num.cycle( (time%3000)/3000 ) * 20;
+/*             form
+            .fill("#09f")
+            .point(  space.center.$subtract( cycle(1000), 0 ), 20, "circle" ); */
+
+            
+            
+
+            //form.strokeOnly("#ed0b0b", 10, "round", "round").line( ln );
+            //console.log(ln);
             
         });
     }
