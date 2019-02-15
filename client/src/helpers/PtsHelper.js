@@ -54,7 +54,7 @@ export default class SpecialEffect {
 
     }
     createPoints = (space, form) => {
-        while (this.points.length <= 15) {
+        while (this.points.length <= 100) {
             let temp = {};
             temp["x"] = this.getRandomX();
             temp["y"] = this.getRandomY();
@@ -65,30 +65,21 @@ export default class SpecialEffect {
         this.createVectors(space, form)
     }
     getRandomY = () => {
-        return Math.floor(Math.random() * 700) + 100;
+        return Math.floor(Math.random() * 700) + 50;
     }
     getRandomX = () => {
         return Math.floor(Math.random() * 3000) + 1000;
     }
     createVectors = (space, form) => {
         space.add((time, ftime) => {
-            let cycle = (off) => space.center.x * (Num.cycle((time + off) % 3000 / 5000) * 2);
+            let cycle = (off) => space.center.x * (Num.cycle((time + off) % 9000 / 9000) * 2);
 
             for(let i = 0; i < this.points.length; i++){
                 let tempPoint = new Pt(cycle(this.points[i].x), this.points[i].y);
                 form
                 .strokeOnly(this.points[i].color, 10, "round", "round")
-                .line(Line.fromAngle(tempPoint, 0, 40));
+                .line(Line.fromAngle(tempPoint, 0, 20));
             }
-
-
-/*             let poin = new Pt([cycle(1000), 300]);
-            let poin2 = new Pt([cycle(2000), 500]);
-            let kedo = Line.fromAngle(poin, 0, 40);
-            let kedo2 = Line.fromAngle(poin2, 0, 40); */
-
-/*             form.strokeOnly(0, 10, "round", "round").line(kedo);
-            form.strokeOnly("#f00", 10, "round", "round").line(kedo2); */
 
         });
     }

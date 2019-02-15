@@ -13,8 +13,10 @@ class Landing extends Component {
     }
     componentDidMount = () => {
         const Animater = new PtsHelper();
-        Animater.initializeCanvas("line");
 
+        setTimeout(()=>{
+            Animater.initializeCanvas("line");
+        }, 2000)
         if(!this.state.canvasLoaded){
             this.setState({canvasLoaded : true});
         }else{
