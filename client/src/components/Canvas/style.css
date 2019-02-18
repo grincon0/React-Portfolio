@@ -1,6 +1,13 @@
-#canvas {
+.canvasBlock{
     height:755px;
     width:1560px;
+
+}
+
+
+#canvas {
+    height:100%;
+    width:100%;
     display: block;
     overflow: hidden;
 

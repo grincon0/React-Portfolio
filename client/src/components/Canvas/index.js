@@ -3,10 +3,10 @@ import "./style.css";
 
 const Canvas = (props) => {
     return (
-        <div className="canvasBlock">
+        <div className="canvasBlock" {...props}>
             <canvas id="canvas">
-                {props.children}
             </canvas>
+            {props.children}
         </div>
     )
 }

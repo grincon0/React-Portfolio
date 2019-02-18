@@ -6,8 +6,13 @@ h1,h2,h3,h4,h5,p{
 
 .center{
     position: absolute;
-    left: 32%;
-    top: 43%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     z-index:22;
 }
 

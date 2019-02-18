@@ -32,11 +32,12 @@ class Landing extends Component {
                 <Container>
                     <Row>
                         <Col size="md-6">
-                            <Canvas />
-                            <div className="center">
-                                <p>Hello, I'm <span className="name">George Rincon</span>.</p>
-                                <p>I'm a full-stack developer.</p>
-                            </div>
+                            <Canvas>
+                                <div className="center">
+                                    <p>Hello, I'm <span className="name">George Rincon</span>.</p>
+                                    <p>I'm a full-stack developer.</p>
+                                </div>
+                            </Canvas>
                         </Col>
                     </Row>
                 </Container>
