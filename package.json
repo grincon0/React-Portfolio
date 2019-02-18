@@ -1,0 +1,45 @@
+{
+  "name": "react-port",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && yarn start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build",
+    "start-watch": "nodemon index.js",
+    "dev": "concurrently \"yarn run start-watch\" \"cd client && yarn start\""
+  },
+  "engines": {
+    "node": "11.6.0",
+    "npm": "6.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grincon0/React-Portfolio.git"
+  },
+  "author": "George Rincon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grincon0/React-Portfolio/issues"
+  },
+  "homepage": "https://github.com/grincon0/React-Portfolio/",
+  "dependencies": {
+    "@tweenjs/tween.js": "^17.3.0",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "if-env": "^1.0.4",
+    "pts": "^0.7.0",
+    "react-pts-canvas": "^0.1.2"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.9"
+  }
+}
