@@ -1,0 +1,42 @@
+.clickable{
+    border: 2px solid #fff;
+    overflow: hidden;
+
+}
+.clickable:hover{
+    background-color: rgb(0, 102, 255);
+    border-color:  rgb(0, 102, 255);
+    transition: background-color .5s ease-in, border-color .5s ease-in ;
+}
+
+.clickable:hover > .turn-arrow { 
+    transform:rotate(90deg); 
+    -ms-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+}
+
+.clickable p{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.clickable i{
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+
+.turn-arrow{
+    font-size:35px;
+    color:#fff;
+    -webkit-transition: -webkit-transform .5s ease;
+    -ms-transition: -ms-transform .5s ease;
+    transition: transform .5s ease;  
+    z-index:22;
+}
