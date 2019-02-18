@@ -1,15 +1,14 @@
 {
-  "name": "portfolio",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.7.2",
     "@tweenjs/tween.js": "^17.3.0",
     "pts": "^0.7.0",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
     "react-pts-canvas": "^0.1.2",
-    "react-scripts": "2.1.4"
+    "react-scripts": "2.1.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -25,8 +24,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.7.2"
-  }
+  ]
 }
