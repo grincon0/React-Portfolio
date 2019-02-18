@@ -44,9 +44,9 @@ class Landing extends Component {
                             </Canvas>
                         </Col>
                     </Row>
-                    <Row>
-                    </Row>
+
                 </Container>
+                
 
                 <Footer />
             </div>
