@@ -7,14 +7,14 @@ class AnimatedText extends Component {
         super(props);
         this.state = {
             animation: '',
-            animationPlay: false
+            animationPlay: false,
         }
     }
 
     componentDidMount = () => {
         this.timerID = setTimeout(() => {
             this.handleGetAnimation();
-        }, 4000);
+        }, 4000 + ( this.props.delay || 0));
 
     }
     componentWillUnmount = () => {
