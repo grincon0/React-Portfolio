@@ -1,11 +1,24 @@
 .default-text{
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-
+    font-size: 32px;
+    opacity: 0;
 }
 
 .slide-right{
-    -webkit-transition: -webkit-translate .5s .5s ease-in forwards;
+/*     -webkit-transition: -webkit-translate .5s .5s ease-in forwards;
     -ms-transition: -ms-translate .5s .5s ease-in forwards;
-    transition: translate .5s .5s ease-in forwards;  
+    transition: translate .5s .5s ease-in forwards;   */
+    animation: slide-r 3s  2s ease forwards;
+}
+
+@keyframes slide-r{
+    0%{
+        opacity:0;
+        transform: translateX(1px);
+    }
+    100%{
+        transform: translateX(500px);
+        opacity: 1;
+    }
 }
