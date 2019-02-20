@@ -3,10 +3,9 @@ import "./style.css";
 
 const Container = (props) => {
     return (
-        <div className="tester">
+        <div className="tester" {...props} >
             {props.children}
         </div>
-
     );
 
 }
