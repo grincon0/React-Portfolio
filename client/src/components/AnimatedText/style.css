@@ -1,8 +1,11 @@
 .default-text{
+    position: relative;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 32px;
     opacity: 0;
+    left:0;
+
 }
 
 .slide-right{
@@ -14,11 +17,11 @@
 
 @keyframes slide-r{
     0%{
-        opacity:0;
-        transform: translateX(1px);
+        opacity:0.1;
+        transform: translateX(-300px);
     }
     100%{
-        transform: translateX(500px);
+        transform: translateX(0);
         opacity: 1;
     }
 }

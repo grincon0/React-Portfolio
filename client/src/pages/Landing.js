@@ -63,13 +63,12 @@ class Landing extends Component {
                                     anim="slide-right"
                                     text="About" />
                             </Col>
-                            <Col size="md">
                                 <AnimatedText
                                     anim="slide-right"
                                     text="Meeeeee"
                                     delay={1000}
                                 />
-                            </Col>
+                       
                         </Row>
                         <Row>
                             <Col size="lg">
