@@ -29,3 +29,30 @@
     font-weight: 300;
     color: #5effff;
 }
+
+.test-bg-1{
+    background-color: red;
+}
+
+.inline{
+    display: inline-block;
+}
+.test-size{
+    height:500px;
+    width:500px;
+}
+
+.test-bg-2{
+    background-color: orange;
+}
+
+.test-bg-3{
+    background-color: blue;
+}
+.test-bg-4{
+    background-color: green;
+}
+
+.test-bg-5{
+    background-color: rgb(212, 40, 169);
+}

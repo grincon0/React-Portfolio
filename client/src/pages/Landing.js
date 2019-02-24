@@ -5,12 +5,14 @@ import Canvas from "../components/Canvas/index";
 import Clickable from "../components/Clickable/index";
 import Col from "../components/Col/index";
 import NavBar from "../components/NavBar/index";
+import OverlayBlock from "../components/OverlayBlock/index";
 import Row from "../components/Row/index";
 import PtsHelper from "../helpers/PtsHelper";
 import Slider from "../components/Slider/index";
 import Footer from "../components/Footer/index";
 
 import "./styles/Landing.css";
+import ProjectBlock from "../components/ProjectBlock";
 
 class Landing extends Component {
     state = {
@@ -48,11 +50,11 @@ class Landing extends Component {
                         </Row>
                     </section>
                 </Container>
-                
+
                 <NavBar />
 
 
-                <Container style={{backgroundColor: "#fff"}}>
+                <Container style={{ backgroundColor: "#fff" }}>
                     <section id="ABOUT">
                         <Row>
                             <Col size="md">
@@ -61,7 +63,7 @@ class Landing extends Component {
                                     text="About" />
                             </Col>
                             <Col size="md">
-                                <AnimatedText 
+                                <AnimatedText
                                     anim="slide-right"
                                     text="Meeeeee"
                                     delay={1000}
@@ -69,19 +71,25 @@ class Landing extends Component {
                             </Col>
                         </Row>
                         <Row>
-                            <Col size="lg-4">
+                            <Col size="md-4" >
+                                <div style={{ height: 500, width: 500 }} className="test-bg-1"></div>
 
                             </Col>
-                            <Col size="lg-4">
+                            <Col size="md-4">
+                                <div style={{ height: 250, width: 400 }} className="test-bg-2"></div>
 
                             </Col>
-                            <Col size="lg-4">
+                            <Col size="md-4" >
+                                <div style={{ height: 345, width: 400 }} className="test-bg-3"></div>
 
                             </Col>
                         </Row>
                         <Row>
-
+                            <Col size="lg">
+                                <OverlayBlock />
+                            </Col>
                         </Row>
+
                     </section>
                 </Container>
 
