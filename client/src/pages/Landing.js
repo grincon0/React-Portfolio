@@ -4,6 +4,7 @@ import Container from "../components/Container/index";
 import Canvas from "../components/Canvas/index";
 import Clickable from "../components/Clickable/index";
 import Col from "../components/Col/index";
+import FlexContainer from "../components/FlexContainer/index";
 import NavBar from "../components/NavBar/index";
 import OverlayBlock from "../components/OverlayBlock/index";
 import Row from "../components/Row/index";
@@ -12,7 +13,7 @@ import Slider from "../components/Slider/index";
 import Footer from "../components/Footer/index";
 
 import "./styles/Landing.css";
-import ProjectBlock from "../components/ProjectBlock";
+
 
 class Landing extends Component {
     state = {
@@ -54,7 +55,7 @@ class Landing extends Component {
                 <NavBar />
 
 
-                <Container style={{ backgroundColor: "#fff" }}>
+                <FlexContainer style={{ backgroundColor: "#fff" }}>
                     <section id="ABOUT">
                         <Row>
                             <Col size="md">
@@ -71,27 +72,13 @@ class Landing extends Component {
                             </Col>
                         </Row>
                         <Row>
-                            <Col size="md-4" >
-                                <div style={{ height: 500, width: 500 }} className="test-bg-1"></div>
-
-                            </Col>
-                            <Col size="md-4">
-                                <div style={{ height: 250, width: 400 }} className="test-bg-2"></div>
-
-                            </Col>
-                            <Col size="md-4" >
-                                <div style={{ height: 345, width: 400 }} className="test-bg-3"></div>
-
-                            </Col>
-                        </Row>
-                        <Row>
                             <Col size="lg">
                                 <OverlayBlock />
                             </Col>
                         </Row>
 
                     </section>
-                </Container>
+                </FlexContainer>
 
                 <Footer />
             </div>
