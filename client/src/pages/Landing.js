@@ -51,9 +51,6 @@ class Landing extends Component {
                         </Row>
                     </section>
                 </Container>
-
-
-
                 <section id="ABOUT">
                     <FlexContainer style={{ backgroundColor: "#fff" }}>
                         <NavBar />

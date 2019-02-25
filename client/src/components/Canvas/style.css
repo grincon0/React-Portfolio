@@ -1,14 +1,24 @@
 .canvasBlock{
+    position: relative;
     height:755px;
-    width:1560px;
+    top: 0;
+    left: 0;
+    overflow: hidden;
 
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
+
 #canvas {
+    position: relative;
     height:100%;
     width:100%;
-    display: block;
     overflow: hidden;
 
 }
