@@ -11,11 +11,12 @@ class Canvas extends Component {
     componentDidMount = () => {
         this.checkWindowSizeChange();
     }
+    componentWillUnmount = () => {
+        clearTimeout(this.sizeTimer);
+    }
     checkWindowSizeChange = () => {
-        setInterval(()=> {
+        this.sizeTimer = setInterval(()=> {
             if(this.state.width !== window.innerWidth){
-                console.log(window.innerWidth);
-                console.log('state', this.state.width);
                 let newState = {...this.state}
                 newState.width = parseInt(window.innerWidth);
                 this.setState(newState);
@@ -23,7 +24,7 @@ class Canvas extends Component {
             }else{
                 return;
             }
-        }, 350);
+        }, 150);
     }
     render = () => {
         return (
