@@ -52,32 +52,40 @@ class Landing extends Component {
                     </section>
                 </Container>
 
-                <NavBar />
 
 
-                <FlexContainer style={{ backgroundColor: "#fff" }}>
-                    <section id="ABOUT">
+                <section id="ABOUT">
+                    <FlexContainer style={{ backgroundColor: "#fff" }}>
+                        <NavBar />
+
                         <Row>
                             <Col size="md">
                                 <AnimatedText
                                     anim="slide-right"
                                     text="About" />
                             </Col>
-                                <AnimatedText
-                                    anim="slide-right"
-                                    text="Meeeeee"
-                                    delay={1000}
-                                />
-                       
+                            <AnimatedText
+                                anim="slide-right"
+                                text="Meeeeee"
+                                delay={1000}
+                            />
+
                         </Row>
                         <Row>
-                            <Col size="lg">
+                            <Col size="md">
                                 <OverlayBlock />
+
+                            </Col>
+                            <Col size="md">
+                                <OverlayBlock />
+
                             </Col>
                         </Row>
 
-                    </section>
-                </FlexContainer>
+
+                    </FlexContainer>
+
+                </section>
 
                 <Footer />
             </div>
