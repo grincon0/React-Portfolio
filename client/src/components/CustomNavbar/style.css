@@ -5,6 +5,7 @@
     width: 100vw;
     padding: 5px;
     justify-content: space-between;
+    border-bottom: 2px rgb(62, 62, 253) solid;
 }
 
 .CustomNav a{
@@ -12,6 +13,7 @@
     display:block;
     text-decoration: none;
     padding: 10px;
+    opacity: 0;
 
 }
 
@@ -26,11 +28,20 @@
     margin-right: 9px;
 }
 
+.CustomAnchors{
+    display: flex;
+    justify-content: flex-start;
+}
+
 
 @media only screen and (min-width: 600px) {
     .CustomNavBtn{
         opacity: 1;
         pointer-events: auto;
+    }
+    .CustomAnchors a{
+        opacity: 0;
+        pointer-events: none;
     }
 
 }
@@ -40,6 +51,19 @@
         opacity: 0;
         pointer-events: none;
 
+    }
+    .CustomAnchors a{
+        opacity: 0;
+        pointer-events: none;
+    }
+
+}
+
+@media only screen and (min-width: 769px) {
+
+    .CustomAnchors a{
+        opacity: 1;
+        pointer-events: auto;
     }
 
 }
