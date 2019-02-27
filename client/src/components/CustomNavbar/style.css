@@ -25,3 +25,21 @@
     border-radius: 4px;
     margin-right: 9px;
 }
+
+
+@media only screen and (min-width: 600px) {
+    .CustomNavBtn{
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    .CustomNavBtn{
+        opacity: 0;
+        pointer-events: none;
+
+    }
+
+}
