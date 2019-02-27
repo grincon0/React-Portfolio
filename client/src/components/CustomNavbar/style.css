@@ -33,6 +33,31 @@
     justify-content: flex-start;
 }
 
+.NavMenu{
+    width:100%;
+    background-color: rgb(63, 63, 63);
+    border-bottom: 2px rgb(240, 64, 181) solid;
+    z-index:22;
+    height: 0;
+    overflow: hidden;
+}
+
+.noshow{
+    display: none;
+}
+.collapsee{
+    display: block;
+    animation: showMenu 0.4s ease forwards; 
+}
+.hidee{
+    display: block;
+    animation: hideMenu 0.4s ease forwards; 
+}
+
+
+
+
+
 
 @media only screen and (min-width: 600px) {
     .CustomNavBtn{
@@ -56,6 +81,9 @@
         opacity: 0;
         pointer-events: none;
     }
+    .NavMenu{
+        opacity:1;
+    }
 
 }
 
@@ -64,6 +92,31 @@
     .CustomAnchors a{
         opacity: 1;
         pointer-events: auto;
+    }
+    .NavMenu{
+        opacity: 0;
+    }
+
+}
+@keyframes showMenu{
+    from{
+
+        height: 0px;
+    }
+    to{
+
+        height:95px;
+    }
+
+}
+@keyframes hideMenu{
+    from{
+
+        height:95px;
+    }
+    to{
+
+        height:0px;
     }
 
 }
