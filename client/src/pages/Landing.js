@@ -5,6 +5,7 @@ import Canvas from "../components/Canvas/index";
 import Clickable from "../components/Clickable/index";
 import Col from "../components/Col/index";
 import FlexContainer from "../components/FlexContainer/index";
+import CustomNavBar from "../components/CustomNavbar/index";
 import NavBar from "../components/NavBar/index";
 import OverlayBlock from "../components/OverlayBlock/index";
 import Row from "../components/Row/index";
@@ -53,7 +54,7 @@ class Landing extends Component {
                 </Container>
                 <section id="ABOUT">
                     <FlexContainer style={{ backgroundColor: "#fff" }}>
-                        <NavBar />
+                        <CustomNavBar />
 
                         <Row>
                             <Col size="md">
