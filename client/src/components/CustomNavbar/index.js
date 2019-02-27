@@ -9,11 +9,7 @@ class CustomNavBar extends Component {
         hasCollapseBtnClicked: false,
         canCollapse: false
     }
-    componentDidUpdate = () => {
-        console.log(this.state);
-    }
     handleCollapse = () => {
-        //changes c0llapse state
         if (!this.state.hasCollapseBtnClicked) {
             let newState = {
  
@@ -25,7 +21,6 @@ class CustomNavBar extends Component {
         }
     }
     handleNewState = (newState) => {
-        console.log("state changing");
         if (newState !== undefined) {
 
             if (!this.state.canCollapse) {
@@ -50,9 +45,7 @@ class CustomNavBar extends Component {
     elementHasClass = (classToCheck) => {
         document.getElementById("CustomCollapse").classList.contains(classToCheck);
     }
-    handleCollapsableDisplay = () => {
-        document.getElementsById("CustomCollapse").style.display = "block";
-    }
+
     render = () => {
         return (
             <nav>
@@ -72,7 +65,6 @@ class CustomNavBar extends Component {
                 </div>
                 <div>
                     <div id="CustomCollapse" className={`NavMenu ${this.state.class} `}>
-
                         <ul className={this.state.listClass}> 
                             <li>
                                 <a href="#">HOME</a>
@@ -87,8 +79,6 @@ class CustomNavBar extends Component {
                                 <a href="#">CONTACT</a>
                             </li>
                         </ul>
-
-
                     </div>
                 </div>
             </nav>
