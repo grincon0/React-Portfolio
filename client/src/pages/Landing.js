@@ -10,6 +10,7 @@ import OverlayBlock from "../components/OverlayBlock/index";
 import Row from "../components/Row/index";
 import PtsHelper from "../helpers/PtsHelper";
 import Slider from "../components/Slider/index";
+import SVGIcon from "../components/SVGIcon/index";
 import Footer from "../components/Footer/index";
 
 import "./styles/Landing.css";
@@ -63,15 +64,33 @@ class Landing extends Component {
 
                         </Row>
                         <Row>
-                        <AnimatedText
+                            <AnimatedText
                                 anim="slide-right"
                                 text="Meeeeee"
                                 delay={500}
                             />
                         </Row>
                         <Row>
-                            
-
+                            <SVGIcon
+                                src={"art"}
+                                width={64}
+                                height={64}
+                            />
+                            <SVGIcon
+                                src={"ideaa"}
+                                width={64}
+                                height={64}
+                            />
+                            <SVGIcon
+                                src={"liftoff"}
+                                width={64}
+                                height={64}
+                            />
+                            <SVGIcon
+                                src={"colorwheel"}
+                                width={64}
+                                height={64}
+                            />
                         </Row>
                     </FlexContainer>
                 </section>
