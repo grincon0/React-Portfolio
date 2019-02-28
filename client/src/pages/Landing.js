@@ -6,7 +6,6 @@ import Clickable from "../components/Clickable/index";
 import Col from "../components/Col/index";
 import FlexContainer from "../components/FlexContainer/index";
 import CustomNavBar from "../components/CustomNavbar/index";
-import NavBar from "../components/NavBar/index";
 import OverlayBlock from "../components/OverlayBlock/index";
 import Row from "../components/Row/index";
 import PtsHelper from "../helpers/PtsHelper";
@@ -55,39 +54,29 @@ class Landing extends Component {
                 <section id="ABOUT">
                     <FlexContainer style={{ backgroundColor: "#fff" }}>
                         <CustomNavBar />
-
                         <Row>
                             <Col size="md">
                                 <AnimatedText
                                     anim="slide-right"
                                     text="About" />
                             </Col>
-                            <AnimatedText
-                                anim="slide-right"
-                                text="Meeeeee"
-                                delay={1000}
-                            />
 
                         </Row>
                         <Row>
-                            <Col size="md">
-                                <OverlayBlock />
-
-                            </Col>
-                            <Col size="md">
-                                <OverlayBlock />
-
-                            </Col>
+                        <AnimatedText
+                                anim="slide-right"
+                                text="Meeeeee"
+                                delay={500}
+                            />
                         </Row>
+                        <Row>
+                            
 
-
+                        </Row>
                     </FlexContainer>
-
                 </section>
-
                 <Footer />
             </div>
-
         )
 
     }

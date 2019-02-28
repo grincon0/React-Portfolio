@@ -5,14 +5,12 @@ import "./style.css";
 class CustomNavBar extends Component {
     state = {
         class: "noshow",
-        listClass:"nowshow",
         hasCollapseBtnClicked: false,
         canCollapse: false
     }
     handleCollapse = () => {
         if (!this.state.hasCollapseBtnClicked) {
             let newState = {
- 
                 hasCollapseBtnClicked: true
             }
             this.handleNewState(newState);
@@ -65,7 +63,7 @@ class CustomNavBar extends Component {
                 </div>
                 <div>
                     <div id="CustomCollapse" className={`NavMenu ${this.state.class} `}>
-                        <ul className={this.state.listClass}> 
+                        <ul> 
                             <li>
                                 <a href="#">HOME</a>
                             </li>

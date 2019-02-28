@@ -14,7 +14,17 @@
     text-decoration: none;
     padding: 10px;
     opacity: 0;
+}
 
+.CustomAnchors a{
+    width: 103px;
+    text-align: center;
+
+}
+
+.CustomAnchors a:hover{
+    background-color: #df0ac2;
+    transition: background-color 0.3s ease;
 }
 
 
@@ -25,7 +35,7 @@
     background-color: rgba(255, 255, 255, 0);
     border: 1px #fff solid;
     border-radius: 4px;
-    margin-right: 9px;
+    margin-right: 10px;
 }
 
 .CustomAnchors{
@@ -55,14 +65,33 @@
 }
 
 
+@media only screen and (min-width: 455px) {
+    .CustomNavBtn{
+        opacity: 1;
+        pointer-events: auto;
+        margin-right:65px;
+    }
 
+}
 
+@media only screen and (min-width: 480px) {
+    .CustomNavBtn{
+        opacity: 1;
+        pointer-events: auto;
+        margin-right:55px;
+    }
+/*     .CustomAnchors a{
+        opacity: 0;
+        pointer-events: none;
+    } */
 
+}
 
 @media only screen and (min-width: 600px) {
     .CustomNavBtn{
         opacity: 1;
         pointer-events: auto;
+        margin-right: 11px;
     }
     .CustomAnchors a{
         opacity: 0;
