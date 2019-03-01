@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Landing from "./pages/Landing";
+import Test3D from "./pages/Test3D";
 import Wrapper from "./components/Wrapper";
 import "./App.css";
 
@@ -8,9 +9,8 @@ import "./App.css";
 class App extends Component {
   render() {
     return (
-      
         <Wrapper>
-          <Landing />
+          <Test3D />
         </Wrapper>
       
     );

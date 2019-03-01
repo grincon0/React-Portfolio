@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    background-color: #3d385a;
+}
+
+.scene {
+    perspective: 1000px;
+}
+
+.container-3d{
+    width: 680px;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: 1s;
+    transform: rotateX(55deg) rotateY(-45deg) rotateY(10deg);
+    transform: preserve-3d;
+}
+
+.container-3d-origin{
+    transform: rotate(0);
+}
+
+.card-3d img {
+    max-width: 100%;
+}
+
+.card-3d {
+    width:200px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.card-3d{
+    cursor: pointer;
+    transform: translateZ(10px);
+}
