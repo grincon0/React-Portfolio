@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background-color: #edecf0;
-    animation: bgColor 5s ease alternate-reverse infinite;
+    animation: bgColor 10s ease alternate-reverse infinite;
 }
 
 .scene {
@@ -37,6 +37,7 @@ display: flex;
 .card-3d {
     width:250px;
     margin: 1px;
+    opacity: 0.8;
 }
 
 .card-3d{
@@ -48,14 +49,15 @@ display: flex;
 .card-3d img:nth-child(1){
     -webkit-filter: hue-rotate(90deg); /* Safari */
     filter: hue-rotate(90deg);
-    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, opacity  0.3s ease-in;
+
 }
 
 .card-3d img:nth-child(2){
     -webkit-filter: hue-rotate(120deg); /* Safari */
     filter: hue-rotate(120deg);
     transform-origin: 30px, -400px;
-    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
   transform: translate(30px, -400px); 
 } 
 
@@ -63,15 +65,16 @@ display: flex;
 .card-3d img:nth-child(3){
     -webkit-filter: hue-rotate(30deg); /* Safari */
     filter: hue-rotate(30deg);
-    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
     transform: translate(70px, -800px);
 
 }
 .card-3d img:nth-child(4){
     -webkit-filter: hue-rotate(222deg); /* Safari */
     filter: hue-rotate(222deg);
-    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
     transform: translate(110px, -1200px);
+
 
 }
 
@@ -92,9 +95,83 @@ display: flex;
     transform: translate(110px, -1200px) translate(-100px);
 }
 
-.image-marker{
+#image1:hover{
+    opacity: 1;
+}
+
+#image2:hover{
+    opacity: 1;
+}
+
+#image3:hover{
+    opacity: 1;
+}
+
+#image4:hover{
+    opacity: 1;
+}
+
+#image1:hover ~ #image2 { 
+    opacity: 0.1; 
+}
+#image1:hover ~ #image3 { 
+    opacity: 0.1; 
+}
+#image1:hover ~ #image4 { 
+    opacity: 0.1; 
+}
+
+#image2:hover ~ #image1 { 
+    opacity: 0.1; 
+}
+#image2:hover ~ #image3 { 
+    opacity: 0.1; 
+}
+#image2:hover ~ #image4 { 
+    opacity: 0.1; 
+}
+
+
+#image3:hover ~ #image1 { 
+    opacity: 0.1; 
+}
+#image3:hover ~ #image2{ 
+    opacity: 0.1; 
+}
+#image3:hover ~ #image4 { 
+    opacity: 0.1; 
+}
+
+#image4:hover ~ #image1 { 
+    opacity: 0.1; 
+}
+#image4:hover ~ #image2{ 
+    opacity: 0.1; 
+}
+#image4:hover ~ #image3 { 
+    opacity: 0.1; 
+}
+
+
+
+
+
+
+/* .image-marker{
     transform: rotate(0);
 }
+ */
+.subtitle{
+    position: absolute;
+    color:black;
+    font-family: Roboto;
+    font-size: 32px;
+}
+
+.sub-text p:nth-child(1){
+    transform: translate(1050px, 300px);
+}
+
 
 @keyframes bgColor{
     0%{
@@ -110,7 +187,7 @@ display: flex;
         background-color: #f1b8ff;
     }
     100%{
-        background-color: #ff9494;
+        background-color: #73e273;
     }
 }
 
