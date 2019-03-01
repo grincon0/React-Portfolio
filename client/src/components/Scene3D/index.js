@@ -10,17 +10,20 @@ class Scene3D extends Component {
         }
     }
     handleStateChange = () => {
-        this.state.addclass ? this.setState({addclass: false}) : this.setState({addclass : true});
+        this.state.addclass ? this.setState({ addclass: false }) : this.setState({ addclass: true });
     }
     render = () => {
         return (
             <div className="scene">
-                <div className={`container-3d ${this.state.addclass ? "container-3d-origin" : ""}`}>
-                    <div className="card-3d" onClick={this.handleStateChange}>
-                        <img  src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt="atl" />
-                    </div>
-                    <div className="card-3d"  onClick={this.handleStateChange}>
-                        <img src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt="atl" />
+                <div className="parent-container">
+                    <div className={`container-3d ${this.state.addclass ? "container-3d-origin" : ""}`}>
+                        <div className="card-3d" onClick={this.handleStateChange}>
+                            <img className="image-marker" src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt="atl" />
+                            <img className="image-marker" src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt="atl" />
+                             <img className="image-marker" src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt="atl" />
+                            <img className="image-marker" src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt="atl" /> 
+                        </div>
+
                     </div>
                 </div>
             </div>

@@ -1,23 +1,26 @@
 body {
     margin: 0;
-    background-color: #3d385a;
+    background-color: #edecf0;
 }
 
 .scene {
     perspective: 1000px;
 }
 
+.parent-container{
+    height: 100vh;
+}
+
 .container-3d{
     width: 680px;
     margin:auto;
-    display: flex;
+display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     height: 100vh;
-    transition: 1s;
-    transform: rotateX(55deg) rotateY(-45deg) rotateY(10deg);
-    transform: preserve-3d;
+    transition: 1s ease;
+    transform: rotateX(70deg) rotateZ(-43deg) rotateY(-5deg);
+    transform-style: preserve-3d;
 }
 
 .container-3d-origin{
@@ -25,16 +28,72 @@ body {
 }
 
 .card-3d img {
-    max-width: 100%;
+    width: 100%;
+    opacity: 0.8;
 }
 
 .card-3d {
-    width:200px;
-    margin: 10px;
-    transition: 0.3s;
+    width:250px;
+    margin: 1px;
 }
 
 .card-3d{
     cursor: pointer;
-    transform: translateZ(10px);
+    transform: translateZ(00px);
+    
 }
+
+.card-3d img:nth-child(1){
+    -webkit-filter: hue-rotate(90deg); /* Safari */
+    filter: hue-rotate(90deg);
+    transition: transform 0.3s ease-in;
+}
+
+.card-3d img:nth-child(2){
+    -webkit-filter: hue-rotate(120deg); /* Safari */
+    filter: hue-rotate(120deg);
+    transform-origin: 30px, -400px;
+    transition: transform 0.3s ease-in;
+  transform: translate(30px, -400px); 
+} 
+
+
+.card-3d img:nth-child(3){
+    -webkit-filter: hue-rotate(30deg); /* Safari */
+    filter: hue-rotate(30deg);
+    transition: transform 0.3s ease-in;
+    transform: translate(70px, -800px);
+
+}
+.card-3d img:nth-child(4){
+    -webkit-filter: hue-rotate(222deg); /* Safari */
+    filter: hue-rotate(222deg);
+    transition: transform 0.3s ease-in;
+    transform: translate(110px, -1200px);
+
+}
+
+.card-3d img:hover:nth-child(1){
+    transition: transform 0.3s ease-in;
+    transform:  translateX(-70px);
+}
+.card-3d img:hover:nth-child(2){
+    transition: 0.3s ease-in;
+    transform: translate(30px, -400px) translate(-80px);
+}
+.card-3d img:hover:nth-child(3){
+    transition: 0.3s ease-in;
+    transform: translate(70px, -800px) translate(-90px);
+}
+.card-3d img:hover:nth-child(4){
+    transition: 0.3s ease-in;
+    transform: translate(110px, -1200px) translate(-100px);
+}
+
+.image-marker{
+    transform: rotate(0);
+}
+
+
+
+
