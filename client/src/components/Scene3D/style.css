@@ -13,26 +13,28 @@ body {
 }
 
 .container-3d{
-    width: 680px;
+    
     margin:auto;
-display: flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     height: 100vh;
     transition: 1s ease;
     transform: rotateX(70deg) rotateZ(-43deg) rotateY(-5deg);
     transform-style: preserve-3d;
-    overflow: hidden;
 }
 
 .container-3d-origin{
     transform: rotate(0);
 }
 
-.card-3d img {
-    width: 100%;
-    opacity: 0.8;
+.container-3d-width{
+    width:680px;
 }
+
+/* .card-3d img {
+    opacity: 0.8;
+} */
 
 .card-3d {
     width:250px;
@@ -42,7 +44,6 @@ display: flex;
 
 .card-3d{
     cursor: pointer;
-    transform: translateZ(00px);
     
 }
 
@@ -73,7 +74,7 @@ display: flex;
     -webkit-filter: hue-rotate(222deg); /* Safari */
     filter: hue-rotate(222deg);
     transition: transform 0.3s ease-in, opacity 0.3s ease-in;
-    transform: translate(110px, -1200px);
+    /* transform: translate(110px, -1200px); */
 
 
 }
@@ -93,6 +94,19 @@ display: flex;
 .card-3d img:hover:nth-child(4){
     transition: 0.3s ease-in;
     transform: translate(110px, -1200px) translate(-100px);
+}
+
+
+.image-position-4{
+    transform: translate(110px, -1200px);
+}
+
+.expand-position-4{
+    transform: translate(-500px, -1200px);
+}
+
+.start-anim{
+    animation: moveExpand 0.5s ease-out forwards;
 }
 
 #image1:hover{
@@ -152,6 +166,39 @@ display: flex;
     opacity: 0.1; 
 }
 
+.expand{
+    transition: width 1s, height 1s;
+ width: 100vw;
+    height:100vh;
+    transform: translate(-500px, 0px);
+}
+
+.image-size{
+    width: 100%;
+}
+
+.image-opacity{
+    opacity: 0.8;
+}
+
+.image-size-2{
+
+}
+.image-size-3{
+
+}
+.image-size-4{
+
+}
+
+.disappear{
+    transition: opacity 0.4s;
+    opacity: 0;
+}
+.overflow-hide-all{
+    overflow: hidden;
+}
+
 
 
 
@@ -172,7 +219,14 @@ display: flex;
     transform: translate(1050px, 300px);
 }
 
-
+@keyframes moveExpand {
+    from{
+        transform: translate(110px, -1200px);
+    }
+    to{
+        transform: translate(-700px, -1300px);
+    }
+}
 @keyframes bgColor{
     0%{
         background-color: #cab8ff;
