@@ -19,7 +19,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     height: 100vh;
-    transition: 1s ease;
+    transition: 0.5s ease;
     transform: rotateX(70deg) rotateZ(-43deg) rotateY(-5deg);
     transform-style: preserve-3d;
 }
@@ -98,9 +98,20 @@ body {
 }
 
 .start-anim{
-    animation: moveExpand 0.5s ease-out forwards;
+    animation: moveExpandA 0.5s ease-out forwards;
 }
 
+.start-animB{
+    animation: moveExpandB 0.5s ease-out forwards;
+}
+
+.start-animC{
+    animation: moveExpandC 0.5s ease-out forwards;
+}
+
+.start-animD{
+    animation: moveExpandD 0.5s ease-out forwards;
+}
 #image1:hover{
     opacity: 1;
 }
@@ -211,17 +222,68 @@ body {
     transform: translate(1050px, 300px);
 }
 
-@keyframes moveExpand {
+@keyframes moveExpandA {
     0%{
+        opacity: 1;
         transform: translate(110px, -1200px);
 
     }
     50%{
+        opacity: 1;
         transform: rotateY(360deg);
     }
     100%{
         opacity: 1;
         transform: translate(-644px, -1336px);
+    }
+}
+@keyframes moveExpandB {
+    0%{
+        opacity: 1;
+        transform: translate(110px, -1200px);
+
+    }
+    50%{
+        opacity: 1;
+        transform: rotateY(360deg);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-644px, -891px);
+    }
+}
+@keyframes moveExpandC {
+    0%{
+        opacity: 1;
+        transform: translate(110px, -1200px);
+
+    }
+    50%{
+        opacity: 1;
+        transform: rotateY(360deg);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-644px, -446px);
+    }
+}
+@keyframes moveExpandD {
+    0%{
+        opacity: 1;
+        transform: translate(110px, -1200px);
+        
+
+    }
+    25%{
+        transform: rotateY(360deg);
+    }
+    50%{
+        opacity: 1;
+        
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-643px, -1.5px);
     }
 }
 @keyframes bgColor{
