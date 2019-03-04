@@ -145,6 +145,15 @@ class Scene3D extends Component {
 
 
         }
+        handleTextAppear = (e) => {
+            console.log('ran');
+            if(e.target.id === "image4"){
+                document.getElementById("text1").classList.add("subtitle-appear");
+            }else{
+                return;
+            }       
+
+        }
         resetCardOpacity = () => {
             document.getElementById("image1").classList.remove("disappear");
             document.getElementById("image2").classList.remove("disappear");
@@ -155,7 +164,7 @@ class Scene3D extends Component {
             return (
                 <div>
                     <div className="sub-text">
-                        <p id="text1" className="subtitle">Home</p>
+                    <p id="text1" className="subtitle">Home</p>
                         <p id="text2" className="subtitle">About</p>
                         <p id="text3" className="subtitle">Labs</p>
                         <p id="text4" className="subtitle">Contact</p>
@@ -167,8 +176,9 @@ class Scene3D extends Component {
                                     <img data-ident="1" id="image1" className="image-size image-opacity" onClick={this.handleStateChange} src={PinkImage} alt="atl" />
                                     <img data-ident="2" id="image2" className="image-size image-opacity" onClick={this.handleStateChange} src={PurpleImage} alt="atl" />
                                     <img data-ident="3" id="image3" className="image-size image-opacity" onClick={this.handleStateChange} src={BlueImage} alt="atl" />
-                                    <img data-ident="4" id="image4" className="image-size image-opacity image-position-4" onClick={this.handleStateChange} src={GreenImage}
+                                    <img data-ident="4" id="image4" className="image-size image-opacity image-position-4" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} src={GreenImage}
                                         alt="atl" />
+                                                                            
                                 </div>
                             </div>
                         </div>
