@@ -151,6 +151,10 @@ class Scene3D extends Component {
             document.getElementById("text1").classList.add("subtitle-appear-1");
         } else if (e.target.id === "image3") {
             document.getElementById("text2").classList.add("subtitle-appear-2");
+        } else if (e.target.id === "image2") {
+            document.getElementById("text3").classList.add("subtitle-appear-3");
+        }else{
+            document.getElementById("text4").classList.add("subtitle-appear-4");
         }
 
     }
@@ -172,8 +176,18 @@ class Scene3D extends Component {
                 }, 751);
                 break;
             case "image2":
+                document.getElementById("text3").classList.remove("subtitle-appear-3");
+                document.getElementById("text3").classList.add("subtitle-reset-3");
+                setTimeout(() => {
+                    document.getElementById("text3").classList.remove("subtitle-reset-3");
+                }, 551);
                 break;
             case "image1":
+            document.getElementById("text4").classList.remove("subtitle-appear-4");
+            document.getElementById("text4").classList.add("subtitle-reset-4");
+            setTimeout(() => {
+                document.getElementById("text4").classList.remove("subtitle-reset-4");
+            }, 551);
                 break;
             default:
                 break;
@@ -200,8 +214,8 @@ class Scene3D extends Component {
                     <div className="parent-container">
                         <div id="card-container" className={`container-3d ${this.state.releaseContain ? "" : "container-3d-width"} overflow-hide-all ${this.state.addclass ? "container-3d-origin" : ""}`}>
                             <div className="card-3d" >
-                                <img data-ident="1" id="image1" className="image-size image-opacity" onClick={this.handleStateChange} src={PinkImage} alt="atl" />
-                                <img data-ident="2" id="image2" className="image-size image-opacity" onClick={this.handleStateChange} src={PurpleImage} alt="atl" />
+                                <img data-ident="1" id="image1" className="image-size image-opacity" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={PinkImage} alt="atl" />
+                                <img data-ident="2" id="image2" className="image-size image-opacity" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={PurpleImage} alt="atl" />
                                 <img data-ident="3" id="image3" className="image-size image-opacity" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={BlueImage} alt="atl" />
                                 <img data-ident="4" id="image4" className="image-size image-opacity image-position-4" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={GreenImage}
                                     alt="atl" />

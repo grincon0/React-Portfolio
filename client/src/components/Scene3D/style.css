@@ -237,6 +237,22 @@ body {
     animation: textresetB .75s ease;
 }
 
+.subtitle-appear-3{
+    animation: textappearC .55s ease forwards;
+}
+
+.subtitle-reset-3{
+    animation: textresetC .55s ease;
+}
+
+.subtitle-appear-4{
+    animation: textappearD .55s ease forwards;
+}
+
+.subtitle-reset-4{
+    animation: textresetD .55s ease;
+}
+
 .sub-text p:nth-child(1){
     transform: translate(1050px, 300px);
 }
@@ -245,6 +261,17 @@ body {
     /* opacity: 1; */
     transform: translate(960px, 410px);
 }
+
+.sub-text p:nth-child(3){
+    /* opacity: 1;  */
+    transform: translate(530px, 400px);
+}
+
+.sub-text p:nth-child(4){
+/*     opacity: 1;  */
+    transform: translate(500px, 420px);
+}
+
 @keyframes moveExpandA {
     0%{
         opacity: 1;
@@ -381,6 +408,70 @@ body {
     100%{
         opacity: 0;
         transform: translate(960px, 410px);
+        color: rgb(153, 153, 153);
+    }
+}
+
+@keyframes textappearC{
+    0%{
+        opacity: 0;
+        color: aqua;
+        transform: translate(530px, 400px);
+        /* left: 0px; */
+       
+    }
+    100%{
+        opacity: 1;
+        color: rgb(153, 153, 153);
+        /* left:90px; */
+        transform: translate(500px, 440px);
+      
+    }
+}
+
+@keyframes textresetC{
+    0%{
+        opacity: 1;
+        left: 0px;
+        transform: translate(500px, 440px);
+        color: rgb(153, 153, 153);
+
+    }
+    100%{
+        opacity: 0;
+        transform: translate(530px, 400px);
+        color: rgb(153, 153, 153);
+    }
+}
+
+@keyframes textappearD{
+    0%{
+        opacity: 0;
+        color: aqua;
+        transform: translate(500px, 420px);
+        /* left: 0px; */
+       
+    }
+    100%{
+        opacity: 1;
+        color: rgb(153, 153, 153);
+        /* left:90px; */
+        transform: translate(430px, 450px);
+      
+    }
+}
+
+@keyframes textresetD{
+    0%{
+        opacity: 1;
+        left: 0px;
+        transform: translate(430px, 450px);
+        color: rgb(153, 153, 153);
+
+    }
+    100%{
+        opacity: 0;
+        transform: translate(500px, 420px);
         color: rgb(153, 153, 153);
     }
 }
