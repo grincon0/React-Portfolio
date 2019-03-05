@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
 body {
     margin: 0;
     background-color: #edecf0;
@@ -172,7 +173,7 @@ body {
 
 .expand{
     transition: width 1s, height 1s;
- width: 100vw;
+    width: 100vw;
     height:100vh;
     transform: translate(-500px, 0px);
 }
@@ -215,15 +216,19 @@ body {
 .subtitle{
     position: absolute;
     color:rgb(243, 243, 243);
-    font-family: Roboto;
-    font-size: 32px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
     opacity: 0;
 }
 
 .subtitle-appear{
-    transition: transform 1s ease;
-    animation: textappearA 1s ease;
+    animation: textappearA 1s ease forwards;
 }
+
+.subtitle-reset{
+    animation: textresetA 1s ease;
+}
+
 .sub-text p:nth-child(1){
     transform: translate(1050px, 300px);
 }
@@ -309,15 +314,31 @@ body {
     0%{
         opacity: 0;
         color: aqua;
-        transform: translate(1050px, 300px);
-        left: 0px;
+        transform: translate(1000px, 300px);
+        /* left: 0px; */
        
     }
     100%{
         opacity: 1;
-        color: rgb(153, 153, 153)000;
-        left:90px;
+        color: rgb(153, 153, 153);
+        /* left:90px; */
+        transform: translate(1090px, 300px);
       
+    }
+}
+
+@keyframes textresetA{
+    0%{
+        opacity: 1;
+        left: 0px;
+        transform: translate(1090px, 300px);
+        color: rgb(153, 153, 153);
+
+    }
+    100%{
+        opacity: 0;
+        transform: translate(1000px, 300px);
+        color: rgb(153, 153, 153);
     }
 }
 
