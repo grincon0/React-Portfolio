@@ -148,27 +148,44 @@ class Scene3D extends Component {
     handleTextAppear = (e) => {
         console.log('ran');
         if (e.target.id === "image4") {
-            document.getElementById("text1").classList.add("subtitle-appear");
-        } else {
-            return;
+            document.getElementById("text1").classList.add("subtitle-appear-1");
+        } else if (e.target.id === "image3") {
+            document.getElementById("text2").classList.add("subtitle-appear-2");
         }
 
     }
     handleTestReset = (e) => {
         console.log('out');
-        if(e.target.id === "image4"){
-            document.getElementById("text1").classList.remove("subtitle-appear");
-            document.getElementById("text1").classList.add("subtitle-reset");
-            setTimeout(() => {
-                document.getElementById("text1").classList.remove("subtitle-reset");
-            },1001)
+        switch (e.target.id) {
+            case "image4":
+                document.getElementById("text1").classList.remove("subtitle-appear-1");
+                document.getElementById("text1").classList.add("subtitle-reset-1");
+                setTimeout(() => {
+                    document.getElementById("text1").classList.remove("subtitle-reset-1");
+                }, 751);
+                break;
+            case "image3":
+                document.getElementById("text2").classList.remove("subtitle-appear-2");
+                document.getElementById("text2").classList.add("subtitle-reset-2");
+                setTimeout(() => {
+                    document.getElementById("text2").classList.remove("subtitle-reset-2");
+                }, 751);
+                break;
+            case "image2":
+                break;
+            case "image1":
+                break;
+            default:
+                break;
         }
     }
+
+
     resetCardOpacity = () => {
         document.getElementById("image1").classList.remove("disappear");
         document.getElementById("image2").classList.remove("disappear");
         document.getElementById("image3").classList.remove("disappear");
-        document.getElementById("image3").classList.remove("disappear");
+        document.getElementById("image4").classList.remove("disappear");
     }
     render = () => {
         return (
@@ -185,7 +202,7 @@ class Scene3D extends Component {
                             <div className="card-3d" >
                                 <img data-ident="1" id="image1" className="image-size image-opacity" onClick={this.handleStateChange} src={PinkImage} alt="atl" />
                                 <img data-ident="2" id="image2" className="image-size image-opacity" onClick={this.handleStateChange} src={PurpleImage} alt="atl" />
-                                <img data-ident="3" id="image3" className="image-size image-opacity" onClick={this.handleStateChange} src={BlueImage} alt="atl" />
+                                <img data-ident="3" id="image3" className="image-size image-opacity" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={BlueImage} alt="atl" />
                                 <img data-ident="4" id="image4" className="image-size image-opacity image-position-4" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={GreenImage}
                                     alt="atl" />
 

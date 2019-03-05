@@ -221,18 +221,30 @@ body {
     opacity: 0;
 }
 
-.subtitle-appear{
-    animation: textappearA 1s ease forwards;
+.subtitle-appear-1{
+    animation: textappearA .75s ease forwards;
 }
 
-.subtitle-reset{
-    animation: textresetA 1s ease;
+.subtitle-reset-1{
+    animation: textresetA .75s ease;
+}
+
+.subtitle-appear-2{
+    animation: textappearB .75s ease forwards;
+}
+
+.subtitle-reset-2{
+    animation: textresetB .75s ease;
 }
 
 .sub-text p:nth-child(1){
     transform: translate(1050px, 300px);
 }
 
+.sub-text p:nth-child(2){
+    /* opacity: 1; */
+    transform: translate(960px, 410px);
+}
 @keyframes moveExpandA {
     0%{
         opacity: 1;
@@ -330,7 +342,6 @@ body {
 @keyframes textresetA{
     0%{
         opacity: 1;
-        left: 0px;
         transform: translate(1090px, 300px);
         color: rgb(153, 153, 153);
 
@@ -341,6 +352,42 @@ body {
         color: rgb(153, 153, 153);
     }
 }
+
+@keyframes textappearB{
+    0%{
+        opacity: 0;
+        color: aqua;
+        transform: translate(960px, 410px);
+        /* left: 0px; */
+       
+    }
+    100%{
+        opacity: 1;
+        color: rgb(153, 153, 153);
+        /* left:90px; */
+        transform: translate(1050px, 410px);
+      
+    }
+}
+
+@keyframes textresetB{
+    0%{
+        opacity: 1;
+        left: 0px;
+        transform: translate(1050px, 410px);
+        color: rgb(153, 153, 153);
+
+    }
+    100%{
+        opacity: 0;
+        transform: translate(960px, 410px);
+        color: rgb(153, 153, 153);
+    }
+}
+
+
+
+
 
 
 
