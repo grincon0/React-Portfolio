@@ -1,0 +1,22 @@
+.show-container{
+    animation: showCont 2s 3s ease forwards;
+}
+
+
+
+
+@keyframes showCont{
+    0%{
+        opacity: 0;
+        height: 0;
+        display: none;
+    }
+    25%{
+        display: flex;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        height:100%;
+    }
+}

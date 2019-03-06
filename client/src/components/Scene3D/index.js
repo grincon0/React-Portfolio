@@ -5,6 +5,8 @@ import GreenImage from "../../assets/images/green.png";
 import PurpleImage from "../../assets/images/purple.png";
 import "./style.css";
 
+
+
 class Scene3D extends Component {
     constructor(props) {
         super(props);
@@ -15,6 +17,7 @@ class Scene3D extends Component {
         }
     }
     handleStateChange = (e) => {
+        this.props.tester();
         let ident = e.target.id;
         /*         let newState ={...this.state};
                 this.state.addclass ? newState.addclass = false : newState.addclass = true; */
@@ -86,9 +89,7 @@ class Scene3D extends Component {
 
         }
     }
-
     handleSelectionOpacity = (id) => {
-
         if (this.state.releaseContain) {
             switch (id) {
                 case "image1":
@@ -153,7 +154,7 @@ class Scene3D extends Component {
             document.getElementById("text2").classList.add("subtitle-appear-2");
         } else if (e.target.id === "image2") {
             document.getElementById("text3").classList.add("subtitle-appear-3");
-        }else{
+        } else {
             document.getElementById("text4").classList.add("subtitle-appear-4");
         }
 
@@ -183,27 +184,41 @@ class Scene3D extends Component {
                 }, 551);
                 break;
             case "image1":
-            document.getElementById("text4").classList.remove("subtitle-appear-4");
-            document.getElementById("text4").classList.add("subtitle-reset-4");
-            setTimeout(() => {
-                document.getElementById("text4").classList.remove("subtitle-reset-4");
-            }, 551);
+                document.getElementById("text4").classList.remove("subtitle-appear-4");
+                document.getElementById("text4").classList.add("subtitle-reset-4");
+                setTimeout(() => {
+                    document.getElementById("text4").classList.remove("subtitle-reset-4");
+                }, 551);
                 break;
             default:
                 break;
         }
     }
-
-
     resetCardOpacity = () => {
         document.getElementById("image1").classList.remove("disappear");
         document.getElementById("image2").classList.remove("disappear");
         document.getElementById("image3").classList.remove("disappear");
         document.getElementById("image4").classList.remove("disappear");
     }
+    removeContainerVisibility = () => {
+        if (this.state.releaseContain) {
+            setTimeout(() => {
+                document.getElementById("3D-contain").classList.add("hideTest");
+            }, 600);
+    
+
+        }
+    }
     render = () => {
+        if (this.state.releaseContain) {
+            this.removeContainerVisibility();
+            setTimeout(() => {
+                document.getElementById("3D-contain").classList.add("hideall");
+            }, 3000);
+        }
+
         return (
-            <div>
+            <div id="3D-contain">
                 <div className="sub-text">
                     <p id="text1" className="subtitle">Home</p>
                     <p id="text2" className="subtitle">About</p>
@@ -219,7 +234,6 @@ class Scene3D extends Component {
                                 <img data-ident="3" id="image3" className="image-size image-opacity" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={BlueImage} alt="atl" />
                                 <img data-ident="4" id="image4" className="image-size image-opacity image-position-4" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={GreenImage}
                                     alt="atl" />
-
                             </div>
                         </div>
                     </div>

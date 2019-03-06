@@ -13,13 +13,20 @@ import Slider from "../components/Slider/index";
 import SVGIcon from "../components/SVGIcon/index";
 import Footer from "../components/Footer/index";
 
+import Scene3D from "../components/Scene3D/index";
+
 import "./styles/Landing.css";
 
 
 class Landing extends Component {
-    state = {
-        canvasLoaded: false
+    constructor(props){
+        super(props);
+        this.state = {
+            canvasLoaded: false,
+            containerHidden: true,
+        }
     }
+
     componentDidMount = () => {
         const Animater = new PtsHelper();
 
@@ -33,10 +40,16 @@ class Landing extends Component {
         }
 
     }
+    handleTransition = () => {
+        let newState = {...this.state};
+        newState.containerHidden = false;
+        this.setState(newState);
+    }
     render = () => {
         return (
             <div>
-                <Slider />
+                {/* <Slider /> */}
+                <div className={`opacity-container ${this.props.classes}`}>
                 <Container>
                     <section id="HOME">
                         <Row>
@@ -95,6 +108,7 @@ class Landing extends Component {
                     </FlexContainer>
                 </section>
                 <Footer />
+                </div>
             </div>
         )
 

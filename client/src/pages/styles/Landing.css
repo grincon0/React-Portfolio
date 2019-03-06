@@ -56,3 +56,18 @@
 .test-bg-5{
     background-color: rgb(212, 40, 169);
 }
+
+.hideall{
+    display: none;
+}
+
+.opacity-container{
+    opacity: 0;
+}
+
+.hideTest{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 1s linear;
+}
+
