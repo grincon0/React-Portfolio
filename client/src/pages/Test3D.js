@@ -7,7 +7,6 @@ class Test3D extends Component {
     state = {
         test: "test",
         hideLanding: true,
-
     }
     handleStateChange = () => {
         console.log("this function works");

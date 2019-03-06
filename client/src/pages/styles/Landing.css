@@ -68,6 +68,6 @@
 .hideTest{
     visibility: hidden;
     opacity: 0;
-    transition: visibility 1s, opacity 1s linear;
+    transition: visibility 0.6s, opacity 0.6s cubic-bezier(.694,.048,.335,1);
 }
 

@@ -1,5 +1,5 @@
 .show-container{
-    animation: showCont 2s 3s ease forwards;
+    animation: showCont .6s 1s cubic-bezier(.694,.048,.335,1) forwards;
 }
 
 
@@ -11,7 +11,7 @@
         height: 0;
         display: none;
     }
-    25%{
+    2%{
         display: flex;
         opacity: 0;
     }

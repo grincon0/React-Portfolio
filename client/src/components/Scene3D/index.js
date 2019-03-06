@@ -214,7 +214,7 @@ class Scene3D extends Component {
             this.removeContainerVisibility();
             setTimeout(() => {
                 document.getElementById("3D-contain").classList.add("hideall");
-            }, 3000);
+            }, 1200);
         }
 
         return (
