@@ -24,6 +24,13 @@ class About extends Component {
                             anim="slide-right-quick"
                         />
                     </Flexbox>
+                    <Flexbox>
+                        <AnimatedText
+                            text="Testing 2nd Div"
+                            anim="slide-right-quick"
+                            delay={600}
+                        />
+                    </Flexbox>
                 </FlexContainer>
             </div>
         );
