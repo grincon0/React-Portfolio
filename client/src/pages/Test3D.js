@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import About from "./sections/About";
 import Scene3D from "../components/Scene3D/index";
+
 import Landing from "../pages/Landing";
 import "./styles/Texts3D.css";
 
