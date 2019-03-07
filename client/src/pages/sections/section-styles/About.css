@@ -6,6 +6,6 @@
     height: 100vh;
 }
 
-.true-center{
-
+.nav-flex{
+    position: fixed;
 }

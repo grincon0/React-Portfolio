@@ -1,0 +1,24 @@
+#burger-icon{
+    margin-top:1em;
+    margin-right: 2em;
+}
+
+#burger-icon i{
+    display: block;
+    width: 40px;
+    height:2px;
+    margin: 6px;
+    background-color: rgb(192, 192, 192);
+    border-radius: 2px;
+    transition: transform .6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#burger-icon:hover > i:nth-child(1){
+    transform: translateY(-4px);
+}
+
+#burger-icon:hover > i:nth-child(3){
+    transform: translateY(4px);
+}
+
+
