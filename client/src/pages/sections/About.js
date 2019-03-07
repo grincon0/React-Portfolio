@@ -19,6 +19,7 @@ class About extends Component {
         return (
             <div className="overflow-fix">
                 <FlexContainer
+                    classes="nav-height-fix"
                     direction="row"
                     justify="end"
                 >
