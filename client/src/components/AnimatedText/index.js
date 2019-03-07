@@ -14,7 +14,7 @@ class AnimatedText extends Component {
     componentDidMount = () => {
         this.timerID = setTimeout(() => {
             this.handleGetAnimation();
-        }, 4000 + (this.props.delay || 0));
+        }, 1000 + (this.props.delay || 0));
 
     }
     componentWillUnmount = () => {
