@@ -1,8 +1,9 @@
 .default-text{
     position: relative;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 32px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
     opacity: 0;
     left:0;
 
