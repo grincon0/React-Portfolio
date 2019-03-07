@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+
 body {
     margin: 0;
     background-color: #edecf0;
@@ -345,7 +345,7 @@ body {
         background-color: #000000;
     }
     100%{
-        background-color: #303030;
+        background-color: #000000;
     }
 }
 
