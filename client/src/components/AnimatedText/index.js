@@ -63,7 +63,7 @@ class AnimatedText extends Component {
     render = () => {
         return (
             <div>
-                <p className={"default-text " + (this.state.animation ? this.state.animation : "")}>{this.props.text}</p>
+                <p className={"default-text " + (this.state.animation ? this.state.animation : "") + " " +  this.props.classes}>{this.props.text}</p>
             </div>
         );
     }

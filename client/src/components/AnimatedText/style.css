@@ -26,13 +26,13 @@
     /*     -webkit-transition: -webkit-translate .5s .5s ease-in forwards;
         -ms-transition: -ms-translate .5s .5s ease-in forwards;
         transition: translate .5s .5s ease-in forwards;   */
-        animation: slide-r 1s  cubic-bezier(.694,.048,.335,1) forwards;
+        animation: slide-r 0.6s cubic-bezier(.694,.048,.335,1) forwards;
     }
 .slide-left-quick{
     /*     -webkit-transition: -webkit-translate .5s .5s ease-in forwards;
         -ms-transition: -ms-translate .5s .5s ease-in forwards;
         transition: translate .5s .5s ease-in forwards;   */
-        animation: slide-l 1s  0.5s cubic-bezier(.694,.048,.335,1) forwards;
+        animation: slide-l 0.6s cubic-bezier(.694,.048,.335,1) forwards;
 }
 
 

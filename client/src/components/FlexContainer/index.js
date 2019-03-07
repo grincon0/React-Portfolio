@@ -57,7 +57,7 @@ class FlexContainer extends Component {
 
     render = () => {
         return (
-            <div className={`d-flex contain flex-${this.state.direction} ${this.state.justify ? `justify-content-${this.state.justify}` : ""}`} {...this.props}>
+            <div className={`d-flex contain ${this.props.classes} flex-${this.state.direction} ${this.state.justify ? `justify-content-${this.state.justify}` : ""}`} >
                 {this.props.children}
             </div>
         );

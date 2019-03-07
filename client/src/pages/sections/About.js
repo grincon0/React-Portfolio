@@ -17,20 +17,25 @@ class About extends Component {
     render = () => {
         return (
             <div>
-                <FlexContainer>
-                    <Flexbox>
-                        <AnimatedText
-                            text="Testing New Div"
-                            anim="slide-right-quick"
-                        />
-                    </Flexbox>
-                    <Flexbox>
-                        <AnimatedText
-                            text="Testing 2nd Div"
-                            anim="slide-right-quick"
-                            delay={600}
-                        />
-                    </Flexbox>
+                <FlexContainer
+                classes="box-size"
+                direction="column"
+                justify="center"
+                >
+                        <Flexbox>
+                            <AnimatedText
+                                text="Testing New Div"
+                                anim="slide-right-quick"
+                            />
+                        </Flexbox>
+                        <Flexbox>
+                            <AnimatedText
+                                text="Testing 2nd Div"
+                                anim="slide-left-quick"
+                            />
+
+                        </Flexbox>
+             
                 </FlexContainer>
             </div>
         );
