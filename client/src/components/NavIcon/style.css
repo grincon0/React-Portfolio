@@ -75,6 +75,11 @@
     transform: translate3d(0,10px,0) rotate(45deg) scale(1.5);
 }
 
+#burger-icon.x-out:hover i:nth-child(n){
+    transition: transform .6s cubic-bezier(0.23, 1, 0.32, 1), background-color 1s cubic-bezier(0.23, 1, 0.32, 1);
+    background-color: rgb(219, 0, 0);
+}
+
 
 
 
