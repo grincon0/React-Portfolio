@@ -6,20 +6,21 @@ class Menu extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            placeholder: false
+            display : false
+
         }
     }
-/*     handleCollapse = () => {
-        if(!this.state.collapse){
-            this.setState({collapse: true});
-        }else{
-            this.setState({collapse: false});
-        }
+    componentDidMount = () => {
+            
     }
- */
     render = () => {
+        if(!this.state.display){
+            setTimeout(() => {
+                this.setState({display: true});
+            }, 500)
+        }
         return (
-            <nav id="nav-menu" className={`nav-block-flex ${this.props.collapseMenu ? "nav-menu-show" : ""}`}>
+            <nav id="nav-menu" className={`nav-block-flex ${this.props.collapseMenu ? "nav-menu-show" : ""} ${this.state.display ? "display-fix" : ""}`}>
                 <a href="#">Home</a>
                 <a href="#">About</a>
                 <a href="#">Projects</a>

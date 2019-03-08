@@ -13,10 +13,39 @@
     transition: transform 0.9s ease-in, height 0.3s cubic-bezier(.694,.048,.335,1);
 }
 
+#nav-menu a{
+    color:white;
+    font-size: 3.92345em;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 0;
+    display: none;
+    
+}
+
+#nav-menu.display-fix a{
+    display: inline;
+}
+
 .nav-menu-show{
     /* transition: transform 0.9s ease-in, height 0.3s cubic-bezier(.694,.048,.335,1); */
+    
     height: 100vh;
 }
+
+#nav-menu.nav-menu-show a{
+
+    transition: opacity 0.2s ease;
+    opacity: 1;
+    z-index: 100;
+}
+
+
+
+
+
+
 
 
 

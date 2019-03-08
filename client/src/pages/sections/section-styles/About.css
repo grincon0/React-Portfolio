@@ -17,3 +17,7 @@
 .overflow-fix{
     overflow: hidden;
 }
+
+/* #about{
+    z-index: 20;
+} */
