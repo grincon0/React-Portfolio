@@ -12,9 +12,8 @@ class NavIcon extends Component {
         }
     }
     componentDidMount = () => {
-        if (this.state.canReset) {
-            this.handleTransformReset();
-        }
+            
+        
     }
     componentWillUnmount = () => {
         if(this.state.canReset){
@@ -24,6 +23,7 @@ class NavIcon extends Component {
     }
     handleStateChange = () => {
         this.state.transform ? this.setState({ canReset: false, transform: false }) : this.setState({ canReset: true, transform: true });
+        this.handleTransformReset();
     }
     handleTransformReset = () => {
         
@@ -33,7 +33,7 @@ class NavIcon extends Component {
                 canReset: false,
                 transform: false
             })
-        }, 1001);
+        }, 901);
     }
     handleParentHover = () => {
         if(!this.state.hovering){
@@ -51,7 +51,11 @@ class NavIcon extends Component {
     }
     render = () => {
         return (
-            <div id="burger-icon" className={this.state.hovering ? "hover-burger": ""} onClick={this.handleStateChange} onMouseOver={this.handleParentHover} onMouseOut={this.removeParentHover}>
+            <div id="burger-icon" 
+            className={`${this.state.hovering ? "hover-burger": ""} ${this.state.transform ? "rotate-in" : ""}`}
+            onClick={this.handleStateChange} 
+            onMouseOver={this.handleParentHover} 
+            onMouseOut={this.removeParentHover}>
                 <i id="i-first" className={this.state.transform ? "" : ""}></i>
                 <i id="i-second" className={this.state.transform ? " " : ""}></i>
                 <i id="i-third" className={this.state.transform ? "" : ""}></i>
