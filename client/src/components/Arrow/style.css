@@ -1,0 +1,13 @@
+#arrow-box img{
+    position: absolute;
+    height:15px;
+    width: 15px;
+
+}
+
+#arrow-bow #arrow-bar{
+    position: absolute;
+    background-color: #fff;
+    height: 6px;
+    width:11px;
+}
