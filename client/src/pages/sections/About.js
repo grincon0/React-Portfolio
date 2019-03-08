@@ -31,7 +31,7 @@ class About extends Component {
     render = () => {
         return (
             <section id="ABOUT">
-                <div className="overflow-fix">
+                <div className="overflow-fix box-size">
                     <Menu collapseMenu={this.state.collapseMenu}/>
                     <FlexContainer
                         classes="nav-height-fix"
@@ -41,7 +41,7 @@ class About extends Component {
                         <NavIcon toggleMenu={this.toggleMenu} />
                     </FlexContainer>
                     <FlexContainer
-                        classes="box-size"
+                     
                         direction="column"
                         justify="center"
                     >
