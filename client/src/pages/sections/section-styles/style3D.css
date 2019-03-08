@@ -1,0 +1,60 @@
+.rotating-box{
+    width: 100vw;
+    height:100vh;
+    margin: 100px auto;
+    perspective: 800px;
+}
+
+/* Change width */
+.single-rb {
+    width: 400px;
+    color:#ffffff;
+    font-size: 60px;
+    text-align: center;
+}
+
+.single-rb div{ 
+    position: absolute;
+    width: 400px;
+    height:400px;
+}
+
+.front-side{
+    transform: translateZ(200px);
+}
+
+.back-side{
+    transform: rotateY(180deg)
+    translateZ(200px);
+    background: tomato;
+}
+
+.left-side{
+    transform: rotateY(-90deg)
+    translateX(200px);
+    background: tomato;
+    transform-origin: left;
+}
+
+.right-side{
+    transform: rotateY(-90deg)
+    translateX(200px);
+    background: tomato;
+    transform-origin: right;
+}
+
+/* only for testing */
+.top-side{
+    transform: rotateY(-90deg)
+    translateX(200px);
+    background: tomato;
+    transform-origin: top;
+}
+
+.bottom-side{
+    transform: rotateY(-90deg)
+    translateX(200px);
+    background: tomato;
+    transform-origin: bottom;
+}
+
