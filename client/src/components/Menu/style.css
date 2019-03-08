@@ -19,8 +19,9 @@
     text-decoration: none;
     opacity: 0;
     transition: opacity 0.2s ease;
-    z-index: 0;
+    z-index:5;
     display: none;
+    pointer-events: none;
     
 }
 
@@ -35,10 +36,29 @@
 }
 
 #nav-menu.nav-menu-show a{
-
+    pointer-events: auto;
     transition: opacity 0.2s ease;
     opacity: 1;
     z-index: 100;
+}
+
+
+#nav-menu i:nth-child(n){
+    content: "";
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    overflow: hidden;
+    width:0;
+    /* left: 0; */
+    height: 4px;
+    transition: width 0.5s 0.2s cubic-bezier(.694,.048,.335,1);
+}
+
+#nav-menu a:hover + i{
+    width: 25%;
+}
+
+#nav-menu::after{
+
 }
 
 

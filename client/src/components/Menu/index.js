@@ -10,9 +10,6 @@ class Menu extends Component {
 
         }
     }
-    componentDidMount = () => {
-            
-    }
     render = () => {
         if(!this.state.display){
             setTimeout(() => {
@@ -22,9 +19,13 @@ class Menu extends Component {
         return (
             <nav id="nav-menu" className={`nav-block-flex ${this.props.collapseMenu ? "nav-menu-show" : ""} ${this.state.display ? "display-fix" : ""}`}>
                 <a href="#">Home</a>
+                <i></i>
                 <a href="#">About</a>
+                <i></i>
                 <a href="#">Projects</a>
+                <i></i>
                 <a href="#">Contact</a>
+                <i></i>
             </nav>
         );
     }
