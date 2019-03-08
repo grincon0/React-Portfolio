@@ -1,0 +1,22 @@
+.nav-block-flex{
+    position: fixed;
+    display: flex;
+    background-color: rgb(99, 99, 99);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    left:0;
+    height: 0;
+    width: 100vw;
+    z-index: 100;
+    transition: transform 0.9s ease-in, height 0.3s cubic-bezier(.694,.048,.335,1);
+}
+
+.nav-menu-show{
+    /* transition: transform 0.9s ease-in, height 0.3s cubic-bezier(.694,.048,.335,1); */
+    height: 100vh;
+}
+
+
+

@@ -1,6 +1,7 @@
 #burger-icon{
     margin-top:1em;
     margin-right: 2em;
+    z-index: 200;
 }
 
 #burger-icon i{

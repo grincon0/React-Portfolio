@@ -34,6 +34,7 @@ class NavIcon extends Component {
     }
     handleStateChange = () => {
         console.log(this.state.clicked);
+        this.props.toggleMenu();
         if (this.state.clicked) {
             this.cancelAnim();
         }
