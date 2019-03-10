@@ -12,7 +12,7 @@ class App extends Component {
     return (
         <Wrapper>
           {/* <Test3D /> */}
-          <About />
+          <About /> 
         </Wrapper>
       
     );

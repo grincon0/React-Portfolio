@@ -1,13 +1,57 @@
 #arrow-box img{
     position: absolute;
-    height:15px;
-    width: 15px;
+    height:30px;
+    width: 30px;
 
 }
 
-#arrow-bow #arrow-bar{
+#arrow-bar{
+    content: "";
     position: absolute;
-    background-color: #fff;
-    height: 6px;
-    width:11px;
+    background-color: #ebebeb;
+    height: 2px;
+    width:33px;
+    border-radius: 3px;
+
+}
+
+#arrow-head{
+    transform: rotate(90deg);
+}
+#arrow-head i:nth-child(n){
+    background-color: #ebebeb;
+    position: absolute;
+    content: "";
+    height: 1.5px;
+    width:8px;
+    margin: 0;
+    transition: bottom 0.5s ease;
+
+}
+#arrow-head i:nth-child(1){
+   
+    transform: rotate(-45deg);
+   
+
+}
+#arrow-head i:nth-child(2){
+    transform: rotate(225deg);
+}
+
+#arrow-head.starting-point i:nth-child(1){
+    right:0.01px;
+    bottom:30px;
+
+}
+
+#arrow-head.starting-point i:nth-child(2){
+    bottom: 30px;
+}
+
+
+
+#arrow-head.hover-arrow i:nth-child(n){
+    transition: all 0.5s ease;
+    bottom: 40px;
+    
 }

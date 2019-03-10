@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AnimatedText from "../../components/AnimatedText/index";
+import Arrow from "../../components/Arrow/index";
 import Flexbox from "../../components/Flexbox/index";
 import FlexContainer from "../../components/FlexContainer/index";
 /* import OverlayBlock from "../../components/OverlayBlock/index"; */
@@ -32,6 +33,7 @@ class About extends Component {
         return (
             <section id="ABOUT">
                 <div className="overflow-fix box-size">
+                    
                     <Menu collapseMenu={this.state.collapseMenu}/>
                     <FlexContainer
                         classes="nav-height-fix"
@@ -58,6 +60,7 @@ class About extends Component {
                             />
 
                         </Flexbox>
+                        <Arrow />
                     </FlexContainer>
                 </div>
             </section>

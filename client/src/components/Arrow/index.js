@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Arrow from "../../assets/SVG/Icons/right-arrow-2.svg";
+import SVGArrow from "../../assets/SVG/Icons/right-arrow-2.svg";
 import "./style.css";
 
 class Arrow extends Component {
@@ -12,15 +12,20 @@ class Arrow extends Component {
         }
     }
     handleHover = () => {
+        let newState = {...this.state};
+        newState.hover = true;
+        this.setState(newState);
 
     }
     handleOut = () => {
-
+        let newState = {...this.state};
+        newState.hover = false;
+        this.setState(newState);
     }
     render = () => {
         return (
             <div id="arrow-box" className={`${this.state.hover ? "" : ""}`} onMouseOver={this.handleHover} onMouseOut={this.handleOut}>
-                <div id="arrow-head">
+                <div id="arrow-head" className={`starting-point ${this.state.hover ? "hover-arrow" : ""} `}>
                     <i></i>
                     <i></i>
                 </div>
