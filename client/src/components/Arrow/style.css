@@ -1,8 +1,31 @@
-#arrow-box img{
-    position: absolute;
-    height:30px;
-    width: 30px;
+#arrow-box{
+    height: 60px;
+    width:100px;
+    background-color:rgb(7, 70, 70);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+
+
+#arrow-box img{
+    position: relative;
+    height:15px;
+    width: 15px;
+    left:16px;
+    bottom: 2px;
+
+ 
+}
+
+#arrow-head.starting-point img{
+    transition: transform 0.6s ease;
+}
+
+#arrow-head.hover-arrow img{
+    transition: transform 0.6s ease;
+    transform: translateX(30px);
 }
 
 #arrow-bar{
@@ -15,10 +38,10 @@
 
 }
 
-#arrow-head{
+/* #arrow-head{
     transform: rotate(90deg);
-}
-#arrow-head i:nth-child(n){
+} */
+/* #arrow-head i:nth-child(n){
     background-color: #ebebeb;
     position: absolute;
     content: "";
@@ -54,4 +77,4 @@
     transition: all 0.5s ease;
     bottom: 40px;
     
-}
+} */
