@@ -1,10 +1,14 @@
 #arrow-box{
+    position: relative;
     height: 60px;
     width:100px;
     background-color:rgb(7, 70, 70);
     display: flex;
     align-items: center;
     justify-content: center;
+    bottom: 15%;
+    left: calc(45% - 20px);
+
 }
 
 
@@ -45,11 +49,11 @@
 } */
 
 .hover-bar-out{
-    animation: testWidth-out 1000ms cubic-bezier(1, 0, 0, 1) forwards;
+    animation: testWidth-out 0.6s cubic-bezier(0.6, 1, 0.6, 1) forwards;
 }
 
 .hover-bar-in{
-    animation: testWidth-in 1000ms cubic-bezier(1, 0, 0, 1) forwards;
+    animation: testWidth-in 0.6s cubic-bezier(0.6, 1, 0.6, 1) forwards;
 }
 
 /* Start and Reset animations */
@@ -60,24 +64,24 @@
         width:33px;
     }
     50%{
-        width: 63px;
+        width: 50px;
         
     }
     100%{
-        transform: translateX(110px);
-        width:25px;
+        transform: translateX(30px);
+        width:30px;
     }
 }
 
 @keyframes testWidth-in{
 
     0%{
-        transform: translateX(110px);
-        width:25px;
+        transform: translateX(30px);
+        width:30px;
     }
     50%{
         
-        width: 63px;
+        width: 50px;
         
     }
     100%{
