@@ -35,8 +35,58 @@
     height: 2px;
     width:33px;
     border-radius: 3px;
-
+    transition: width 600ms cubic-bezier(1, 0, 0, 1);
 }
+
+
+/* #arrow-box.hover-box i{
+    transition: width 600ms cubic-bezier(1, 0, 0, 1);
+    width:63px;
+} */
+
+.hover-bar-out{
+    animation: testWidth-out 1000ms cubic-bezier(1, 0, 0, 1) forwards;
+}
+
+.hover-bar-in{
+    animation: testWidth-in 1000ms cubic-bezier(1, 0, 0, 1) forwards;
+}
+
+/* Start and Reset animations */
+
+@keyframes testWidth-out{
+
+    0%{
+        width:33px;
+    }
+    50%{
+        width: 63px;
+        
+    }
+    100%{
+        transform: translateX(110px);
+        width:25px;
+    }
+}
+
+@keyframes testWidth-in{
+
+    0%{
+        transform: translateX(110px);
+        width:25px;
+    }
+    50%{
+        
+        width: 63px;
+        
+    }
+    100%{
+        transform: translateX(0);
+        width:33px;
+    }
+}
+
+
 
 /* #arrow-head{
     transform: rotate(90deg);

@@ -24,12 +24,12 @@ class Arrow extends Component {
     }
     render = () => {
         return (
-            <div id="arrow-box" className={`${this.state.hover ? "" : ""}`} onMouseOver={this.handleHover} onMouseOut={this.handleOut}>
+            <div id="arrow-box" className={`${this.state.hover ? "hover-box" : ""}`} onMouseOver={this.handleHover} onMouseOut={this.handleOut}>
                 <div id="arrow-head" className={`starting-point ${this.state.hover ? "hover-arrow" : ""} `}>
                     <img src={SVGArrow} alt="arrow" />
                 </div>
 
-                <i id="arrow-bar"></i>
+                <i id="arrow-bar" className={`${this.state.hover ? "hover-bar-out" : "hover-bar-in"}`}></i>
             </div>
         );
     }

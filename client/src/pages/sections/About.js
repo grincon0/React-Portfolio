@@ -19,12 +19,12 @@ class About extends Component {
         }
     }
     toggleMenu = () => {
-        if(!this.state.collapseMenu){
-            let newState = {...this.state};
+        if (!this.state.collapseMenu) {
+            let newState = { ...this.state };
             newState.collapseMenu = true;
             this.setState(newState);
-        }else{
-            let newState = {...this.state};
+        } else {
+            let newState = { ...this.state };
             newState.collapseMenu = false;
             this.setState(newState);
         }
@@ -33,8 +33,8 @@ class About extends Component {
         return (
             <section id="ABOUT">
                 <div className="overflow-fix box-size">
-                    
-                    <Menu collapseMenu={this.state.collapseMenu}/>
+
+                    <Menu collapseMenu={this.state.collapseMenu} />
                     <FlexContainer
                         classes="nav-height-fix"
                         direction="row"
@@ -43,7 +43,7 @@ class About extends Component {
                         <NavIcon toggleMenu={this.toggleMenu} />
                     </FlexContainer>
                     <FlexContainer
-                     
+
                         direction="column"
                         justify="center"
                     >
