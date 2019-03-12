@@ -1,3 +1,15 @@
+@font-face {
+    font-family: GilroyBold;
+    font-weight: bold;
+    src: url("../../assets/fonts/Gilroy-ExtraBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: GilroyLight;
+    src: url("../../assets/fonts/Gilroy-Light.otf") format("opentype");
+}
+
+
 .parent-box{
     position:relative;
     overflow: hidden;
@@ -61,3 +73,29 @@
 .text-box-cls{
     margin-left: 45px;
 }
+
+#text-box h1{
+    font-family: GilroyBold;
+}
+
+#text-box{
+    position: relative;
+    top:50px;
+}
+
+#text-box.text-box-start p, #text-box.text-box-start h1 {
+    transition: opacity 2s ease;
+    opacity: 0;
+}
+
+#overlay-parent.show-block-text #text-box p:nth-child(n){
+    opacity: 1;
+}
+
+#overlay-parent.show-block-text #text-box h1:nth-child(n){
+    opacity: 1;
+}
+
+/* #content:hover p{
+    opacity: 1;
+} */

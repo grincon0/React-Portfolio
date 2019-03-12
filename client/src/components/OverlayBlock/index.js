@@ -6,7 +6,8 @@ class OverlayBlock extends Component {
         super(props);
         this.state = {
             test: "text",
-            show: false
+            show: false,
+            hover: false
         }
     }
     componentDidMount = () => {
@@ -17,13 +18,19 @@ class OverlayBlock extends Component {
     componentWillUnmount = () => {
         clearTimeout(this.timerTransform);
     }
+    handleHover = () => {
+        this.setState({hover:true});
+    }
+    handleOut = () => {
+        this.setState({hover:false});
+    }
     render = () => {
         return (
-            <div className="parent-box">
+            <div id="overlay-parent" className={`parent-box ${this.state.hover? "show-block-text" : ""}`} onMouseOver={this.handleHover} onMouseOut={this.handleOut}>
                 <div className={`overlay-content o-full-size overlay-start ${this.props.classes ? this.props.classes : ""} ${this.state.show ? this.props.showClass : ""}`}></div>
-                <div className={`overlay block-top ${this.props.color ? this.props.color : ""}`}>
+                <div id="content" className={`overlay block-top ${this.props.color ? this.props.color : ""} `}>
 
-                    <div id="text-box" className="text-box-cls">
+                    <div id="text-box" className="text-box-cls text-box-start">
                         <p>{this.props.appType}</p>
                         <h1>{this.props.headline}</h1>
                         <p>{this.props.text}</p>
