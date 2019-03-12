@@ -25,7 +25,9 @@ class ProjectContent extends Component {
                     <FlexBox
                     classes="proj-box"
                     >
-                        <OverlayBlock />
+                        <OverlayBlock
+                        classes="pet-perfect"
+                        />
                         <OverlayBlock />
                         <OverlayBlock />
                         <OverlayBlock />

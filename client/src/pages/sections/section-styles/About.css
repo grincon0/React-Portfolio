@@ -18,6 +18,10 @@
     overflow: hidden;
 }
 
+.overflowX-fix{
+    overflow-x: hidden;
+}
+
 .show-trans{
     position: absolute;
     color: white;

@@ -12,7 +12,7 @@ class OverlayBlock extends Component{
     render = () => {
         return(
             <div className="parent-box">
-                <img src="https://picsum.photos/200/300" alt="eee"></img>
+                <div className={`overlay-content o-full-size ${this.props.classes ? this.props.classes : ""}`}></div>
                 <div className="overlay right"></div>
             </div>
 

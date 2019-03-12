@@ -26,6 +26,17 @@
     bottom 0.2s cubic-bezier(.694,.048,.335,1), left 0.2s cubic-bezier(.694,.048,.335,1);
 }
 
+.overlay-content{
+    content:"";
+}
+
+
+.o-full-size{
+    background-color: #4facfe;
+    height: 360px;
+    width: 31vw;
+}
+
 .right{
     right:200%;
     left:-100%;

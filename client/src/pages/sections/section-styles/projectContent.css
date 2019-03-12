@@ -1,4 +1,11 @@
 .proj-box{
     margin-left:1rem;
     margin-right:1rem;
+    flex-wrap: wrap;
+}
+
+
+.pet-perfect{
+    background-image: url("../../../assets/images/peanutSmile.jpg");
+    background-size: cover;
 }

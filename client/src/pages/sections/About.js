@@ -17,9 +17,11 @@ class About extends Component {
         super(props);
         this.state = {
             hidden: true,
-            collapseMenu: false
+            collapseMenu: false,
+            section: '',
         }
     }
+
     toggleMenu = () => {
         if (!this.state.collapseMenu) {
             let newState = { ...this.state };
@@ -34,7 +36,7 @@ class About extends Component {
     render = () => {
         return (
             <section id="ABOUT">
-                <div className="overflow-fix box-size">
+                <div className={`box-size ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"}`}>
                     <Menu collapseMenu={this.state.collapseMenu} />
                     <FlexContainer classes="nav-height-fix" direction="row" justify="end">
                         <NavIcon toggleMenu={this.toggleMenu} />
