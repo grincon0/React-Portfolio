@@ -60,6 +60,14 @@ class About extends Component {
                             />
 
                         </Flexbox>
+{/*                         <AnimatedText
+                            classes="show-trans "
+                            transform={true}
+                            text="portfolio"
+                            hover={this.props.}
+                            hoverInClass="left-trans-in"
+                            hoverOutClass="left-trans-out"
+                        /> */}
                         <Arrow />
                     </FlexContainer>
                 </div>

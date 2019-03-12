@@ -35,6 +35,18 @@
         animation: slide-l 0.6s cubic-bezier(.694,.048,.335,1) forwards;
 }
 
+.trans-short{
+    transition: all 0.6s ease;
+    
+}
+
+.slide-right-short{
+    
+}
+
+.slide-left-short{
+
+}
 
 
 @keyframes slide-r{

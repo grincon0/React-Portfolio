@@ -8,14 +8,17 @@ class AnimatedText extends Component {
         this.state = {
             animation: '',
             animationPlay: false,
+            transform: false,
+            hover: false
         }
     }
 
     componentDidMount = () => {
-        this.timerID = setTimeout(() => {
-            this.handleGetAnimation();
-        }, 1000 + (this.props.delay || 0));
-
+        if(!this.props.transform){
+            this.timerID = setTimeout(() => {
+                this.handleGetAnimation();
+            }, 1000 + (this.props.delay || 0));
+        }
     }
     componentWillUnmount = () => {
         clearTimeout(this.timerID);
@@ -63,7 +66,7 @@ class AnimatedText extends Component {
     render = () => {
         return (
             <div>
-                <p className={"default-text " + (this.state.animation ? this.state.animation : "") + " " +  this.props.classes}>{this.props.text}</p>
+                <p className={"default-text " + (this.state.animation ? this.state.animation : "") + " " +  this.props.classes + (this.props.hover ? this.props.hoverInClass : this.props.hoverOutClass)}>{this.props.text}</p>
             </div>
         );
     }
