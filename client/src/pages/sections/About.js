@@ -41,7 +41,8 @@ class About extends Component {
                     <FlexContainer classes="nav-height-fix" direction="row" justify="end">
                         <NavIcon toggleMenu={this.toggleMenu} />
                     </FlexContainer>
-                    <FlexContainer direction="column" justify="center">
+                    {/* comp below needs direction column and justify center if rednering AboutContent */}
+                    <FlexContainer>
                         {/* <AboutContent /> */}
                         <ProjectContent />
                         <Arrow />

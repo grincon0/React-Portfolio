@@ -1,12 +1,60 @@
+.coral{
+    background-color: #FF6F61;
+}
+
+.violet{
+    background-color: #6b5b95;
+}
+
+.chili{
+    background-color: #9b1b30;
+}
+
+.eclipse{
+    background-color: #343148;
+}
+
+.quetzal{
+    background-color: #006e6d;
+}
+
+.mist{
+    background-color: #B4B7BA;
+}
+
+.greenery{
+    background-color: #92b558;
+}
+
+.spruce{
+    background-color: #005960;
+}
+
+.meadow{
+    background-color: #006e51;
+}
+
+.snorkel{
+    background-color: #034f84;
+}
+
+.buttercup{
+    background-color: #fae03c;
+}
+
+
+
+
+
 .proj-box{
     margin-left:1rem;
     margin-right:1rem;
     flex-wrap: wrap;
 }
 
-.align-fix{
+/* .align-fix{
     align-self: auto;
-}
+} */
 
 
 .pet-perfect{

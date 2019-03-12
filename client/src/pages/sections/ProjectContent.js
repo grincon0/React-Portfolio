@@ -20,23 +20,47 @@ class ProjectContent extends Component {
                 <FlexContainer
                     direction="row"
                     justify="start"
-                    
                 >
                     <FlexBox
-                    classes="proj-box"
+                        classes="proj-box"
                     >
                         <OverlayBlock
-                        classes="pet-perfect align-fix"
+                            classes="pet-perfect align-fix"
+                            color="coral"
+
                         />
                         <OverlayBlock
-                        classes="random-photo align-fix"
-                         />
-                        <OverlayBlock
-                        classes="random-photo-2 align-fix"
-                        
+                            classes="random-photo align-fix"
+                            color="violet"
                         />
                         <OverlayBlock
-                        classes="random-photo-3 align-fix"
+                            classes="random-photo-2 align-fix"
+                            color="chili"
+
+                        />
+                        <OverlayBlock
+                            classes="random-photo-2 align-fix"
+                            color="quetzal"
+                        />
+                        <OverlayBlock
+                            classes="random-photo align-fix"
+                            color="greenery"
+                        />
+                        <OverlayBlock
+                            classes="random-photo-3 align-fix"
+                            color="snorkel"
+                        />
+                        <OverlayBlock
+                            classes="random-photo-2 align-fix"
+                            color="buttercup"
+                        />
+                        <OverlayBlock
+                            classes="random-photo align-fix"
+                            color="eclipse"
+                        />
+                        <OverlayBlock
+                            classes="random-photo-3 align-fix"
+                            color="meadow"
                         />
 
                     </FlexBox>

@@ -9,7 +9,6 @@
 }
 
 .overlay{
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
     position: absolute;
     top:0;
     right:0;
@@ -19,16 +18,16 @@
     width:100%;
 
     -moz-transition: top 0.4s cubic-bezier(0.7, 0, 0.3, 1), right 0.4s cubic-bezier(0.7, 0, 0.3, 1), 
-    bottom 0.4s cubic-bezier(0.7, 0, 0.3, 1), left 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+    bottom 0.4s cubic-bezier(0.7, 0, 0.3, 1), left 0.4s cubic-bezier(0.7, 0, 0.3, 1), transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
     -webkit-transition: top 0.4s cubic-bezier(0.7, 0, 0.3, 1), right 0.4s cubic-bezier(0.7, 0, 0.3, 1), 
-    bottom 0.4s cubic-bezier(0.7, 0, 0.3, 1), left 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+    bottom 0.4s cubic-bezier(0.7, 0, 0.3, 1), left 0.4s cubic-bezier(0.7, 0, 0.3, 1), transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
     transition: top 0.4s cubic-bezier(0.7, 0, 0.3, 1), right 0.4s cubic-bezier(0.7, 0, 0.3, 1), 
-    bottom 0.4s cubic-bezier(0.7, 0, 0.3, 1), left 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+    bottom 0.4s cubic-bezier(0.7, 0, 0.3, 1), left 0.4s cubic-bezier(0.7, 0, 0.3, 1), transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
 
-    transform: matrix(1, 0, 0, 1, 0, 0);
-
-    
+    /* transform: skewY(10deg); */ 
 }
+
+
 
 .overlay-content{
     content:"";
