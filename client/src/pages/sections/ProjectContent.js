@@ -10,11 +10,20 @@ class ProjectContent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            placeholder: ''
+            placeholder: '',
+            loaded:false
         }
     }
+     componentDidMount = () => {
 
+
+    } 
     render = () => {
+      /*   if(!this.state.loaded){
+            this.setState({loaded: true});
+        }
+         */
+
         return (
             <section id="PROJECTS">
                 <FlexContainer
@@ -22,45 +31,63 @@ class ProjectContent extends Component {
                     justify="start"
                 >
                     <FlexBox
+                    id="Items"
                         classes="proj-box"
                     >
                         <OverlayBlock
-                            classes="pet-perfect align-fix"
+                            classes={`pet-perfect align-fix `}
+                            showClass="overlay-end"
                             color="coral"
 
                         />
                         <OverlayBlock
-                            classes="random-photo align-fix"
+                            classes={`random-photo align-fix`}
+                            showClass="overlay-end"
                             color="violet"
+                            delay={100}
                         />
                         <OverlayBlock
-                            classes="random-photo-2 align-fix"
+                            classes={`random-photo-2 align-fix`}
+                            showClass="overlay-end"
                             color="chili"
+                            delay={200}
 
                         />
                         <OverlayBlock
-                            classes="random-photo-2 align-fix"
+                            classes={`random-photo-2 align-fix`}
+                            showClass="overlay-end"
                             color="quetzal"
+                            delay={300}
                         />
                         <OverlayBlock
-                            classes="random-photo align-fix"
+                            classes={`random-photo align-fix`}
+                            showClass="overlay-end"
                             color="greenery"
+                            delay={400}
                         />
                         <OverlayBlock
-                            classes="random-photo-3 align-fix"
+                            classes={`random-photo-3 align-fix`}
+                            showClass="overlay-end"
                             color="snorkel"
+                            delay={500}
                         />
                         <OverlayBlock
-                            classes="random-photo-2 align-fix"
+                            classes={`random-photo-2 align-fix`}
+                            showClass="overlay-end"
                             color="buttercup"
+                            delay={600}
                         />
                         <OverlayBlock
-                            classes="random-photo align-fix"
+                            classes={`random-photo align-fix`}
+                            showClass="overlay-end"
                             color="eclipse"
+                            delay={700}
                         />
                         <OverlayBlock
-                            classes="random-photo-3 align-fix"
+                            classes={`random-photo-3 align-fix`}
+                            showClass="overlay-end"
                             color="meadow"
+                            delay={800}
                         />
 
                     </FlexBox>

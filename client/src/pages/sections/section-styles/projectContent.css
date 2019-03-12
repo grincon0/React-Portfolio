@@ -78,3 +78,14 @@
     background-image: url("https://picsum.photos/200/300?image=44");
     background-size: 100% 100%;
 }
+
+.overlay-start{
+    opacity: 0;
+    transition: transform .5s ease-in;
+    transform: translateY(400px);
+}
+.overlay-end{
+    transition: transform .5s ease-out, opacity 1s ease-out;
+    opacity: 1;
+    transform: translateY(0px);
+}
