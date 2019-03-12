@@ -21,7 +21,10 @@ class OverlayBlock extends Component{
         return(
             <div className="parent-box">
                 <div className={`overlay-content o-full-size overlay-start ${this.props.classes ? this.props.classes : ""} ${this.state.show? this.props.showClass : ""}`}></div>
-                <div className={`overlay block-top ${this.props.color ? this.props.color : ""}`}></div>
+                <div className={`overlay block-top ${this.props.color ? this.props.color : ""}`}>
+                <h1>{this.props.headline}</h1>
+                <p>{this.props.text}</p>
+                </div>
             </div>
 
         );

@@ -38,6 +38,8 @@ class ProjectContent extends Component {
                             classes={`pet-perfect align-fix `}
                             showClass="overlay-end"
                             color="coral"
+                            headline="Pet-Perfect"
+                            text="The perfect site for the passionate pet owner"
 
                         />
                         <OverlayBlock
