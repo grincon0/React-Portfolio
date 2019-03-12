@@ -21,18 +21,18 @@
 .show-trans{
     position: absolute;
     color: white;
-    transition: all 0.6s ease;
-    bottom:20px;
+    transition: transform 0.8s ease, opacity 0.4s ease;
+    bottom:7px;
 }
 
 .left-trans-in{
     opacity: 1;
-    transform: translateX(-30px); 
+    transform: translateX(-50px); 
 }
 
 .left-trans-out{
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(50px);
 }
 
 /* #about{
