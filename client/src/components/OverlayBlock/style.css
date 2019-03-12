@@ -56,3 +56,8 @@
 .parent-box:hover .block-top{
     top:0;
 }
+
+
+.text-box-cls{
+    margin-left: 45px;
+}
