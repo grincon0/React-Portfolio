@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AboutContent from "./AboutContent";
 import AnimatedText from "../../components/AnimatedText/index";
 import Arrow from "../../components/Arrow/index";
 import Flexbox from "../../components/Flexbox/index";
@@ -47,7 +48,8 @@ class About extends Component {
                         direction="column"
                         justify="center"
                     >
-                        <Flexbox>
+                    <AboutContent />
+                        {/* <Flexbox>
                             <AnimatedText
                                 text="Testing New Div"
                                 anim="slide-right-quick"
@@ -59,7 +61,7 @@ class About extends Component {
                                 anim="slide-left-quick"
                             />
 
-                        </Flexbox>
+                        </Flexbox> */}
                         <Arrow />
                     </FlexContainer>
                 </div>
