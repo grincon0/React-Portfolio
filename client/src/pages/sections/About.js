@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AboutContent from "./AboutContent";
+import ProjectContent from "./ProjectContent";
 import AnimatedText from "../../components/AnimatedText/index";
 import Arrow from "../../components/Arrow/index";
 import Flexbox from "../../components/Flexbox/index";
@@ -34,34 +35,13 @@ class About extends Component {
         return (
             <section id="ABOUT">
                 <div className="overflow-fix box-size">
-
                     <Menu collapseMenu={this.state.collapseMenu} />
-                    <FlexContainer
-                        classes="nav-height-fix"
-                        direction="row"
-                        justify="end"
-                    >
+                    <FlexContainer classes="nav-height-fix" direction="row" justify="end">
                         <NavIcon toggleMenu={this.toggleMenu} />
                     </FlexContainer>
-                    <FlexContainer
-
-                        direction="column"
-                        justify="center"
-                    >
-                    <AboutContent />
-                        {/* <Flexbox>
-                            <AnimatedText
-                                text="Testing New Div"
-                                anim="slide-right-quick"
-                            />
-                        </Flexbox>
-                        <Flexbox>
-                            <AnimatedText
-                                text="Testing 2nd Div"
-                                anim="slide-left-quick"
-                            />
-
-                        </Flexbox> */}
+                    <FlexContainer direction="column" justify="center">
+                        {/* <AboutContent /> */}
+                        <ProjectContent />
                         <Arrow />
                     </FlexContainer>
                 </div>

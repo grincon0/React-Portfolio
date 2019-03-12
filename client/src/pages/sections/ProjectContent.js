@@ -16,8 +16,23 @@ class ProjectContent extends Component {
 
     render = () => {
         return (
-            <section>
+            <section id="PROJECTS">
+                <FlexContainer
+                    direction="row"
+                    justify="start"
+                    
+                >
+                    <FlexBox
+                    classes="proj-box"
+                    >
+                        <OverlayBlock />
+                        <OverlayBlock />
+                        <OverlayBlock />
+                        <OverlayBlock />
 
+                    </FlexBox>
+
+                </FlexContainer>
             </section>
         );
     }

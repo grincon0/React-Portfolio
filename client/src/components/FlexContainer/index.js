@@ -49,6 +49,7 @@ class FlexContainer extends Component {
                 temp["justify"] = this.props.justify;
                 break;
             default:
+            temp["justify"] = 'start';
                 break;
         }
 
