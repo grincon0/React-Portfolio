@@ -18,12 +18,16 @@
     overflow: hidden;
     width:100%;
 
-    -moz-transition: top 0.2s cubic-bezier(.694,.048,.335,1), right 0.2s cubic-bezier(.694,.048,.335,1), 
-    bottom 0.2s cubic-bezier(.694,.048,.335,1), left 0.2s cubic-bezier(.694,.048,.335,1);
-    -webkit-transition: top 0.2s cubic-bezier(.694,.048,.335,1), right 0.2s cubic-bezier(.694,.048,.335,1), 
-    bottom 0.2s cubic-bezier(.694,.048,.335,1), left 0.2s cubic-bezier(.694,.048,.335,1);
-    transition: top 0.2s cubic-bezier(.694,.048,.335,1), right 0.2s cubic-bezier(.694,.048,.335,1), 
-    bottom 0.2s cubic-bezier(.694,.048,.335,1), left 0.2s cubic-bezier(.694,.048,.335,1);
+    -moz-transition: top 0.4s cubic-bezier(0.7, 0, 0.3, 1), right 0.4s cubic-bezier(0.7, 0, 0.3, 1), 
+    bottom 0.4s cubic-bezier(0.7, 0, 0.3, 1), left 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+    -webkit-transition: top 0.4s cubic-bezier(0.7, 0, 0.3, 1), right 0.4s cubic-bezier(0.7, 0, 0.3, 1), 
+    bottom 0.4s cubic-bezier(0.7, 0, 0.3, 1), left 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+    transition: top 0.4s cubic-bezier(0.7, 0, 0.3, 1), right 0.4s cubic-bezier(0.7, 0, 0.3, 1), 
+    bottom 0.4s cubic-bezier(0.7, 0, 0.3, 1), left 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+
+    transform: matrix(1, 0, 0, 1, 0, 0);
+
+    
 }
 
 .overlay-content{

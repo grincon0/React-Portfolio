@@ -26,11 +26,18 @@ class ProjectContent extends Component {
                     classes="proj-box"
                     >
                         <OverlayBlock
-                        classes="pet-perfect"
+                        classes="pet-perfect align-fix"
                         />
-                        <OverlayBlock />
-                        <OverlayBlock />
-                        <OverlayBlock />
+                        <OverlayBlock
+                        classes="random-photo align-fix"
+                         />
+                        <OverlayBlock
+                        classes="random-photo-2 align-fix"
+                        
+                        />
+                        <OverlayBlock
+                        classes="random-photo-3 align-fix"
+                        />
 
                     </FlexBox>
 

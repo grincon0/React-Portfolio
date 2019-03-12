@@ -4,8 +4,29 @@
     flex-wrap: wrap;
 }
 
+.align-fix{
+    align-self: auto;
+}
+
 
 .pet-perfect{
     background-image: url("../../../assets/images/peanutSmile.jpg");
     background-size: cover;
+}
+
+.random-photo{
+    background-image: url("https://picsum.photos/200/300/?random");
+    background-size: cover;
+}
+.random-photo-2{
+    background-image: url("https://picsum.photos/200/300?image=0");
+    background-size: 100% 100%;
+}
+.random-photo-3{
+    background-image: url("https://picsum.photos/200/300?image=22");
+    background-size: 100% 100%;
+}
+.random-photo-4{
+    background-image: url("https://picsum.photos/200/300?image=44");
+    background-size: 100% 100%;
 }
