@@ -43,12 +43,18 @@ class ProjectContent extends Component {
                             text="The perfect site for the passionate pet owner"
                             pColorChange="buttercup-text"
                             h2ColorChange="eclipse-text"
+                            
                         />
                         <OverlayBlock
                             classes={`random-photo align-fix`}
                             showClass="overlay-end"
                             color="violet"
                             delay={100}
+                            appType="Augmented Reality Mobile App"
+                            headline="Ad-Vision."
+                            text="Magical AR app that reads targets and returns info on screen"
+                            pColorChange="violet-text-header"
+                            h1ColorChange="buttercup-text"
                         />
                         <OverlayBlock
                             classes={`random-photo-2 align-fix`}
