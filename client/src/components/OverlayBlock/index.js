@@ -38,9 +38,9 @@ class OverlayBlock extends Component {
                     <div id="text-box" className="text-box-cls text-box-start">
                     </div>
                 </div>
-                <div id="overlay-info" className={`pos-start headline ${this.state.hover ? "move-headline" : ""}`}>
-                    <p className={`start-text-color ${this.state.hover ? this.props.pColorChange : ""}`}>{this.props.appType}</p>
-                    <h1 className={`start-text-color ${this.state.hover ? this.props.h1ColorChange : ""}`}>{this.props.headline}</h1>
+                <div id="overlay-info" className={`pos-start headline ${this.state.hover ? "move-headline" : ""} ${this.state.show ? "pos-end pos-show-text" : ""}`}>
+                    <p className={`start-text-color ${this.state.hover ? this.props.pColorChange : ""} ${this.state.show ? "pos-show-text" : ""}`}>{this.props.appType}</p>
+                    <h1 className={`start-text-color ${this.state.hover ? this.props.h1ColorChange : ""} `}>{this.props.headline}</h1>
                     <h2 className={`hidden-text overlay-subtitle ${this.state.hover ? "show-text-o" : ""} ${this.props.h2ColorChange}`}>{this.props.text}</h2>
 
                 </div>

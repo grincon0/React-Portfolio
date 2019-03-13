@@ -124,16 +124,17 @@
 
 
 
+.tiny-flex{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .proj-box{
     margin-left:2rem;
     margin-right:1rem;
     flex-wrap: wrap;
 }
-
-/* .align-fix{
-    align-self: auto;
-} */
 
 
 .pet-perfect{
@@ -160,11 +161,11 @@
 
 .overlay-start{
     opacity: 0;
-    transition: transform .5s ease-in;
-    transform: translateY(400px);
+    transition: transform .9s ease-in;
+    transform: translateY(500px);
 }
 .overlay-end{
-    transition: transform .5s ease-out, opacity 1s ease-out;
+    transition: transform .9s ease-out, opacity 1s ease-out;
     opacity: 1;
     transform: translateY(0px);
 }

@@ -17,21 +17,13 @@ class AnimatedText extends Component {
         if(!this.props.transform){
             this.timerID = setTimeout(() => {
                 this.handleGetAnimation();
-            }, 1000 + (this.props.delay || 0));
+            }, 10 + (this.props.delay || 0));
         }
     }
     componentWillUnmount = () => {
         clearTimeout(this.timerID);
     }
     handleGetAnimation = () => {
-        /*         if(this.props.anim === "slide-right"){
-                        this.setState({
-                            animation: this.props.anim,
-                            animationPlay: true
-                        });
-                }else{
-                    console.log('no');
-                } */
         switch (this.props.anim) {
             case "slide-right":
                 this.setState({

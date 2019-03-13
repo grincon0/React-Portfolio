@@ -13,13 +13,13 @@
 /*     -webkit-transition: -webkit-translate .5s .5s ease-in forwards;
     -ms-transition: -ms-translate .5s .5s ease-in forwards;
     transition: translate .5s .5s ease-in forwards;   */
-    animation: slide-r 3s  2s ease forwards;
+    animation: slide-r 3s  ease forwards;
 }
 .slide-left{
     /*     -webkit-transition: -webkit-translate .5s .5s ease-in forwards;
         -ms-transition: -ms-translate .5s .5s ease-in forwards;
         transition: translate .5s .5s ease-in forwards;   */
-        animation: slide-l 3s  2s ease forwards;
+        animation: slide-l 3s  ease forwards;
 }
 
 .slide-right-quick{
