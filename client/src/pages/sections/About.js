@@ -23,6 +23,10 @@ class About extends Component {
     }
     testLoader = () => {
         document.body.className += 'page-is-changing';
+        setTimeout(()=>{
+            document.body.className = '';
+        },1000)
+        
     }
     toggleMenu = () => {
         if (!this.state.collapseMenu) {

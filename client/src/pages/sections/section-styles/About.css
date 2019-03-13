@@ -48,32 +48,36 @@ body::after, body::before{
     width:100%;
     position: fixed;
     left:0;
-    z-index: 999;
-    background-color: aliceblue;
+    z-index: 990;
+    background-color: rgb(8, 27, 110);
     transition: all 0.5s ease;
 }
 
 body::before{
     top:0;
-    transform: translateY(-100%);
+    transform: translateX(-100%);
 }
 
 body::after{
     bottom: 0;
-    transform: translateY(100%);
+    transform: translateX(100%);
 }
 
 body.page-is-changing::after, body.page-is-changing::before{
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
 .cd-loading-bar {
+    content: "";
+    background-color: blue;
     position: fixed;
     height: 2px;
     width: 90%;
+    z-index: 995;
 }
 
 .cd-loading-bar::before{
+    background-color: red;
     position: absolute;
     top:0;
     left:0;
@@ -81,6 +85,7 @@ body.page-is-changing::after, body.page-is-changing::before{
     width:100%;
     transform: scaleX(0);
     transform-origin: left center;
+    z-index: 995;
 }
 
 .page-is-changing .cd-loading-bar::before{
