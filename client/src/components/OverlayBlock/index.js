@@ -25,6 +25,7 @@ class OverlayBlock extends Component {
         this.setState({ hover: false });
     }
     render = () => {
+
         return (
             <div id="overlay-parent" className={`parent-box ${this.state.hover ? "show-block-text" : ""}`} onMouseOver={this.handleHover} onMouseOut={this.handleOut}>
 
@@ -38,9 +39,9 @@ class OverlayBlock extends Component {
                     </div>
                 </div>
                 <div id="overlay-info" className={`pos-start headline ${this.state.hover ? "move-headline" : ""}`}>
-                    <p>{this.props.appType}</p>
-                    <h1>{this.props.headline}</h1>
-                    <h2 className={`hidden-text overlay-subtitle ${this.state.hover ? "show-text-o" : ""}`}>{this.props.text}</h2>
+                    <p className={`start-text-color ${this.state.hover ? this.props.pColorChange : ""}`}>{this.props.appType}</p>
+                    <h1 className={`start-text-color ${this.state.hover ? this.props.h1ColorChange : ""}`}>{this.props.headline}</h1>
+                    <h2 className={`hidden-text overlay-subtitle ${this.state.hover ? "show-text-o" : ""} ${this.props.h2ColorChange}`}>{this.props.text}</h2>
 
                 </div>
             </div>

@@ -41,7 +41,8 @@ class ProjectContent extends Component {
                             appType="Website"
                             headline="Pet-Perfect."
                             text="The perfect site for the passionate pet owner"
-
+                            pColorChange="buttercup-text"
+                            h2ColorChange="eclipse-text"
                         />
                         <OverlayBlock
                             classes={`random-photo align-fix`}
