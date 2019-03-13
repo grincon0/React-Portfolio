@@ -9,6 +9,12 @@
     src: url("../../assets/fonts/Gilroy-Light.otf") format("opentype");
 }
 
+@font-face {
+    font-family: LeagueSpartan;
+    font-weight: bold;
+    src: url("../../assets/fonts/LeagueSpartan-Bold.otf") format("opentype");
+}
+
 
 .parent-box{
     position:relative;
@@ -69,6 +75,53 @@
     top:0;
 }
 
+.pos-start{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color:white;
+  
+    margin-left:40px;
+}
+
+.headline{
+    transition: all 0.5s ease;
+    top:200px;
+}
+
+
+.headline p{
+    transition: transform 0.5s ease;
+}
+
+.headline h1{
+    transition: transform 0.5s ease;
+}
+
+.hidden-text{
+    opacity: 0;
+    transform: translateY(200px);
+}
+
+.overlay-subtitle{
+    font-weight: bold;
+    transition: transform 0.5s ease, opacity 1s ease;
+}
+
+.move-headline{
+    transition: transform 0.5s ease;
+    transform: translateY(-200px);
+}
+
+.show-text-o{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pos-start h1{
+    font-family: LeagueSpartan;
+}
+
 
 .text-box-cls{
     margin-left: 45px;
@@ -83,7 +136,7 @@
     top:50px;
 }
 
-#text-box.text-box-start p, #text-box.text-box-start h1 {
+/* #text-box.text-box-start p, #text-box.text-box-start h1 {
     transition: opacity 2s ease;
     opacity: 0;
 }
@@ -94,7 +147,8 @@
 
 #overlay-parent.show-block-text #text-box h1:nth-child(n){
     opacity: 1;
-}
+} */
+
 
 /* #content:hover p{
     opacity: 1;
