@@ -11,18 +11,18 @@ class ProjectContent extends Component {
         super(props);
         this.state = {
             placeholder: '',
-            loaded:false
+            loaded: false
         }
     }
-     componentDidMount = () => {
+    componentDidMount = () => {
 
 
-    } 
+    }
     render = () => {
-      /*   if(!this.state.loaded){
-            this.setState({loaded: true});
-        }
-         */
+        /*   if(!this.state.loaded){
+              this.setState({loaded: true});
+          }
+           */
 
         return (
             <section id="PROJECTS">
@@ -31,36 +31,45 @@ class ProjectContent extends Component {
                     justify="start"
                 >
                     <FlexBox
-                    id="Items"
+                        id="Items"
                         classes="proj-box"
                     >
-                        <OverlayBlock
-                            classes={`pet-perfect align-fix `}
-                            showClass="overlay-end"
-                            color="coral"
-                            appType="Website"
-                            headline="Pet-Perfect."
-                            text="The perfect site for the passionate pet owner"
-                            pColorChange="buttercup-text"
-                            h2ColorChange="eclipse-text"
-                            
-                        />
                         <OverlayBlock
                             classes={`random-photo align-fix`}
                             showClass="overlay-end"
                             color="violet"
-                            delay={100}
+
                             appType="Augmented Reality Mobile App"
                             headline="Ad-Vision."
                             text="Magical AR app that reads targets and returns info on screen"
                             pColorChange="violet-text-header"
                             h1ColorChange="buttercup-text"
                         />
+
+
                         <OverlayBlock
                             classes={`random-photo-2 align-fix`}
                             showClass="overlay-end"
-                            color="chili"
+                            color="night"
+                            delay={100}
+                            appType="Platform Fighter Video Game"
+                            headline="Pixel-Smash."
+                            text="Test your mettle against online players or the relentless CPU."
+                            pColorChange="violet-text"
+                            h1ColorChange="magenta-text"
+                            h2ColorChange="violet-text-header"
+
+                        />
+                        <OverlayBlock
+                            classes={`pet-perfect align-fix `}
+                            showClass="overlay-end"
+                            color="coral"
                             delay={200}
+                            appType="Website"
+                            headline="Pet-Perfect."
+                            text="The perfect site for the passionate pet owner"
+                            pColorChange="buttercup-text"
+                            h2ColorChange="eclipse-text"
 
                         />
                         <OverlayBlock
@@ -68,18 +77,29 @@ class ProjectContent extends Component {
                             showClass="overlay-end"
                             color="quetzal"
                             delay={300}
+                            appType="Mongo-powered Web App"
+                            headline="Space-Scraper."
+                            text="Scrapes current articles from Space.com"
+                            pColorChange="mist-text"
+                            h2ColorChange="greenery-text"
                         />
                         <OverlayBlock
                             classes={`random-photo align-fix`}
                             showClass="overlay-end"
-                            color="greenery"
+                            color="midnight"
                             delay={400}
+                            appType="Command Line Application"
+                            headline="Bamazon."
+                            text="Purchase and manage your business' inventory"
+                            pColorChange="mist-text"
+                            h2ColorChange="greenery-text"
                         />
                         <OverlayBlock
                             classes={`random-photo-3 align-fix`}
                             showClass="overlay-end"
                             color="snorkel"
                             delay={500}
+                            
                         />
                         <OverlayBlock
                             classes={`random-photo-2 align-fix`}

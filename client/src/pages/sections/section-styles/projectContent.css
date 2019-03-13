@@ -3,7 +3,7 @@
 }
 
 .violet{
-    background-color: #6b5b95;
+    background-color: rgba(107, 91, 149, 0.918);
 }
 
 .chili{
@@ -14,6 +14,9 @@
     background-color: #343148;
 }
 
+.midnight{
+    background-color: #161616;
+}
 .quetzal{
     background-color: #006e6d;
 }
@@ -40,6 +43,10 @@
 
 .buttercup{
     background-color: #fae03c;
+}
+
+.night{
+    background-color: #181720;
 }
 
 .coral-text{
@@ -88,6 +95,18 @@
 
 .buttercup-text{
     color: #fae03c;
+}
+
+.magenta-text{
+    color: #fa3cea;
+}
+
+.hot-text{
+    color: #db3861;
+}
+
+.grey-text{
+    color: #bdbdbd;
 }
 
 
