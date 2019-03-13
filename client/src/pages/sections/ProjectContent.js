@@ -22,6 +22,7 @@ class ProjectContent extends Component {
                 <FlexContainer
                     direction="row"
                     justify="start"
+                    classes="margin-fix"
                 >
                     <FlexBox
                         id="Items"

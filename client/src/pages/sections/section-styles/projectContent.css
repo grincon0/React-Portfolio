@@ -117,14 +117,16 @@
     color: #f5f5f5;
 }
 
-
+.margin-fix{
+    margin-left: 20px;
+}
 
 
 
 
 
 .proj-box{
-    margin-left:1rem;
+    margin-left:2rem;
     margin-right:1rem;
     flex-wrap: wrap;
 }
