@@ -21,7 +21,9 @@ class About extends Component {
             section: '',
         }
     }
-
+    testLoader = () => {
+        document.body.className += 'page-is-changing';
+    }
     toggleMenu = () => {
         if (!this.state.collapseMenu) {
             let newState = { ...this.state };
@@ -45,7 +47,10 @@ class About extends Component {
                     <FlexContainer>
                         {/* <AboutContent /> */}
                         <ProjectContent />
-                        <Arrow />
+                        <Arrow
+                        arrowText={"About"}
+                        onClick={this.testLoader}
+                        />
                     </FlexContainer>
                 </div>
             </section>

@@ -130,10 +130,23 @@
     align-items: center;
 }
 
+.align-fix{
+    align-items: center;
+
+}
+
 .proj-box{
     margin-left:2rem;
     margin-right:1rem;
     flex-wrap: wrap;
+}
+
+.tester-color{
+    background-color: #343148;
+}
+
+.line-move{
+   line-height: 0.6px;
 }
 
 
