@@ -12,9 +12,9 @@ class App extends Component {
   render() {
     return (
         <Wrapper>
-         <Test3D  />
+         {/* <Test3D  /> */}
           
-          {/* <About />  */}
+         <About />
         </Wrapper>
       
     );

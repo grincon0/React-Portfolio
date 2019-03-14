@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AboutContent from "./AboutContent";
 import ProjectContent from "./ProjectContent";
+import Contact from "./Contact";
 import AnimatedText from "../../components/AnimatedText/index";
 import Arrow from "../../components/Arrow/index";
 import Flexbox from "../../components/Flexbox/index";
@@ -57,9 +58,10 @@ class About extends Component {
                     direction="column"
                     justify="center"
                     >
-                       <AboutContent
+                    <Contact />
+                      {/*  <AboutContent
                         canRender={this.props.canRender}
-                       />
+                       /> */}
                         {/* <ProjectContent /> */}
                         <Arrow
                         arrowText={"About"}

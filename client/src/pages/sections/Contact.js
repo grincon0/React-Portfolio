@@ -1,10 +1,11 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import AnimatedText from "../../components/AnimatedText/index";
-import Form from "../../../components/Form/index";
-import "./style.css";
+import Form from "../../components/Form/index";
+import FlexContainer from "../../components/FlexContainer";
+
 
 class Contact extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             test: "test"
@@ -15,15 +16,14 @@ class Contact extends Component {
     }
 
     render = () => {
-        return(
+        return (
             <section id="CONTACT">
+                <Form/>
+
+                {/*                 <AnimatedText />
                 <AnimatedText />
-                <AnimatedText />
-                <AnimatedText />
-                <Form 
-                
-                
-                />
+                <AnimatedText /> */}
+
             </section>
         );
     }

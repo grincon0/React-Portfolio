@@ -12,24 +12,59 @@ class Form extends Component {
             msg: ""
         }
     }
+    handleInputChange = event => {
+        const {name, value} = event.target;
+
+        this.setState({
+            [name]: value
+        })
+    }
+    handleFormSubmit = event => {
+        event.preventDefault();
+        console.log(this.state.msg);
+        this.setState({name: "", email: "", msg: ""})
+    }
 
     render = () => {
         return (
             <form>
                 <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" className="input-bg" name="user_name" />
+
+                    <input 
+                    type="text" 
+                    placeholder="Enter your name."
+                    id="name" 
+                    className="input-bg" 
+                    name="name" 
+                    value={this.state.name}
+                    onChange={this.handleInputChange}
+                    />
 
                 </div>
                 <div>
-                    <label for="mail">E-mail:</label>
-                    <input type="email" id="mail" className="input-bg" name="user_email" />
+
+                    <input 
+                    type="email" 
+                    placeholder="Enter your email address."
+                    id="email" 
+                    className="input-bg" 
+                    name="email"
+                    value={this.state.email}
+                    onChange={this.handleInputChange}
+                     />
                 </div>
                 <div>
-                    <label for="msg">Message:</label>
-                    <textarea id="msg" className="input-bg" name="user_message"></textarea>
+
+                    <textarea 
+                    id="msg" 
+                    placeholder="Your message."
+                    className="input-bg" 
+                    name="msg"
+                    value={this.state.msg}
+                    onChange={this.handleInputChange}
+                    ></textarea>
                 </div>
-                <button>Submit</button>
+                <button onClick={this.handleFormSubmit}>Submit</button>
             </form>
 
         );
