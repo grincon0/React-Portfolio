@@ -1,0 +1,37 @@
+{
+    "data": [
+        {
+            "name": "Ad-Vision",
+            "type": "Node.JS",
+            "other": "React-Native",
+            "misc":["Node.js", "ViroReact", "Google Cloud Vision"]
+        },
+        {
+            "name": "Pixel-Smash",
+            "type": "Node.js",
+            "other": "React-Native",
+            "misc":["Gulp", "Socket.io"]
+
+        },
+        {
+            "name": "Pet-Perfect",
+            "type": "JavaScript",
+            "other": "React-Native"
+        },
+        {
+            "name": "Space-Scraper",
+            "type": "Node.JS",
+            "other": "MongoDB"
+        },
+        {
+            "name": "Bamazon",
+            "type": "Node.JS",
+            "other": "MySQL"
+        },
+        {
+            "name": "Liri-Bot",
+            "type": "Node.js",
+            "other": "React-Native"
+        }
+    ]
+}
