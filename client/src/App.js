@@ -8,11 +8,13 @@ import "./App.css";
 
 
 class App extends Component {
+
   render() {
     return (
         <Wrapper>
-          {/* <Test3D /> */}
-          <About /> 
+         <Test3D  />
+          
+          {/* <About />  */}
         </Wrapper>
       
     );

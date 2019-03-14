@@ -272,6 +272,10 @@ body {
     transform: translate(500px, 420px);
 }
 
+.show-fix{
+    display: none;
+}
+
 @keyframes moveExpandA {
     0%{
         opacity: 1;

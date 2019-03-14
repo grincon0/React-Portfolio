@@ -27,7 +27,7 @@ class Arrow extends Component {
 
 
         return (
-            <a href="#">
+           
             <div id="arrow-box" className={`${this.state.hover ? "hover-box" : ""}`} onMouseOver={this.handleHover} onMouseOut={this.handleOut} onClick={this.props.onClick}>
                 <div id="arrow-head" className={`starting-point ${this.state.hover ? "hover-arrow" : ""} `}>
                     <img src={SVGArrow} alt="arrow" />
@@ -43,7 +43,7 @@ class Arrow extends Component {
                     hoverOutClass="left-trans-out"
                 />
             </div>
-            </a>
+           
 
 
         );

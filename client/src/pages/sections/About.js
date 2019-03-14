@@ -21,6 +21,11 @@ class About extends Component {
             section: '',
         }
     }
+    componentDidMount = () => {
+        if(document.body.className === 'page-is-changing'){
+            document.body.className = '';
+        }
+    }
     testLoader = () => {
         document.body.className += 'page-is-changing';
         setTimeout(()=>{
@@ -42,15 +47,20 @@ class About extends Component {
     render = () => {
         return (
             <section id="ABOUT">
-                <div className={`box-size ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"}`}>
+                <div className={`box-size ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"} ${this.props.classes}`}>
                     <Menu collapseMenu={this.state.collapseMenu} />
                     <FlexContainer classes="nav-height-fix" direction="row" justify="end">
                         <NavIcon toggleMenu={this.toggleMenu} />
                     </FlexContainer>
                     {/* comp below needs direction column and justify center if rednering AboutContent */}
-                    <FlexContainer>
-                        {/* <AboutContent /> */}
-                        <ProjectContent />
+                    <FlexContainer 
+                    direction="column"
+                    justify="center"
+                    >
+                       <AboutContent
+                        canRender={this.props.canRender}
+                       />
+                        {/* <ProjectContent /> */}
                         <Arrow
                         arrowText={"About"}
                         onClick={this.testLoader}

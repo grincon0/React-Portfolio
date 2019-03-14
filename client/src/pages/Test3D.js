@@ -10,6 +10,15 @@ class Test3D extends Component {
         test: "test",
         hideLanding: true,
     }
+/*     componentDidMount = () => {
+        if(document.getElementById("body").classList.contains("page-is-changing")){
+          setTimeout(() => {
+            document.getElementById("body").classList.remove("page-is-changing");
+            this.setState({showContent: true});
+          }, 1000);
+        }
+        
+      } */
     handleStateChange = () => {
         console.log("this function works");
         this.setState({hideLanding : false});
@@ -23,8 +32,9 @@ class Test3D extends Component {
                 <Scene3D
                 tester={this.handleStateChange}
                 />
-                <Landing 
-                classes={this.state.hideLanding ? "hideall" : "show-container"}
+                <About 
+                classes={this.state.hideLanding ? "hideall" :  "show-container"}
+                canRender={this.state.hideLanding}
                 />
             </div>
         );
