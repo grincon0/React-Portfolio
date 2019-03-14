@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./style.css";
 
 
+
 /* add action and method to form tag later */
 class Form extends Component {
     constructor(props) {
@@ -9,8 +10,12 @@ class Form extends Component {
         this.state = {
             name: "",
             email: "",
-            msg: ""
+            msg: "",
+            test: false
         }
+    }
+    componentDidMount = () => {
+
     }
     handleInputChange = event => {
         const { name, value } = event.target;
@@ -26,32 +31,41 @@ class Form extends Component {
     }
 
     render = () => {
+        setTimeout(() => {
+            if(!this.state.test){
+                this.setState({test:true});
+            }
+
+        },1000);
+
         return (
-            <form id="form">
-                <div>
+            <form id="form" >
+                <div id="first">
+
                     <input
                         type="text"
                         placeholder=" Enter your name."
                         id="name"
-                        className="input-bg form-start underline"
+                        className={`input-bg form-start underline begin-position-left ${this.state.test ? "end-pos" : ""} `}
                         name="name"
                         value={this.state.name}
                         onChange={this.handleInputChange}
                     />
-
                 </div>
-                <div>
 
+                <div id="second">
                     <input
                         type="email"
                         placeholder=" Enter your email address."
                         id="email"
-                        className="input-bg form-start underline"
+                        className={`input-bg form-start underline begin-position-right ${this.state.test ? "end-pos" : ""}`}
                         name="email"
                         value={this.state.email}
                         onChange={this.handleInputChange}
                     />
                 </div>
+
+
                 <div>
 
                     <textarea

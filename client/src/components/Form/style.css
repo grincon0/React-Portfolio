@@ -13,6 +13,7 @@
     border: none;
     border-radius: 1px;
     color: aliceblue;
+
 }
 
 .underline{
@@ -20,19 +21,59 @@
 
 }
 
-
-
-
 .input-bg{
     background:none;
     -webkit-appearance: none;
 }
 
-#form{
+
+
+.slide-into-right{
+    
+}
+.slide-into-left{
 
 }
+
+
+.begin-position-left{
+    opacity: 0;
+    transform: translateX(-500px);
+}
+
+.begin-position-right{
+    opacity: 0;
+    transform: translateX(500px);
+}
+
+#form #first input.end-pos{
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    opacity: 1;
+    
+    transform: translateX(0);
+
+}
+
+#form #second input.end-pos{
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) ;
+    opacity: 1;
+    transform: translateX(0);
+
+}
+
+
 #form button{
+    background: none;
+    color: aliceblue;
+
     border: none;
+    border: 2px aqua solid;
     outline: none;
     border-radius: 1px;
+    width: 125px;
+    height:35px;
+}
+
+#form div textarea{
+    height: 100px;
 }
