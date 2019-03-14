@@ -42,7 +42,7 @@
 }
 
 #form #first input.end-pos{
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.65s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     opacity: 1;
     
     transform: translateX(0);
@@ -50,7 +50,7 @@
 }
 
 #form #second input.end-pos{
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) ;
+    transition: all 0.65s cubic-bezier(0.68, -0.55, 0.265, 1.55) ;
     opacity: 1;
     transform: translateX(0);
 
@@ -81,10 +81,23 @@
 }
 
 #form .end-pos button{
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.65s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transform: scale(1);
 }
 
-#form div textarea{
+#form .text-box{
+    margin-bottom: 1em;
+}
+
+#form .text-box textarea{
+    opacity: 0;
+    height: 0;
+
+}
+
+#form .end-pos textarea{
+
+    transition: all 0.69s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    opacity: 1;
     height: 100px;
 }

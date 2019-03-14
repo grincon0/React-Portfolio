@@ -66,7 +66,7 @@ class Form extends Component {
                 </div>
 
 
-                <div>
+                <div className={`text-box ${this.state.test ? "end-pos" : ""}`}>
 
                     <textarea
                         id="msg"
