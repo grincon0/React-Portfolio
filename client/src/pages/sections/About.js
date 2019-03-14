@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import AboutContent from "./AboutContent";
-import ProjectContent from "./ProjectContent";
-import Contact from "./Contact";
+import ProjectContent from "../sections/ProjectContent";
 import AnimatedText from "../../components/AnimatedText/index";
 import Arrow from "../../components/Arrow/index";
 import Flexbox from "../../components/Flexbox/index";
 import FlexContainer from "../../components/FlexContainer/index";
-/* import OverlayBlock from "../../components/OverlayBlock/index"; */
+import OverlayBlock from "../../components/OverlayBlock/index";
 import Menu from "../../components/Menu/index";
 import NavIcon from "../../components/NavIcon/index";
 /* import Slider from "../../components/Slider/index";
@@ -55,14 +54,13 @@ class About extends Component {
                     </FlexContainer>
                     {/* comp below needs direction column and justify center if rednering AboutContent */}
                     <FlexContainer 
-                    direction="column"
-                    justify="center"
+
                     >
-                    <Contact />
+                    {/* <Contact /> */}
                       {/*  <AboutContent
                         canRender={this.props.canRender}
                        /> */}
-                        {/* <ProjectContent /> */}
+                       <ProjectContent />
                         <Arrow
                         arrowText={"About"}
                         onClick={this.testLoader}

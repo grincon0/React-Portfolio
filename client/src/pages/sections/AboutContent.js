@@ -3,9 +3,6 @@ import AnimatedText from "../../components/AnimatedText/index";
 import Arrow from "../../components/Arrow/index";
 import Flexbox from "../../components/Flexbox/index";
 import FlexContainer from "../../components/FlexContainer/index";
-/* import OverlayBlock from "../../components/OverlayBlock/index"; */
-import Menu from "../../components/Menu/index";
-import NavIcon from "../../components/NavIcon/index";
 import "./section-styles/About.css";
 
 class AboutContent extends Component {

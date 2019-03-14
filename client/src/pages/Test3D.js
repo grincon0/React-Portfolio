@@ -32,10 +32,10 @@ class Test3D extends Component {
                 <Scene3D
                 tester={this.handleStateChange}
                 />
-                <About 
+{/*                 <About 
                 classes={this.state.hideLanding ? "hideall" :  "show-container"}
                 canRender={this.state.hideLanding}
-                />
+                /> */}
             </div>
         );
     }
