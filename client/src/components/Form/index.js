@@ -77,7 +77,7 @@ class Form extends Component {
                         onChange={this.handleInputChange}
                     ></textarea>
                 </div>
-                <div className="btn-box">
+                <div className={`btn-box ${this.state.test ? "end-pos" : ""} `}>
                     <button onClick={this.handleFormSubmit}>Submit</button>
                 </div>
             </form>

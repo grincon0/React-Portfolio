@@ -1,9 +1,4 @@
 
-.btn-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .form-start{
     outline: none;
     width: 400px;
@@ -72,6 +67,22 @@
     border-radius: 1px;
     width: 125px;
     height:35px;
+}
+
+#form .btn-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#form .btn-box button{
+
+    transform-origin: center center;
+    transform: scale(0);
+}
+
+#form .end-pos button{
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform: scale(1);
 }
 
 #form div textarea{
