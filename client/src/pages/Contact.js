@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 /* import AboutContent from "./AboutContent";
 import ProjectContent from "./ProjectContent"; */
-import Contact from "./sections/Contact";
+import ContactContent from "./sections/Contact";
 /* import AnimatedText from "../../components/AnimatedText/index"; */
 import Arrow from "../components/Arrow/index";
 /* import Flexbox from "../../components/Flexbox/index"; */
@@ -13,7 +13,7 @@ import NavIcon from "../components/NavIcon/index";
 import SVGIcon from "../../components/SVGIcon/index"; */
 import "../pages/sections/section-styles/About.css";
 
-class About extends Component {
+class Contact extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -58,7 +58,7 @@ class About extends Component {
                     direction="column"
                     justify="center"
                     >
-                    <Contact />
+                    <ContactContent />
                       {/*  <AboutContent
                         canRender={this.props.canRender}
                        /> */}
@@ -74,4 +74,4 @@ class About extends Component {
     }
 }
 
-export default About;
+export default Contact;
