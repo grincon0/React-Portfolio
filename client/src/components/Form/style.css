@@ -1,3 +1,38 @@
+
+.btn-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-start{
+    outline: none;
+    width: 400px;
+    margin-top: 1em;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 1px;
+    color: aliceblue;
+}
+
+.underline{
+    border-bottom: 2px aqua solid;
+
+}
+
+
+
+
 .input-bg{
-    background-color: rgb(88, 88, 88);
+    background:none;
+    -webkit-appearance: none;
+}
+
+#form{
+
+}
+#form button{
+    border: none;
+    outline: none;
+    border-radius: 1px;
 }
