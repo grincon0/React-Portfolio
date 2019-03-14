@@ -49,8 +49,8 @@ body::after, body::before{
     position: fixed;
     left:0;
     z-index: 990;
-    background-color: rgb(8, 27, 110);
-    transition: all 0.5s ease;
+    transition: all 0.5s cubic-bezier(.694,.048,.335,1);
+    animation: rainbow 1s ease-in infinite reverse;
 }
 
 body::before{
@@ -95,3 +95,15 @@ body.page-is-changing::after, body.page-is-changing::before{
 /* #about{
     z-index: 20;
 } */
+
+@keyframes rainbow{
+    0%{
+        background-color: rgb(91, 39, 150);
+    }
+    50%{
+        background-color: rgb(39, 150, 150);
+    }
+    100%{
+        background-color: rgb(46, 39, 150);
+    }
+}

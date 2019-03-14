@@ -25,7 +25,7 @@ class About extends Component {
         document.body.className += 'page-is-changing';
         setTimeout(()=>{
             document.body.className = '';
-        },1000)
+        },1500)
         
     }
     toggleMenu = () => {
