@@ -5,6 +5,7 @@ import Wrapper from "./components/Wrapper";
 import Test3D from "./pages/Test3D";
 import About from "./pages/sections/About";
 import Contact from "./pages/Contact";
+import Projects from "./pages/Projects";
 import "./App.css";
 
 
@@ -18,7 +19,7 @@ class App extends Component {
           <Switch>
             {/*             <Route exact path="/" component={Test3D} /> */}
             {/*             <Route exact path="/about" component={About} /> */}
-            <Route exact path="/" component={Contact} />
+            <Route exact path="/" component={Projects} />
 
           </Switch>
           {/* <Test3D  /> */}
