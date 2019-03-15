@@ -28,10 +28,10 @@ class Scene3D extends Component {
         clearTimeout(this.renderTimer);
     }
     handleStateChange = (e) => {
-        this.props.tester();
+        this.props.transitioner();
+
+        
         let ident = e.target.id;
-        /*         let newState ={...this.state};
-                this.state.addclass ? newState.addclass = false : newState.addclass = true; */
         this.state.addclass ? this.setState({ addclass: false, releaseContain: false }) : this.setState({ addclass: true, releaseContain: true });
         this.handleSelectionOpacity(ident);
         this.handleImageExpansion(ident);
@@ -158,7 +158,6 @@ class Scene3D extends Component {
 
     }
     handleTextAppear = (e) => {
-        console.log('ran');
         if (e.target.id === "image4") {
             document.getElementById("text1").classList.add("subtitle-appear-1");
         } else if (e.target.id === "image3") {
@@ -171,35 +170,34 @@ class Scene3D extends Component {
 
     }
     handleTestReset = (e) => {
-        console.log('out');
         switch (e.target.id) {
             case "image4":
                 document.getElementById("text1").classList.remove("subtitle-appear-1");
                 document.getElementById("text1").classList.add("subtitle-reset-1");
                 setTimeout(() => {
                     document.getElementById("text1").classList.remove("subtitle-reset-1");
-                }, 751);
+                }, 200);
                 break;
             case "image3":
                 document.getElementById("text2").classList.remove("subtitle-appear-2");
                 document.getElementById("text2").classList.add("subtitle-reset-2");
                 setTimeout(() => {
                     document.getElementById("text2").classList.remove("subtitle-reset-2");
-                }, 751);
+                }, 200);
                 break;
             case "image2":
                 document.getElementById("text3").classList.remove("subtitle-appear-3");
                 document.getElementById("text3").classList.add("subtitle-reset-3");
                 setTimeout(() => {
                     document.getElementById("text3").classList.remove("subtitle-reset-3");
-                }, 551);
+                }, 200);
                 break;
             case "image1":
                 document.getElementById("text4").classList.remove("subtitle-appear-4");
                 document.getElementById("text4").classList.add("subtitle-reset-4");
                 setTimeout(() => {
                     document.getElementById("text4").classList.remove("subtitle-reset-4");
-                }, 551);
+                }, 200);
                 break;
             default:
                 break;
@@ -213,20 +211,20 @@ class Scene3D extends Component {
     }
     removeContainerVisibility = () => {
         if (this.state.releaseContain) {
-            setTimeout(() => {
+
                 document.getElementById("3D-contain").classList.add("hideTest");
-            }, 600);
+           
 
 
         }
     }
     render = () => {
-        if (this.state.releaseContain) {
+    if (this.state.releaseContain) {
             this.removeContainerVisibility();
-            setTimeout(() => {
+/*             setTimeout(() => {
                 document.getElementById("3D-contain").classList.add("hideall");
-            }, 1200);
-        }
+            }, 100); */
+        } 
 
         return (
             <div>

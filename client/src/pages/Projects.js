@@ -73,7 +73,6 @@ class Projects extends Component {
                     </FlexContainer>
                     <FlexContainer >
                         <ProjectContent />
-
                         <Route render={({ history }) => (
                             <Arrow
                                 arrowText={"Contact"}

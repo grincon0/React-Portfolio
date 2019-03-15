@@ -35,9 +35,6 @@ class About extends Component {
     }
     doTransitionEffect = () => {
         document.body.className += 'page-is-changing';
-        setTimeout(() => {
-            document.body.className = '';
-        }, 3000);
     }
     testLoader = () => {
         /*         document.body.className += 'page-is-changing';
