@@ -56,15 +56,13 @@ class Projects extends Component {
                     {/* comp below needs direction column and justify center if rednering AboutContent */}
                     <FlexContainer 
                     >
-                    {/* <Contact /> */}
-                      {/*  <AboutContent
-                        canRender={this.props.canRender}
-                       /> */}
                        <ProjectContent />
+                       <a href="/contact">
                         <Arrow
-                        arrowText={"About"}
+                        arrowText={"Contact"}
                         onClick={this.testLoader}
                         />
+                        </a>
                     </FlexContainer>
                 </div>
             </section>

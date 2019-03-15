@@ -196,6 +196,13 @@ body {
 
 }
 
+
+
+
+.image4-a{
+    position: absolute;
+}
+
 .disappear{
     transition: opacity 0.4s;
     opacity: 0;

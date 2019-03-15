@@ -11,23 +11,23 @@ class About extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            canRender:true,
+            canRender: true,
             collapseMenu: false,
             hidden: true,
             section: ''
         }
     }
     componentDidMount = () => {
-        if(document.body.className === 'page-is-changing'){
+        if (document.body.className === 'page-is-changing') {
             document.body.className = '';
         }
     }
     testLoader = () => {
         document.body.className += 'page-is-changing';
-        setTimeout(()=>{
+        setTimeout(() => {
             document.body.className = '';
-        },1500)
-        
+        }, 1500)
+
     }
     toggleMenu = () => {
         if (!this.state.collapseMenu) {
@@ -49,17 +49,19 @@ class About extends Component {
                         <NavIcon toggleMenu={this.toggleMenu} />
                     </FlexContainer>
                     {/* comp below needs direction column and justify center if rednering AboutContent */}
-                    <FlexContainer 
-                    direction="column"
-                    justify="center"
+                    <FlexContainer
+                        direction="column"
+                        justify="center"
                     >
-                     <AboutContent
-                        canRender={this.state.canRender}
-                       />
-                        <Arrow
-                        arrowText={"About"}
-                        onClick={this.testLoader}
+                        <AboutContent
+                            canRender={this.state.canRender}
                         />
+                        <a href="/projects">
+                            <Arrow
+                                arrowText={"Projects"}
+                                onClick={this.testLoader}
+                            />
+                        </a>
                     </FlexContainer>
                 </div>
             </section>

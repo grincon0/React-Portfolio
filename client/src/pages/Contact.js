@@ -23,16 +23,16 @@ class Contact extends Component {
         }
     }
     componentDidMount = () => {
-        if(document.body.className === 'page-is-changing'){
+        if (document.body.className === 'page-is-changing') {
             document.body.className = '';
         }
     }
     testLoader = () => {
         document.body.className += 'page-is-changing';
-        setTimeout(()=>{
+        setTimeout(() => {
             document.body.className = '';
-        },1500)
-        
+        }, 1500)
+
     }
     toggleMenu = () => {
         if (!this.state.collapseMenu) {
@@ -54,19 +54,21 @@ class Contact extends Component {
                         <NavIcon toggleMenu={this.toggleMenu} />
                     </FlexContainer>
                     {/* comp below needs direction column and justify center if rednering AboutContent */}
-                    <FlexContainer 
-                    direction="column"
-                    justify="center"
+                    <FlexContainer
+                        direction="column"
+                        justify="center"
                     >
-                    <ContactContent />
-                      {/*  <AboutContent
+                        <ContactContent />
+                        {/*  <AboutContent
                         canRender={this.props.canRender}
                        /> */}
                         {/* <ProjectContent /> */}
-                        <Arrow
-                        arrowText={"About"}
-                        onClick={this.testLoader}
-                        />
+                        <a href="/">
+                            <Arrow
+                                arrowText={"Home"}
+                                onClick={this.testLoader}
+                            />
+                        </a>
                     </FlexContainer>
                 </div>
             </section>
