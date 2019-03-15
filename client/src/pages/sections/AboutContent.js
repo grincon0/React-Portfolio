@@ -39,7 +39,6 @@ class AboutContent extends Component {
 
     render = () => {
         let thing = this.handleThing();
-        console.log(thing);
         return (
             <div>
                 <Flexbox>

@@ -7,7 +7,7 @@ import FlexContainer from "../components/FlexContainer/index";
 import Menu from "../components/Menu/index";
 import NavIcon from "../components/NavIcon/index";
 
-import { Route, Redirect } from 'react-router-dom'
+import { Route, withRouter, Redirect } from 'react-router-dom'
 /* import Slider from "../components/Slider/index"; */
 class About extends Component {
     constructor(props) {
@@ -20,10 +20,24 @@ class About extends Component {
         }
     }
     componentDidMount = () => {
-        console.log(this.props);
         if (document.body.className === 'page-is-changing') {
             document.body.className = '';
         }
+    }
+    handleTransition = async (event, history) => {
+        event.preventDefault();
+        await this.doTransitionEffect();
+
+        setTimeout(() => {
+            this.props.history.push('/projects');
+        }, 500);
+
+    }
+    doTransitionEffect = () => {
+        document.body.className += 'page-is-changing';
+        setTimeout(() => {
+            document.body.className = '';
+        }, 1500);
     }
     testLoader = () => {
         /*         document.body.className += 'page-is-changing';
@@ -43,9 +57,7 @@ class About extends Component {
         }
     }
     render = () => {
-        if (this.state.toProjects === true) {
-            return <Redirect to='/projects' />;
-        }
+
         return (
             <section id="ABOUT">
                 <div className={`box-size ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"} ${this.props.classes}`}>
@@ -62,7 +74,7 @@ class About extends Component {
                         <Route render={({ history }) => (
                             <Arrow
                                 arrowText={"Projects"}
-                                onClick={() => { history.push('/projects') }}
+                                onClick={(e) => { this.handleTransition(e, history) }}
                             />
                         )} />
                         {/* About page content ends */}
