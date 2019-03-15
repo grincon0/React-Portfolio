@@ -42,6 +42,7 @@ class Arrow extends Component {
                     hoverInClass="left-trans-in"
                     hoverOutClass="left-trans-out"
                 />
+                {this.props.children}
             </div>
            
 

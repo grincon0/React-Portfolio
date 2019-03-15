@@ -11,6 +11,7 @@ import Menu from "../components/Menu/index";
 import NavIcon from "../components/NavIcon/index";
 /* import Slider from "../../components/Slider/index";
 import SVGIcon from "../../components/SVGIcon/index"; */
+import { Route, Redirect } from "react-router-dom";
 import "../pages/sections/section-styles/About.css";
 
 class Contact extends Component {
@@ -23,16 +24,24 @@ class Contact extends Component {
         }
     }
     componentDidMount = () => {
-        if(document.body.className === 'page-is-changing'){
+        console.log(this.props);
+        if (document.body.className === 'page-is-changing') {
             document.body.className = '';
         }
     }
+    handleRedirect = () => {
+        if (this.state.toAbout) {
+            return <Redirect to='/' />;
+        }
+    }
     testLoader = () => {
-        document.body.className += 'page-is-changing';
-        setTimeout(()=>{
-            document.body.className = '';
-        },1500)
-        
+        /*         document.body.className += 'page-is-changing';
+                setTimeout(() => {
+                    document.body.className = '';
+                }, 1500) */
+        this.setState({ toAbout: true });
+        console.log(this.state);
+
     }
     toggleMenu = () => {
         if (!this.state.collapseMenu) {
@@ -45,6 +54,7 @@ class Contact extends Component {
             this.setState(newState);
         }
     }
+
     render = () => {
         return (
             <section id="ABOUT">
@@ -53,19 +63,18 @@ class Contact extends Component {
                     <FlexContainer classes="nav-height-fix" direction="row" justify="end">
                         <NavIcon toggleMenu={this.toggleMenu} />
                     </FlexContainer>
-                    {/* comp below needs direction column and justify center if rednering AboutContent */}
-                    <FlexContainer 
-                    direction="column"
-                    justify="center"
+                    <FlexContainer
+                        direction="column"
+                        justify="center"
                     >
-                    <ContactContent />
-                      {/*  <AboutContent
-                        canRender={this.props.canRender}
-                       /> */}
-                        {/* <ProjectContent /> */}
-                        <Arrow
-                        arrowText={"About"}
-                        onClick={this.testLoader}
+                        <ContactContent />
+
+                        <Route render={({ history }) => (
+                            <Arrow
+                                arrowText={"About"}
+                                onClick={() => { history.push('/') }}
+                            />
+                        )}
                         />
                     </FlexContainer>
                 </div>

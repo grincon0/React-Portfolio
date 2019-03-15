@@ -13,6 +13,8 @@ import NavIcon from "../components/NavIcon/index";
 import SVGIcon from "../../components/SVGIcon/index"; */
 import "../pages/sections/section-styles/About.css";
 
+import { Route, Redirect } from "react-router-dom";
+
 class Projects extends Component {
     constructor(props) {
         super(props);
@@ -20,19 +22,26 @@ class Projects extends Component {
             hidden: true,
             collapseMenu: false,
             section: '',
+            toContact: false,
         }
     }
     componentDidMount = () => {
-        if(document.body.className === 'page-is-changing'){
+        console.log(this.props);
+        if (document.body.className === 'page-is-changing') {
             document.body.className = '';
         }
     }
+    handleRedirect = () => {
+        if (this.state.toContact) {
+            return <Redirect to="/contact" />;
+        }
+    }
+    componentWillUnmount = () => {
+        console.log("Project component unmounted");
+    }
     testLoader = () => {
-        document.body.className += 'page-is-changing';
-        setTimeout(()=>{
-            document.body.className = '';
-        },1500)
-        
+
+        this.setState({ toContact: true });
     }
     toggleMenu = () => {
         if (!this.state.collapseMenu) {
@@ -53,17 +62,15 @@ class Projects extends Component {
                     <FlexContainer classes="nav-height-fix" direction="row" justify="end">
                         <NavIcon toggleMenu={this.toggleMenu} />
                     </FlexContainer>
-                    {/* comp below needs direction column and justify center if rednering AboutContent */}
-                    <FlexContainer 
-                    >
-                    {/* <Contact /> */}
-                      {/*  <AboutContent
-                        canRender={this.props.canRender}
-                       /> */}
-                       <ProjectContent />
-                        <Arrow
-                        arrowText={"About"}
-                        onClick={this.testLoader}
+                    <FlexContainer >
+                        <ProjectContent />
+
+                        <Route render={({ history }) => (
+                            <Arrow
+                                arrowText={"Contact"}
+                                onClick={() => { history.push('/contact') }}
+                            />
+                        )}
                         />
                     </FlexContainer>
                 </div>
