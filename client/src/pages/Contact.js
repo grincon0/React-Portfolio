@@ -24,7 +24,6 @@ class Contact extends Component {
         }
     }
     componentDidMount = () => {
-        console.log(this.props);
         if (document.body.className === 'page-is-changing') {
             document.body.className = '';
         }
@@ -68,7 +67,6 @@ class Contact extends Component {
                         justify="center"
                     >
                         <ContactContent />
-
                         <Route render={({ history }) => (
                             <Arrow
                                 arrowText={"About"}
