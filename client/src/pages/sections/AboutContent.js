@@ -44,12 +44,6 @@ class AboutContent extends Component {
                 <Flexbox>
                     {thing}
                 </Flexbox>
-{/*                 <Flexbox>
-                {this.props.canRender ? <AnimatedText
-                        text="Testing 2nd Div"
-                        anim="slide-left-quick"
-                    /> : null}
-                </Flexbox> */}
             </div>
         );
     }

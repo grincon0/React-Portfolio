@@ -49,8 +49,8 @@ body::after, body::before{
     position: fixed;
     left:0;
     z-index: 990;
-    transition: all 0.4s cubic-bezier(.694,.048,.335,1);
-    animation: rainbow 1s ease-in infinite reverse;
+    transition: all 0.5s cubic-bezier(.694,.048,.335,1);
+    animation: rainbow 2s ease-in infinite reverse;
 }
 
 body::before{

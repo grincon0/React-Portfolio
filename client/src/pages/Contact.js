@@ -28,10 +28,25 @@ class Contact extends Component {
             document.body.className = '';
         }
     }
+    doTransitionEffect = () => {
+        document.body.className += 'page-is-changing';
+        setTimeout(() => {
+            document.body.className = '';
+        }, 3000);
+    }
     handleRedirect = () => {
         if (this.state.toAbout) {
             return <Redirect to='/' />;
         }
+    }
+    handleTransition = async (event, history) => {
+        event.preventDefault();
+        await this.doTransitionEffect();
+
+        setTimeout(() => {
+            this.props.history.push('/');
+        }, 1000);
+
     }
     testLoader = () => {
         /*         document.body.className += 'page-is-changing';
@@ -69,11 +84,10 @@ class Contact extends Component {
                         <ContactContent />
                         <Route render={({ history }) => (
                             <Arrow
-                                arrowText={"About"}
-                                onClick={() => { history.push('/') }}
+                                arrowText={"Projects"}
+                                onClick={(e) => { this.handleTransition(e, history) }}
                             />
-                        )}
-                        />
+                        )} />
                     </FlexContainer>
                 </div>
             </section>

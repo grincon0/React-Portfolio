@@ -26,15 +26,24 @@ class Projects extends Component {
         }
     }
     componentDidMount = () => {
-        console.log(this.props);
         if (document.body.className === 'page-is-changing') {
             document.body.className = '';
         }
     }
-    handleRedirect = () => {
-        if (this.state.toContact) {
-            return <Redirect to="/contact" />;
-        }
+    doTransitionEffect = () => {
+        document.body.className += 'page-is-changing';
+        setTimeout(() => {
+            document.body.className = '';
+        }, 3000);
+    }
+    handleTransition = async (event, history) => {
+        event.preventDefault();
+        await this.doTransitionEffect();
+
+        setTimeout(() => {
+            this.props.history.push('/contact');
+        }, 1000);
+
     }
     componentWillUnmount = () => {
         console.log("Project component unmounted");
@@ -68,10 +77,9 @@ class Projects extends Component {
                         <Route render={({ history }) => (
                             <Arrow
                                 arrowText={"Contact"}
-                                onClick={() => { history.push('/contact') }}
+                                onClick={(e) => { this.handleTransition(e, history) }}
                             />
-                        )}
-                        />
+                        )} />
                     </FlexContainer>
                 </div>
             </section>

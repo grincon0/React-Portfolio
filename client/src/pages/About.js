@@ -8,7 +8,7 @@ import Menu from "../components/Menu/index";
 import NavIcon from "../components/NavIcon/index";
 
 import { Route, withRouter, Redirect } from 'react-router-dom'
-/* import Slider from "../components/Slider/index"; */
+
 class About extends Component {
     constructor(props) {
         super(props);
@@ -30,14 +30,14 @@ class About extends Component {
 
         setTimeout(() => {
             this.props.history.push('/projects');
-        }, 500);
+        }, 1000);
 
     }
     doTransitionEffect = () => {
         document.body.className += 'page-is-changing';
         setTimeout(() => {
             document.body.className = '';
-        }, 1500);
+        }, 3000);
     }
     testLoader = () => {
         /*         document.body.className += 'page-is-changing';
