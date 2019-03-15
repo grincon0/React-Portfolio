@@ -6,6 +6,8 @@ import Flexbox from "../components/Flexbox/index";
 import FlexContainer from "../components/FlexContainer/index";
 import Menu from "../components/Menu/index";
 import NavIcon from "../components/NavIcon/index";
+
+import {Redirect} from 'react-router-dom'
 /* import Slider from "../components/Slider/index"; */
 class About extends Component {
     constructor(props) {
@@ -14,19 +16,22 @@ class About extends Component {
             canRender: true,
             collapseMenu: false,
             hidden: true,
+            toProjects: false,
             section: ''
         }
     }
     componentDidMount = () => {
+        console.log(this.props);
         if (document.body.className === 'page-is-changing') {
             document.body.className = '';
         }
     }
     testLoader = () => {
-        document.body.className += 'page-is-changing';
+/*         document.body.className += 'page-is-changing';
         setTimeout(() => {
             document.body.className = '';
-        }, 1500)
+        }, 1500) */
+        this.setState({toProjects: true});
 
     }
     toggleMenu = () => {
@@ -41,6 +46,11 @@ class About extends Component {
         }
     }
     render = () => {
+        if(this.state.toProjects === true){
+            
+            return <Redirect to='/projects' />;
+        }
+
         return (
             <section id="ABOUT">
                 <div className={`box-size ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"} ${this.props.classes}`}>
@@ -56,12 +66,12 @@ class About extends Component {
                         <AboutContent
                             canRender={this.state.canRender}
                         />
-                        <a href="/projects">
-                            <Arrow
-                                arrowText={"Projects"}
-                                onClick={this.testLoader}
-                            />
-                        </a>
+
+                        <Arrow
+                            arrowText={"Projects"}
+                            onClick={this.testLoader}>
+                        </Arrow>
+
                     </FlexContainer>
                 </div>
             </section>

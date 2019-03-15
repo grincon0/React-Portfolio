@@ -11,6 +11,7 @@ import Menu from "../components/Menu/index";
 import NavIcon from "../components/NavIcon/index";
 /* import Slider from "../../components/Slider/index";
 import SVGIcon from "../../components/SVGIcon/index"; */
+import { Redirect } from "react-router-dom";
 import "../pages/sections/section-styles/About.css";
 
 class Contact extends Component {
@@ -20,18 +21,27 @@ class Contact extends Component {
             hidden: true,
             collapseMenu: false,
             section: '',
+            toAbout: false
         }
     }
     componentDidMount = () => {
+        console.log(this.props);
         if (document.body.className === 'page-is-changing') {
             document.body.className = '';
         }
     }
+    handleRedirect = () => {
+        if (this.state.toAbout) {
+            return <Redirect to='/' />;
+        }
+    }
     testLoader = () => {
-        document.body.className += 'page-is-changing';
-        setTimeout(() => {
-            document.body.className = '';
-        }, 1500)
+        /*         document.body.className += 'page-is-changing';
+                setTimeout(() => {
+                    document.body.className = '';
+                }, 1500) */
+        this.setState({ toAbout: true });
+        console.log(this.state);
 
     }
     toggleMenu = () => {
@@ -45,7 +55,10 @@ class Contact extends Component {
             this.setState(newState);
         }
     }
+
     render = () => {
+        this.handleRedirect();
+
         return (
             <section id="ABOUT">
                 <div className={`box-size ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"} ${this.props.classes}`}>
@@ -59,16 +72,12 @@ class Contact extends Component {
                         justify="center"
                     >
                         <ContactContent />
-                        {/*  <AboutContent
-                        canRender={this.props.canRender}
-                       /> */}
-                        {/* <ProjectContent /> */}
-                        <a href="/">
-                            <Arrow
-                                arrowText={"Home"}
-                                onClick={this.testLoader}
-                            />
-                        </a>
+
+                        <Arrow
+                            arrowText={"Home"}
+                            onClick={this.testLoader}
+                        />
+
                     </FlexContainer>
                 </div>
             </section>
