@@ -14,7 +14,18 @@ class Scene3D extends Component {
             addclass: false,
             releaseContain: false,
             imageClicked: '',
+            canRender: false,
         }
+    }
+    componentDidMount = () => {
+        this.renderTimer = setTimeout(() => {
+            let newState = { ...this.state };
+            newState.canRender = true;
+            this.setState(newState);
+        }, 1500);
+    }
+    componentWillUnmount = () => {
+        clearTimeout(this.renderTimer);
     }
     handleStateChange = (e) => {
         this.props.tester();
@@ -205,7 +216,7 @@ class Scene3D extends Component {
             setTimeout(() => {
                 document.getElementById("3D-contain").classList.add("hideTest");
             }, 600);
-    
+
 
         }
     }
@@ -218,27 +229,31 @@ class Scene3D extends Component {
         }
 
         return (
-            <div id="3D-contain">
-                <div className="sub-text">
-                    <p id="text1" className="subtitle">Home</p>
-                    <p id="text2" className="subtitle">About</p>
-                    <p id="text3" className="subtitle">Labs</p>
-                    <p id="text4" className="subtitle">Contact</p>
-                </div>
-                <div className="scene">
-                    <div className="parent-container">
-                        <div id="card-container" className={`container-3d ${this.state.releaseContain ? "" : "container-3d-width"} overflow-hide-all ${this.state.addclass ? "container-3d-origin" : ""}`}>
-                            <div className="card-3d" >
-                                <img data-ident="1" id="image1" className="image-size image-opacity" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={PinkImage} alt="atl" />
-                                <img data-ident="2" id="image2" className="image-size image-opacity" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={PurpleImage} alt="atl" />
-                                <img data-ident="3" id="image3" className="image-size image-opacity" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={BlueImage} alt="atl" />
-                                <img data-ident="4" id="image4" className="image-size image-opacity image-position-4" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={GreenImage}
-                                    alt="atl" />
+            <div>
+                <div id="3D-contain">
+                    <div className="sub-text">
+                        <p id="text1" className="subtitle">Home</p>
+                        <p id="text2" className="subtitle">About</p>
+                        <p id="text3" className="subtitle">Labs</p>
+                        <p id="text4" className="subtitle">Contact</p>
+                    </div>
+                    <div className="scene">
+                        <div className="parent-container">
+                            <div id="card-container" className={`container-3d ${this.state.releaseContain ? "" : "container-3d-width"} overflow-hide-all ${this.state.addclass ? "container-3d-origin" : ""}`}>
+                                <div className="card-3d" >
+                                    <img data-ident="1" id="image1" className="image-size image-opacity" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={PinkImage} alt="atl" />
+                                    <img data-ident="2" id="image2" className="image-size image-opacity" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={PurpleImage} alt="atl" />
+                                    <img data-ident="3" id="image3" className="image-size image-opacity" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={BlueImage} alt="atl" />
+                                   <img data-ident="4" id="image4" className="image-size image-opacity image-position-4" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={GreenImage}
+                                        alt="atl"></img> 
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
 
         );
     }

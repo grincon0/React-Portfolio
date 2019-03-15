@@ -1,0 +1,103 @@
+
+.form-start{
+    outline: none;
+    width: 400px;
+    margin-top: 1em;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 1px;
+    color: aliceblue;
+
+}
+
+.underline{
+    border-bottom: 2px aqua solid;
+
+}
+
+.input-bg{
+    background:none;
+    -webkit-appearance: none;
+}
+
+
+
+.slide-into-right{
+    
+}
+.slide-into-left{
+
+}
+
+
+.begin-position-left{
+    opacity: 0;
+    transform: translateX(-500px);
+}
+
+.begin-position-right{
+    opacity: 0;
+    transform: translateX(500px);
+}
+
+#form #first input.end-pos{
+    transition: all 0.65s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    opacity: 1;
+    
+    transform: translateX(0);
+
+}
+
+#form #second input.end-pos{
+    transition: all 0.65s cubic-bezier(0.68, -0.55, 0.265, 1.55) ;
+    opacity: 1;
+    transform: translateX(0);
+
+}
+
+
+#form button{
+    background: none;
+    color: aliceblue;
+
+    border: none;
+    border: 2px aqua solid;
+    outline: none;
+    border-radius: 1px;
+    width: 125px;
+    height:35px;
+}
+
+#form .btn-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#form .btn-box button{
+
+    transform-origin: center center;
+    transform: scale(0);
+}
+
+#form .end-pos button{
+    transition: all 0.65s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform: scale(1);
+}
+
+#form .text-box{
+    margin-bottom: 1em;
+}
+
+#form .text-box textarea{
+    opacity: 0;
+    height: 0;
+
+}
+
+#form .end-pos textarea{
+
+    transition: all 0.69s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    opacity: 1;
+    height: 100px;
+}

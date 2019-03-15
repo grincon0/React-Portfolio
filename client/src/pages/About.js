@@ -1,24 +1,20 @@
 import React, { Component } from 'react';
-import AboutContent from "./AboutContent";
-import ProjectContent from "../sections/ProjectContent";
-import AnimatedText from "../../components/AnimatedText/index";
-import Arrow from "../../components/Arrow/index";
-import Flexbox from "../../components/Flexbox/index";
-import FlexContainer from "../../components/FlexContainer/index";
-import OverlayBlock from "../../components/OverlayBlock/index";
-import Menu from "../../components/Menu/index";
-import NavIcon from "../../components/NavIcon/index";
-/* import Slider from "../../components/Slider/index";
-import SVGIcon from "../../components/SVGIcon/index"; */
-import "./section-styles/About.css";
-
+import AboutContent from "../pages/sections/AboutContent";
+import AnimatedText from "../components/AnimatedText/index";
+import Arrow from "../components/Arrow/index";
+import Flexbox from "../components/Flexbox/index";
+import FlexContainer from "../components/FlexContainer/index";
+import Menu from "../components/Menu/index";
+import NavIcon from "../components/NavIcon/index";
+/* import Slider from "../components/Slider/index"; */
 class About extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            hidden: true,
+            canRender:true,
             collapseMenu: false,
-            section: '',
+            hidden: true,
+            section: ''
         }
     }
     componentDidMount = () => {
@@ -54,13 +50,12 @@ class About extends Component {
                     </FlexContainer>
                     {/* comp below needs direction column and justify center if rednering AboutContent */}
                     <FlexContainer 
-
+                    direction="column"
+                    justify="center"
                     >
-                    {/* <Contact /> */}
-                      {/*  <AboutContent
-                        canRender={this.props.canRender}
-                       /> */}
-                       <ProjectContent />
+                     <AboutContent
+                        canRender={this.state.canRender}
+                       />
                         <Arrow
                         arrowText={"About"}
                         onClick={this.testLoader}

@@ -3,11 +3,6 @@ import AnimatedText from "../../components/AnimatedText/index";
 import Arrow from "../../components/Arrow/index";
 import Flexbox from "../../components/Flexbox/index";
 import FlexContainer from "../../components/FlexContainer/index";
-/* import OverlayBlock from "../../components/OverlayBlock/index"; */
-import Menu from "../../components/Menu/index";
-import NavIcon from "../../components/NavIcon/index";
-/* import Slider from "../../components/Slider/index";
-import SVGIcon from "../../components/SVGIcon/index"; */
 import "./section-styles/About.css";
 
 class AboutContent extends Component {
@@ -18,32 +13,44 @@ class AboutContent extends Component {
             collapseMenu: false
         }
     }
-    /*     toggleMenu = () => {
-            if (!this.state.collapseMenu) {
-                let newState = { ...this.state };
-                newState.collapseMenu = true;
-                this.setState(newState);
-            } else {
-                let newState = { ...this.state };
-                newState.collapseMenu = false;
-                this.setState(newState);
+    componentDidMount = () => {
+        this.renderChecker = setInterval(() => {
+            if(this.props.canRender){
+                this.tester();
+                clearInterval(this.renderChecker);
             }
-        } */
+            console.log('running');
+        }, 400);
+    }
+    tester = () => {
+        this.setState({hidden: false})
+    }
+    handleThing = () =>{
+        if(!this.state.hidden){
+            return(
+                <AnimatedText
+                        text="Testing 2nd Div"
+                        anim="slide-right-quick"
+                        delay={4000}
+                    />
+            );
+        }
+    }
+
     render = () => {
+        let thing = this.handleThing();
+        console.log(thing);
         return (
             <div>
                 <Flexbox>
-                    <AnimatedText
-                        text="Testing New Div"
-                        anim="slide-right-quick"
-                    />
+                    {thing}
                 </Flexbox>
-                <Flexbox>
-                    <AnimatedText
+{/*                 <Flexbox>
+                {this.props.canRender ? <AnimatedText
                         text="Testing 2nd Div"
                         anim="slide-left-quick"
-                    />
-                </Flexbox>
+                    /> : null}
+                </Flexbox> */}
             </div>
         );
     }

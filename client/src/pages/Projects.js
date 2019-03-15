@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-import AboutContent from "./AboutContent";
-import ProjectContent from "../sections/ProjectContent";
-import AnimatedText from "../../components/AnimatedText/index";
-import Arrow from "../../components/Arrow/index";
-import Flexbox from "../../components/Flexbox/index";
-import FlexContainer from "../../components/FlexContainer/index";
-import OverlayBlock from "../../components/OverlayBlock/index";
-import Menu from "../../components/Menu/index";
-import NavIcon from "../../components/NavIcon/index";
+/* import AboutContent from "./AboutContent"; */
+import ProjectContent from "../pages/sections/ProjectContent";
+/* import Contact from "./sections/Contact"; */
+/* import AnimatedText from "../../components/AnimatedText/index"; */
+import Arrow from "../components/Arrow/index";
+/* import Flexbox from "../../components/Flexbox/index"; */
+import FlexContainer from "../components/FlexContainer/index";
+/* import OverlayBlock from "../../components/OverlayBlock/index"; */
+import Menu from "../components/Menu/index";
+import NavIcon from "../components/NavIcon/index";
 /* import Slider from "../../components/Slider/index";
 import SVGIcon from "../../components/SVGIcon/index"; */
-import "./section-styles/About.css";
+import "../pages/sections/section-styles/About.css";
 
-class About extends Component {
+class Projects extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -54,7 +55,6 @@ class About extends Component {
                     </FlexContainer>
                     {/* comp below needs direction column and justify center if rednering AboutContent */}
                     <FlexContainer 
-
                     >
                     {/* <Contact /> */}
                       {/*  <AboutContent
@@ -72,4 +72,4 @@ class About extends Component {
     }
 }
 
-export default About;
+export default Projects;
