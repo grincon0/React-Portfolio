@@ -11,7 +11,7 @@ import Menu from "../components/Menu/index";
 import NavIcon from "../components/NavIcon/index";
 /* import Slider from "../../components/Slider/index";
 import SVGIcon from "../../components/SVGIcon/index"; */
-import { Redirect } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import "../pages/sections/section-styles/About.css";
 
 class Contact extends Component {
@@ -21,7 +21,6 @@ class Contact extends Component {
             hidden: true,
             collapseMenu: false,
             section: '',
-            toAbout: false
         }
     }
     componentDidMount = () => {
@@ -57,8 +56,6 @@ class Contact extends Component {
     }
 
     render = () => {
-        this.handleRedirect();
-
         return (
             <section id="ABOUT">
                 <div className={`box-size ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"} ${this.props.classes}`}>
@@ -66,18 +63,19 @@ class Contact extends Component {
                     <FlexContainer classes="nav-height-fix" direction="row" justify="end">
                         <NavIcon toggleMenu={this.toggleMenu} />
                     </FlexContainer>
-                    {/* comp below needs direction column and justify center if rednering AboutContent */}
                     <FlexContainer
                         direction="column"
                         justify="center"
                     >
                         <ContactContent />
 
-                        <Arrow
-                            arrowText={"Home"}
-                            onClick={this.testLoader}
+                        <Route render={({ history }) => (
+                            <Arrow
+                                arrowText={"About"}
+                                onClick={() => { history.push('/') }}
+                            />
+                        )}
                         />
-
                     </FlexContainer>
                 </div>
             </section>

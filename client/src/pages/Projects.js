@@ -55,7 +55,6 @@ class Projects extends Component {
         }
     }
     render = () => {
-        this.handleRedirect();
         return (
             <section id="ABOUT">
                 <div className={`box-size ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"} ${this.props.classes}`}>
@@ -71,13 +70,8 @@ class Projects extends Component {
                                 arrowText={"Contact"}
                                 onClick={() => { history.push('/contact') }}
                             />
-
-                        )} />
-
-
-
-
-
+                        )}
+                        />
                     </FlexContainer>
                 </div>
             </section>
