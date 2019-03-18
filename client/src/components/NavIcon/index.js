@@ -9,7 +9,18 @@ class NavIcon extends Component {
             transform: false,
             hovering: false,
             clicked: false,
-            morphX: false
+            morphX: false,
+            mounted: false,
+            started: false,
+        }
+    }
+    componentDidMount = () => {
+        if(!this.state.mounted){
+            setTimeout(() => {
+                this.setState({mounted:true})
+                this.clearStartTransform();
+            },100);
+            
         }
     }
     componentDidUpdate = () => {
@@ -20,6 +31,11 @@ class NavIcon extends Component {
             clearTimeout(this.resetTimer);
             clearTimeout(this.exTimer);
         }
+    }
+    clearStartTransform = () => {
+        setTimeout(() => {
+            this.setState({mounted:false, started:true})
+        }, 1000);
     }
     cancelAnim = () => {
         let resetState = { ...this.state };
@@ -89,7 +105,7 @@ class NavIcon extends Component {
         return (
             <div id="burger-icon"
                 className={
-                    `${this.state.hovering ? "hover-burger" : ""} ${this.state.transform ? "rotate-in" : ""} ${this.state.morphX ? "x-out" : ""} `}
+                    ` ${this.state.started ? "" : "start-up "} ${this.state.mounted ? "start-back" : ""} ${this.state.hovering ? "hover-burger" : ""} ${this.state.transform ? "rotate-in" : ""} ${this.state.morphX ? "x-out" : ""} `}
                 onClick={this.handleStateChange}
                 onMouseOver={this.handleParentHover}
                 onMouseOut={this.removeParentHover}>
