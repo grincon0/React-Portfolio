@@ -6,6 +6,7 @@ import Flexbox from "../components/Flexbox/index";
 import FlexContainer from "../components/FlexContainer/index";
 import Menu from "../components/Menu/index";
 import NavIcon from "../components/NavIcon/index";
+import Parallax from "../components/Parallax/index";
 
 import { Route, withRouter, Redirect } from 'react-router-dom'
 
@@ -59,15 +60,20 @@ class About extends Component {
             <section id="ABOUT">
                 <div className={`box-size ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"} ${this.props.classes}`}>
                     <Menu collapseMenu={this.state.collapseMenu} />
-                    <FlexContainer classes="nav-height-fix" direction="row" justify="end">
+                    <FlexContainer classes="nav-height-fix height-fixer" direction="row" justify="end">
                         <NavIcon toggleMenu={this.toggleMenu} />
                     </FlexContainer>
                     <FlexContainer
+                        id="parallax-container"
                         direction="column"
                         justify="center"
                     >
+                    
                         {/* About page content beings */}
-                        <AboutContent canRender={this.state.canRender} />
+                        <AboutContent canRender={this.state.canRender}>
+                        <Parallax />
+                        
+                        </AboutContent>
                         <Route render={({ history }) => (
                             <Arrow
                                 arrowText={"Projects"}
@@ -76,6 +82,7 @@ class About extends Component {
                         )} />
                         {/* About page content ends */}
                     </FlexContainer>
+                    
                 </div>
             </section>
         );

@@ -10,6 +10,10 @@
     height: 55px;
 }
 
+.height-fixer{
+    overflow: hidden;
+}
+
 .nav-flex{
     position: fixed;
 }

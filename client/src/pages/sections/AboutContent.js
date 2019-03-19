@@ -15,7 +15,7 @@ class AboutContent extends Component {
     }
     componentDidMount = () => {
         this.renderChecker = setInterval(() => {
-            if(this.props.canRender){
+            if (this.props.canRender) {
                 this.tester();
                 clearInterval(this.renderChecker);
             }
@@ -23,16 +23,16 @@ class AboutContent extends Component {
         }, 400);
     }
     tester = () => {
-        this.setState({hidden: false})
+        this.setState({ hidden: false })
     }
-    handleThing = () =>{
-        if(!this.state.hidden){
-            return(
+    handleThing = () => {
+        if (!this.state.hidden) {
+            return (
                 <AnimatedText
-                        text="Testing 2nd Div"
-                        anim="slide-right-quick"
-                        delay={4000}
-                    />
+                    text="Testing 2nd Div"
+                    anim="slide-right-quick"
+                    delay={1000}
+                />
             );
         }
     }
@@ -41,10 +41,10 @@ class AboutContent extends Component {
         let thing = this.handleThing();
         return (
             <div>
-                <Flexbox>
-                    {thing}
-                </Flexbox>
+                {thing}
+                {this.props.children}
             </div>
+
         );
     }
 }
