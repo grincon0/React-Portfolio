@@ -96,6 +96,10 @@ body.page-is-changing::after, body.page-is-changing::before{
     transform: scaleX(1);
 }
 
+.overflow-fix-about{
+    overflow-y: hidden;
+}
+
 /* #about{
     z-index: 20;
 } */

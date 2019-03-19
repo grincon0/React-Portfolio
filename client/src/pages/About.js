@@ -67,6 +67,7 @@ class About extends Component {
                         id="parallax-container"
                         direction="column"
                         justify="center"
+                        class="overflow-fix-about"
                     >
                     
                         {/* About page content beings */}
