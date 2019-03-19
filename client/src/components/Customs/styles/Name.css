@@ -12,23 +12,28 @@
     opacity: 0;
     display:inline-block;
     z-index: 15;
-    animation: animateName 2s ease forwards;
+    
 }
-/* #Name h1 span:nth-child(){
+ #Name h1 span:nth-child(1){
+    animation: animateName 0.6s ease forwards;
+}
+#Name h1 span:nth-child(2){
+    animation: animateName 0.6s ease .1s forwards;
+}
+#Name h1 span:nth-child(3){
+    animation: animateName 0.6s ease .2s forwards;
+}
+#Name h1 span:nth-child(4){
+    animation: animateName 0.6s ease .3s forwards;
+}   
+#Name h1 span:nth-child(5){
+    animation: animateName 0.6s ease .4s forwards;
+}
+#Name h1 span:nth-child(6){
+    animation: animateName 0.6s ease .5s forwards;
+}
 
-}
-#Name h1 span:nth-child(){
-    
-}
-#Name h1 span:nth-child(){
-    
-}
-#Name h1 span:nth-child(){
-    
-}
-#Name h1 span:nth-child(){
-    
-} */
+
 
 @keyframes animateName{
     0%{
