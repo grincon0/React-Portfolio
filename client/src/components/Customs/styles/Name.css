@@ -1,0 +1,42 @@
+
+#Name.Animated h1{
+    text-align: center;
+    font-size: 3em;
+    font-family: Roboto;
+    color: aliceblue;
+    z-index: 15;
+
+}
+
+#Name.Animated h1 span:nth-child(n){
+    opacity: 0;
+    display:inline-block;
+    z-index: 15;
+    animation: animateName 2s ease forwards;
+}
+/* #Name h1 span:nth-child(){
+
+}
+#Name h1 span:nth-child(){
+    
+}
+#Name h1 span:nth-child(){
+    
+}
+#Name h1 span:nth-child(){
+    
+}
+#Name h1 span:nth-child(){
+    
+} */
+
+@keyframes animateName{
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
