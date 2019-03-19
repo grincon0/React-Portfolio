@@ -36,11 +36,10 @@ class AboutContent extends Component {
             );
         }
     }
-
     render = () => {
         let thing = this.handleThing();
         return (
-            <div>
+            <div className={``}>
                 {thing}
                 {this.props.children}
             </div>
