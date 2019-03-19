@@ -36,7 +36,6 @@ class AboutContent extends Component {
             );
         }
     }
-
     render = () => {
         let thing = this.handleThing();
         return (

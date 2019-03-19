@@ -18,7 +18,9 @@ class Parallax extends Component {
             icons: [Circle, Triangle, Square, X],
             height: 25,
             width: 25,
-            readyToDump: false
+            readyToDump: false,
+            readyToKill:false,
+
         }
     }
     componentDidMount = () => {
@@ -28,10 +30,17 @@ class Parallax extends Component {
                 imgArr.push(this.createElement(this.state.amount - i));
             }
             this.setState({ createElements: imgArr, readyToDump: true });
+
+/*             let test = new ParallaxHelper();
+            test.watch(); */
+            ParallaxHelper.watch();
         }
     }
     componentDidUpdate = () => {
-        console.log(this.state.createElements)
+        let element = document.getElementById('parallax-container');
+        if(element == null){
+            test.kill();
+        }
     }
     createElement = (key) => {
         return (
@@ -58,14 +67,11 @@ class Parallax extends Component {
         if (this.state.readyToDump) {
             elem = this.state.createElements;
         }
-        let test = new ParallaxHelper();
-        test.watch();
+
         return (
             <div id="img-container">
-            {elem || null}
+                {elem || null}
             </div>
-
-
         );
     }
 }

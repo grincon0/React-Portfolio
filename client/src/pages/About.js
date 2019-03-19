@@ -60,14 +60,13 @@ class About extends Component {
             <section id="ABOUT">
                 <div className={`box-size ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"} ${this.props.classes}`}>
                     <Menu collapseMenu={this.state.collapseMenu} />
-                    <FlexContainer classes="nav-height-fix height-fixer" direction="row" justify="end">
+                    <FlexContainer classes="nav-height-fix " direction="row" justify="end">
                         <NavIcon toggleMenu={this.toggleMenu} />
                     </FlexContainer>
                     <FlexContainer
                         id="parallax-container"
                         direction="column"
                         justify="center"
-                        class="overflow-fix-about"
                     >
                     
                         {/* About page content beings */}
