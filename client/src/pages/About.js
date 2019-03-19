@@ -6,6 +6,7 @@ import Flexbox from "../components/Flexbox/index";
 import FlexContainer from "../components/FlexContainer/index";
 import Menu from "../components/Menu/index";
 import NavIcon from "../components/NavIcon/index";
+import Parallax from "../components/Parallax/index";
 
 import { Route, withRouter, Redirect } from 'react-router-dom'
 
@@ -62,6 +63,7 @@ class About extends Component {
                     <FlexContainer classes="nav-height-fix" direction="row" justify="end">
                         <NavIcon toggleMenu={this.toggleMenu} />
                     </FlexContainer>
+
                     <FlexContainer
                         direction="column"
                         justify="center"
@@ -76,6 +78,7 @@ class About extends Component {
                         )} />
                         {/* About page content ends */}
                     </FlexContainer>
+                    <Parallax />
                 </div>
             </section>
         );
