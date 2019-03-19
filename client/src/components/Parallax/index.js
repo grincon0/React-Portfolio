@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import ParallaxHelper from "../../helpers/ParallaxHelper";
+import ParaHelper from "../../helpers/ParallaxHelper";
 import Circle from "../../assets/SVG/Parallax/Circle.svg";
 import Triangle from "../../assets/SVG/Parallax/Triangle.svg";
 import Square from "../../assets/SVG/Parallax/Square.svg";
