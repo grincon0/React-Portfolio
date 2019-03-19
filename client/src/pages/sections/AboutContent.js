@@ -13,34 +13,16 @@ class AboutContent extends Component {
             collapseMenu: false
         }
     }
-    componentDidMount = () => {
-        this.renderChecker = setInterval(() => {
-            if (this.props.canRender) {
-                this.tester();
-                clearInterval(this.renderChecker);
-            }
-            console.log('running');
-        }, 400);
-    }
-    tester = () => {
-        this.setState({ hidden: false })
-    }
-    handleThing = () => {
-        if (!this.state.hidden) {
-            return (
-                <AnimatedText
-                    text="Testing 2nd Div"
-                    anim="slide-right-quick"
-                    delay={1000}
-                />
-            );
-        }
-    }
+
     render = () => {
-        let thing = this.handleThing();
         return (
             <div className={``}>
-                {thing}
+                <AnimatedText 
+                text="George Rincon"
+                
+                classes="blur-short"
+                />
+               
                 {this.props.children}
             </div>
 

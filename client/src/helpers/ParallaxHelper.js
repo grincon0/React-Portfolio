@@ -31,7 +31,7 @@ const ParallaxHelper = {
             this.enableParallax(e,"parallax-container", ".parallax-img-5", -100);
             this.enableParallax(e,"parallax-container", ".parallax-img-6", -25);
             this.enableParallax(e,"parallax-container", ".parallax-img-7", -80);
-            this.enableParallax(e,"parallax-container", ".parallax-img-8", -10);
+            this.enableParallax(e,"parallax-container", ".parallax-img-8", -20);
             this.enableParallax(e,"parallax-container", ".parallax-img-9", -35);
             this.enableParallax(e,"parallax-container", ".parallax-img-10", 33);
     },
