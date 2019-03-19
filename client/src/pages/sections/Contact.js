@@ -19,11 +19,6 @@ class Contact extends Component {
         return (
             <section id="CONTACT">
                 <Form/>
-
-                {/*                 <AnimatedText />
-                <AnimatedText />
-                <AnimatedText /> */}
-
             </section>
         );
     }

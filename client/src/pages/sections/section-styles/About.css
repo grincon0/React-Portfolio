@@ -1,5 +1,5 @@
 .about-background{
-    background-color: #000;
+    background-color: rgb(19, 14, 46);
 }
 
 .box-size{
@@ -115,3 +115,4 @@ body.page-is-changing::after, body.page-is-changing::before{
         background-color: rgb(46, 39, 150);
     }
 }
+

@@ -70,9 +70,8 @@ class About extends Component {
                     >
                     
                         {/* About page content beings */}
-                        <AboutContent canRender={this.state.canRender}>
+                        <AboutContent>
                         <Parallax />
-                        
                         </AboutContent>
                         <Route render={({ history }) => (
                             <Arrow
