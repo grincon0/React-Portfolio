@@ -36,11 +36,8 @@ class Parallax extends Component {
             ParallaxHelper.watch();
         }
     }
-    componentDidUpdate = () => {
-        let element = document.getElementById('parallax-container');
-        if(element == null){
-            test.kill();
-        }
+    componentWillUnmount = () => {
+        ParallaxHelper.kill();
     }
     createElement = (key) => {
         return (

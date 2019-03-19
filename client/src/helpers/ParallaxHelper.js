@@ -17,7 +17,13 @@ const ParallaxHelper = {
         });
     },
     watch: function() {
-        document.addEventListener('mousemove', (e) => {
+        document.addEventListener('mousemove', this.boundWatch);
+        
+    },
+    boundWatch: function(e) {
+        ParallaxHelper.enableSet(e);
+    },
+    enableSet : function(e){
             this.enableParallax(e,"parallax-container", ".parallax-img-1", -50);
             this.enableParallax(e,"parallax-container", ".parallax-img-2", -20);
             this.enableParallax(e,"parallax-container", ".parallax-img-3", -40);
@@ -28,10 +34,9 @@ const ParallaxHelper = {
             this.enableParallax(e,"parallax-container", ".parallax-img-8", -10);
             this.enableParallax(e,"parallax-container", ".parallax-img-9", -35);
             this.enableParallax(e,"parallax-container", ".parallax-img-10", 33);
-        });
     },
     kill: function(){
-        document.removeEventListener('mousemove', this.watch);
+        document.removeEventListener('mousemove', this.boundWatch);
     }
 }
 
