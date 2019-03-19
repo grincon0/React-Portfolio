@@ -10,7 +10,14 @@ export const Name = (props) => {
                 <span>O</span>
                 <span>R</span>
                 <span>G</span>
-                <span>E</span>
+                <span className={`end-top`}>E</span>
+
+                <span className={`end-bottom`}>R</span>
+                <span>I</span>
+                <span>N</span>
+                <span>C</span>
+                <span>O</span>
+                <span>N</span>
             </h1>
         </section>
 

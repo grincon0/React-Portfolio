@@ -18,11 +18,6 @@ class AboutContent extends Component {
     render = () => {
         return (
             <div className={``}>
-{/*                 <AnimatedText 
-                text="George Rincon"
-                
-                classes="blur-short"
-                /> */}
                 <Name />
                
                 {this.props.children}
