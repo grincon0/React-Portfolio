@@ -71,7 +71,7 @@ class About extends Component {
                     
                         {/* About page content beings */}
                         <AboutContent>
-                        <Parallax />
+                        
                         </AboutContent>
                         <Route render={({ history }) => (
                             <Arrow
