@@ -3,7 +3,7 @@ import AnimatedText from "../../components/AnimatedText/index";
 import Arrow from "../../components/Arrow/index";
 import Flexbox from "../../components/Flexbox/index";
 import FlexContainer from "../../components/FlexContainer/index";
-import {Name} from "../../components/Customs/index";
+import {Name, TextOverlay} from "../../components/Customs/index";
 import Parallax from "../../components/Parallax/index";
 import "./section-styles/About.css";
 
@@ -20,7 +20,10 @@ class AboutContent extends Component {
         return (
             <div className={``}>
                 {this.props.children}
-                <Name />
+                {/* <Name /> */}
+                <TextOverlay
+                    text="01"
+                />
                 <Parallax />
                 
             </div>

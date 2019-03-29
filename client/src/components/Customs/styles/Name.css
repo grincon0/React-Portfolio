@@ -22,14 +22,25 @@
     opacity: 0;
     display:inline-block;
     position: relative;
-    overflow:hidden;
+
     color: transparent;
     background: -webkit-linear-gradient(#eee, #333);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transform: rotateY(90deg);
+    overflow: hidden;
   
 }
+
+#Name.show-pseudo span::before{
+    display:block;
+}
+
+#Name.hide-pseudo span::before{
+    display:none;
+    opacity: 0;
+}
+
 
 
   #Name.move-to-focus h1 span:nth-child(1){
@@ -75,15 +86,15 @@
 } 
 
 span::before{
-    content: "";
-    display: block;
+    content: "G";
     background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
     height: 90%;
     width: 100%;
     transform: translate3d(0,0,0);
-    transition: transform 0.4s ease;
+    transition: all 0.4s ease;
     position: absolute;
     z-index: -4;
+    
     
 /*     -webkit-transform: translate3d(0,-100%,0);
 transform: translate3d(0,-100%,0); */
@@ -123,4 +134,90 @@ animations mess with the state of the element in such a way gthat if you wanted 
         transform: rotateY(0deg);
         z-index: 1;
     }
+}
+
+
+
+
+/* #Name.show-number .mask-number{
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+} */
+
+#Name.show-number .mask-number{
+    display: block;
+    position: absolute;
+    width: 265px;
+    height:220px;
+    font-size:11.5625em;
+    font-family: League Spartan,Helvetica,Arial,sans-serif;
+    color:#99999d;
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+    opacity: 0;
+    transition: opacity .3s,-webkit-transform .45s cubic-bezier(.694,.048,.335,1);
+    transition: opacity .3s,transform .45s cubic-bezier(.694,.048,.335,1);
+    transition: opacity .3s,transform .45s cubic-bezier(.694,.048,.335,1),-webkit-transform .45s cubic-bezier(.694,.048,.335,1);
+    z-index: 90;
+    overflow: hidden;
+
+}
+
+#Name.show-number .mask-back, #Name.show-number .mask-front{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+}
+
+#Name.show-number .mask-overlay{
+    overflow: hidden;
+    position: relative;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+    color: transparent;
+}
+
+#Name.show-number .mask-overlay, #Name.show-number .mask-overlay:before {
+    transition: -webkit-transform .6s cubic-bezier(.694,.048,.335,1) 0s;
+    transition: transform .6s cubic-bezier(.694,.048,.335,1) 0s;
+    transition: transform .6s cubic-bezier(.694,.048,.335,1) 0s,-webkit-transform .6s cubic-bezier(.694,.048,.335,1) 0s
+}
+
+#Name.show-number .mask-overlay::before {
+    content: "01";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    text-shadow: 5px 5px 11px rgba(74,74,74,.5);
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate3d(0,-100%,0);
+    transform: translate3d(0,-100%,0);
+}
+
+#Name.show-number:hover .mask-number {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+
+#Name.show-number:hover .mask-overlay, #Name.show-number:hover .mask-overlay::before {
+    transition-delay: .4s;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+}
+
+#Name.show-number:hover .case-study-mask:after {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+}
+
+#Name.show-number:hover .case-study-mask-number {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
 }
