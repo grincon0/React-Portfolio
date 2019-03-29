@@ -1,13 +1,13 @@
 #Text-Cont.show-number .mask-number{
     display: block;
-    position: absolute;
+    position: relative;
     width: 265px;
     height:220px;
-    font-size:11.5625em;
+    font-size:9em;
     font-family: League Spartan,Helvetica,Arial,sans-serif;
     color:#99999d;
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+/*     -webkit-transform: translateY(15px);
+    transform: translateY(15px); */
     opacity: 0;
     transition: opacity .3s,-webkit-transform .45s cubic-bezier(.694,.048,.335,1);
     transition: opacity .3s,transform .45s cubic-bezier(.694,.048,.335,1);
@@ -40,12 +40,11 @@
 }
 
 #Text-Cont.show-number .mask-overlay::before {
-    content: "01";
+    content: attr(data-content);
     position: absolute;
     top: 0;
     left: 0;
-    color: #fff;
-    text-shadow: 5px 5px 11px rgba(74,74,74,.5);
+    color: turquoise;
     width: 100%;
     height: 100%;
     -webkit-transform: translate3d(0,-100%,0);

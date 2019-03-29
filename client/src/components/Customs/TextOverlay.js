@@ -5,6 +5,7 @@ export class TextOverlay extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            content: "",
             ready: false,
             loadBefore: false
         }
@@ -12,7 +13,10 @@ export class TextOverlay extends Component {
 
     componentDidMount = () => {
         /*     setTimeout(() =>{ */
-        this.setState({ ready: true });
+        this.setState({ 
+            content: this.props.text,
+            ready: true 
+        });
         /* this.addTransitionEndListener(); */
         /*      },600); */
 
@@ -31,7 +35,7 @@ export class TextOverlay extends Component {
                 <div className="mask-number">
                     <div className="mask-back">{this.props.text}</div>
                     <div className="mask-front">
-                        <div className="mask-overlay">{this.props.text}</div>
+                        <div data-content={this.state.content} className="mask-overlay">{this.props.text}</div>
                     </div>
                 </div>
             </section>
