@@ -1,25 +1,66 @@
-import React from "react";
+import React, { Component } from "react";
 import "./styles/Name.css";
 
-export const Name = (props) => {
-    return (
-        <section id="Name" className={`Animated`}>
-            <h1>
-                <span>G</span>
-                <span>E</span>
-                <span>O</span>
-                <span>R</span>
-                <span>G</span>
-                <span className={`end-top`}>E</span>
+export class Name extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            ready: false
+        }
+    }
 
-                <span className={`end-bottom`}>R</span>
-                <span>I</span>
-                <span>N</span>
-                <span>C</span>
-                <span>O</span>
-                <span>N</span>
-            </h1>
-        </section>
+    componentDidMount = () => {
+        
+        setTimeout(() =>{
+            this.setState({ ready: true });
+            this.addTransitionEndListener();
+        },600);
+        
+    }
+    addTransitionEndListener =()=> {
+        const transtion = document.querySelector('.last-char');
+        transtion.addEventListener('animationend', () => {
+            console.log('Animation ended');
+        });
+    }
+    render = () => {
+        return (
+            <section id="Name" className={`Animated ${this.state.ready ? "move-to-focus" : ""}`}>
+                <h1>
+                    <span>G</span>
 
-    );
+
+                    <span>E</span>
+
+                    <span>O</span>
+                    <span>R</span>
+                    <span>G</span>
+
+                    <span className={`end-top`}>E</span>
+
+
+                    <span>R</span>
+
+
+                    <span>I</span>
+
+
+                    <span>N</span>
+
+
+                    <span>C</span>
+
+                    <span>O</span>
+
+                    <span className="last-char">N</span>
+                </h1>
+
+
+            </section>
+
+
+        );
+    }
+
+
 }
