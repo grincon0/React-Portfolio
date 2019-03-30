@@ -6,6 +6,8 @@ import liftoff from "../../assets/SVG/Icons/liftoff.svg";
 import paint from "../../assets/SVG/Icons/paint.svg";
 import performance from "../../assets/SVG/Icons/performance.svg";
 import car from "../../assets/SVG/Icons/car.svg";
+import palm from "../../assets/SVG/palm2.svg";
+
 import "./style.css";
 
 class SVGIcon extends Component {
@@ -25,6 +27,8 @@ class SVGIcon extends Component {
                 return colorwheel;
             case "liftoff":
                 return liftoff;
+            case "palm":
+                return palm;
             default:
                 break;
         }
@@ -34,7 +38,7 @@ class SVGIcon extends Component {
         let SVGimage = this.handleSVGProp();
 
         return (
-            <img src={SVGimage} width={this.props.width} height={this.props.height} alt="icon"></img>
+            <img className={this.props.classes} src={SVGimage} width={this.props.width} height={this.props.height} alt="icon"></img>
 
         )
     }

@@ -1,0 +1,18 @@
+
+canvas {
+    display: block;	
+    overflow: hidden;
+}
+
+.wave-adjust{
+    position: absolute;
+    transform: translateY(300px);
+    overflow: hidden;
+    top:0;
+    
+}
+
+.move-wave{
+    transition: all 3s ease;
+    transform: translateY(100px);
+}

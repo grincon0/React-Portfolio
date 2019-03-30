@@ -92,6 +92,8 @@ body.page-is-changing::after, body.page-is-changing::before{
  /*    z-index: 995; */
 /* } */ 
 
+
+
 .page-is-changing .cd-loading-bar::before{
     transform: scaleX(1);
 }
