@@ -6,6 +6,7 @@ import FlexContainer from "../../components/FlexContainer/index";
 import { Name, TextOverlay } from "../../components/Customs/index";
 import Parallax from "../../components/Parallax/index";
 import {Waves} from "../../components/Experiments/index";
+import SVGIcon from "../../components/SVGIcon/index";
 import "./section-styles/About.css";
 
 class AboutContent extends Component {
@@ -24,6 +25,7 @@ class AboutContent extends Component {
               <FlexContainer
                     direction="row"
                     justify="center"
+                    classes={`overflow-fix`}
                 >
                     <TextOverlay
                         text="G"
@@ -54,6 +56,7 @@ class AboutContent extends Component {
                 <FlexContainer
                     direction="row"
                     justify="center"
+                    classes={`overflow-fix`}
                 >
                     <TextOverlay
                         text="R"
@@ -78,6 +81,12 @@ class AboutContent extends Component {
                     <TextOverlay
                         text="n"
                         faded={false}
+                    />
+                    <SVGIcon 
+                    classes={`palm`}
+                    src="palm"
+                    height={180}
+                    width={180}
                     />
                     <Waves /> 
                 </FlexContainer> 

@@ -58,7 +58,7 @@ class About extends Component {
 
         return (
             <section id="ABOUT">
-                <div className={`box-size ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"} ${this.props.classes}`}>
+                <div className={`box-size overflow-fix ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"} ${this.props.classes}`}>
                     <Menu collapseMenu={this.state.collapseMenu} />
                     <FlexContainer classes="nav-height-fix " direction="row" justify="end">
                         <NavIcon toggleMenu={this.toggleMenu} />
@@ -67,6 +67,7 @@ class About extends Component {
                         id="parallax-container"
                         direction="column"
                         justify="center"
+                        classes={`overflow-fix`}
                     >
                     
                         {/* About page content beings */}

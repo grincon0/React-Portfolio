@@ -1,0 +1,17 @@
+.palm{
+    position: absolute;
+    left: 0;
+    top: calc(100vh - 380px);
+    animation: smooth-right 1s ease-in 0.5s forwards;
+    transform: translateX(-200px);
+}
+
+@keyframes smooth-right{
+    from{
+        transform: translateX(-200px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+

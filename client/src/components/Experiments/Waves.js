@@ -10,10 +10,13 @@ export class Waves extends Component {
         }
     }
     componentDidMount = () => {
-        let waveTimer = setTimeout(() => {
+        this.waveTimer = setTimeout(() => {
             this.setState({move: true});
         },1000)
         $.init();
+    }
+    componentWillUnmount = () => {
+        clearTimeout(this.waveTimer);
     }
     render = () => {
         return(
