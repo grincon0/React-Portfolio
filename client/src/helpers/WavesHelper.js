@@ -94,7 +94,7 @@ $.loop = () => {
 	$.wave();
 	$.wave();
 	$.wave();
-	$.wave();
+	/* $.wave(); */
 	$.yoff += $.yinc;
 	$.goff += $.ginc;
 };

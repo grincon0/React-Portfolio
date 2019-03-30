@@ -21,7 +21,7 @@ class AboutContent extends Component {
         return (
             <div className={``}>
                 {this.props.children}
-        {/*         <FlexContainer
+              <FlexContainer
                     direction="row"
                     justify="center"
                 >
@@ -79,8 +79,9 @@ class AboutContent extends Component {
                         text="n"
                         faded={false}
                     />
-                </FlexContainer> */}
-                <Waves />
+                    <Waves /> 
+                </FlexContainer> 
+                 
 
                 <Parallax />
 
