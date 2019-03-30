@@ -1,0 +1,10 @@
+
+canvas {
+	display: block;	
+}
+
+.wave-adjust{
+    position: relative;
+    transform: translateY(100px);
+    overflow: hidden;
+}

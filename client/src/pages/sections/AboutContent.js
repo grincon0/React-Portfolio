@@ -5,6 +5,7 @@ import Flexbox from "../../components/Flexbox/index";
 import FlexContainer from "../../components/FlexContainer/index";
 import { Name, TextOverlay } from "../../components/Customs/index";
 import Parallax from "../../components/Parallax/index";
+import {Waves} from "../../components/Experiments/index";
 import "./section-styles/About.css";
 
 class AboutContent extends Component {
@@ -20,7 +21,7 @@ class AboutContent extends Component {
         return (
             <div className={``}>
                 {this.props.children}
-                <FlexContainer
+        {/*         <FlexContainer
                     direction="row"
                     justify="center"
                 >
@@ -78,7 +79,8 @@ class AboutContent extends Component {
                         text="n"
                         faded={false}
                     />
-                </FlexContainer>
+                </FlexContainer> */}
+                <Waves />
 
                 <Parallax />
 

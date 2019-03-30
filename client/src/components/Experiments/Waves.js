@@ -1,4 +1,5 @@
-import React, {Component} from "react"
+import React, {Component} from "react";
+import $ from "../../helpers/WavesHelper.js";
 import "./styles/Waves.css";
 
 export class Waves extends Component {
@@ -8,9 +9,12 @@ export class Waves extends Component {
             test: false
         }
     }
+    componentDidMount = () => {
+        $.init();
+    }
     render = () => {
         return(
-            <canvas></canvas>
+            <canvas className="wave-adjust"></canvas>
         );
     }
 
