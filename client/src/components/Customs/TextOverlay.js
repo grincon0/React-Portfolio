@@ -6,20 +6,21 @@ export class TextOverlay extends Component {
         super(props);
         this.state = {
             content: "",
-            ready: false,
+            fade: false,
+            ready: true,
             loadBefore: false
         }
     }
 
     componentDidMount = () => {
-        /*     setTimeout(() =>{ */
-        this.setState({ 
-            content: this.props.text,
-            ready: true 
-        });
-        /* this.addTransitionEndListener(); */
-        /*      },600); */
+        let newState = {...this.state};
+        
+        if(this.props.fade === true){
+            newState.fade = true;
+        }
+        newState.content = this.props.text;
 
+        this.setState(newState);
     }
     addTransitionEndListener = () => {
         const transtion = document.querySelector('.last-char');
@@ -31,7 +32,7 @@ export class TextOverlay extends Component {
 
     render = () => {
         return (
-            <section id="Text-Cont" className={`Animated ${this.state.ready ? "show-number" : ""} ${this.state.loadBefore ? "show-pseudo" : "hide-psuedo"}`}>
+            <section id="Text-Container" className={`Animated ${this.state.ready ? "show-number" : ""} ${this.state.loadBefore ? "show-pseudo" : "hide-psuedo"} ${this.state.faded ? "invisible" : "visible"}`}>
                 <div className="mask-number">
                     <div className="mask-back">{this.props.text}</div>
                     <div className="mask-front">

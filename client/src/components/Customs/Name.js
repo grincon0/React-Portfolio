@@ -42,13 +42,6 @@ export class Name extends Component {
                     <span>O</span>
                     <span className="last-char">N</span>
                 </h1> 
-{/* 
-                <div className="mask-number">
-                    <div className="mask-back">01</div>
-                    <div className="mask-front">
-                        <div className="mask-overlay">01</div>
-                    </div>
-                </div> */}
             </section>
 
 

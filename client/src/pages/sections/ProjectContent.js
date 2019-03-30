@@ -4,6 +4,7 @@ import Arrow from "../../components/Arrow/index";
 import OverlayBlock from "../../components/OverlayBlock/index";
 import FlexBox from "../../components/Flexbox/index";
 import FlexContainer from "../../components/FlexContainer/index";
+
 import "./section-styles/projectContent.css";
 
 class ProjectContent extends Component {
@@ -25,6 +26,7 @@ class ProjectContent extends Component {
                     justify="center"
                     classes="align-fix"
                 >
+                
                     <FlexBox
                         classes="tiny-flex"
                     >

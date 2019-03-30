@@ -20,13 +20,66 @@ class AboutContent extends Component {
         return (
             <div className={``}>
                 {this.props.children}
-                {/* <Name /> */}
-                <TextOverlay
-                    text="01"
-                />
-                <TextOverlay
-                    text="02"
-                />
+                <FlexContainer
+                    direction="row"
+                    justify="center"
+                >
+                    <TextOverlay
+                        text="G"
+                        faded={false}
+                    />
+                    <TextOverlay
+                        text="e"
+                        faded={false}
+                    />
+                    <TextOverlay
+                        text="o"
+                        faded={false}
+                    />
+                    <TextOverlay
+                        text="r"
+                        faded={false}
+                    />
+                    <TextOverlay
+                        text="g"
+                        faded={false}
+                    />
+                    <TextOverlay
+                        text="e"
+                        faded={false}
+                    />
+
+                </FlexContainer>
+                <FlexContainer
+                    direction="row"
+                    justify="center"
+                >
+                    <TextOverlay
+                        text="R"
+                        faded={false}
+                    />
+                    <TextOverlay
+                        text="i"
+                        faded={false}
+                    />
+                    <TextOverlay
+                        text="n"
+                        faded={false}
+                    />
+                    <TextOverlay
+                        text="c"
+                        faded={false}
+                    />
+                    <TextOverlay
+                        text="o"
+                        faded={false}
+                    />
+                    <TextOverlay
+                        text="n"
+                        faded={false}
+                    />
+                </FlexContainer>
+
                 <Parallax />
 
             </div>
