@@ -9,6 +9,7 @@ import Landing from "./pages/Landing";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
+import Parallax from "./components/Parallax/index";
 import {
   CSSTransition,
   TransitionGroup,
@@ -30,6 +31,7 @@ class App extends Component {
     return (
 
       <div className="App">
+      {/* <Parallax /> */}
         <Route render={({ location }) => (
           <TransitionGroup>
             <CSSTransition
@@ -37,6 +39,7 @@ class App extends Component {
               timeout={900}
               classNames="fade"
             >
+            
               <Switch location={location}>
                 <Route exact path="/" component={Landing} />
                 <Route path="/about" component={About} />
