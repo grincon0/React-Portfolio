@@ -34,9 +34,9 @@ export class TextOverlay extends Component {
         return (
             <section id="Text-Container" className={`Animated ${this.state.ready ? "show-number" : ""} ${this.state.loadBefore ? "show-pseudo" : "hide-psuedo"} ${this.state.faded ? "invisible" : "visible"}`}>
                 <div className="mask-number">
-                    <div className="mask-back">{this.props.text}</div>
+                    <h1 className="mask-back">{this.props.text}</h1>
                     <div className="mask-front">
-                        <div data-content={this.state.content} className="mask-overlay">{this.props.text}</div>
+                        <h1 data-content={this.state.content} className="mask-overlay">{this.props.text}</h1>
                     </div>
                 </div>
             </section>
