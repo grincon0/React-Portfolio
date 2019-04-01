@@ -66,22 +66,29 @@ class About extends Component {
                     <FlexContainer
                         id="parallax-container"
                         direction="column"
-                        justify="center"
+                       
                         classes={`overflow-fix`}
                     >
                     
                         {/* About page content beings */}
-                        <AboutContent>
+                        <AboutContent />
                         
-                        </AboutContent>
+                        <FlexContainer
+                    direction="column"
+                    justify="center"
+                    
+                    >
                         <Route render={({ history }) => (
                             <Arrow
                                 arrowText={"Projects"}
                                 onClick={(e) => { this.handleTransition(e, history) }}
                             />
                         )} />
+                    </FlexContainer>
+                    
                         {/* About page content ends */}
                     </FlexContainer>
+                   
                     
                 </div>
             </section>

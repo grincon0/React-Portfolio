@@ -1,0 +1,82 @@
+#Top-Text-Container:before {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    z-index: 99;
+}
+
+#Top-Text-Container:before{
+    background-color: rgba(17, 17, 77, 0.226);
+    animation: reveal 1.8s ease forwards;
+}
+
+/* #Headline-1 span, #Headline-2 span{
+    font-family: LeagueSpartan, sans-serif;
+    font-size: 28px;
+    color:white;
+    margin-left: 2px;
+    margin-right: 2px;
+   
+} */
+
+#Headline-1 span:nth-child(n){
+    display: inline-block;
+    font-family: LeagueSpartan, sans-serif;
+    font-size: 28px;
+    color:white;
+    margin-left: 2px;
+    margin-right: 2px;
+    transform: scale(0);
+}
+
+#Headline-1.DoIt span:nth-child(1){
+    animation: spanreveal 0.6s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+#Headline-1.DoIt span:nth-child(2){
+    animation: spanreveal 0.6s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s forwards;
+}
+#Headline-1.DoIt span:nth-child(3){
+    animation: spanreveal 0.6s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s forwards;
+}
+#Headline-1.DoIt span:nth-child(4){
+    animation: spanreveal 0.6s cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s forwards;
+}
+#Headline-1.DoIt span:nth-child(5){
+    animation: spanreveal 0.6s cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s forwards;
+}
+#Headline-1.DoIt span:nth-child(6){
+    animation: spanreveal 0.6s cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s forwards;
+}
+
+
+@keyframes spanreveal{
+    0%{
+        transform: scale(0);
+    }
+    65%{
+        transform: scale(0);
+    }
+    80%{
+        transform: scale(1.7);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes reveal {
+    0% {
+        width: 0;
+        right: 0;
+   }
+    65% {
+        width: 100%;
+        right: 0;
+   }
+    100% {
+        width: 0;
+        right: 100%;
+   }
+}
