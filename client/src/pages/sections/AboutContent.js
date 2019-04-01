@@ -15,8 +15,37 @@ class AboutContent extends Component {
         super(props);
         this.state = {
             hidden: true,
-            collapseMenu: false
+            collapseMenu: false,
+            headlineAnimationCompleted: {
+                first: false,
+                second: false
+            }
         }
+    }
+    componentDidMount = () => {
+        this.addAnimationEndLisenter('.last-span', 'animation', 'first');
+    }
+    addAnimationEndLisenter = (query, type, which) => {
+        let element = document.querySelector(query);
+
+        element.addEventListener(`${type}end`, () => {
+            console.log(`${type} ended`);
+
+            let newState = { ...this.state };
+
+            switch (which) {
+                case 'first':
+                    newState.headlineAnimationCompleted.first = true;
+                    this.setState(newState);
+                    break;
+                case 'second':
+                    newState.headlineAnimationCompleted.second = true;
+                    this.setState(newState);
+                    break;
+                default:
+                    break;
+            }
+        });
     }
 
     render = () => {
@@ -30,15 +59,14 @@ class AboutContent extends Component {
                     id="Top-Text-Container"
                 >
 
-                    <div id="Headline-1" className="DoIt">
+                    <div id="Headline-1" className={"DoIt"}>
                         <span>H</span>
                         <span>i</span>
                         <span>,</span>
                         <span>I</span>
                         <span>'</span>
-                        <span className="last-word">m</span>
+                        <span className="last-span">m</span>
                     </div>
-
                     <TextOverlay
                         text="G"
                         faded={false}
@@ -64,6 +92,8 @@ class AboutContent extends Component {
                         faded={false}
                     />
 
+
+
                 </FlexContainer>
                 <FlexContainer
                     direction="row"
@@ -71,6 +101,9 @@ class AboutContent extends Component {
                     classes={`overflow-fix`}
                     id="Bottom-Text-Container"
                 >
+
+
+
                     <TextOverlay
                         text="R"
                         faded={false}
@@ -96,18 +129,20 @@ class AboutContent extends Component {
                         faded={false}
                     />
 
-                    <div id="Headline-2">
+
+
+                    <div id="Headline-2" className={`${this.state.headlineAnimationCompleted.first ? "run-second" : "" }`}>
                         <span>F</span>
                         <span>u</span>
                         <span>l</span>
                         <span>l</span>
-                        <span></span>
+                        <span> </span>
                         <span>S</span>
                         <span>t</span>
                         <span>a</span>
                         <span>c</span>
                         <span>k</span>
-                        <span></span>
+                        <span> </span>
                         <span>D</span>
                         <span>e</span>
                         <span>v</span>
@@ -116,7 +151,7 @@ class AboutContent extends Component {
                         <span>o</span>
                         <span>p</span>
                         <span>e</span>
-                        <span >r</span>
+                        <span>r</span>
                     </div>
                     <SVGIcon
                         classes={`palm`}
