@@ -3,7 +3,8 @@ import AnimatedText from "../../components/AnimatedText/index";
 import Arrow from "../../components/Arrow/index";
 import Flexbox from "../../components/Flexbox/index";
 import FlexContainer from "../../components/FlexContainer/index";
-import {FirstName, LastName} from "../../components/Name/index";
+
+import { FirstName, LastName } from "../../components/Name/index";
 import { Name, TextOverlay } from "../../components/Customs/index";
 import Parallax from "../../components/Parallax/index";
 import { Waves } from "../../components/Experiments/index";
@@ -19,12 +20,14 @@ class AboutContent extends Component {
             collapseMenu: false,
             headlineAnimationCompleted: {
                 first: false,
-                second: false
+                name: false,
+                second: false,
             }
         }
     }
     componentDidMount = () => {
         this.addAnimationEndLisenter('.last-span', 'animation', 'first');
+        this.addAnimationEndLisenter('.lastname-overlay', 'animation', 'name')
     }
     addAnimationEndLisenter = (query, type, which) => {
         let element = document.querySelector(query);
@@ -43,7 +46,12 @@ class AboutContent extends Component {
                     newState.headlineAnimationCompleted.second = true;
                     this.setState(newState);
                     break;
+                case 'name':
+                    newState.headlineAnimationCompleted.name = true;
+                    this.setState(newState);
+                    break;
                 default:
+
                     break;
             }
         });
@@ -68,45 +76,26 @@ class AboutContent extends Component {
                         <span>'</span>
                         <span className="last-span">m</span>
                     </div>
-                    <FirstName
-                    animate={this.state.headlineAnimationCompleted.first}
-                    />
-                    
-                    {/* <TextOverlay
-                        text="G"
-                        faded={false}
-                    />
-                    <TextOverlay
-                        text="e"
-                        faded={false}
-                    />
-                    <TextOverlay
-                        text="o"
-                        faded={false}
-                    />
-                    <TextOverlay
-                        text="r"
-                        faded={false}
-                    />
-                    <TextOverlay
-                        text="g"
-                        faded={false}
-                    />
-                    <TextOverlay
-                        text="e"
-                        faded={false}
-                    /> */}
-
-
-
                 </FlexContainer>
+                <Flexbox
+                    direction="row"
+                    justify="center"
+                    classes={`flex-adjust`}
+                >
+                    <FirstName
+                        animate={this.state.headlineAnimationCompleted.first}
+                    />
+                    <LastName
+                        animate={this.state.headlineAnimationCompleted.first}
+                    />
+                </Flexbox>
                 <FlexContainer
                     direction="row"
                     justify="center"
                     classes={`overflow-fix`}
                     id="Bottom-Text-Container"
                 >
-{/*                     <TextOverlay
+                    {/*                     <TextOverlay
                         text="R"
                         faded={false}
                     />
@@ -130,13 +119,11 @@ class AboutContent extends Component {
                         text="n"
                         faded={false}
                     /> */}
-                    <LastName
-                        animate={this.state.headlineAnimationCompleted.first}
-                    />
 
 
 
-                    <div id="Headline-2" className={`${this.state.headlineAnimationCompleted.first ? "run-second" : ""}`}>
+
+                    <div id="Headline-2" className={`${this.state.headlineAnimationCompleted.name ? "run-second" : ""}`}>
                         <span>F</span>
                         <span>u</span>
                         <span>l</span>
