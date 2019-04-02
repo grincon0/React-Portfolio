@@ -6,12 +6,10 @@
 
 #Text-Container.show-number .mask-number{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content:flex-start;
     position: relative;
-    width: 70px;
-    height:70px;
-    
+    width: 50px;
+    height:65px;
     font-family: LeagueSpartan,sans-serif;
     color:#ececee;
 /*     -webkit-transform: translateY(15px);
@@ -20,7 +18,7 @@
     transition: opacity .1s,transform .1s cubic-bezier(.694,.048,.335,1);
     transition: opacity .1s,transform .1s cubic-bezier(.694,.048,.335,1),-webkit-transform .1s cubic-bezier(.694,.048,.335,1);
     z-index: 90;
-    text-align: center;
+    
     margin: 0;
     
 }
@@ -42,7 +40,6 @@
     left:0;
     width:100%;
     height: 100%;
-   
 }
 
 #Text-Container.show-number .mask-overlay{
@@ -56,9 +53,9 @@
 }
 
 #Text-Container.show-number .mask-overlay, #Text-Container.show-number .mask-overlay:before {
-    transition: -webkit-transform 2s cubic-bezier(0.215, 0.61, 0.355, 1) ;
-    transition: transform 2s cubic-bezier(0.215, 0.61, 0.355, 1) ;
-    transition: transform 2s cubic-bezier(0.215, 0.61, 0.355, 1) ,-webkit-transform 2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: -webkit-transform 1s cubic-bezier(0.215, 0.61, 0.355, 1) ;
+    transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1) ;
+    transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1) ,-webkit-transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 #Text-Container.show-number .mask-overlay::before {
@@ -98,7 +95,7 @@
 #Text-Container{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
 }
 

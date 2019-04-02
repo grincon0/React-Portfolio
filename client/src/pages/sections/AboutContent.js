@@ -27,7 +27,8 @@ class AboutContent extends Component {
     }
     componentDidMount = () => {
         this.addAnimationEndLisenter('.last-span', 'animation', 'first');
-        this.addAnimationEndLisenter('.lastname-overlay', 'animation', 'name')
+        this.addAnimationEndLisenter('.lastname-overlay', 'animation', 'name');
+        this.addAnimationEndLisenter('.lastname-final', 'animation', 'second');
     }
     addAnimationEndLisenter = (query, type, which) => {
         let element = document.querySelector(query);
@@ -56,8 +57,34 @@ class AboutContent extends Component {
             }
         });
     }
-
+    handleSpanHover = (e) => {
+        switch (e.target.id) {
+            case "span1":
+            console.log('leu')
+                document.getElementById("span1").classList.add("hover-span");
+                break;
+            default:
+                break;
+        }
+    }
+    handleSpanOut = (e) => {
+        switch (e.target.id) {
+            case "span1":
+                document.getElementById("span1").classList.remove("hover-span");
+                break;
+            default:
+                break;
+        }
+    }
+    handleThirdLineClasses = ()=> {
+        if(this.state.headlineAnimationCompleted.name === true && this.state.headlineAnimationCompleted.second === true){
+            return "animation-finished";
+        }else if(this.state.headlineAnimationCompleted.name === true){
+            return "run-second";
+        }
+    }
     render = () => {
+        let thirdClasses = this.handleThirdLineClasses();
         return (
             <div className={``}>
                 {this.props.children}
@@ -68,8 +95,8 @@ class AboutContent extends Component {
                     id="Top-Text-Container"
                 >
 
-                    <div id="Headline-1" className={"DoIt"}>
-                        <span>H</span>
+                    <div id="Headline-1" className={`${this.state.headlineAnimationCompleted.second ? "animation-finished" : "DoIt "}`}>
+                        <span id="span1" onMouseOver={this.handleSpanHover} onMouseOut={this.handleSpanOut}>H</span>
                         <span>i</span>
                         <span>,</span>
                         <span>I</span>
@@ -95,35 +122,8 @@ class AboutContent extends Component {
                     classes={`overflow-fix`}
                     id="Bottom-Text-Container"
                 >
-                    {/*                     <TextOverlay
-                        text="R"
-                        faded={false}
-                    />
-                    <TextOverlay
-                        text="i"
-                        faded={false}
-                    />
-                    <TextOverlay
-                        text="n"
-                        faded={false}
-                    />
-                    <TextOverlay
-                        text="c"
-                        faded={false}
-                    />
-                    <TextOverlay
-                        text="o"
-                        faded={false}
-                    />
-                    <TextOverlay
-                        text="n"
-                        faded={false}
-                    /> */}
-
-
-
-
-                    <div id="Headline-2" className={`${this.state.headlineAnimationCompleted.name ? "run-second" : ""}`}>
+            
+                    <div id="Headline-2" className={`${thirdClasses}`}>
                         <span>F</span>
                         <span>u</span>
                         <span>l</span>
@@ -143,7 +143,7 @@ class AboutContent extends Component {
                         <span>o</span>
                         <span>p</span>
                         <span>e</span>
-                        <span>r</span>
+                        <span className={`lastname-final`}>r</span>
                     </div>
                     <SVGIcon
                         classes={`palm`}

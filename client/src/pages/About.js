@@ -37,12 +37,6 @@ class About extends Component {
     doTransitionEffect = () => {
         document.body.className += 'page-is-changing';
     }
-    testLoader = () => {
-        /*         document.body.className += 'page-is-changing';
-                setTimeout(() => {
-                    document.body.className = '';
-                }, 1500) */
-    }
     toggleMenu = () => {
         if (!this.state.collapseMenu) {
             let newState = { ...this.state };
