@@ -14,6 +14,7 @@ class Parallax extends Component {
         super(props);
         this.state = {
             amount: 10,
+            canAppear: false,
             createElements: [],
             icons: [Circle, Triangle, Square, X],
             height: 25,
@@ -33,11 +34,22 @@ class Parallax extends Component {
 
 /*             let test = new ParallaxHelper();
             test.watch(); */
+            setTimeout(() => {
+                let newState = {...this.state};
+                newState.canAppear = true;
+                this.setState(newState);
+            },1000);
             ParallaxHelper.watch();
         }
     }
     componentWillUnmount = () => {
+        clearTimeout(this.opacityTimer);
         ParallaxHelper.kill();
+    }
+    setTimer = () => {
+        
+        
+        
     }
     createElement = (key) => {
         return (
@@ -66,7 +78,7 @@ class Parallax extends Component {
         }
 
         return (
-            <div id="img-container">
+            <div id="img-container" className={`${this.state.canAppear ? "ease-opacity" : ""}`}>
                 {elem || null}
             </div>
         );
