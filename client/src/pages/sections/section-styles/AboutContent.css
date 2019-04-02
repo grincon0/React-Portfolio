@@ -31,11 +31,22 @@
 #Headline-1 span:nth-child(n), #Headline-2 span:nth-child(n){
     display: inline-block;
     font-family: LeagueSpartan, sans-serif;
-    font-size: 28px;
+    font-size: 1.5em;
     color:white;
     margin-left: 2px;
     margin-right: 2px;
     transform: scale(0);
+    z-index: 111;
+}
+
+#Headline-1 span.hover-span{
+    opacity: 1;
+    transform: scale(1);
+    animation: wiggle 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) !important;
+} 
+
+#Headline-1.animation-finished span:nth-child(3){
+    margin-right: 10px;
 }
 
 
@@ -46,6 +57,7 @@
     animation: spanreveal 0.6s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s forwards;
 }
 #Headline-1.DoIt span:nth-child(3){
+    margin-right: 10px;
     animation: spanreveal 0.6s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s forwards;
 }
 #Headline-1.DoIt span:nth-child(4){
@@ -70,6 +82,7 @@
     animation: spanreveal 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s forwards;
 }   
 #Headline-2.run-second span:nth-child(4){
+    margin-right: 10px;
     animation: spanreveal 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s forwards;
 }
 #Headline-2.run-second span:nth-child(5){
@@ -88,6 +101,7 @@
     animation: spanreveal 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s forwards;
 }
 #Headline-2.run-second span:nth-child(10){
+    margin-right: 10px;
     animation: spanreveal 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) 0.9s forwards;
 }
 #Headline-2.run-second span:nth-child(11){
@@ -121,9 +135,67 @@
     animation: spanreveal 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) 1.9s forwards;
 }
 
+#Headline-2.animation-finished span:nth-child(4){
+    margin-right: 10px;
+}
+#Headline-2.animation-finished span:nth-child(10){
+    margin-right: 10px;
+}
+
+#Headline-2.animation-finished span:nth-child(10){
+    margin-right: 10px;
+}
+
+
+#Headline-1.animation-finished span{
+    transform: scale(1);
+    opacity: 1;
+}
+
+#Headline-2.animation-finished span{
+    transform: scale(1);
+    opacity: 1;
+}
+
+#Headline-1.animation-finished span:hover{
+    animation: wiggle 1.5s ease;
+}
+#Headline-2.animation-finished span:hover{
+    animation: wiggle 1.5s ease;
+}
+
     
 
+@keyframes wiggle{
+    0%{
+        transform: scaleY(1);
+    }
 
+    20%{
+        transform: scaleY(0.5);
+    }
+    25%{
+        transform: scaleY(1);
+    }
+    35%{
+        transform: scaleY(0.6);
+    }
+    45%{
+        transform: scaleY(1);
+    }
+    55%{
+        transform: scaleY(0.7);
+    }
+    75%{
+        transform: scaleY(1.1)
+    }
+    88%{
+        transform: scaleY(1);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
 
 @keyframes spanreveal{
     0%{

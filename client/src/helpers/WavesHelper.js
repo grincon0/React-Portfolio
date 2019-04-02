@@ -37,7 +37,7 @@ Reset
 
 $.reset = () => {
 	$.w = window.innerWidth;
-	$.h = window.innerHeight - 80;
+	$.h = window.innerHeight - 200;
 	$.cx = $.w / 2;
 	$.cy = $.h / 2;
 	$.c.width = $.w;

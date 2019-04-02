@@ -67,6 +67,12 @@
     animation: revealL 1s 0.6s ease;
 }
 
+.spacefix{
+    content: '';
+    width:30px;
+}
+
+
 
 
 

@@ -6,7 +6,7 @@ canvas {
 
 .wave-adjust{
     position: absolute;
-    transform: translateY(300px);
+    transform: translateY(500px);
     overflow: hidden;
     top:0;
     
@@ -14,5 +14,5 @@ canvas {
 
 .move-wave{
     transition: all 3s ease;
-    transform: translateY(100px);
+    transform: translateY(200px);
 }

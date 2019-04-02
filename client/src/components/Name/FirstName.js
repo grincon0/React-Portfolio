@@ -64,7 +64,10 @@ export class FirstName extends Component {
                             text="e"
                             faded={false}
                             animate={this.state.animate}
+                            classes={`firstname-end`}
                         />
+                        <div className="spacefix"></div>
+
                     </div>
                 </div>
             </Flexbox>

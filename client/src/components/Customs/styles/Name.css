@@ -221,3 +221,7 @@ animations mess with the state of the element in such a way gthat if you wanted 
     -webkit-transform: translateY(0);
     transform: translateY(0)
 }
+
+#Name.show-number .end-top{
+    margin-right: 22px;
+}
