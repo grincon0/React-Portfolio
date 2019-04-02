@@ -1,3 +1,10 @@
+.flex-adjust{
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 #Top-Text-Container:before {
     content: "";
     position: absolute;

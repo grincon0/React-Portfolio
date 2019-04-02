@@ -1,5 +1,5 @@
 #Text-Container h1{
-    font-size: 5em;
+    font-size: 4em;
     text-align: center;
 }
 
@@ -21,6 +21,7 @@
     transition: opacity .1s,transform .1s cubic-bezier(.694,.048,.335,1),-webkit-transform .1s cubic-bezier(.694,.048,.335,1);
     z-index: 90;
     text-align: center;
+    margin: 0;
     
 }
 
