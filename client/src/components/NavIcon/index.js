@@ -105,7 +105,7 @@ class NavIcon extends Component {
         return (
             <div id="burger-icon"
                 className={
-                    ` ${this.state.started ? "" : "start-up "} ${this.state.mounted ? "start-back" : ""} ${this.state.hovering ? "hover-burger" : ""} ${this.state.transform ? "rotate-in" : ""} ${this.state.morphX ? "x-out" : ""} `}
+                    ` ${this.state.started ? "" : "start-up "} ${this.state.mounted ? "start-back" : ""} ${this.state.hovering ? "hover-burger" : ""} ${this.state.transform ? "rotate-in" : ""} ${this.state.morphX ? "x-out" : ""} ${this.props.transition ? "page-is-changing" : ""} `}
                 onClick={this.handleStateChange}
                 onMouseOver={this.handleParentHover}
                 onMouseOut={this.removeParentHover}>
