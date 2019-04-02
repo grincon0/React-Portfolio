@@ -164,6 +164,37 @@
     animation: wiggle 1.5s ease;
 }
 
+/* center to left page transition */
+
+#Headline-1.page-is-changing span:nth-child(n){
+    transition: transform 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#Headline-1.page-is-changing span:nth-child(1){
+    transform: translateX(-600px);
+}
+
+#Headline-1.page-is-changing span:nth-child(2){
+    transition-delay: 0.1s;
+    transform: translateX(-600px);
+}
+#Headline-1.page-is-changing span:nth-child(3){
+    transition-delay:0.3s;
+    transform: translateX(-600px);
+}
+#Headline-1.page-is-changing span:nth-child(4){
+    transition-delay: 0.5s;
+    transform: translateX(-600px);
+}
+#Headline-1.page-is-changing span:nth-child(5){
+    transition-delay: 0.7s;
+    transform: translateX(-600px);
+}
+
+#Headline-1.page-is-changing span:nth-child(6){
+    transition-delay: 0.9s;
+    transform: translateX(-600px);
+}
     
 
 @keyframes wiggle{

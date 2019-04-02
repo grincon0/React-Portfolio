@@ -6,6 +6,11 @@
     transform: translateX(-200px);
 }
 
+.volcan{
+    position: absolute;
+    top:calc(100vh - 380px);
+}
+
 @keyframes smooth-right{
     from{
         transform: translateX(-200px);

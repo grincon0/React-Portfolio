@@ -22,13 +22,15 @@ class AboutContent extends Component {
                 first: false,
                 name: false,
                 second: false,
-            }
+            },
+            pageTransition: false
         }
     }
     componentDidMount = () => {
         this.addAnimationEndLisenter('.last-span', 'animation', 'first');
         this.addAnimationEndLisenter('.lastname-overlay', 'animation', 'name');
         this.addAnimationEndLisenter('.lastname-final', 'animation', 'second');
+        this.transitionChecker();
     }
     addAnimationEndLisenter = (query, type, which) => {
         let element = document.querySelector(query);
@@ -83,8 +85,22 @@ class AboutContent extends Component {
             return "run-second";
         }
     }
+    transitionChecker = () => {
+        this.transitionInterval = setInterval(() => {
+            if(this.props.transition === true){
+                let newState = {...this.state};
+                newState.pageTransition = true;
+                this.setState(newState);
+                console.log(newState);
+                clearInterval(this.transitionInterval);
+                
+            }
+        
+        },300);
+    }
     render = () => {
         let thirdClasses = this.handleThirdLineClasses();
+
         return (
             <div className={``}>
                 {this.props.children}
@@ -94,9 +110,8 @@ class AboutContent extends Component {
                     classes={`overflow-fix`}
                     id="Top-Text-Container"
                 >
-
-                    <div id="Headline-1" className={`${this.state.headlineAnimationCompleted.second ? "animation-finished" : "DoIt "}`}>
-                        <span id="span1" onMouseOver={this.handleSpanHover} onMouseOut={this.handleSpanOut}>H</span>
+                    <div id="Headline-1" className={`${this.state.headlineAnimationCompleted.second ? "animation-finished" : "DoIt "} ${this.state.pageTransition ? "page-is-changing" : ""}`}>
+                        <span id="span1" >H</span>
                         <span>i</span>
                         <span>,</span>
                         <span>I</span>
@@ -151,6 +166,12 @@ class AboutContent extends Component {
                         height={180}
                         width={180}
                     />
+{/*                     <SVGIcon 
+                        classes={`volcan`}
+                        src="volcan"
+                        height={100}
+                        width={100}
+                    /> */}
                     <Waves />
                 </FlexContainer>
 

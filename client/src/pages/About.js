@@ -17,7 +17,8 @@ class About extends Component {
             canRender: true,
             collapseMenu: false,
             hidden: true,
-            section: ''
+            section: '',
+            transition: false
         }
     }
     componentDidMount = () => {
@@ -27,16 +28,27 @@ class About extends Component {
     }
     handleTransition = async (event, history) => {
         event.preventDefault();
-        await this.doTransitionEffect();
+        /* old version for body */
+        /* await this.doTransitionEffect(); */
+
+        await this.runTransition();
 
         setTimeout(() => {
             this.props.history.push('/projects');
-        }, 1000);
+        }, 3000);
 
     }
+    /* old version for body pseudos */
     doTransitionEffect = () => {
         document.body.className += 'page-is-changing';
     }
+    runTransition = () => {
+        let newState = {...this.state};
+        newState.transition = true;
+        this.setState(newState);
+        console.log('new state about ran');
+    }
+
     toggleMenu = () => {
         if (!this.state.collapseMenu) {
             let newState = { ...this.state };
@@ -65,7 +77,9 @@ class About extends Component {
                     >
                     
                         {/* About page content beings */}
-                        <AboutContent />
+                        <AboutContent
+                        transition={this.state.transition}
+                        />
                         
                         <FlexContainer
                     direction="column"

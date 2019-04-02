@@ -7,6 +7,7 @@ import paint from "../../assets/SVG/Icons/paint.svg";
 import performance from "../../assets/SVG/Icons/performance.svg";
 import car from "../../assets/SVG/Icons/car.svg";
 import palm from "../../assets/SVG/palm2.svg";
+import volcan from "../../assets/SVG/volcan.svg";
 
 import "./style.css";
 
@@ -29,6 +30,8 @@ class SVGIcon extends Component {
                 return liftoff;
             case "palm":
                 return palm;
+            case "volcan":
+                return volcan;
             default:
                 break;
         }
