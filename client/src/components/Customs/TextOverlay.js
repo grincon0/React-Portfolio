@@ -49,7 +49,7 @@ export class TextOverlay extends Component {
     }
     render = () => {
         return (
-            <section id="Text-Container" className={`Animated ${this.state.ready ? "show-number" : ""} ${this.state.animate ? "reveal-text" : ""}`}>
+            <section id="Text-Container" className={`Animated ${this.state.ready ? "show-number" : ""} ${this.state.animate ? "reveal-text" : ""} ${this.props.transition ? "page-is-changing" : ""}`}>
                 <div className="mask-number">
                     <h1 className="mask-back">{this.props.text}</h1>
                     <div className="mask-front">
