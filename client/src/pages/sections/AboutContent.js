@@ -23,6 +23,11 @@ class AboutContent extends Component {
                 name: false,
                 second: false,
             },
+            pageTransitions : {
+                first: false,
+                name: false,
+                second: false
+            },
             pageTransition: false
         }
     }
@@ -161,7 +166,8 @@ class AboutContent extends Component {
                         <span className={`lastname-final`}>r</span>
                     </div>
                     <SVGIcon
-                        classes={`palm`}
+                        id="palmTree"
+                        classes={`palm ${this.state.pageTransition ? "page-is-changing" : ""}`}
                         src="palm"
                         height={180}
                         width={180}
