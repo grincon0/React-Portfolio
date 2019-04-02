@@ -30,26 +30,32 @@ export class LastName extends Component {
                         <TextOverlay
                             text="R"
                             faded={false}
+                            animate={this.state.animate}
                         />
                         <TextOverlay
                             text="i"
                             faded={false}
+                            animate={this.state.animate}
                         />
                         <TextOverlay
                             text="n"
                             faded={false}
+                            animate={this.state.animate}
                         />
                         <TextOverlay
                             text="c"
                             faded={false}
+                            animate={this.state.animate}
                         />
                         <TextOverlay
                             text="o"
                             faded={false}
+                            animate={this.state.animate}
                         />
                         <TextOverlay
                             text="n"
                             faded={false}
+                            animate={this.state.animate}
                         />
                     </div>
                 </div>
