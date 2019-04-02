@@ -5,10 +5,12 @@ export class TextOverlay extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            animate: false,
             content: "",
             fade: false,
             ready: true,
-            loadBefore: false
+            loadBefore: false,
+            forAbout: false,
         }
     }
 
@@ -18,9 +20,15 @@ export class TextOverlay extends Component {
         if(this.props.fade === true){
             newState.fade = true;
         }
+
+        if(this.props.forAbout === true){
+            newState.forAbout = true;
+        }
         newState.content = this.props.text;
 
         this.setState(newState);
+
+        this.checkAnimation();
     }
     addTransitionEndListener = () => {
         const transtion = document.querySelector('.last-char');
@@ -29,10 +37,19 @@ export class TextOverlay extends Component {
             this.setState({ loadBefore: true });
         });
     }
+    checkAnimation = () => {
+        this.animateInterval = setInterval(() => {
+            if (this.props.animate === true) {
+                this.setState({ animate: true });
+                console.log('done');
+                clearInterval(this.animateInterval);
+            }
 
+        }, 300);
+    }
     render = () => {
         return (
-            <section id="Text-Container" className={`Animated ${this.state.ready ? "show-number" : ""} ${this.state.loadBefore ? "show-pseudo" : "hide-psuedo"} ${this.state.faded ? "invisible" : "visible"}`}>
+            <section id="Text-Container" className={`Animated ${this.state.ready ? "show-number" : ""} ${this.state.animate ? "reveal-text" : ""}`}>
                 <div className="mask-number">
                     <h1 className="mask-back">{this.props.text}</h1>
                     <div className="mask-front">

@@ -1,0 +1,120 @@
+.firstname-overlay{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.lastname-overlay{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* .firstname-wrapper{
+    width: 445px;
+} */
+
+.firstname-overlay:before, .firstname-overlay:after{
+    content: '';
+    position: absolute;
+/*     top: 0;
+    right: 0; */
+    height: 110px;
+    z-index: 110;
+}
+
+.lastname-overlay:before, .lastname-overlay:after{
+    content: '';
+    position: absolute;
+/*     top: 0;
+    right: 0; */
+    height: 110px;
+    z-index: 110;
+}
+
+.firstname-overlay:before{
+    background-color: #f10f79;
+}
+
+.firstname-overlay:after{
+    background-color: aquamarine;
+    animation-delay: 0.5s;
+}
+
+.firstname-overlay.run-anim-first:before{
+    animation: revealR 1.8s ease;
+}
+.firstname-overlay.run-anim-first:after{
+    animation: revealR 1s 0.6s ease;
+}
+
+.lastname-overlay:before{
+    background-color: #db9705;
+}
+
+.lastname-overlay:after{
+    background-color: rgb(42, 29, 114);
+    animation-delay: 0.5s;
+}
+
+.lastname-overlay.run-anim-first:before{
+    animation: revealL 1.8s ease;
+}
+.lastname-overlay.run-anim-first:after{
+    animation: revealL 1s 0.6s ease;
+}
+
+
+
+
+@keyframes revealR {
+    0% {
+        width: 0;
+        right: 0;
+   }
+    65% {
+        width: 100%;
+        right: 0;
+   }
+    100% {
+        width: 0;
+        right: 100%;
+   }
+}
+@keyframes revealL {
+    0% {
+        width: 0;
+        left: 0;
+   }
+    65% {
+        width: 100%;
+        left: 0;
+   }
+    100% {
+        width: 0;
+        left: 100%;
+   }
+}
+
+
+@keyframes show-firstname{
+    0%{
+
+    }
+    100%{
+
+    }
+}
+
+@keyframes show-secondname{
+    0%{
+
+    }
+    100%{
+
+    }
+    
+}
