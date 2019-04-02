@@ -99,6 +99,12 @@
 #Text-Container.show-number .mask-number{
     animation: scale-easeInOutElastic 0.3s ease-in forwards;
 }
+
+
+
+
+
+
 @keyframes scale-easeInOutElastic {
 	0% {
 		transform: scale(0);

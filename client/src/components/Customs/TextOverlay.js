@@ -8,7 +8,8 @@ export class TextOverlay extends Component {
             content: "",
             fade: false,
             ready: true,
-            loadBefore: false
+            loadBefore: false,
+            forAbout: false,
         }
     }
 
@@ -17,6 +18,10 @@ export class TextOverlay extends Component {
         
         if(this.props.fade === true){
             newState.fade = true;
+        }
+
+        if(this.props.forAbout === true){
+            newState.forAbout = true;
         }
         newState.content = this.props.text;
 
@@ -32,7 +37,7 @@ export class TextOverlay extends Component {
 
     render = () => {
         return (
-            <section id="Text-Container" className={`Animated ${this.state.ready ? "show-number" : ""} ${this.state.loadBefore ? "show-pseudo" : "hide-psuedo"} ${this.state.faded ? "invisible" : "visible"}`}>
+            <section id="Text-Container" className={`Animated ${this.state.ready ? "show-number" : ""} ${this.state.loadBefore ? "show-pseudo" : "hide-psuedo"} ${this.state.faded ? "invisible" : "visible"} ${this.state.forAbout ? "reveal-text" : ""}`}>
                 <div className="mask-number">
                     <h1 className="mask-back">{this.props.text}</h1>
                     <div className="mask-front">

@@ -3,6 +3,7 @@ import AnimatedText from "../../components/AnimatedText/index";
 import Arrow from "../../components/Arrow/index";
 import Flexbox from "../../components/Flexbox/index";
 import FlexContainer from "../../components/FlexContainer/index";
+import {FirstName, LastName} from "../../components/Name/index";
 import { Name, TextOverlay } from "../../components/Customs/index";
 import Parallax from "../../components/Parallax/index";
 import { Waves } from "../../components/Experiments/index";
@@ -67,7 +68,11 @@ class AboutContent extends Component {
                         <span>'</span>
                         <span className="last-span">m</span>
                     </div>
-                    <TextOverlay
+                    <FirstName
+                    animate={this.state.headlineAnimationCompleted.first}
+                    />
+                    
+                    {/* <TextOverlay
                         text="G"
                         faded={false}
                     />
@@ -90,7 +95,7 @@ class AboutContent extends Component {
                     <TextOverlay
                         text="e"
                         faded={false}
-                    />
+                    /> */}
 
 
 
@@ -101,10 +106,7 @@ class AboutContent extends Component {
                     classes={`overflow-fix`}
                     id="Bottom-Text-Container"
                 >
-
-
-
-                    <TextOverlay
+{/*                     <TextOverlay
                         text="R"
                         faded={false}
                     />
@@ -127,11 +129,12 @@ class AboutContent extends Component {
                     <TextOverlay
                         text="n"
                         faded={false}
-                    />
+                    /> */}
+                    <LastName />
 
 
 
-                    <div id="Headline-2" className={`${this.state.headlineAnimationCompleted.first ? "run-second" : "" }`}>
+                    <div id="Headline-2" className={`${this.state.headlineAnimationCompleted.first ? "run-second" : ""}`}>
                         <span>F</span>
                         <span>u</span>
                         <span>l</span>
