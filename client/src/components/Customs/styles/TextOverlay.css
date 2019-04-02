@@ -21,15 +21,20 @@
     transition: opacity .1s,transform .1s cubic-bezier(.694,.048,.335,1),-webkit-transform .1s cubic-bezier(.694,.048,.335,1);
     z-index: 90;
     text-align: center;
+    
 }
 
-#Text-Container.visible .mask-number{
+#Text-Container.show-number {
+    opacity: 0;
+}
+
+/* #Text-Container.visible .mask-number{
     opacity: 1;
 }
 
 #Text-Container.invisible .mask-number{
     opacity: 0;
-}
+} */
 #Text-Container.show-number .mask-back, #Text-Container.show-number .mask-front{
     position: absolute;
     top:0;
@@ -96,8 +101,22 @@
 
 }
 
-#Text-Container.show-number .mask-number{
+/* #Text-Container.show-number .mask-number{
     animation: scale-easeInOutElastic 0.3s ease-in forwards;
+} */
+
+#Text-Container.show-number.reveal-text{
+    transition: 1s ease 1s;
+    opacity: 1;
+}
+
+@keyframes revealText-fadein{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 

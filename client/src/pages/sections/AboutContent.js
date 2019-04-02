@@ -130,7 +130,9 @@ class AboutContent extends Component {
                         text="n"
                         faded={false}
                     /> */}
-                    <LastName />
+                    <LastName
+                        animate={this.state.headlineAnimationCompleted.first}
+                    />
 
 
 

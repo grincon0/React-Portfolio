@@ -22,8 +22,8 @@ export class FirstName extends Component {
     }
     checkAnimation = () => {
         this.animateInterval = setInterval(() => {
-            if(this.props.animate === true){
-                this.setState({animate: true});
+            if (this.props.animate === true) {
+                this.setState({ animate: true });
                 console.log('done');
                 clearInterval(this.animateInterval);
             }
@@ -34,34 +34,38 @@ export class FirstName extends Component {
         return (
             <Flexbox>
                 <div className="firstname-wrapper">
-
-                
-                <div className={`firstname-overlay ${this.state.animate ? "run-anim-first" : ""}`}>
-                    <TextOverlay
-                        text="G"
-                        faded={false}
-                    />
-                    <TextOverlay
-                        text="e"
-                        faded={false}
-                    />
-                    <TextOverlay
-                        text="o"
-                        faded={false}
-                    />
-                    <TextOverlay
-                        text="r"
-                        faded={false}
-                    />
-                    <TextOverlay
-                        text="g"
-                        faded={false}
-                    />
-                    <TextOverlay
-                        text="e"
-                        faded={false}
-                    />
-                </div>
+                    <div className={`firstname-overlay ${this.state.animate ? "run-anim-first" : ""}`}>
+                        <TextOverlay
+                            text="G"
+                            faded={false}
+                            animate={this.state.animate}
+                        />
+                        <TextOverlay
+                            text="e"
+                            faded={false}
+                            animate={this.state.animate}
+                        />
+                        <TextOverlay
+                            text="o"
+                            faded={false}
+                            animate={this.state.animate}
+                        />
+                        <TextOverlay
+                            text="r"
+                            faded={false}
+                            animate={this.state.animate}
+                        />
+                        <TextOverlay
+                            text="g"
+                            faded={false}
+                            animate={this.state.animate}
+                        />
+                        <TextOverlay
+                            text="e"
+                            faded={false}
+                            animate={this.state.animate}
+                        />
+                    </div>
                 </div>
             </Flexbox>
         )
