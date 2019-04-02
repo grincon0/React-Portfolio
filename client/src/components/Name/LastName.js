@@ -26,37 +26,45 @@ export class LastName extends Component {
         return (
             <Flexbox>
                 <div className="lastname-wrapper">
-                    <div className={`lastname-overlay ${this.state.animate ? "run-anim-first" : ""}`}>
+                    <div className={`lastname-overlay ${this.state.animate ? "run-anim-first" : ""} ${this.props.transition ? "page-is-changing" : ""}`}>
+                        
                         <TextOverlay
                             text="R"
                             faded={false}
                             animate={this.state.animate}
+                            transition={this.props.transition}
                         />
                         <TextOverlay
                             text="i"
                             faded={false}
                             animate={this.state.animate}
+                            transition={this.props.transition}
                         />
                         <TextOverlay
                             text="n"
                             faded={false}
                             animate={this.state.animate}
+                            transition={this.props.transition}
                         />
                         <TextOverlay
                             text="c"
                             faded={false}
                             animate={this.state.animate}
+                            transition={this.props.transition}
                         />
                         <TextOverlay
                             text="o"
                             faded={false}
                             animate={this.state.animate}
+                            transition={this.props.transition}
                         />
                         <TextOverlay
                             text="n"
                             faded={false}
                             animate={this.state.animate}
+                            transition={this.props.transition}
                         />
+                        
                     </div>
                 </div>
             </Flexbox>

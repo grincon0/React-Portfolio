@@ -27,6 +27,8 @@
     opacity: 0;
 }
 
+
+
 /* #Text-Container.visible .mask-number{
     opacity: 1;
 }
@@ -106,6 +108,11 @@
 #Text-Container.show-number.reveal-text{
     transition: 1s ease 1s;
     opacity: 1;
+}
+
+#Text-Container.page-is-changing .mask-number{
+    transition: opacity 0.1s ease 0.9s;
+    opacity: 0;
 }
 
 @keyframes revealText-fadein{

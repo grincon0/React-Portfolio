@@ -23,7 +23,7 @@ class AboutContent extends Component {
                 name: false,
                 second: false,
             },
-            pageTransitions : {
+            pageTransitions: {
                 first: false,
                 name: false,
                 second: false
@@ -67,7 +67,7 @@ class AboutContent extends Component {
     handleSpanHover = (e) => {
         switch (e.target.id) {
             case "span1":
-            console.log('leu')
+                console.log('leu')
                 document.getElementById("span1").classList.add("hover-span");
                 break;
             default:
@@ -83,25 +83,25 @@ class AboutContent extends Component {
                 break;
         }
     }
-    handleThirdLineClasses = ()=> {
-        if(this.state.headlineAnimationCompleted.name === true && this.state.headlineAnimationCompleted.second === true){
+    handleThirdLineClasses = () => {
+        if (this.state.headlineAnimationCompleted.name === true && this.state.headlineAnimationCompleted.second === true) {
             return "animation-finished";
-        }else if(this.state.headlineAnimationCompleted.name === true){
+        } else if (this.state.headlineAnimationCompleted.name === true) {
             return "run-second";
         }
     }
     transitionChecker = () => {
         this.transitionInterval = setInterval(() => {
-            if(this.props.transition === true){
-                let newState = {...this.state};
+            if (this.props.transition === true) {
+                let newState = { ...this.state };
                 newState.pageTransition = true;
                 this.setState(newState);
                 console.log(newState);
                 clearInterval(this.transitionInterval);
-                
+
             }
-        
-        },300);
+
+        }, 300);
     }
     render = () => {
         let thirdClasses = this.handleThirdLineClasses();
@@ -125,25 +125,30 @@ class AboutContent extends Component {
                     </div>
                 </FlexContainer>
                 <Flexbox
+                    id="Name-container"
                     direction="row"
                     justify="center"
-                    classes={`flex-adjust`}
+                    classes={`flex-adjust ${this.state.pageTransition ? "page-is-changing" : ""}`}
                 >
                     <FirstName
+                        id="First-Name"
+                        transition={this.state.pageTransition}
                         animate={this.state.headlineAnimationCompleted.first}
                     />
                     <LastName
+                    id="Last-Name"
+                    transition={this.state.pageTransition}
                         animate={this.state.headlineAnimationCompleted.first}
                     />
                 </Flexbox>
                 <FlexContainer
                     direction="row"
                     justify="center"
-                    classes={`overflow-fix`}
+                    classes={`overflow-fix `}
                     id="Bottom-Text-Container"
                 >
-            
-                    <div id="Headline-2" className={`${thirdClasses}`}>
+
+                    <div id="Headline-2" className={`${thirdClasses} ${this.state.pageTransition ? "page-is-changing" : ""}`}>
                         <span>F</span>
                         <span>u</span>
                         <span>l</span>
@@ -172,7 +177,7 @@ class AboutContent extends Component {
                         height={180}
                         width={180}
                     />
-{/*                     <SVGIcon 
+                    {/*                     <SVGIcon 
                         classes={`volcan`}
                         src="volcan"
                         height={100}

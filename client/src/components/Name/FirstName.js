@@ -34,37 +34,43 @@ export class FirstName extends Component {
         return (
             <Flexbox>
                 <div className="firstname-wrapper">
-                    <div className={`firstname-overlay ${this.state.animate ? "run-anim-first" : ""}`}>
+                    <div className={`firstname-overlay ${this.state.animate ? "run-anim-first" : ""} ${this.props.transition ? "page-is-changing" : ""} ${this.props.classes ? this.props.classes : ""}`}>
                         <TextOverlay
                             text="G"
                             faded={false}
                             animate={this.state.animate}
+                            transition={this.props.transition}
                         />
                         <TextOverlay
                             text="e"
                             faded={false}
                             animate={this.state.animate}
+                            transition={this.props.transition}
                         />
                         <TextOverlay
                             text="o"
                             faded={false}
                             animate={this.state.animate}
+                            transition={this.props.transition}
                         />
                         <TextOverlay
                             text="r"
                             faded={false}
                             animate={this.state.animate}
+                            transition={this.props.transition}
                         />
                         <TextOverlay
                             text="g"
                             faded={false}
                             animate={this.state.animate}
+                            transition={this.props.transition}
                         />
                         <TextOverlay
                             text="e"
                             faded={false}
                             animate={this.state.animate}
                             classes={`firstname-end`}
+                            transition={this.props.transition}
                         />
                         <div className="spacefix"></div>
 
