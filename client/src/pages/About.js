@@ -8,7 +8,7 @@ import Menu from "../components/Menu/index";
 import NavIcon from "../components/NavIcon/index";
 import Parallax from "../components/Parallax/index";
 
-import { Route, withRouter, Redirect } from 'react-router-dom'
+import { Route, withRouter, Redirect } from 'react-router-dom';
 
 class About extends Component {
     constructor(props) {
@@ -43,7 +43,7 @@ class About extends Component {
         document.body.className += 'page-is-changing';
     }
     runTransition = () => {
-        let newState = {...this.state};
+        let newState = { ...this.state };
         newState.transition = true;
         this.setState(newState);
         console.log('new state about ran');
@@ -67,38 +67,41 @@ class About extends Component {
                 <div className={`box-size overflow-fix ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"} ${this.props.classes}`}>
                     <Menu collapseMenu={this.state.collapseMenu} />
                     <FlexContainer classes="nav-height-fix " direction="row" justify="end">
-                        <NavIcon toggleMenu={this.toggleMenu} />
+                        <NavIcon
+                            toggleMenu={this.toggleMenu}
+                            transition={this.state.transition}
+                        />
                     </FlexContainer>
                     <FlexContainer
                         id="parallax-container"
                         direction="column"
-                       
+
                         classes={`overflow-fix`}
                     >
-                    
+
                         {/* About page content beings */}
                         <AboutContent
-                        transition={this.state.transition}
+                            transition={this.state.transition}
                         />
-                        
+
                         <FlexContainer
-                    direction="column"
-                    justify="center"
-                    
-                    >
-                        <Route render={({ history }) => (
-                            <Arrow
-                                arrowText={"Projects"}
-                                onClick={(e) => { this.handleTransition(e, history) }}
-                                transition={this.state.transition}
-                            />
-                        )} />
-                    </FlexContainer>
-                    
+                            direction="column"
+                            justify="center"
+
+                        >
+                            <Route render={({ history }) => (
+                                <Arrow
+                                    arrowText={"Projects"}
+                                    onClick={(e) => { this.handleTransition(e, history) }}
+                                    transition={this.state.transition}
+                                />
+                            )} />
+                        </FlexContainer>
+
                         {/* About page content ends */}
                     </FlexContainer>
-                   
-                    
+
+
                 </div>
             </section>
         );
