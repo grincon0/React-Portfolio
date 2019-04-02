@@ -167,7 +167,7 @@
 /* center to left page transition */
 
 #Headline-1.page-is-changing span:nth-child(n){
-    transition: transform 0.7s cubic-bezier(0.895, 0.03, 0.685, 0.22)
+    transition: transform 0.7s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
 
 #Headline-1.page-is-changing span:nth-child(1){

@@ -90,6 +90,7 @@ class About extends Component {
                             <Arrow
                                 arrowText={"Projects"}
                                 onClick={(e) => { this.handleTransition(e, history) }}
+                                transition={this.state.transition}
                             />
                         )} />
                     </FlexContainer>
