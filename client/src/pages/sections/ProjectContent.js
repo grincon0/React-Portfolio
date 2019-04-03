@@ -85,24 +85,26 @@ class ProjectContent extends Component {
 
                     </FlexBox>
                     <FlexContainer
-                        direction="row"
+                        direction="column"
                         justify="center"
                         classes="margin-fix "
                     >
+                    <div>
+                        <p>From web development to game design, from UI/UX design to Full Stack devleopment Click on the buttons below to filter my projects by technology</p>
+                    </div>
 
                         <div className="flex">
 
                             <FlexBox
-                                id="Items"
+                                id="Items-one"
                                 classes="proj-box"
                             >
-
                                 <ProjectOverlay />
                                 <ProjectOverlay delay={100} />
                             </FlexBox>
 
                             <FlexBox
-                                id="Items"
+                                id="Items-two"
                                 classes="proj-box"
                             >
                                 <ProjectOverlay delay={200} />
@@ -110,7 +112,7 @@ class ProjectContent extends Component {
                             </FlexBox>
 
                             <FlexBox
-                                id="Items"
+                                id="Items-three"
                                 classes="proj-box"
                             >
                                 <ProjectOverlay delay={400} />
