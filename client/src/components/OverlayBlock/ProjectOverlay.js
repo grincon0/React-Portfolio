@@ -30,29 +30,13 @@ export class ProjectOverlay extends Component {
     render = () => {
         return (
 
-            <div className={`item-container`}>
+            <div className={`item-container ${this.state.show ? "move-in" : ""}`}>
                 <div className="project-box">
                     <div className={`project-mask`}>
-                        <img src={`https://picsum.photos/200/300/?random`} alt="pic"></img>
-
                     </div>
                 </div>
-
             </div>
-            /*             <div id="overlay-parent" className={`parent-box ${this.state.hover ? "show-block-text" : ""}`} onMouseOver={this.handleHover} onMouseOut={this.handleOut}>
-                            <div className={`overlay-content o-full-size overlay-start ${this.props.classes ? this.props.classes : ""} ${this.state.show ? this.props.showClass : ""}`}>
-                            </div>
-                            <div id="content" className={`project-overlay block-top ${this.props.color ? this.props.color : ""} `}>
-                                <div id="text-box" className="text-box-cls text-box-start">
-                                </div>
-                            </div>
-                            <div id="overlay-info" className={`pos-start headline ${this.state.hover ? "move-headline" : ""} ${this.state.show ? "pos-end pos-show-text" : ""}`}>
-                                <p className={`start-text-color ${this.state.hover ? this.props.pColorChange : ""} ${this.state.show ? "pos-show-text" : ""}`}>{this.props.appType}</p>
-                                <h1 className={`start-text-color ${this.state.hover ? this.props.h1ColorChange : ""} `}>{this.props.headline}</h1>
-                                <h2 className={`hidden-text overlay-subtitle ${this.state.hover ? "show-text-o" : ""} ${this.props.h2ColorChange}`}>{this.props.text}</h2>
-            
-                            </div>
-                        </div> */
+
         )
     }
 }
