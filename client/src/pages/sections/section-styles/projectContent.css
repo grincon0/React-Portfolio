@@ -121,6 +121,12 @@
     margin-left: 20px;
 }
 
+.text-project-header{
+    font-family: LeagueSpartan, sans-serif;
+    font-size: 30pt;
+    color: white;
+
+}
 
 
 
@@ -137,7 +143,9 @@
 
 .proj-box{
     margin-left:2rem;
-    margin-right:1rem;
+    margin-right:2rem;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
