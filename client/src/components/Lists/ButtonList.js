@@ -7,8 +7,7 @@ export class ButtonList extends Component {
         super(props);
         this.state = {
             test: false,
-            count: 9,
-            content: [{ name: "ReactJS" }, { name: "NodeJS" }, { name: "JavaScript" }, { name: "FrontEnd" }, { name: "BackEnd" }, { name: "Mongodb" },
+            content: [{ name: "ReactJS" }, { name: "NodeJS" }, { name: "JavaScript" }, { name: "FrontEnd" }, { name: "BackEnd" }, { name: "Mongodb" }, { name: "SQL" },
             { name: "Game Design" }, { name: "AR" }, { name: "React Native" }, { name: "Sockets.io" }]
         }
     }

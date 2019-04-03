@@ -30,7 +30,8 @@
     right: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--tooltip-color);
+    /* background-color: var(--tooltip-color); */
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
     transition: transform 0.7s cubic-bezier(.694,.048,.335,1);
     transform: translateX(calc(100% - 204%));
 }
@@ -44,7 +45,7 @@
     right: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
     transition: transform 0.7s cubic-bezier(.694,.048,.335,1) 0.1s;
     transform: translateX(calc(100% - 204%));
 }
