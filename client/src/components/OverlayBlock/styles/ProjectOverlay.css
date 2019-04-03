@@ -1,0 +1,45 @@
+.project-mask{
+    display: block;
+    position: relative;
+    width: 100%;
+
+
+
+}
+
+
+.project-mask:before{
+    content: "";
+    position: absolute;
+
+    top:0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index:60;
+    transition: all 0.5s ease;
+    background-color: rgba(255, 0, 0, 0.548);
+}
+
+.project-mask:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top:0;
+    right: 0;
+    z-index:60;
+    transition: all 0.5s ease;
+    background-color:rgba(0, 0, 255, 0.527);
+}
+
+.project-mask:hover.project-mask:before{
+    left: 0;
+    width: 100%;
+}
+
+.project-mask:hover.project-mask:after{
+    right: 0;
+    width: 100%;
+
+}
