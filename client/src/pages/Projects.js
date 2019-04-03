@@ -23,6 +23,7 @@ class Projects extends Component {
             collapseMenu: false,
             section: '',
             toContact: false,
+            transition: false,
         }
     }
     componentDidMount = () => {
@@ -38,11 +39,13 @@ class Projects extends Component {
     }
     handleTransition = async (event, history) => {
         event.preventDefault();
-        await this.doTransitionEffect();
+        /* await this.doTransitionEffect(); */
+
+        await this.runTransition();
 
         setTimeout(() => {
             this.props.history.push('/contact');
-        }, 1000);
+        }, 3000);
 
     }
     componentWillUnmount = () => {
@@ -63,13 +66,22 @@ class Projects extends Component {
             this.setState(newState);
         }
     }
+    runTransition = () => {
+        let newState = { ...this.state };
+        newState.transition = true;
+        this.setState(newState);
+        console.log('new state about ran');
+    }
     render = () => {
         return (
             <section id="ABOUT">
                 <div className={`box-size ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"} ${this.props.classes}`}>
                     <Menu collapseMenu={this.state.collapseMenu} />
                     <FlexContainer classes="nav-height-fix" direction="row" justify="end">
-                        <NavIcon toggleMenu={this.toggleMenu} />
+                        <NavIcon 
+                        toggleMenu={this.toggleMenu}
+                        transition={this.state.transition} 
+                        />
                     </FlexContainer>
                     <FlexContainer >
                         <ProjectContent />
@@ -77,6 +89,7 @@ class Projects extends Component {
                             <Arrow
                                 arrowText={"Contact"}
                                 onClick={(e) => { this.handleTransition(e, history) }}
+                                transition={this.state.transition}
                             />
                         )} />
                     </FlexContainer>

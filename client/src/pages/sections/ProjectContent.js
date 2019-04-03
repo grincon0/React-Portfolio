@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import AnimatedText from "../../components/AnimatedText/index";
 import Arrow from "../../components/Arrow/index";
-import OverlayBlock from "../../components/OverlayBlock/index";
+import {LargeOverlay} from "../../components/OverlayBlock/index";
 import FlexBox from "../../components/Flexbox/index";
 import FlexContainer from "../../components/FlexContainer/index";
 
@@ -13,10 +13,50 @@ class ProjectContent extends Component {
         this.state = {
             placeholder: '',
             loaded: false,
-            delay: 400
+            delay: 400,
+            pageTransition: false
         }
     }
+    addAnimationEndLisenter = (query, type, which) => {
+        let element = document.querySelector(query);
 
+        element.addEventListener(`${type}end`, () => {
+            console.log(`${type} ended`);
+
+            let newState = { ...this.state };
+
+            switch (which) {
+                case 'first':
+                    newState.headlineAnimationCompleted.first = true;
+                    this.setState(newState);
+                    break;
+                case 'second':
+                    newState.headlineAnimationCompleted.second = true;
+                    this.setState(newState);
+                    break;
+                case 'name':
+                    newState.headlineAnimationCompleted.name = true;
+                    this.setState(newState);
+                    break;
+                default:
+
+                    break;
+            }
+        });
+    }
+    transitionChecker = () => {
+        this.transitionInterval = setInterval(() => {
+            if (this.props.transition === true) {
+                let newState = { ...this.state };
+                newState.pageTransition = true;
+                this.setState(newState);
+                console.log(newState);
+                clearInterval(this.transitionInterval);
+
+            }
+
+        }, 300);
+    }
     render = () => {
 
         return (
@@ -31,13 +71,13 @@ class ProjectContent extends Component {
                         classes="tiny-flex"
                     >
                         <AnimatedText
-                            classes="text-default color-default"
+                            classes="text-project-header color-default"
                             anim="slide-right-quick"
                             text="Projects"
                         />
 
                         <AnimatedText
-                            classes="text-default color-default line-move"
+                            classes="text-project-header color-default line-move"
                             anim="slide-right-quick"
                             delay={200}
                             text="_______"
@@ -54,7 +94,7 @@ class ProjectContent extends Component {
                             id="Items"
                             classes="proj-box"
                         >
-                            <OverlayBlock
+                            <LargeOverlay
                                 classes={`random-photo align-fix`}
                                 showClass="overlay-end"
                                 color="violet"
@@ -67,7 +107,7 @@ class ProjectContent extends Component {
                             />
 
 
-                            <OverlayBlock
+                            <LargeOverlay
                                 classes={`random-photo-2 align-fix`}
                                 showClass="overlay-end"
                                 color="night"
@@ -80,7 +120,7 @@ class ProjectContent extends Component {
                                 h2ColorChange="violet-text-header"
 
                             />
-                            <OverlayBlock
+                            <LargeOverlay
                                 classes={`pet-perfect align-fix `}
                                 showClass="overlay-end"
                                 color="coral"
@@ -92,7 +132,7 @@ class ProjectContent extends Component {
                                 h2ColorChange="eclipse-text"
 
                             />
-                            <OverlayBlock
+                            <LargeOverlay
                                 classes={`random-photo-2 align-fix`}
                                 showClass="overlay-end"
                                 color="quetzal"
@@ -103,7 +143,7 @@ class ProjectContent extends Component {
                                 pColorChange="mist-text"
                                 h2ColorChange="greenery-text"
                             />
-                            <OverlayBlock
+                            <LargeOverlay
                                 classes={`random-photo align-fix`}
                                 showClass="overlay-end"
                                 color="midnight"
@@ -114,7 +154,7 @@ class ProjectContent extends Component {
                                 pColorChange="mist-text"
                                 h2ColorChange="greenery-text"
                             />
-                            <OverlayBlock
+                            <LargeOverlay
                                 classes={`random-photo-3 align-fix`}
                                 showClass="overlay-end"
                                 color="snorkel"
