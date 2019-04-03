@@ -12,13 +12,13 @@ export class ButtonList extends Component {
 
     render = () => {
         return(
-            <ul>
+            <ul className={`button-list`}>
                 <li>
                     <Button
                     text="NODE.JS"
                     />
                 </li>
-            </ul>
+            </ul> 
         );
     }
 }
