@@ -1,11 +1,29 @@
+
+
+.project-box{
+    position: relative;
+    border: 1px solid gray;
+}
+.project-box:before{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+    transform: skew(2deg, 2deg);
+}
+
+
+
 .project-mask{
     display: block;
     position: relative;
     width: 100%;
-
-
-
 }
+
+
 
 
 .project-mask:before{
