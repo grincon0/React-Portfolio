@@ -136,6 +136,11 @@
     align-items: center;
 }
 
+.button-flex{
+    flex-direction: row;
+    
+}
+
 .align-fix{
     align-items: center;
 

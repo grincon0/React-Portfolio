@@ -93,7 +93,9 @@ class ProjectContent extends Component {
                     <div>
                         <p>From web development to game design, from UI/UX design to Full Stack devleopment Click on the buttons below to filter my projects by technology</p>
                     </div>
-                    <FlexBox>
+                    <FlexBox
+                        classes="button-flex"
+                    >
                         <ButtonList />
 
                     </FlexBox>
