@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import AnimatedText from "../../components/AnimatedText/index";
 import Arrow from "../../components/Arrow/index";
+import {ButtonList} from  "../../components/Lists/index"
 import { ProjectOverlay, LargeOverlay } from "../../components/OverlayBlock/index";
 import FlexBox from "../../components/Flexbox/index";
 import FlexContainer from "../../components/FlexContainer/index";
@@ -92,6 +93,10 @@ class ProjectContent extends Component {
                     <div>
                         <p>From web development to game design, from UI/UX design to Full Stack devleopment Click on the buttons below to filter my projects by technology</p>
                     </div>
+                    <FlexBox>
+                        <ButtonList />
+
+                    </FlexBox>
 
                         <div className="flex">
 

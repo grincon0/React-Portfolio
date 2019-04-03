@@ -11,8 +11,8 @@ export class Button extends Component {
 
     render = () => {
         return(
-            <div>
-                
+            <div className={`button-container`}>
+                <button className={`button-mask`}><p className={`button-text`}>{this.props.text}</p></button>
             </div>
 
         );

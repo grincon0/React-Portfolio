@@ -1,0 +1,53 @@
+.button-mask{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    
+}
+
+.button-mask:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    transition: transform 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transform: translateX(-200px);
+}
+
+.button-mask:after{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 196, 0);
+    transition: transform 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.1s;
+    transform: translateX(-200px);
+}
+
+.button-container .button-text{
+    font-family: sans-serif;
+    color: aliceblue;
+    z-index: 100;
+    
+}
+
+.button-container:hover .button-mask:before, .button-container:hover .button-mask:after{
+    transform: translateX(200px);
+}
+
