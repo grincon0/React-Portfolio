@@ -11,6 +11,20 @@
 
 }
 
+.highlight-1{
+    transition: color 0.6s ease;
+    color: rgb(235, 0, 110);
+}
+
+.highlight-2{
+    transition: color 0.6s ease;
+    color: rgb(0, 168, 235);
+}
+.highlight-3{
+    transition: color 0.6s ease;
+    color: rgb(0, 235, 106);
+}
+
 .underline{
     border-bottom: 2px aqua solid;
 
@@ -21,14 +35,6 @@
     -webkit-appearance: none;
 }
 
-
-
-.slide-into-right{
-    
-}
-.slide-into-left{
-
-}
 
 
 .begin-position-left{
@@ -77,7 +83,7 @@
 #form .btn-box button{
 
     transform-origin: center center;
-    transform: scale(0);
+    
 }
 
 #form .end-pos button{
@@ -100,4 +106,24 @@
     transition: all 0.69s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     opacity: 1;
     height: 100px;
+}
+
+
+/* New code */
+
+
+#form #first .form-name, #form #second .form-email, #msg.form-textarea {
+    background-color:transparent;
+    border-bottom: 2px solid pink;
+    border-radius: 4px;
+    width:500px;
+    margin-bottom: 0.655em;
+    color:#fff;
+}
+
+
+input, textarea{
+    text-decoration: none;
+    border: none;
+    outline: none;
 }

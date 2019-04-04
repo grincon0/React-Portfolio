@@ -6,7 +6,7 @@ import { ProjectOverlay, LargeOverlay } from "../../components/OverlayBlock/inde
 import FlexBox from "../../components/Flexbox/index";
 import FlexContainer from "../../components/FlexContainer/index";
 
-import "./section-styles/projectContent.css";
+import "./section-styles/ProjectContent.css";
 
 class ProjectContent extends Component {
     constructor(props) {
@@ -59,7 +59,6 @@ class ProjectContent extends Component {
         }, 300);
     }
     render = () => {
-
         return (
             <section id="PROJECTS">
                 <FlexContainer

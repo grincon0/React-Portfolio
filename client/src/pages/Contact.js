@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 /* import AboutContent from "./AboutContent";
 import ProjectContent from "./ProjectContent"; */
-import ContactContent from "./sections/Contact";
+import ContactContent from "./sections/ContactContent";
 /* import AnimatedText from "../../components/AnimatedText/index"; */
 import Arrow from "../components/Arrow/index";
 /* import Flexbox from "../../components/Flexbox/index"; */
@@ -21,6 +21,7 @@ class Contact extends Component {
             hidden: true,
             collapseMenu: false,
             section: '',
+            transition: false,
         }
     }
     componentDidMount = () => {
@@ -41,18 +42,16 @@ class Contact extends Component {
     }
     handleTransition = async (event, history) => {
         event.preventDefault();
-        await this.doTransitionEffect();
+        /* await this.doTransitionEffect(); */
+
+        await this.runTransition();
 
         setTimeout(() => {
             this.props.history.push('/');
-        }, 1000);
+        }, 3000);
 
     }
     testLoader = () => {
-        /*         document.body.className += 'page-is-changing';
-                setTimeout(() => {
-                    document.body.className = '';
-                }, 1500) */
         this.setState({ toAbout: true });
         console.log(this.state);
 
@@ -68,26 +67,33 @@ class Contact extends Component {
             this.setState(newState);
         }
     }
+    runTransition = () => {
+        let newState = { ...this.state };
+        newState.transition = true;
+        this.setState(newState);
+        console.log('new state about ran');
+    }
 
     render = () => {
         return (
-            <section id="ABOUT">
+            <section id="CONTACT">
                 <div className={`box-size ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"} ${this.props.classes}`}>
                     <Menu collapseMenu={this.state.collapseMenu} />
                     <FlexContainer classes="nav-height-fix" direction="row" justify="end">
-                        <NavIcon toggleMenu={this.toggleMenu} />
+                        <NavIcon 
+                        toggleMenu={this.toggleMenu} 
+                        transition={this.state.transition} />
                     </FlexContainer>
                     <FlexContainer
                         direction="column"
-                        justify="center"
-                    >
+                        justify="center">
                         <ContactContent />
                         <Route render={({ history }) => (
                             <Arrow
-                                arrowText={"Projects"}
+                                arrowText={"Home"}
                                 onClick={(e) => { this.handleTransition(e, history) }}
-                            />
-                        )} />
+                                transition={this.state.transition}/>
+                        )}/>
                     </FlexContainer>
                 </div>
             </section>
