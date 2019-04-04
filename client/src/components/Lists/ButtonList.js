@@ -47,13 +47,13 @@ export class ButtonList extends Component {
         }
     }
     componentDidUpdate = () => {
-        
+     
     }
     handleButtonClick = (event) => {
         /* const { value } = event.target; */
         const value = event.target.value;
     
-        console.log(value);
+       
 
         if (value !== "ALL") {
             let newState = { ...this.state };
@@ -72,31 +72,33 @@ export class ButtonList extends Component {
 
     }
     filterProjectItems = () => {
-        if (this.state.filter === undefined) {
+        /* If we have a string to filter by */
+        if (this.state.filter !== "") {
             let filteredList = [];
             let data = [...this.state.projects];
+            console.log('state', data);
 
 
             for (let elem of data) {
-                console.log(data[elem]);
-                if (data[elem].skill !== this.state.filter) {
-                    filteredList.push(data[elem]);
+                
+                if (elem.skill.includes(this.state.filter)) {
+                    filteredList.push(elem);
                 }
             }
-
+            console.log('filtered',filteredList)
             return filteredList.map((item) => <ProjectOverlay key={item.count} name={item.name} />);
 
             /* this.mapProjectItems(filteredList); */
 
         } else {
-            console.log('running');
+          
             /* this.mapProjectItems(); */
             let projectData = [...this.state.projects];
             return projectData.map((item) => <ProjectOverlay key={item.count} name={item.name} />);
         }
 
     }
-    mapProjectItems = (arr) => {
+/*     mapProjectItems = (arr) => {
         if (typeof arr === 'undefined') {
             console.log('mapping')
             let projectData = [...this.state.projects];
@@ -106,7 +108,7 @@ export class ButtonList extends Component {
             return arr.map((item) => <ProjectOverlay key={item.count} name={item.name} />);
         }
 
-    }
+    } */
     render = () => {
         let dumpList = this.dumpListItems();
         let dumpProjects = this.filterProjectItems();
