@@ -91,7 +91,7 @@ class ProjectContent extends Component {
                         classes="margin-fix "
                     >
                     <div>
-                        <p>From web development to game design, from UI/UX design to Full Stack devleopment Click on the buttons below to filter my projects by technology</p>
+                        <p>From web development to game design, from UI/UX design to Full Stack devleopment, Click on the buttons below to filter my projects by technology</p>
                     </div>
                     <FlexBox
                         classes="button-flex"
@@ -100,36 +100,7 @@ class ProjectContent extends Component {
 
                     </FlexBox>
 
-                        <div className="flex">
-
-                            <FlexBox
-                                id="Items-one"
-                                classes="proj-box"
-                            >
-                                <ProjectOverlay />
-                                <ProjectOverlay delay={100} />
-                            </FlexBox>
-
-                            <FlexBox
-                                id="Items-two"
-                                classes="proj-box"
-                            >
-                                <ProjectOverlay delay={200} />
-                                <ProjectOverlay delay={300} />
-                            </FlexBox>
-
-                            <FlexBox
-                                id="Items-three"
-                                classes="proj-box"
-                            >
-                                <ProjectOverlay delay={400} />
-                                <ProjectOverlay delay={500} />
-                            </FlexBox>
-
-
-
-
-                        </div>
+                       
 
                     </FlexContainer>
                 </FlexContainer>

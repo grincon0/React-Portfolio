@@ -32,7 +32,9 @@ export class ProjectOverlay extends Component {
 
             <div className={`item-container ${this.state.show ? "move-in" : ""}`}>
                 <div className="project-box">
+                    
                     <div className={`project-mask`}>
+                    <h1>{this.props.name}</h1>
                     </div>
                 </div>
             </div>
