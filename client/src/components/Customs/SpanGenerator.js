@@ -17,6 +17,7 @@ export class SpanGenerator extends Component {
                 console.log(split);
                 console.log(this.props.blocks);
                 newState.styledSpans = this.getSpanBlocks(split, this.props.blocks);
+                console.log(newState);
                 this.setState(newState);
                 
             } else {
@@ -33,7 +34,7 @@ export class SpanGenerator extends Component {
     getSpanBlocks = (slicedStrings, { from, to, classes }) => {
         if (slicedStrings !== undefined) {
             return slicedStrings.map((span, i) => {
-                if ((from - 1) <= i <= (to - 1)) {
+                if ((from - 1) <= i && i <= (to - 1)) {
                     return <span key={i} className={classes}>{span}</span>;
                 } else {
                     return <span key={i}>{span}</span>;
@@ -55,7 +56,10 @@ export class SpanGenerator extends Component {
 
     }
     render = () => {
-        let spans = this.mapSpans();
+        let spans; 
+
+         spans = !this.state.styledSpans ? this.mapSpans() : this.state.styledSpans;
+        
         return (
             <div>
                 {spans}
