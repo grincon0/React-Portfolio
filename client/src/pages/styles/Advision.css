@@ -34,7 +34,7 @@
     right: 0;
     left: auto;
     top:100%;
-    transition: all 0.55s cubic-bezier(.694,.048,.335,1);
+    transition: all 0.45s cubic-bezier(.694,.048,.335,1);
 }
 
 .h2-block h2::after{
@@ -47,7 +47,7 @@
     left: auto;
     top:100%;
     
-    transition: all 0.65s cubic-bezier(.694,.048,.335,1) 0.2s;
+    transition: all 0.25s cubic-bezier(.694,.048,.335,1) 0.5s;
 }
 
  .h2-block:hover h2{
@@ -66,7 +66,7 @@
     justify-items: center;
     flex-direction: row;
     color:#fff;
-    width: 100vw;
+    width: 100%;
     
 }
 
@@ -88,12 +88,148 @@
 .ad-title-lower span{
     font-family: LeagueSpartan, sans-serif;
     display: inline;
-    margin-left: 50px;
+    margin-left: 100px;
 }
 
 .ad-title-lower p{
-    margin-right: 50px;
+    margin-right: 100px;
     display: inline;
+
+    
 }
 
+.ad-about{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100px);
+    height: 62vh;
+    width: 100%;
+    background-color: rgb(29, 94, 94);
+    color: #fff;
+}
+.ad-about .about-header{
+    margin-top:30px;
+}
+.ad-about .about-header h1{
+    display:inline;
+    font-family: LeagueSpartan, sans-serif;
+    font-size: 60pt; 
+}
+
+.ad-about .about-header span{
+    display: inline;
+    font-size: 60pt;
+}
+
+.about-wrap{
+    
+    width: 580px;
+}
+
+.about-wrap p{
+    display: block;
+    margin-top:20px;
+    margin-bottom:30px;
+}
+
+.ad-role{
+    height: 60vh;
+    background-color: #6B78B4;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ad-role p{
+    font-family: LeagueSpartan, sans-serif;
+    font-size: 15pt;
+}
+
+.ad-stack{
+    height: 60vh;
+    background-color: #E4EBDD;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.github-link{
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.github-link::before{
+    content: "View Source";
+    position: absolute;
+    text-align: center;
+    font-family: LeagueSpartan, sans-serif;
+    font-size: 15px;
+    color: #f3f3f3;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(.694,.048,.335,1);
+}
+
+.github-link:hover::before{
+    opacity: 1;
+    transform: translateY(75px);
+}
+
+.web-link{
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.web-link::before{
+    content: "View Site";
+    position: absolute;
+    text-align: center;
+    font-family: LeagueSpartan, sans-serif;
+    font-size: 15px;
+    color: #f3f3f3;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(.694,.048,.335,1);
+}
+
+.web-link:hover::before{
+    opacity: 1;
+    transform: translateY(75px);
+}
+
+.octo-dark{
+    transition: all 0.6s ease;
+    filter: brightness(0%);
+}
+
+.octo-dark:hover{
+    filter: brightness(100%);
+    animation: movecat 0.8s linear;
+}
+
+
+.stack-list ul li{
+    list-style-type: circle;
+}
+
+@keyframes movecat{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    60%{
+        transform: translateY(-25px);
+    }
+    70%{
+        transform: translateY(0);
+    }
+    80%{
+        transform: translateY(-25px);
+    }
+    90%{
+        transform: translateY(0);
+    }
+
+}
 
