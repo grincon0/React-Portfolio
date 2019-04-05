@@ -10,6 +10,8 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import Advision from "./pages/Advision";
+import PetPerfect from "./pages/PetPerfect";
+import PixelSmash from "./pages/PixelSmash";
 import Parallax from "./components/Parallax/index";
 import {
   CSSTransition,
@@ -46,6 +48,8 @@ class App extends Component {
                 <Route path="/about" component={About} />
                 <Route path="/projects" component={Projects} />
                 <Route path="/advision" component={Advision} />
+                <Route path="/pixelsmash" component={PixelSmash} />
+                <Route path="/petperfect" component={PetPerfect} />
                 <Route path="/contact" component={Contact} />
               </Switch>
             </CSSTransition>

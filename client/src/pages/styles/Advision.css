@@ -172,7 +172,7 @@
 
 .github-link:hover::before{
     opacity: 1;
-    transform: translateY(75px);
+    transform: translateY(80px);
 }
 
 .web-link{
@@ -184,6 +184,7 @@
     content: "View Site";
     position: absolute;
     text-align: center;
+    left: 2px;
     font-family: LeagueSpartan, sans-serif;
     font-size: 15px;
     color: #f3f3f3;
@@ -193,12 +194,16 @@
 
 .web-link:hover::before{
     opacity: 1;
-    transform: translateY(75px);
+    transform: translateY(80px);
 }
 
-.octo-dark{
+.octo-dark , .web-dark{
     transition: all 0.6s ease;
     filter: brightness(0%);
+}
+
+.web-dark:hover{
+    filter: brightness(100%);
 }
 
 .octo-dark:hover{

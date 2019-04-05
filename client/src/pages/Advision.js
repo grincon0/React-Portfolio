@@ -58,7 +58,7 @@ export default class Advision extends Component {
                     </div>
                     <div className={`about-links`}>
                         <a className={`github-link`} href={this.state.data.github} target="_blank"><SVGIcon classes="octo-dark" src="octocat" height={75} width={75} /></a>
-                        {this.state.data.link ? <a className={`web-link`} href={this.state.data.link} target="_blank"><SVGIcon classes="octo-dark" src="internet" height={75} width={75} /></a> : "" }
+                        {this.state.data.link ? <a className={`web-link`} href={this.state.data.link} target="_blank"><SVGIcon classes="web-dark" src="internet" height={75} width={75} /></a> : "" }
 
                     </div>
 
