@@ -31,25 +31,7 @@ export class SpanGenerator extends Component {
         }
 
 
-        /*  this.animateSpans(); */
-
     }
-
-
-    /* animateSpans = () => {
-        if (this.state.styledSpans) {
-            let e;
-            let ancestor = document.getElementById("Span-Container"),
-                descendents = ancestor.getElementsByTagName('*');
-
-            for (let i = 0; i < descendents.length; i++) {
-                e = descendents[i];
-                e.className += " justdo";
-
-            }
-        }
-    } */
-
 
     getSpanBlocks = (slicedStrings, arr) => {
 
@@ -116,14 +98,10 @@ export class SpanGenerator extends Component {
 
     }
     render = () => {
-
-        /*    setTimeout(() => {
-               this.animateSpans();
-           },3000); */
         let spans = !this.state.styledSpans ? this.mapSpans() : this.state.styledSpans;
 
         return (
-            <div id="Span-Container" className={`span-default`}>
+            <div id="Span-Container" className={`span-default ${this.props.transition ? "page-is-changing" : ""}`}>
                 {spans}
             </div>
 

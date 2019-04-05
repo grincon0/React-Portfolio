@@ -28,17 +28,26 @@ class ContactContent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            test: "test"
+            animate: false,
+            transition: false
         }
     }
     componentDidMount = () => {
-
+        this.animateTimer = setTimeout(() => {
+            if(this.state.animate === false){
+                this.setState({animate :true});
+            }
+        }, 100);
+    }
+    componentWillUnmount = () => {
+        console.log(spanBlocks);
+        clearTimeout(this.animateTimer);
     }
     transitionChecker = () => {
         this.transitionInterval = setInterval(() => {
             if (this.props.transition === true) {
                 let newState = { ...this.state };
-                newState.pageTransition = true;
+                newState.transition = true;
                 this.setState(newState);
                 console.log(newState);
                 clearInterval(this.transitionInterval);
@@ -82,7 +91,7 @@ class ContactContent extends Component {
                     justify="center"
                     classes="align-fix">
                     <div className="testi">
-                        <div className="contact-title-div">
+                        <div className={`contact-title-div ${this.state.animate ? "run-anim-first" : ""} ${this.props.transition ? "page-is-changing" : ""}`}>
                             <h1 className="contact-title">Contact</h1>
                             <div className="contact-title-front">
                                 <h1 data-content="Contact" className="contact-title-overlay">Contact</h1>
@@ -95,10 +104,13 @@ class ContactContent extends Component {
                         <SpanGenerator
                             text="Want to work together? Need a developer for your team? Let's talk."
                             blocks={spanBlocks}
+                            transition={this.props.transition}
                         />
 
                     </div>
-                    <Form />
+                    <Form 
+                    transition={this.props.transition}
+                    />
 
                 </FlexContainer>
 

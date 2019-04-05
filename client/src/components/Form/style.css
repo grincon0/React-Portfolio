@@ -115,9 +115,6 @@
 
 #form #first .form-name, #form #second .form-email, #msg.form-textarea {
     left: 0;
-    background-color:transparent;
-    border: 2px solid white;
-    border-radius: 2px;
     width:0;
     margin-bottom: 0.655em;
     color:#fff;
@@ -125,7 +122,25 @@
     
 }
 
-#form #first .form-name:focus{
+#form #first .form-name{
+    background-color: rgba(0, 168, 235, 0.74);
+    border: 2px solid rgba(0, 168, 235, 0.74);
+}
+
+#form #second .form-email{
+    background-color: rgba(235, 0, 110, 0.747);
+    border: 2px solid rgba(235, 0, 110, 0.747);
+}
+
+#msg.form-textarea{
+    background-color: rgba(0, 235, 106, 0.753);
+    border: 2px solid rgba(0, 235, 106, 0.753);
+}
+
+input::placeholder, textarea::placeholder{
+    color: #fff;
+}
+/* #form #first .form-name:focus{
     
     background-color: rgba(0, 168, 235, 0.74);
 }
@@ -137,20 +152,17 @@
 
 #msg.form-textarea:focus{
     background-color: rgba(0, 235, 106, 0.753);
-}
+} */
 
 #form{
     margin-top: 2rem;
 }
 
-#form.rollout #first .form-name, #form.rollout #second .form-email, #msg.form-textarea.rollout {
-    
-    
-}
+
 
 #form.rollout #first .form-name{
-    transition: width 0.6s cubic-bezier(.694,.048,.335,1) 0.7s, 
-    opacity 0.6s cubic-bezier(.694,.048,.335,1) 0.7s,
+    transition: width 0.6s cubic-bezier(.694,.048,.335,1) 0.4s, 
+    opacity 0.6s cubic-bezier(.694,.048,.335,1) 0.4s,
     background-color 0.6s cubic-bezier(.694,.048,.335,1);
     
     width: 500px;
@@ -158,8 +170,8 @@
 }
 
 #form.rollout #second .form-email{
-    transition: width 0.6s cubic-bezier(.694,.048,.335,1) 3s,
-     opacity 0.6s cubic-bezier(.694,.048,.335,1) 3s,
+    transition: width 0.6s cubic-bezier(.694,.048,.335,1) 2.55s,
+     opacity 0.6s cubic-bezier(.694,.048,.335,1) 2.55s,
      background-color 0.6s cubic-bezier(.694,.048,.335,1);
    
     width: 500px;
@@ -167,11 +179,35 @@
 }
 
 #form.rollout .text-box .form-textarea{
-    transition: width 0.6s cubic-bezier(.694,.048,.335,1) 4s, opacity 0.6s cubic-bezier(.694,.048,.335,1) 4s,
+    transition: width 0.6s cubic-bezier(.694,.048,.335,1) 4.2s, opacity 0.6s cubic-bezier(.694,.048,.335,1) 4.2s,
     background-color 0.6s cubic-bezier(.694,.048,.335,1);
   
     width: 500px;
     opacity: 1;
+}
+
+#form.rollout.page-is-changing #first .form-name{
+    transition: all 0.6s cubic-bezier(.694,.048,.335,1);
+    right: 0 !important;
+    width: 0 !important;
+    opacity: 0;
+    transform: translateX(400px);
+}
+
+#form.rollout.page-is-changing #second .form-email{
+    transition: all 0.6s cubic-bezier(.694,.048,.335,1);
+    right:0;
+    width: 0;
+    opacity: 0;
+    transform: translateX(400px);
+}
+
+#form.rollout.page-is-changing .text-box #msg.form-textarea{
+    transition: all 0.6s cubic-bezier(.694,.048,.335,1);
+    right:0;
+    width :0;
+    opacity: 0;
+    transform: translateX(400px);
 }
 
 input, textarea{

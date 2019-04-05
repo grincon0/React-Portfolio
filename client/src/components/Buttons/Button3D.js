@@ -11,10 +11,10 @@ export class Button3D extends Component {
 
     render = () => {
         return (
-            <div className="scene">
+            <div className="scene-button">
                 <div onClick={this.props.onClick} className="cube">
                     <span className="side top">Sent!</span>
-                    <span className="side front">Front</span>
+                    <span className="side front">Submit</span>
                 </div>
             </div>
         )

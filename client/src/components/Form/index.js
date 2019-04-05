@@ -40,7 +40,7 @@ class Form extends Component {
     render = () => {
 
         return (
-            <form id="form" className={`${this.state.animate ? "rollout" : ""}`}>
+            <form id="form" className={`${this.state.animate ? "rollout" : ""} ${this.props.transition ? "page-is-changing" : ""}`}>
                 <div id="first">
                     <input
                         type="text"
