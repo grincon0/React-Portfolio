@@ -1,7 +1,8 @@
 
 canvas {
-    display: block;	
+    display: felx;	
     overflow: hidden;
+    pointer-events: none;
 }
 
 .wave-adjust{

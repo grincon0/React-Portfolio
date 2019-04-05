@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import AnimatedText from "../../components/AnimatedText/index";
 import Arrow from "../../components/Arrow/index";
-import {ButtonList} from  "../../components/Lists/index"
+import { ButtonList } from "../../components/Lists/index"
 import { ProjectOverlay, LargeOverlay } from "../../components/OverlayBlock/index";
 import FlexBox from "../../components/Flexbox/index";
 import FlexContainer from "../../components/FlexContainer/index";
@@ -12,11 +12,20 @@ class ProjectContent extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            animationComplete: {
+                title: false,
+                subtitle: false,
+                buttons: false
+            },
             placeholder: '',
             loaded: false,
             delay: 400,
             pageTransition: false
         }
+    }
+    componentDidMount = () => {
+        this.addAnimationEndLisenter(".line-move", "animation", "title");
+        this.addAnimationEndLisenter(".project-page-text", "transition", "subtitle");
     }
     addAnimationEndLisenter = (query, type, which) => {
         let element = document.querySelector(query);
@@ -27,16 +36,16 @@ class ProjectContent extends Component {
             let newState = { ...this.state };
 
             switch (which) {
-                case 'first':
-                    newState.headlineAnimationCompleted.first = true;
+                case 'title':
+                    newState.animationComplete.title = true;
                     this.setState(newState);
                     break;
-                case 'second':
-                    newState.headlineAnimationCompleted.second = true;
+                case 'buttons':
+                    newState.animationComplete.buttons = true;
                     this.setState(newState);
                     break;
-                case 'name':
-                    newState.headlineAnimationCompleted.name = true;
+                case 'subtitle':
+                    newState.animationComplete.subtitle = true;
                     this.setState(newState);
                     break;
                 default:
@@ -89,17 +98,23 @@ class ProjectContent extends Component {
                         justify="center"
                         classes="margin-fix "
                     >
-                    <div>
-                        <p>From web development to game design, from UI/UX design to Full Stack devleopment, Click on the buttons below to filter my projects by technology</p>
-                    </div>
-                    <FlexBox
-                        classes="button-flex"
-                    >
-                        <ButtonList />
+                        <div className={`project-page-subtitle ${this.state.animationComplete.title ? "rollout" : ""}`}>
+                            <div className="project-page-text">
+                                <p>From web development to game design, from UI/UX design to Full Stack devleopment, Click on the buttons below to filter my projects by technology</p>
+                            </div>
 
-                    </FlexBox>
+                        </div>
+                        <FlexBox
+                            classes="button-flex"
+                        >
+                            <ButtonList
+                                animate={this.state.animationComplete.subtitle}
+                                transition={this.props.transition}
+                            />
 
-                       
+                        </FlexBox>
+
+
 
                     </FlexContainer>
                 </FlexContainer>

@@ -1,0 +1,99 @@
+.ad-vision-container{
+    
+}
+
+.nav-section{
+    flex-direction: row;
+    justify-content: flex-end;
+    background: transparent;
+    width: 100%;
+}
+
+.h2-block{
+    position: relative;
+    color: rgb(134, 134, 134);
+    margin-top:25px;
+    margin-right: 25px;
+}
+.h2-block h2{
+    position: relative;
+    font-family: LeagueSpartan, sans-serif;
+    font-size:25px;
+    width: 100%;
+    transition: color 0.6s ease;
+}
+
+.h2-block h2::before{
+    content: "";
+    position: absolute;
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    width: 0;
+    height: 4px;
+    right: 0;
+    left: auto;
+    top:100%;
+    transition: all 0.55s cubic-bezier(.694,.048,.335,1);
+}
+
+.h2-block h2::after{
+    content: "";
+    position: absolute;
+    background: linear-gradient(45deg, red, blue);
+    width: 0;
+    height: 4px;
+    right: 0;
+    left: auto;
+    top:100%;
+    
+    transition: all 0.65s cubic-bezier(.694,.048,.335,1) 0.2s;
+}
+
+ .h2-block:hover h2{
+    color:#fff;
+}
+.h2-block:hover h2::before,  .h2-block:hover h2::after{
+    left: 0;
+    width: 100%;
+}
+
+.ad-title-box{
+    background-color: rgb(0, 0, 77);
+    height: calc(100vh - 150px);
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: row;
+    color:#fff;
+    width: 100vw;
+    
+}
+
+.ad-title-box p, .ad-title-box h1{
+    display: block;
+}
+
+.ad-title-box h1{
+    font-size: 60pt;
+    font-family: LeagueSpartan, sans-serif;
+}
+
+.ad-title-lower{
+    color:#fff;
+    justify-content: space-between;
+    transform: translateY(-70px);
+}
+
+.ad-title-lower span{
+    font-family: LeagueSpartan, sans-serif;
+    display: inline;
+    margin-left: 50px;
+}
+
+.ad-title-lower p{
+    margin-right: 50px;
+    display: inline;
+}
+
+
