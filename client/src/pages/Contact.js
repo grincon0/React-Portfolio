@@ -87,7 +87,9 @@ class Contact extends Component {
                     <FlexContainer
                         direction="column"
                         justify="center">
-                        <ContactContent />
+                        <ContactContent
+                        transition={this.state.transition}
+                         />
                         <Route render={({ history }) => (
                             <Arrow
                                 arrowText={"Home"}

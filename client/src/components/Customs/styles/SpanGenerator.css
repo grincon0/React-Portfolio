@@ -1,18 +1,10 @@
-
- #Span-Container.span-default  {
-    color:#fff;
-    
-
-} 
-
 .span-default span{
-    transform: scale(0);
+   transform: scale(0);
 }
 
 
-#s-1{
-   
-}
+
+
 
 #s-0{
     animation-delay: 0.1s
@@ -216,6 +208,45 @@
     animation: revealSpan 1s ease forwards;
 }
  */
+
+#Span-Container{
+   position: relative;
+   
+}
+ #Span-Container.span-default  {
+   color:#fff;
+   font-size: 12pt;
+   
+} 
+
+
+
+#Span-Container::before, #Span-Container::after{
+   content: '';
+   position: absolute;
+   height: 100%;
+   z-index: 100;
+}
+
+#Span-Container:before{
+   background-color: rgb(0, 235, 106);
+}
+
+#Span-Container:after{
+   background-color: rgb(235, 153, 0);;
+   animation-delay: 0.5s;
+}
+
+#Span-Container.page-is-changing span{
+   transition: opacity 0.2s ease 0.8s;
+   opacity: 0;
+}
+#Span-Container.page-is-changing:before{
+   animation: reverseL 1.8s ease;
+}
+#Span-Container.page-is-changing:after{
+   animation: reverseL 1s 0.6s ease;
+}
 
 
 

@@ -1,13 +1,13 @@
 
 .testi h1{
-    font-size: 30pt;
+    font-size: 45pt;
     text-align: center;
     font-family: LeagueSpartan, sans-serif;
     display: absolute;
 }
 
 .contact-title-div h1{
-    font-size: 30pt;
+    font-size: 45pt;
     text-align: center;
     font-family: LeagueSpartan, sans-serif;
 }
@@ -15,19 +15,57 @@
     display: flex;
     justify-content: flex-start;
     position: relative;
-    width: 169px;
-    height: 50px;
+    width: 250px;
+    height: 80px;
     
-    margin: 0;
-    color: #fff;
-    transition: opacity .1s,-webkit-transform .1s cubic-bezier(.694,.048,.335,1);
-    transition: opacity .1s,transform .1s cubic-bezier(.694,.048,.335,1);
-    transition: opacity .1s,transform .1s cubic-bezier(.694,.048,.335,1),-webkit-transform .1s cubic-bezier(.694,.048,.335,1);
+    margin-bottom: 3em;
+    color: transparent;
+    /* transition: opacity 1s,-webkit-transform .1s cubic-bezier(.694,.048,.335,1);
+    transition: opacity 1s,transform .1s cubic-bezier(.694,.048,.335,1);
+    transition: opacity 1s,transform .1s cubic-bezier(.694,.048,.335,1),-webkit-transform 1s cubic-bezier(.694,.048,.335,1); */
 
 }
 
+.contact-title-div::before, .contact-title-div::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    z-index: 100;
+}
+
+.contact-title-div:before{
+    background-color: rgb(235, 0, 110);;
+}
+
+.contact-title-div:after{
+    background-color: rgb(0, 168, 235);;
+    animation-delay: 0.5s;
+}
+
+.contact-title-div.run-anim-first{
+    transition: color 0.5s ease 0.8s;
+    color: #fff;
+    
+}
+.contact-title-div.run-anim-first:before{
+    animation: revealR 1.8s ease;
+}
+.contact-title-div.run-anim-first:after{
+    animation: revealR 1s 0.6s ease;
+}
+
+.contact-title-div.page-is-changing:before{
+    animation: reverseR 1.8s ease;
+}
+.contact-title-div.page-is-changing:after{
+    animation: reverseR 1s 0.6s ease;
+}
+
+.contact-title-div.page-is-changing{
+    color: transparent;
+}
 .testi:hover  .contact-title-div{
-    opacity: 1;
+
   -webkit-transform: translateZ(0);
     transform: translateZ(0) 
 }
@@ -115,13 +153,13 @@
 
 .contact-title-front .contact-title-overlay{
     font-family: LeagueSpartan, sans-serif;
-    font-size: 30pt;
+    font-size: 45pt;
  
 }
 
 
 .testi:hover .contact-title-div{
-    opacity: 1;
+    
     -webkit-transform: translateY(0);
     transform: translateY(0)
 }
@@ -135,3 +173,5 @@
     transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1) ;
     transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1) ,-webkit-transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
+
+

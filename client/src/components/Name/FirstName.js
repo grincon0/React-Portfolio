@@ -14,12 +14,6 @@ export class FirstName extends Component {
     componentDidMount = () => {
         this.checkAnimation();
     }
-    componentDidUpdate = () => {
-
-    }
-    componentWillUnmount = () => {
-
-    }
     checkAnimation = () => {
         this.animateInterval = setInterval(() => {
             if (this.props.animate === true) {
