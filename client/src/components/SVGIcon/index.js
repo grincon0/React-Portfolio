@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import colorwheel from "../../assets/SVG/Icons/colorwheel.svg";
 import art from "../../assets/SVG/Icons/art.svg";
 import ideaa from "../../assets/SVG/Icons/ideaa.svg";
+import octocat from "../../assets/SVG/Logos/github-octocat.svg";
 import liftoff from "../../assets/SVG/Icons/liftoff.svg";
+import internet from "../../assets/SVG/Logos/internet.svg";
 import paint from "../../assets/SVG/Icons/paint.svg";
 import performance from "../../assets/SVG/Icons/performance.svg";
 import car from "../../assets/SVG/Icons/car.svg";
@@ -32,6 +34,10 @@ class SVGIcon extends Component {
                 return palm;
             case "volcan":
                 return volcan;
+            case "octocat":
+                return octocat;
+            case "internet":
+                return internet;
             default:
                 break;
         }

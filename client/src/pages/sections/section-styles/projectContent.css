@@ -123,7 +123,7 @@
 
 .text-project-header{
     font-family: LeagueSpartan, sans-serif;
-    font-size: 30pt;
+    font-size: 45pt;
     color: white;
 
 }
@@ -196,4 +196,23 @@
     transition: transform .9s ease-out, opacity 1s ease-out;
     opacity: 1;
     transform: translateY(0px);
+}
+
+.project-page-subtitle{
+
+    color:#fff;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 10pt;
+    font-weight: 200;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.project-page-subtitle.rollout .project-page-text{
+    transition: transform 0.5s ease;
+    transform: translateY(0);
+}
+
+.project-page-text{
+    transform: translateY(200px);
 }
