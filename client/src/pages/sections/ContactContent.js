@@ -2,10 +2,26 @@ import React, { Component } from "react";
 import AnimatedText from "../../components/AnimatedText/index";
 import Form from "../../components/Form/index";
 import FlexContainer from "../../components/FlexContainer";
-import {SpanGenerator} from "../../components/Customs/index";
+import { SpanGenerator } from "../../components/Customs/index";
 import "./section-styles/ContactContent.css";
 import SVGIcon from "../../components/SVGIcon/index";
 
+const spanBlocks = [{
+    from: 9,
+    to: 21,
+    classes: "highlight-2",
+    completed: false
+}, {
+    from: 30,
+    to: 38,
+    classes: "highlight-1",
+    completed: false,
+}, {
+    from: 49,
+    to: 52,
+    classes: "highlight-3",
+    completed: false,
+}];
 
 class ContactContent extends Component {
     constructor(props) {
@@ -28,22 +44,34 @@ class ContactContent extends Component {
                         <div className="contact-title-div">
                             <h1 className="contact-title">Contact</h1>
                             <div className="contact-title-front">
-                                <h1 data-content="Contact"className="contact-title-overlay">Contact</h1>
+                                <h1 data-content="Contact" className="contact-title-overlay">Contact</h1>
 
                             </div>
 
                         </div>
                     </div>
-                    <div>
-                        <SpanGenerator 
+                    <div >
+                        <SpanGenerator
                             text="Want to work together? Need a developer for your team? Let's talk."
-                            blocks={{
-                                from:9,
-                                to:21,
-                                classes:"highlight-2"
-                            }}
-                        />
-                        {/* <p className="contact-subtitle">Want to <span className="highlight-2">work together</span>? Need a <span className="highlight-1">developer</span> for your <span className="highlight-3">team</span>? Let's talk.</p> */}
+                            blocks={[{
+                                from: 8,
+                                to: 20,
+                                classes: "highlight-2",
+                                completed: false
+                            }, {
+                                from: 30,
+                                to: 38,
+                                classes: "highlight-1",
+                                completed: false
+                            }, {
+                                from: 49,
+                                to: 52,
+                                classes: "highlight-3",
+                                completed: false
+                            }]}
+                        /> 
+                       {/*  <p className="contact-subtitle">Want to <span className="highlight-2">work together</span>? Need a <span className="highlight-1">developer</span> for your <span className="highlight-3">team</span>? Let's talk.</p>
+                        <span>W</span> */}
                     </div>
                     <Form />
 
