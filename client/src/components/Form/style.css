@@ -14,6 +14,7 @@
 .highlight-1{
     transition: color 0.6s ease;
     color: rgb(235, 0, 110);
+    transform: scale(2);
 }
 
 .highlight-2{
@@ -126,4 +127,20 @@ input, textarea{
     text-decoration: none;
     border: none;
     outline: none;
+}
+
+
+@keyframes revealSpan-Contact{
+    0%{
+        transform: scale(0);
+    }
+    65%{
+        transform: scale(0);
+    }
+    80%{
+        transform: scale(1.40);
+    }
+    100%{
+        transform: scale(1)''
+    }
 }
