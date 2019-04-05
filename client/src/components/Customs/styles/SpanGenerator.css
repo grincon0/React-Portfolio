@@ -1,6 +1,7 @@
 
  #Span-Container.span-default  {
     color:#fff;
+    font-size: 12pt;
     
 
 } 
@@ -9,10 +10,6 @@
     transform: scale(0);
 }
 
-
-#s-1{
-   
-}
 
 #s-0{
     animation-delay: 0.1s

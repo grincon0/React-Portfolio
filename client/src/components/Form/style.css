@@ -48,7 +48,7 @@
     transform: translateX(500px);
 }
 
-#form #first input.end-pos{
+/* #form #first input.end-pos{
     transition: all 0.65s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     opacity: 1;
     
@@ -61,7 +61,7 @@
     opacity: 1;
     transform: translateX(0);
 
-}
+} */
 
 
 #form button{
@@ -104,8 +104,8 @@
 
 #form .end-pos textarea{
 
-    transition: all 0.69s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    opacity: 1;
+    transition: all 0.6s cubic-bezier(.694,.048,.335,1);
+    
     height: 100px;
 }
 
@@ -114,20 +114,73 @@
 
 
 #form #first .form-name, #form #second .form-email, #msg.form-textarea {
+    left: 0;
     background-color:transparent;
-    border-bottom: 2px solid pink;
-    border-radius: 4px;
-    width:500px;
+    border: 2px solid white;
+    border-radius: 2px;
+    width:0;
     margin-bottom: 0.655em;
     color:#fff;
+    opacity: 0;
+    
 }
 
+#form #first .form-name:focus{
+    
+    background-color: rgba(0, 168, 235, 0.74);
+}
+
+#form #second .form-email:focus{
+ 
+    background-color: rgba(235, 0, 110, 0.747);
+}
+
+#msg.form-textarea:focus{
+    background-color: rgba(0, 235, 106, 0.753);
+}
+
+#form{
+    margin-top: 2rem;
+}
+
+#form.rollout #first .form-name, #form.rollout #second .form-email, #msg.form-textarea.rollout {
+    
+    
+}
+
+#form.rollout #first .form-name{
+    transition: width 0.6s cubic-bezier(.694,.048,.335,1) 0.7s, 
+    opacity 0.6s cubic-bezier(.694,.048,.335,1) 0.7s,
+    background-color 0.6s cubic-bezier(.694,.048,.335,1);
+    
+    width: 500px;
+    opacity: 1;
+}
+
+#form.rollout #second .form-email{
+    transition: width 0.6s cubic-bezier(.694,.048,.335,1) 3s,
+     opacity 0.6s cubic-bezier(.694,.048,.335,1) 3s,
+     background-color 0.6s cubic-bezier(.694,.048,.335,1);
+   
+    width: 500px;
+    opacity: 1;
+}
+
+#form.rollout .text-box .form-textarea{
+    transition: width 0.6s cubic-bezier(.694,.048,.335,1) 4s, opacity 0.6s cubic-bezier(.694,.048,.335,1) 4s,
+    background-color 0.6s cubic-bezier(.694,.048,.335,1);
+  
+    width: 500px;
+    opacity: 1;
+}
 
 input, textarea{
     text-decoration: none;
     border: none;
     outline: none;
 }
+
+
 
 
 @keyframes revealSpan-Contact{

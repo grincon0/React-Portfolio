@@ -3,12 +3,13 @@ import AnimatedText from "../../components/AnimatedText/index";
 import Form from "../../components/Form/index";
 import FlexContainer from "../../components/FlexContainer";
 import { SpanGenerator } from "../../components/Customs/index";
+
 import "./section-styles/ContactContent.css";
 import SVGIcon from "../../components/SVGIcon/index";
 
 const spanBlocks = [{
-    from: 9,
-    to: 21,
+    from: 8,
+    to: 20,
     classes: "highlight-2",
     completed: false
 }, {
@@ -33,6 +34,46 @@ class ContactContent extends Component {
     componentDidMount = () => {
 
     }
+    transitionChecker = () => {
+        this.transitionInterval = setInterval(() => {
+            if (this.props.transition === true) {
+                let newState = { ...this.state };
+                newState.pageTransition = true;
+                this.setState(newState);
+                console.log(newState);
+                clearInterval(this.transitionInterval);
+
+            }
+
+        }, 300);
+    }
+    addAnimationEndLisenter = (query, type, which) => {
+        let element = document.querySelector(query);
+
+        element.addEventListener(`${type}end`, () => {
+            console.log(`${type} ended`);
+
+            let newState = { ...this.state };
+
+            switch (which) {
+                case 'first':
+                    newState.headlineAnimationCompleted.first = true;
+                    this.setState(newState);
+                    break;
+                case 'second':
+                    newState.headlineAnimationCompleted.second = true;
+                    this.setState(newState);
+                    break;
+                case 'name':
+                    newState.headlineAnimationCompleted.name = true;
+                    this.setState(newState);
+                    break;
+                default:
+
+                    break;
+            }
+        });
+    }
     render = () => {
         return (
             <section id="CONTACT">
@@ -53,25 +94,9 @@ class ContactContent extends Component {
                     <div >
                         <SpanGenerator
                             text="Want to work together? Need a developer for your team? Let's talk."
-                            blocks={[{
-                                from: 8,
-                                to: 20,
-                                classes: "highlight-2",
-                                completed: false
-                            }, {
-                                from: 30,
-                                to: 38,
-                                classes: "highlight-1",
-                                completed: false
-                            }, {
-                                from: 49,
-                                to: 52,
-                                classes: "highlight-3",
-                                completed: false
-                            }]}
-                        /> 
-                       {/*  <p className="contact-subtitle">Want to <span className="highlight-2">work together</span>? Need a <span className="highlight-1">developer</span> for your <span className="highlight-3">team</span>? Let's talk.</p>
-                        <span>W</span> */}
+                            blocks={spanBlocks}
+                        />
+
                     </div>
                     <Form />
 
