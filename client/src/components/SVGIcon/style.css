@@ -11,6 +11,19 @@
     top:calc(100vh - 380px);
 }
 
+svg .layer2 .volcano-top{
+    animation: volcanotest 1s ease infinite alternate;
+}
+
+@keyframes volcanotest{
+    0%{
+        fill: red;
+    }
+    100%{
+        fill: blue;
+    }
+}
+
 @keyframes smooth-right{
     from{
         transform: translateX(-200px);

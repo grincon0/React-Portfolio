@@ -28,14 +28,6 @@
 }
 
 
-
-/* #Text-Container.visible .mask-number{
-    opacity: 1;
-}
-
-#Text-Container.invisible .mask-number{
-    opacity: 0;
-} */
 #Text-Container.show-number .mask-back, #Text-Container.show-number .mask-front{
     position: absolute;
     top:0;
@@ -80,18 +72,18 @@
 
 #Text-Container.show-number:hover .mask-overlay, #Text-Container.show-number:hover .mask-overlay::before {
     -webkit-transform: translateZ(0);
-    transform: translateZ(0)
+    transform: translateZ(0);
 }
 
 #Text-Container.show-number:hover .case-study-mask:after {
     -webkit-transform: translateX(0);
-    transform: translateX(0)
+    transform: translateX(0);
 }
 
 #Text-Container.show-number:hover .case-study-mask-number {
     opacity: 1;
     -webkit-transform: translateY(0);
-    transform: translateY(0)
+    transform: translateY(0);
 }
 
 #Text-Container{

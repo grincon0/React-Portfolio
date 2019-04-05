@@ -31,53 +31,40 @@ class Form extends Component {
     }
 
     render = () => {
-        setTimeout(() => {
-            if(!this.state.test){
-                this.setState({test:true});
-            }
-
-        },1000);
 
         return (
-            <form id="form" >
+            <form id="form">
                 <div id="first">
-
                     <input
                         type="text"
                         placeholder=" Enter your name."
                         id="name"
-                        className={`input-bg form-start underline begin-position-left ${this.state.test ? "end-pos" : ""} `}
+                        className={`form-name`}
                         name="name"
                         value={this.state.name}
-                        onChange={this.handleInputChange}
-                    />
+                        onChange={this.handleInputChange}/>
                 </div>
-
                 <div id="second">
                     <input
                         type="email"
                         placeholder=" Enter your email address."
                         id="email"
-                        className={`input-bg form-start underline begin-position-right ${this.state.test ? "end-pos" : ""}`}
+                        className={`form-email`}
                         name="email"
                         value={this.state.email}
-                        onChange={this.handleInputChange}
-                    />
+                        onChange={this.handleInputChange}/>
                 </div>
-
-
-                <div className={`text-box ${this.state.test ? "end-pos" : ""}`}>
-
+                <div className={`text-box end-pos`}>
                     <textarea
                         id="msg"
                         placeholder=" Your message."
-                        className="input-bg form-start underline"
+                        className={`form-textarea`}
                         name="msg"
                         value={this.state.msg}
                         onChange={this.handleInputChange}
                     ></textarea>
                 </div>
-                <div className={`btn-box ${this.state.test ? "end-pos" : ""} `}>
+                <div className={`btn-box end-pos`}>
                     <button onClick={this.handleFormSubmit}>Submit</button>
                 </div>
             </form>
