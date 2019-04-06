@@ -29,26 +29,26 @@
 }
 
 .page-is-changing #p-0{
-    animation: projectDisappear 0.6s linear forwards;
+    animation: projectDisappear 0.4s ease-in forwards;
 }
 .page-is-changing #p-1{
-    animation: projectDisappear 0.6s linear 0.1s forwards;
+    animation: projectDisappear 0.4s ease-in 0.1s forwards;
 }
 
 .page-is-changing #p-2{
-    animation: projectDisappear 0.6s linear 0.2s forwards;
+    animation: projectDisappear 0.4s ease-in 0.2s forwards;
 }
 
 .page-is-changing #p-3{
-    animation: projectDisappear 0.6s linear 0.3s forwards;
+    animation: projectDisappear 0.4s ease-in 0.3s forwards;
 }
 
 .page-is-changing #p-4{
-    animation: projectDisappear 0.6s linear 0.4s forwards;
+    animation: projectDisappear 0.4s ease-in 0.4s forwards;
 }
 
 .page-is-changing #p-5{
-    animation: projectDisappear 0.6s linear 0.5s forwards;
+    animation: projectDisappear 0.4s ease-in 0.5s forwards;
 }
 
 

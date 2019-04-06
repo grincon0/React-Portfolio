@@ -36,15 +36,22 @@
 
 .project-mask{
     display: flex;
+    font-family: LeagueSpartan, sans-serif;
     position: relative;
     justify-content: center;
     align-items: center;
     width: 380px;
     height: 260px;
+    color: #f3f3f3;
+    
+}
+
+.project-mask h1{
+    z-index: 111;
 }
 
 .project-box .project-mask{
-    background-image: url(https://picsum.photos/200/300/?random);
+    background-color: #000000;
     background-size: cover;
 }
 
@@ -61,7 +68,7 @@
     height: 100%;
     z-index:60;
     transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
-    background-image: linear-gradient(to right, #f83600 0%, #f9d52359 100%);
+    background-color: rgba(0, 168, 235, 0.74);
 }
 
 .project-mask:after{
@@ -73,7 +80,55 @@
     right: 0;
     z-index:60;
     transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
-    background-image: linear-gradient(to top, #3b42c5ad 0%, #a981bb8e 49%, #ffc9a994 100%);
+    background-color: rgba(0, 235, 106, 0.753);
+}
+
+.project-mask.mask-1:before{
+    background-color: rgba(0, 168, 235, 0.74);
+}
+
+.project-mask.mask-1:after{
+    background-color: rgba(0, 235, 106, 0.753);
+}
+
+.project-mask.mask-2:before{
+    background-color: rgba(35, 0, 235, 0.74);
+}
+
+.project-mask.mask-2:after{
+    background-color: rgba(235, 0, 235, 0.753);
+}
+
+.project-mask.mask-3:before{
+    background-color: rgba(235, 0, 39, 0.753);
+}
+
+.project-mask.mask-3:after{
+    background-color: rgba(235, 0, 90, 0.753);
+}
+
+.project-mask.mask-4:before{
+    background-color: rgba(0, 200, 235, 0.753);
+}
+
+.project-mask.mask-4:after{
+    background-color: rgba(0, 235, 145, 0.753);
+}
+
+.project-mask.mask-5:before{
+    background-color: rgba(235, 0, 0, 0.753);
+}
+
+.project-mask.mask-5:after{
+    background-color: rgba(235, 231, 0, 0.753);
+}
+
+.project-mask.mask-6:before{
+    background-color: rgba(0, 235, 71, 0.753);
+}
+
+.project-mask.mask-6:after{
+    background-color: rgba(0, 43, 235, 0.753);
 }
 
 .project-mask:hover.project-mask:before{
