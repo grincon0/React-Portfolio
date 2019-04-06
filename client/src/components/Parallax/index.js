@@ -37,15 +37,13 @@ class Parallax extends Component {
                 imgArr.push(this.createElement(this.state.amount - i));
             }
             this.setState({ createElements: imgArr, readyToDump: true });
-
-            /*             let test = new ParallaxHelper();
-                        test.watch(); */
+            ParallaxHelper.watch();
             setTimeout(() => {
                 let newState = { ...this.state };
                 newState.canAppear = true;
                 this.setState(newState);
             }, 1000);
-            ParallaxHelper.watch();
+            
         }
     }
     componentWillUnmount = () => {

@@ -84,10 +84,13 @@ class Projects extends Component {
                         />
                     </FlexContainer>
                     <FlexContainer >
-                        <ProjectContent />
+                        <ProjectContent
+                        transition={this.state.transition}
+                        />
                         <Route render={({ history }) => (
                             <Arrow
                                 arrowText={"Contact"}
+                                classes={`arrow-project`}
                                 onClick={(e) => { this.handleTransition(e, history) }}
                                 transition={this.state.transition}
                             />

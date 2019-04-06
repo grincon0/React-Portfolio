@@ -12,8 +12,9 @@ class ProjectContent extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            animate: false,
             animationComplete: {
-                title: false,
+                title: true,
                 subtitle: false,
                 buttons: false
             },
@@ -24,8 +25,15 @@ class ProjectContent extends Component {
         }
     }
     componentDidMount = () => {
-        this.addAnimationEndLisenter(".line-move", "animation", "title");
-        this.addAnimationEndLisenter(".project-page-text", "transition", "subtitle");
+        this.animateTimer = setTimeout(() => {
+            this.setState({animate:true});
+        },1300);
+        
+         this.addAnimationEndLisenter(".project-header", "animation", "title");
+        this.addAnimationEndLisenter(".project-page-text", "animation", "subtitle");
+    }
+    componentWillUnmount = () => {
+        clearTimeout(this.animateTimer);
     }
     addAnimationEndLisenter = (query, type, which) => {
         let element = document.querySelector(query);
@@ -75,22 +83,13 @@ class ProjectContent extends Component {
                     justify="center"
                     classes="align-fix"
                 >
-
                     <FlexBox
                         classes="tiny-flex"
                     >
-                        <AnimatedText
-                            classes="text-project-header color-default"
-                            anim="slide-right-quick"
-                            text="Projects"
-                        />
+                        <div className={`project-header ${this.state.animate ? "show-header" : ""} ${this.props.transition ? "page-is-changing" : ""} `}>
+                            <h1 className={`rollout ${this.props.transition ? "text-disappear" : ""}`}>Projects</h1>
+                        </div>
 
-                        <AnimatedText
-                            classes="text-project-header color-default line-move"
-                            anim="slide-right-quick"
-                            delay={200}
-                            text="_______"
-                        />
 
                     </FlexBox>
                     <FlexContainer
@@ -98,9 +97,9 @@ class ProjectContent extends Component {
                         justify="center"
                         classes="margin-fix "
                     >
-                        <div className={`project-page-subtitle ${this.state.animationComplete.title ? "rollout" : ""}`}>
-                            <div className="project-page-text">
-                                <p>From web development to game design, from UI/UX design to Full Stack devleopment, Click on the buttons below to filter my projects by technology</p>
+                        <div className={`project-page-subtitle ${this.state.animationComplete.title ? "rollout" : ""} ${this.props.transition ? "page-is-changing" : ""}`}>
+                            <div className={`project-page-text ${this.state.animate ? "show-header" : ""} ${this.props.transition ? "text-disappear" : ""} `}>
+                                <p>From web development to game design, and apps in between. Click on the buttons below to filter my projects by technology or skill.</p>
                             </div>
 
                         </div>
