@@ -5,6 +5,7 @@ import { ButtonList } from "../../components/Lists/index"
 import { ProjectOverlay, LargeOverlay } from "../../components/OverlayBlock/index";
 import FlexBox from "../../components/Flexbox/index";
 import FlexContainer from "../../components/FlexContainer/index";
+import Parallax from "../../components/Parallax/index";
 
 import "./section-styles/ProjectContent.css";
 
@@ -12,8 +13,9 @@ class ProjectContent extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            animate: false,
             animationComplete: {
-                title: false,
+                title: true,
                 subtitle: false,
                 buttons: false
             },
@@ -24,8 +26,15 @@ class ProjectContent extends Component {
         }
     }
     componentDidMount = () => {
-        this.addAnimationEndLisenter(".line-move", "animation", "title");
-        this.addAnimationEndLisenter(".project-page-text", "transition", "subtitle");
+        this.animateTimer = setTimeout(() => {
+            this.setState({ animate: true });
+        }, 1300);
+
+        this.addAnimationEndLisenter(".project-header", "animation", "title");
+        this.addAnimationEndLisenter(".project-page-text", "animation", "subtitle");
+    }
+    componentWillUnmount = () => {
+        clearTimeout(this.animateTimer);
     }
     addAnimationEndLisenter = (query, type, which) => {
         let element = document.querySelector(query);
@@ -74,33 +83,23 @@ class ProjectContent extends Component {
                     direction="column"
                     justify="center"
                     classes="align-fix"
+                    id={`parallax-container`}
                 >
-
                     <FlexBox
                         classes="tiny-flex"
                     >
-                        <AnimatedText
-                            classes="text-project-header color-default"
-                            anim="slide-right-quick"
-                            text="Projects"
-                        />
-
-                        <AnimatedText
-                            classes="text-project-header color-default line-move"
-                            anim="slide-right-quick"
-                            delay={200}
-                            text="_______"
-                        />
-
+                        <div className={`project-header ${this.state.animate ? "show-header" : ""} ${this.props.transition ? "page-is-changing" : ""} `}>
+                            <h1 className={`rollout ${this.props.transition ? "text-disappear" : ""}`}>Projects</h1>
+                        </div>
                     </FlexBox>
                     <FlexContainer
                         direction="column"
                         justify="center"
                         classes="margin-fix "
                     >
-                        <div className={`project-page-subtitle ${this.state.animationComplete.title ? "rollout" : ""}`}>
-                            <div className="project-page-text">
-                                <p>From web development to game design, from UI/UX design to Full Stack devleopment, Click on the buttons below to filter my projects by technology</p>
+                        <div className={`project-page-subtitle ${this.state.animationComplete.title ? "rollout" : ""} ${this.props.transition ? "page-is-changing" : ""}`}>
+                            <div className={`project-page-text ${this.state.animate ? "show-header" : ""} ${this.props.transition ? "text-disappear" : ""} `}>
+                                <p>From web development to game design, and apps in between. Click on the buttons below to filter my projects by technology or skill.</p>
                             </div>
 
                         </div>
@@ -113,11 +112,10 @@ class ProjectContent extends Component {
                             />
 
                         </FlexBox>
-
-
-
                     </FlexContainer>
+                    <Parallax />
                 </FlexContainer>
+                
             </section>
         );
     }

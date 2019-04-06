@@ -98,7 +98,7 @@ export class ButtonList extends Component {
                 }
             }
             console.log('filtered', filteredList)
-            return filteredList.map((item) => <ProjectOverlay key={item.count} name={item.name} />);
+            return filteredList.map((item, i) => <ProjectOverlay blockID={`p-${i}`} key={item.count} name={item.name} />);
 
 
 
@@ -106,7 +106,7 @@ export class ButtonList extends Component {
 
 
             let projectData = [...this.state.projects];
-            return projectData.map((item) => <ProjectOverlay key={item.count} name={item.name} />);
+            return projectData.map((item, i) => <ProjectOverlay blockID={`p-${i}`} key={item.count} name={item.name} />);
         }
 
     }
@@ -125,7 +125,7 @@ export class ButtonList extends Component {
 
                     <FlexBox
                         id="Items-one"
-                        classes="proj-box">
+                        classes={`proj-box  ${this.props.transition ? "page-is-changing" : ""} `}>
                         {dumpProjects}
                     </FlexBox>
                 </div>

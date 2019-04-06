@@ -187,7 +187,7 @@ class AboutContent extends Component {
                 </FlexContainer>
 
 
-                <Parallax />
+             <Parallax /> 
 
             </div>
 

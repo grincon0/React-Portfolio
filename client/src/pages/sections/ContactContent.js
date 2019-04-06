@@ -3,7 +3,7 @@ import AnimatedText from "../../components/AnimatedText/index";
 import Form from "../../components/Form/index";
 import FlexContainer from "../../components/FlexContainer";
 import { SpanGenerator } from "../../components/Customs/index";
-
+import Parallax from "../../components/Parallax/index";
 import "./section-styles/ContactContent.css";
 import SVGIcon from "../../components/SVGIcon/index";
 
@@ -34,8 +34,8 @@ class ContactContent extends Component {
     }
     componentDidMount = () => {
         this.animateTimer = setTimeout(() => {
-            if(this.state.animate === false){
-                this.setState({animate :true});
+            if (this.state.animate === false) {
+                this.setState({ animate: true });
             }
         }, 100);
     }
@@ -87,6 +87,7 @@ class ContactContent extends Component {
         return (
             <section id="CONTACT">
                 <FlexContainer
+                    id={`parallax-container`}
                     direction="column"
                     justify="center"
                     classes="align-fix">
@@ -108,9 +109,10 @@ class ContactContent extends Component {
                         />
 
                     </div>
-                    <Form 
-                    transition={this.props.transition}
+                    <Form
+                        transition={this.props.transition}
                     />
+                    <Parallax />
 
                 </FlexContainer>
 

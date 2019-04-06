@@ -35,8 +35,10 @@
 
 
 .project-mask{
-    display: block;
+    display: flex;
     position: relative;
+    justify-content: center;
+    align-items: center;
     width: 380px;
     height: 260px;
 }

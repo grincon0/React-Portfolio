@@ -34,7 +34,10 @@ class App extends Component {
     return (
 
       <div className="App">
-      {/* <Parallax /> */}
+  
+     {/*  <Parallax />  */}
+      
+    
         <Route render={({ location }) => (
           <TransitionGroup>
             <CSSTransition
