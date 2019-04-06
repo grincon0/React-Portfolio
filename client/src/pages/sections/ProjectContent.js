@@ -5,6 +5,7 @@ import { ButtonList } from "../../components/Lists/index"
 import { ProjectOverlay, LargeOverlay } from "../../components/OverlayBlock/index";
 import FlexBox from "../../components/Flexbox/index";
 import FlexContainer from "../../components/FlexContainer/index";
+import Parallax from "../../components/Parallax/index";
 
 import "./section-styles/ProjectContent.css";
 
@@ -26,10 +27,10 @@ class ProjectContent extends Component {
     }
     componentDidMount = () => {
         this.animateTimer = setTimeout(() => {
-            this.setState({animate:true});
-        },1300);
-        
-         this.addAnimationEndLisenter(".project-header", "animation", "title");
+            this.setState({ animate: true });
+        }, 1300);
+
+        this.addAnimationEndLisenter(".project-header", "animation", "title");
         this.addAnimationEndLisenter(".project-page-text", "animation", "subtitle");
     }
     componentWillUnmount = () => {
@@ -82,6 +83,7 @@ class ProjectContent extends Component {
                     direction="column"
                     justify="center"
                     classes="align-fix"
+                    id={`parallax-container`}
                 >
                     <FlexBox
                         classes="tiny-flex"
@@ -89,8 +91,6 @@ class ProjectContent extends Component {
                         <div className={`project-header ${this.state.animate ? "show-header" : ""} ${this.props.transition ? "page-is-changing" : ""} `}>
                             <h1 className={`rollout ${this.props.transition ? "text-disappear" : ""}`}>Projects</h1>
                         </div>
-
-
                     </FlexBox>
                     <FlexContainer
                         direction="column"
@@ -112,11 +112,10 @@ class ProjectContent extends Component {
                             />
 
                         </FlexBox>
-
-
-
                     </FlexContainer>
+                    <Parallax />
                 </FlexContainer>
+                
             </section>
         );
     }

@@ -14,6 +14,8 @@ import Rectangle from "../../assets/SVG/rectangle.svg";
 
 import "./style.css";
 
+let ParallaxEffect;
+
 
 class Parallax extends Component {
     constructor(props) {
@@ -37,18 +39,38 @@ class Parallax extends Component {
                 imgArr.push(this.createElement(this.state.amount - i));
             }
             this.setState({ createElements: imgArr, readyToDump: true });
-            ParallaxHelper.watch();
+            /* ParallaxHelper.watch(); */
+
+            this.startParallax();
+
             setTimeout(() => {
                 let newState = { ...this.state };
                 newState.canAppear = true;
                 this.setState(newState);
             }, 1000);
-            
+
         }
     }
+    startParallax =  async () => {
+        await this.instantiateParallax();
+        this.watchParallax();
+
+    }
+    instantiateParallax = () => {
+        ParallaxEffect = new ParallaxHelper();
+    }
+    watchParallax = () => {
+        ParallaxEffect.watch();
+    }
+    killParallax = () => {
+        ParallaxEffect.kill();
+    }
+
     componentWillUnmount = () => {
+        this.killParallax();
         clearTimeout(this.opacityTimer);
-        ParallaxHelper.kill();
+        
+        
     }
     createElement = (key) => {
         return (
