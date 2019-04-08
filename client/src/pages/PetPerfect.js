@@ -21,11 +21,11 @@ export default class PetPerfect extends Component {
                 github: "https://github.com/DavidDBaker/pet-perfect",
                 link: "https://pet-perfect.herokuapp.com/",
                 sub: "The Perfect Site for the passionate pet owner.",
-                description: "Pet Perfect is an website that allows users to find local pet shops, veterinarians, pet-friendly parks within a 10-mile radius. The user will input his/her zip-code in a input field. Once the zip code is submitted, the webpage will use the Google Maps API to generate a map that will show the nearest veterinarians, pet shops, and pet-friendly parks around the user.",
+                description: "Pet Perfect is a website that allows users to find local pet shops, veterinarians, pet-friendly parks within a 10-mile radius.",
                 role: {
                     paragraph: {
-                        one: "As the first project we tackled as web developers, our team wanted to created web that provides a solution to users. Our love and apprecitate for our furry compantion motivated us to create a web concept around the idea of a one-stop shop for the needs of pet owner",
-                        two: "In addition to UI Design, my main focus was intergrating the Google Maps API for the Front-end. The user is able to select from category of pet-related services to search for within a 10 miles radius of their inputed location",
+                        one: "As the first project we tackled as web developers, our team wanted to created web app that provides a great solution. Our apprecitate for our furry companions prompted us to pursue the idea of a one-stop-shop for the passionate pet owner",
+                        two: "In addition to UI Design, my main focus was intergrating the Google Maps API for the Front-end. The user is able to select from category of pet-related services to search for within a 10 miles radius of the address they provided.",
 
                     }
                 },

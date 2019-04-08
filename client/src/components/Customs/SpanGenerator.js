@@ -40,13 +40,13 @@ export class SpanGenerator extends Component {
             const chars = slicedStrings;
             let counter = 0;
 
-            console.log(chars);
+         
 
 
             for (let i = 0; i < chars.length; i++) {
 
                 let elementDisplay = this.checkIfEmpty(chars[i]);
-                console.log(elementDisplay)
+             
 
 
                 if (counter < arr.length && arr[counter].from <= i && i <= arr[counter].to) {

@@ -21,7 +21,7 @@ export default class PetPerfect extends Component {
                 github: "https://github.com/grincon0/React-NYT-Search",
                 link: "https://react-googlebooks-search.herokuapp.com/",
                 sub: "Search for literature and save them for later.",
-                description: "React Books is a MERN-stack application that allows the user to search for books by their Titie, Author, other revelant keywords for the purposes of saving them into ht edatabse for later viewing.",
+                description: "React Books is a MERN-stack application that allows the user to search for books by their titie, author, and other revelant keywords for the purposes of saving them into Mongo for later viewing.",
                 role: "",
                 stack: ["Full Stack Development", "JavaScript ES6", "Mongoose", "MongoDB", "React.js", "axios.js", "Express.js", "Node.js"]
             },
@@ -143,7 +143,7 @@ export default class PetPerfect extends Component {
 
                 </Flexbox>
 
-                <div id={`parallax-container`} className={`hide-now`}></div>
+                <div id={`parallax-container`} ></div>
             </section>
         );
     }
