@@ -4,7 +4,7 @@ import ProjectContent from "../pages/sections/ProjectContent";
 /* import Contact from "./sections/Contact"; */
 /* import AnimatedText from "../../components/AnimatedText/index"; */
 import Arrow from "../components/Arrow/index";
-/* import Flexbox from "../../components/Flexbox/index"; */
+import Flexbox from "../components/Flexbox/index";
 import FlexContainer from "../components/FlexContainer/index";
 /* import OverlayBlock from "../../components/OverlayBlock/index"; */
 import Menu from "../components/Menu/index";
@@ -37,15 +37,30 @@ class Projects extends Component {
             document.body.className = '';
         }, 2300);
     }
-    handleTransition = async (event, history) => {
+    handleTransition = async (event, history, direction) => {
         event.preventDefault();
         /* await this.doTransitionEffect(); */
 
         await this.runTransition();
+        switch (direction) {
+            case "back":
+                setTimeout(() => {
+                    this.props.history.push('/about');
+                }, 2300);
+                break;
+            case "forward":
+                setTimeout(() => {
+                    this.props.history.push('/contact');
+                }, 2300);
+                break;
 
-        setTimeout(() => {
+            default:
+                break;
+        }
+
+        /* setTimeout(() => {
             this.props.history.push('/contact');
-        }, 2300);
+        }, 2300); */
 
     }
     componentWillUnmount = () => {
@@ -78,25 +93,43 @@ class Projects extends Component {
                 <div className={`box-size ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"} ${this.props.classes}`}>
                     <Menu collapseMenu={this.state.collapseMenu} />
                     <FlexContainer classes="nav-height-fix" direction="row" justify="end">
-                        <NavIcon 
-                        toggleMenu={this.toggleMenu}
-                        transition={this.state.transition} 
+                        <NavIcon
+                            toggleMenu={this.toggleMenu}
+                            transition={this.state.transition}
                         />
                     </FlexContainer>
                     <FlexContainer >
                         <ProjectContent
-                        transition={this.state.transition}
+                            transition={this.state.transition}
                         />
+
+
                         <Route render={({ history }) => (
+
+
                             <Arrow
                                 arrowText={"Contact"}
                                 classes={`arrow-project`}
-                                onClick={(e) => { this.handleTransition(e, history) }}
+                                onClick={(e) => { this.handleTransition(e, history, "forward") }}
                                 transition={this.state.transition}
                             />
+
                         )} />
                     </FlexContainer>
+
+
+                    {/*                     <Route render={({ history }) => (
+
+                        <Arrow
+                            arrowText={"About"}
+                            classes={`arrow-project-left`}
+                            onClick={(e) => { this.handleTransition(e, history, "back") }}
+                            transition={this.state.transition}
+                        />
+
+                    )} /> */}
                 </div>
+
             </section>
         );
     }

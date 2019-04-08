@@ -33,6 +33,28 @@ body {
     width:680px;
 }
 
+.sub-intro{
+    position: absolute;
+    top: 50px;
+    transform: translateX(calc(50vw - 100px));
+    color: #fefefe;
+    opacity:0;
+    z-index: 1;
+    animation: intro 3s ease forwards;
+
+}
+
+@keyframes intro{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
 /* .card-3d img {
     opacity: 0.8;
 } */

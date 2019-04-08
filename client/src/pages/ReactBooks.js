@@ -1,35 +1,33 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { Component } from "react";
 import FlexContainer from "../components/FlexContainer/index";
 import Flexbox from "../components/Flexbox/index";
 import { SpanGenerator } from "../components/Customs/index";
 import SVGIcon from "../components/SVGIcon/index"
 import "./styles/Advision.css";
+import { Route, Redirect } from "react-router-dom";
 
-import { Route, withRouter, Redirect } from 'react-router-dom';
-
-
-
-export default class Advision extends Component {
+export default class PetPerfect extends Component {
     constructor() {
         super();
         this.state = {
             animated: false,
             transition: false,
             data: {
-                tier: "High",
-                id: "1",
-                name: "Ad-Vision",
-                type: ["Native", "Mobile Augmented Reality"],
+                tier: "mid",
+                id:"6",
+                name: "React-Books",
+                type: ["Web app", "MERN Web App"],
                 time: "Early 2019",
-                github: "https://github.com/Wizkym/Ad-Vision",
-                sub: "An ViroReact AR application that render realtime information on your smart phone",
-                description: "Ad-Vision is an Augmented Reality object and text recognition mobile application that renders ads to the user. Using real-world objects/images that it targets, the application will be able to render different forms of media, such as textual information, 3-D objects, and even graphical effects on the screen.",
-                role: "I was responsible for creating an easy to use abstration for ViroReact's built in particle effect generators. Along with testing and creating all 3D compenents that rendered text, video formats, and meshes, I created animations that seamlessly brought the 3D components to life.",
-                stack: ["ViroReact", "React Native", "Objective-C", "Android SDK", "Xcode", "Node.js", "Express.js", "JavaScript ES6", "Google Cloud Platform", "Bing Custom Search API"]
+                github: "https://github.com/grincon0/React-NYT-Search",
+                link: "https://react-googlebooks-search.herokuapp.com/",
+                sub: "Search for literature and save them for later.",
+                description: "React Books is a MERN-stack application that allows the user to search for books by their titie, author, and other revelant keywords for the purposes of saving them into Mongo for later viewing.",
+                role: "",
+                stack: ["Full Stack Development", "JavaScript ES6", "Mongoose", "MongoDB", "React.js", "axios.js", "Express.js", "Node.js"]
             },
-            showAbout:false,
-            showDetail:false,
-            showStack:false
+            showAbout: false,
+            showDetail: false,
+            showStack: false
         }
     }
     componentDidMount = () => {
@@ -39,21 +37,21 @@ export default class Advision extends Component {
         this.removeScrollEventListener();
     }
     handleClassesScrollTop = () => {
-       /*  console.log(document.documentElement.scrollTop || document.body.scrollTop); */
+        /*  console.log(document.documentElement.scrollTop || document.body.scrollTop); */
 
         const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
 
-        if(this.state.showAbout === false && scrollTop > 400){
-            this.setState({showAbout: true});
-            
+        if (this.state.showAbout === false && scrollTop > 400) {
+            this.setState({ showAbout: true });
+
         }
 
-        if(this.state.showDetail === false && scrollTop > 800){
-            this.setState({showDetail: true});
+        if (this.state.showDetail === false && scrollTop > 800) {
+            this.setState({ showDetail: true });
         }
-        if(this.state.showStack === false && scrollTop > 1200){
+        if (this.state.showStack === false && scrollTop > 1200) {
             console.log(this.state.showAbout);
-            this.setState({showStack: true});
+            this.setState({ showStack: true });
         }
     }
     boundScrollTop = () => {
@@ -63,9 +61,9 @@ export default class Advision extends Component {
         document.addEventListener('scroll', this.boundScrollTop);
     }
     removeScrollEventListener = () => {
-     
-            document.removeEventListener('scroll', this.boundScrollTop);
-        
+
+        document.removeEventListener('scroll', this.boundScrollTop);
+
     }
     handleTransition = async (event, history) => {
         event.preventDefault();
@@ -85,10 +83,11 @@ export default class Advision extends Component {
         return (
             <section id="AD-VISION">
                 <Flexbox classes={`nav-section`}>
-                <Route render={({ history }) => (
-                    <div onClick={(e) => this.handleTransition(e)} className={`h2-block`}>
-                        <h2>Go back</h2>
-                    </div>)}/>
+                    <Route render={({ history }) => (
+                        <div onClick={(e) => this.handleTransition(e)} className={`h2-block`}>
+                            <h2>Go back</h2>
+                        </div>
+                    )} />
                 </Flexbox>
                 <Flexbox classes={`ad-title-box`}>
                     <div className={`color-${this.state.data.id}`}>
@@ -128,7 +127,7 @@ export default class Advision extends Component {
                         <p>{this.state.data.role}</p>
                     </div>
                 </Flexbox>
-                <Flexbox classes={`ad-stack ${this.state.showStack? "show-this" : ""}`}>
+                <Flexbox classes={`ad-stack ${this.state.showStack ? "show-this" : ""}`}>
                     <div className={`stack-header`}>
                         <h1>Tech Stack</h1>
                     </div>
@@ -144,7 +143,7 @@ export default class Advision extends Component {
 
                 </Flexbox>
 
-            <div id={`parallax-container`} className={`hide-now`}></div>
+                <div id={`parallax-container`} ></div>
             </section>
         );
     }

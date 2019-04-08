@@ -63,6 +63,17 @@ class ProjectContent extends Component {
             }
         });
     }
+    handlePageTransition = (event) => {
+        event.preventDefault();
+
+        const value = event.target.value;
+        
+        console.log(value);
+       /*  setTimeout(() => {
+            this.props.history.push('/contact');
+        }, 2300); */
+
+    }
     transitionChecker = () => {
         this.transitionInterval = setInterval(() => {
             if (this.props.transition === true) {
@@ -109,6 +120,7 @@ class ProjectContent extends Component {
                             <ButtonList
                                 animate={this.state.animationComplete.subtitle}
                                 transition={this.props.transition}
+                                
                             />
 
                         </FlexBox>

@@ -73,6 +73,9 @@
     transform: translateX(300px);
 }
 
+.arrow-project{
+    bottom: 50vh;
+}
 
 /* Start and Reset animations */
 

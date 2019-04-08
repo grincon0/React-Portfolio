@@ -12,6 +12,9 @@ import Projects from "./pages/Projects";
 import Advision from "./pages/Advision";
 import PetPerfect from "./pages/PetPerfect";
 import PixelSmash from "./pages/PixelSmash";
+import MongoScraper from "./pages/MongoScraper";
+import Bamazon from "./pages/Bamazon";
+import ReactBooks from "./pages/ReactBooks";
 import Parallax from "./components/Parallax/index";
 import {
   CSSTransition,
@@ -53,6 +56,10 @@ class App extends Component {
                 <Route path="/advision" component={Advision} />
                 <Route path="/pixelsmash" component={PixelSmash} />
                 <Route path="/petperfect" component={PetPerfect} />
+                <Route path="/mongoscraper" component={MongoScraper} />
+                <Route path="/bamazon" component={Bamazon} />
+                <Route path="/reactbooks" component={ReactBooks} />
+                
                 <Route path="/contact" component={Contact} />
               </Switch>
             </CSSTransition>

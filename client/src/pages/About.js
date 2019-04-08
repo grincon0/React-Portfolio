@@ -7,7 +7,7 @@ import FlexContainer from "../components/FlexContainer/index";
 import Menu from "../components/Menu/index";
 import NavIcon from "../components/NavIcon/index";
 import Parallax from "../components/Parallax/index";
-
+import SVGIcon from "../components/SVGIcon/index";
 import { Route, withRouter, Redirect } from 'react-router-dom';
 
 class About extends Component {
@@ -63,10 +63,11 @@ class About extends Component {
     render = () => {
 
         return (
-            <section id="ABOUT">
-                <div className={`box-size overflow-fix ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"} ${this.props.classes}`}>
+            <section id="ABOUT" className={'overflow-fix'}>
+                <div className={`box-size overflow-fix `} scroll='no'>
                     <Menu collapseMenu={this.state.collapseMenu} />
                     <FlexContainer classes="nav-height-fix " direction="row" justify="end">
+                        
                         <NavIcon
                             toggleMenu={this.toggleMenu}
                             transition={this.state.transition}
@@ -87,6 +88,7 @@ class About extends Component {
                         <FlexContainer
                             direction="column"
                             justify="center"
+                            style={{overflow:"hidden"}}
 
                         >
                             <Route render={({ history }) => (

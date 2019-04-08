@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://db.onlinewebfonts.com/c/a58481739201b270f06930a07185ba53?family=Ginger-Regular');
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -27,6 +28,10 @@
 .fade{
   transition: opacity 1s ease-in-out;
   opacity: 0;
+}
+
+canvas{
+  overflow: hidden;
 }
 
 @keyframes App-logo-spin {

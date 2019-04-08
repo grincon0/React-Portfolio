@@ -34,6 +34,7 @@ class Landing extends Component {
         <Scene3D
           transitioner={()=> this.handleTransition()}
         />
+        <div id={`parallax-container`} className={`hide-now`}></div>
       </div>
     );
   }
