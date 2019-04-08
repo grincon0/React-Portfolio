@@ -7,7 +7,7 @@ import FlexContainer from "../components/FlexContainer/index";
 import Menu from "../components/Menu/index";
 import NavIcon from "../components/NavIcon/index";
 import Parallax from "../components/Parallax/index";
-
+import SVGIcon from "../components/SVGIcon/index";
 import { Route, withRouter, Redirect } from 'react-router-dom';
 
 class About extends Component {
