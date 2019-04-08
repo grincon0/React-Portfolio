@@ -5,6 +5,7 @@ import FlexContainer from "../../components/FlexContainer";
 import { SpanGenerator } from "../../components/Customs/index";
 import Parallax from "../../components/Parallax/index";
 import "./section-styles/ContactContent.css";
+import "./section-styles/ProjectContent.css";
 import SVGIcon from "../../components/SVGIcon/index";
 
 const spanBlocks = [{

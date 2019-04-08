@@ -7,7 +7,7 @@ import FlexBox from "../../components/Flexbox/index";
 import FlexContainer from "../../components/FlexContainer/index";
 import Parallax from "../../components/Parallax/index";
 
-import "./section-styles/ProjectContent.css";
+
 
 class ProjectContent extends Component {
     constructor(props) {
