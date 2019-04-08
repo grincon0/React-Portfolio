@@ -1,9 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import FlexContainer from "../components/FlexContainer/index";
 import Flexbox from "../components/Flexbox/index";
 import { SpanGenerator } from "../components/Customs/index";
 import SVGIcon from "../components/SVGIcon/index"
 import "./styles/Advision.css";
+
+
 
 export default class Advision extends Component {
     constructor() {
@@ -22,11 +24,45 @@ export default class Advision extends Component {
                 description: "Ad-Vision is an Augmented Reality object and text recogniztion mobile application that renders ads to the user. Using real-world objects/images that the it recognizes, the application will be able to render different forms of media, such as textual information, 3-D objects, and even graphical effects on the screen.",
                 role: "I was responsible for creating an easy to use abstration for ViroReact's built in particle effect generators. Along with testing and creating all 3D compenents that rendered text, video formats, and 3-diemnsional meshes, I created animations that seamlessly brought the user experience to life",
                 stack: ["ViroReact", "React Native", "Objective-C", "Android SDK", "Xcode", "Node.js", "Express.js", "JavaScript ES6", "Google Cloud Platform", "Bing Custom Search API"]
-            }
+            },
+            showAbout:false,
+            showDetail:false,
+            showStack:false
         }
     }
     componentDidMount = () => {
+        this.setScrollEventListener();
+    }
+    componentWillUnmount = () => {
+        this.removeScrollEventListener();
+    }
+    handleClassesScrollTop = () => {
+       /*  console.log(document.documentElement.scrollTop || document.body.scrollTop); */
 
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+
+        if(this.state.showAbout === false && scrollTop > 400){
+            this.setState({showAbout: true});
+            console.log(this.state.showAbout);
+        }
+
+        if(this.state.showDetail === false && scrollTop > 800){
+            this.setState({showDetail: true});
+        }
+        if(this.state.showDetail === false && scrollTop > 1270){
+            this.setState({showStack: true});
+        }
+    }
+    boundScrollTop = () => {
+        this.handleClassesScrollTop();
+    }
+    setScrollEventListener = () => {
+        document.addEventListener('scroll', this.boundScrollTop);
+    }
+    removeScrollEventListener = () => {
+     
+            document.removeEventListener('scroll', this.boundScrollTop);
+        
     }
     render = () => {
         let techStack = this.state.data.stack.map((tech, i) => <li key={i}>{tech}</li>)
@@ -56,7 +92,7 @@ export default class Advision extends Component {
                         <span>Type:</span><p>{this.state.data.type[1]}</p>
                     </div>
                 </Flexbox>
-                <Flexbox classes={`ad-about`}>
+                <Flexbox classes={`ad-about ${this.state.showAbout ? "show-this" : ""} `}>
                     <div className={`about-header`}>
                         <h1>About</h1><span>.</span>
                     </div>
@@ -71,7 +107,7 @@ export default class Advision extends Component {
 
 
                 </Flexbox>
-                <Flexbox classes={`ad-role`}>
+                <Flexbox classes={`ad-role ${this.state.showAbout ? "show-this" : ""}`}>
                     <div className={`about-header`}>
                         <h1>Details</h1><span>.</span>
                     </div>
@@ -79,7 +115,7 @@ export default class Advision extends Component {
                         <p>{this.state.data.role}</p>
                     </div>
                 </Flexbox>
-                <Flexbox classes={`ad-stack`}>
+                <Flexbox classes={`ad-stack ${this.state.showAbout ? "show-this" : ""}`}>
                     <div className={`stack-header`}>
                         <h1>Tech Stack</h1>
                     </div>

@@ -117,6 +117,8 @@
 }
 .ad-about .about-header{
     margin-top:30px;
+    transform: translateY(8px);
+    opacity: 0;
 }
 .ad-about .about-header h1{
     display:inline;
@@ -130,7 +132,8 @@
 }
 
 .about-wrap{
-    
+    transform: translateY(8px);
+    opacity: 0;
     width: 580px;
 }
 
@@ -223,7 +226,6 @@
 }
 
 .ad-role p{
-    
     font-size: 15pt;
 }
 
@@ -337,13 +339,70 @@ i.portal{
     animation: revealL 1s 0.6s cubic-bezier(.694,.048,.335,1);
 }
 
-.ad-title-lower span{
+.lower-left {
+    opacity: 0;
+    animation: lower-left 0.6s cubic-bezier(.694,.048,.335,1) 1.2s forwards;
+}
 
+.lower-right{
+    opacity: 0;
+    animation: lower-right 0.4s cubic-bezier(.694,.048,.335,1) 1.2s forwards;
+}
+
+.ad-about .about-links{
+    opacity: 0;
+    transform: translateY(8px);
+    
+}
+/* scroll transitions*/
+
+.ad-about.show-this .about-header{
+    transition: all 0.5s cubic-bezier(.52,.01,.16,1);
+    transition-delay: 0.2s;
+    transform: translateY(0);
+    opacity: 1;
+    
+}
+
+.ad-about.show-this .about-wrap{
+    transition: all 0.5s cubic-bezier(.52,.01,.16,1);
+    transition-delay: 0.3s;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.ad-about.show-this .about-links{
+    transition: all 0.5s cubic-bezier(.52,.01,.16,1);
+    transition-delay: 0.4s;
+    transform: translateY(0);
+    opacity: 1;
 }
 
 
 
 
+
+@keyframes lower-left{
+    0%{
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes lower-right{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
 
 @keyframes show-anim{
     0%{
