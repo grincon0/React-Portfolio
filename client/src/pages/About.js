@@ -7,8 +7,8 @@ import FlexContainer from "../components/FlexContainer/index";
 import Menu from "../components/Menu/index";
 import NavIcon from "../components/NavIcon/index";
 import Parallax from "../components/Parallax/index";
-
-import { Route, withRouter, Redirect } from 'react-router-dom'
+import SVGIcon from "../components/SVGIcon/index";
+import { Route, withRouter, Redirect } from 'react-router-dom';
 
 class About extends Component {
     constructor(props) {
@@ -17,7 +17,8 @@ class About extends Component {
             canRender: true,
             collapseMenu: false,
             hidden: true,
-            section: ''
+            section: '',
+            transition: false
         }
     }
     componentDidMount = () => {
@@ -27,22 +28,27 @@ class About extends Component {
     }
     handleTransition = async (event, history) => {
         event.preventDefault();
-        await this.doTransitionEffect();
+        /* old version for body */
+        /* await this.doTransitionEffect(); */
+
+        await this.runTransition();
 
         setTimeout(() => {
             this.props.history.push('/projects');
-        }, 1000);
+        }, 2300);
 
     }
+    /* old version for body pseudos */
     doTransitionEffect = () => {
         document.body.className += 'page-is-changing';
     }
-    testLoader = () => {
-        /*         document.body.className += 'page-is-changing';
-                setTimeout(() => {
-                    document.body.className = '';
-                }, 1500) */
+    runTransition = () => {
+        let newState = { ...this.state };
+        newState.transition = true;
+        this.setState(newState);
+        console.log('new state about ran');
     }
+
     toggleMenu = () => {
         if (!this.state.collapseMenu) {
             let newState = { ...this.state };
@@ -57,32 +63,47 @@ class About extends Component {
     render = () => {
 
         return (
-            <section id="ABOUT">
-                <div className={`box-size ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"} ${this.props.classes}`}>
+            <section id="ABOUT" className={'overflow-fix'}>
+                <div className={`box-size overflow-fix `} scroll='no'>
                     <Menu collapseMenu={this.state.collapseMenu} />
-                    <FlexContainer classes="nav-height-fix height-fixer" direction="row" justify="end">
-                        <NavIcon toggleMenu={this.toggleMenu} />
+                    <FlexContainer classes="nav-height-fix " direction="row" justify="end">
+                        
+                        <NavIcon
+                            toggleMenu={this.toggleMenu}
+                            transition={this.state.transition}
+                        />
                     </FlexContainer>
                     <FlexContainer
                         id="parallax-container"
                         direction="column"
-                        justify="center"
+
+                        classes={`overflow-fix`}
                     >
-                    
+
                         {/* About page content beings */}
-                        <AboutContent canRender={this.state.canRender}>
-                        <Parallax />
-                        
-                        </AboutContent>
-                        <Route render={({ history }) => (
-                            <Arrow
-                                arrowText={"Projects"}
-                                onClick={(e) => { this.handleTransition(e, history) }}
-                            />
-                        )} />
+                        <AboutContent
+                            transition={this.state.transition}
+                        />
+
+                        <FlexContainer
+                            direction="column"
+                            justify="center"
+                            style={{overflow:"hidden"}}
+
+                        >
+                            <Route render={({ history }) => (
+                                <Arrow
+                                    arrowText={"Projects"}
+                                    onClick={(e) => { this.handleTransition(e, history) }}
+                                    transition={this.state.transition}
+                                />
+                            )} />
+                        </FlexContainer>
+
                         {/* About page content ends */}
                     </FlexContainer>
-                    
+
+
                 </div>
             </section>
         );

@@ -1,134 +1,133 @@
 import React, { Component } from "react";
 import AnimatedText from "../../components/AnimatedText/index";
 import Arrow from "../../components/Arrow/index";
-import OverlayBlock from "../../components/OverlayBlock/index";
+import { ButtonList } from "../../components/Lists/index"
+import { ProjectOverlay, LargeOverlay } from "../../components/OverlayBlock/index";
 import FlexBox from "../../components/Flexbox/index";
 import FlexContainer from "../../components/FlexContainer/index";
-import "./section-styles/projectContent.css";
+import Parallax from "../../components/Parallax/index";
+
+
 
 class ProjectContent extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            animate: false,
+            animationComplete: {
+                title: true,
+                subtitle: false,
+                buttons: false
+            },
             placeholder: '',
             loaded: false,
-            delay: 400
+            delay: 400,
+            pageTransition: false
         }
     }
+    componentDidMount = () => {
+        this.animateTimer = setTimeout(() => {
+            this.setState({ animate: true });
+        }, 1300);
 
+        this.addAnimationEndLisenter(".project-header", "animation", "title");
+        this.addAnimationEndLisenter(".project-page-text", "animation", "subtitle");
+    }
+    componentWillUnmount = () => {
+        clearTimeout(this.animateTimer);
+    }
+    addAnimationEndLisenter = (query, type, which) => {
+        let element = document.querySelector(query);
+
+        element.addEventListener(`${type}end`, () => {
+            console.log(`${type} ended`);
+
+            let newState = { ...this.state };
+
+            switch (which) {
+                case 'title':
+                    newState.animationComplete.title = true;
+                    this.setState(newState);
+                    break;
+                case 'buttons':
+                    newState.animationComplete.buttons = true;
+                    this.setState(newState);
+                    break;
+                case 'subtitle':
+                    newState.animationComplete.subtitle = true;
+                    this.setState(newState);
+                    break;
+                default:
+
+                    break;
+            }
+        });
+    }
+    handlePageTransition = (event) => {
+        event.preventDefault();
+
+        const value = event.target.value;
+        
+        console.log(value);
+       /*  setTimeout(() => {
+            this.props.history.push('/contact');
+        }, 2300); */
+
+    }
+    transitionChecker = () => {
+        this.transitionInterval = setInterval(() => {
+            if (this.props.transition === true) {
+                let newState = { ...this.state };
+                newState.pageTransition = true;
+                this.setState(newState);
+                console.log(newState);
+                clearInterval(this.transitionInterval);
+
+            }
+
+        }, 300);
+    }
     render = () => {
-
         return (
             <section id="PROJECTS">
                 <FlexContainer
                     direction="column"
                     justify="center"
                     classes="align-fix"
+                    id={`parallax-container`}
                 >
                     <FlexBox
                         classes="tiny-flex"
                     >
-                        <AnimatedText
-                            classes="text-default color-default"
-                            anim="slide-right-quick"
-                            text="Projects"
-                        />
-
-                        <AnimatedText
-                            classes="text-default color-default line-move"
-                            anim="slide-right-quick"
-                            delay={200}
-                            text="_______"
-                        />
-
+                        <div className={`project-header ${this.state.animate ? "show-header" : ""} ${this.props.transition ? "page-is-changing" : ""} `}>
+                            <h1 className={`rollout ${this.props.transition ? "text-disappear" : ""}`}>Projects</h1>
+                        </div>
                     </FlexBox>
                     <FlexContainer
-                        direction="row"
-                        justify="start"
+                        direction="column"
+                        justify="center"
                         classes="margin-fix "
                     >
+                        <div className={`project-page-subtitle ${this.state.animationComplete.title ? "rollout" : ""} ${this.props.transition ? "page-is-changing" : ""}`}>
+                            <div className={`project-page-text ${this.state.animate ? "show-header" : ""} ${this.props.transition ? "text-disappear" : ""} `}>
+                                <p>From web development to game design, and apps in between. Click on the buttons below to filter my projects by technology or skill.</p>
+                            </div>
 
+                        </div>
                         <FlexBox
-                            id="Items"
-                            classes="proj-box"
+                            classes="button-flex"
                         >
-                            <OverlayBlock
-                                classes={`random-photo align-fix`}
-                                showClass="overlay-end"
-                                color="violet"
-                                delay={this.state.delay}
-                                appType="Augmented Reality Mobile App"
-                                headline="Ad-Vision."
-                                text="Magical AR app that reads targets and returns info on screen"
-                                pColorChange="violet-text-header"
-                                h1ColorChange="buttercup-text"
-                            />
-
-
-                            <OverlayBlock
-                                classes={`random-photo-2 align-fix`}
-                                showClass="overlay-end"
-                                color="night"
-                                delay={this.state.delay + 100}
-                                appType="Platform Fighter Video Game"
-                                headline="Pixel-Smash."
-                                text="Test your mettle against online players or the relentless CPU."
-                                pColorChange="violet-text"
-                                h1ColorChange="magenta-text"
-                                h2ColorChange="violet-text-header"
-
-                            />
-                            <OverlayBlock
-                                classes={`pet-perfect align-fix `}
-                                showClass="overlay-end"
-                                color="coral"
-                                delay={this.state.delay + 200}
-                                appType="Website"
-                                headline="Pet-Perfect."
-                                text="The perfect site for the passionate pet owner"
-                                pColorChange="buttercup-text"
-                                h2ColorChange="eclipse-text"
-
-                            />
-                            <OverlayBlock
-                                classes={`random-photo-2 align-fix`}
-                                showClass="overlay-end"
-                                color="quetzal"
-                                delay={this.state.delay + 300}
-                                appType="Mongo-powered Web App"
-                                headline="Space-Scraper."
-                                text="Scrapes current articles from Space.com"
-                                pColorChange="mist-text"
-                                h2ColorChange="greenery-text"
-                            />
-                            <OverlayBlock
-                                classes={`random-photo align-fix`}
-                                showClass="overlay-end"
-                                color="midnight"
-                                delay={this.state.delay + 400}
-                                appType="SQL-backed Command Line Application"
-                                headline="Bamazon."
-                                text="Purchase and manage your business' inventory with this Node.js powered app"
-                                pColorChange="mist-text"
-                                h2ColorChange="greenery-text"
-                            />
-                            <OverlayBlock
-                                classes={`random-photo-3 align-fix`}
-                                showClass="overlay-end"
-                                color="snorkel"
-                                delay={this.state.delay + 500}
-                                appType="Command Line Application"
-                                headline="Liri-Bot."
-                                text="Run a number of queries and return data wiht Liri"
-                                pColorChange="buttercup-text"
-                                h1ColorChange="sun-text"
-                                h2ColorChange="bright-text"
+                            <ButtonList
+                                animate={this.state.animationComplete.subtitle}
+                                transition={this.props.transition}
+                                
                             />
 
                         </FlexBox>
-
                     </FlexContainer>
+                    <Parallax />
                 </FlexContainer>
+                
             </section>
         );
     }

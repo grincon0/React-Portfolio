@@ -1,0 +1,19 @@
+
+canvas {
+    display: felx;	
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.wave-adjust{
+    position: absolute;
+    transform: translateY(500px);
+    overflow: hidden;
+    top:0;
+    
+}
+
+.move-wave{
+    transition: all 3s ease;
+    transform: translateY(200px);
+}

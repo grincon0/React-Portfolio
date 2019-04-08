@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
-/* import AboutContent from "./AboutContent"; */
 import ProjectContent from "../pages/sections/ProjectContent";
-/* import Contact from "./sections/Contact"; */
-/* import AnimatedText from "../../components/AnimatedText/index"; */
 import Arrow from "../components/Arrow/index";
-/* import Flexbox from "../../components/Flexbox/index"; */
+import Flexbox from "../components/Flexbox/index";
 import FlexContainer from "../components/FlexContainer/index";
-/* import OverlayBlock from "../../components/OverlayBlock/index"; */
 import Menu from "../components/Menu/index";
 import NavIcon from "../components/NavIcon/index";
-/* import Slider from "../../components/Slider/index";
-import SVGIcon from "../../components/SVGIcon/index"; */
 import "../pages/sections/section-styles/About.css";
 
 import { Route, Redirect } from "react-router-dom";
@@ -23,6 +17,7 @@ class Projects extends Component {
             collapseMenu: false,
             section: '',
             toContact: false,
+            transition: false,
         }
     }
     componentDidMount = () => {
@@ -34,20 +29,30 @@ class Projects extends Component {
         document.body.className += 'page-is-changing';
         setTimeout(() => {
             document.body.className = '';
-        }, 3000);
+        }, 2300);
     }
-    handleTransition = async (event, history) => {
+    handleTransition = async (event, history, direction) => {
         event.preventDefault();
-        await this.doTransitionEffect();
+        /* await this.doTransitionEffect(); */
 
-        setTimeout(() => {
-            this.props.history.push('/contact');
-        }, 1000);
+        await this.runTransition();
+        switch (direction) {
+            case "back":
+                setTimeout(() => {
+                    this.props.history.push('/about');
+                }, 2300);
+                break;
+            case "forward":
+                setTimeout(() => {
+                    this.props.history.push('/contact');
+                }, 2300);
+                break;
 
+            default:
+                break;
+        }
     }
-    componentWillUnmount = () => {
-        console.log("Project component unmounted");
-    }
+  
     testLoader = () => {
 
         this.setState({ toContact: true });
@@ -63,24 +68,54 @@ class Projects extends Component {
             this.setState(newState);
         }
     }
+    runTransition = () => {
+        let newState = { ...this.state };
+        newState.transition = true;
+        this.setState(newState);
+    }
     render = () => {
         return (
             <section id="ABOUT">
                 <div className={`box-size ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"} ${this.props.classes}`}>
                     <Menu collapseMenu={this.state.collapseMenu} />
                     <FlexContainer classes="nav-height-fix" direction="row" justify="end">
-                        <NavIcon toggleMenu={this.toggleMenu} />
+                        <NavIcon
+                            toggleMenu={this.toggleMenu}
+                            transition={this.state.transition}
+                        />
                     </FlexContainer>
                     <FlexContainer >
-                        <ProjectContent />
+                        <ProjectContent
+                            transition={this.state.transition}
+                        />
+
+
                         <Route render={({ history }) => (
+
+
                             <Arrow
                                 arrowText={"Contact"}
-                                onClick={(e) => { this.handleTransition(e, history) }}
+                                classes={`arrow-project`}
+                                onClick={(e) => { this.handleTransition(e, history, "forward") }}
+                                transition={this.state.transition}
                             />
+
                         )} />
                     </FlexContainer>
+
+
+                    {/*                     <Route render={({ history }) => (
+
+                        <Arrow
+                            arrowText={"About"}
+                            classes={`arrow-project-left`}
+                            onClick={(e) => { this.handleTransition(e, history, "back") }}
+                            transition={this.state.transition}
+                        />
+
+                    )} /> */}
                 </div>
+
             </section>
         );
     }

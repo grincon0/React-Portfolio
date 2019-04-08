@@ -1,5 +1,5 @@
 .about-background{
-    background-color: #000;
+    background-color: rgb(19, 14, 46);
 }
 
 .box-size{
@@ -92,8 +92,14 @@ body.page-is-changing::after, body.page-is-changing::before{
  /*    z-index: 995; */
 /* } */ 
 
+
+
 .page-is-changing .cd-loading-bar::before{
     transform: scaleX(1);
+}
+
+.overflow-fix-about{
+    overflow-y: hidden;
 }
 
 /* #about{
@@ -111,3 +117,4 @@ body.page-is-changing::after, body.page-is-changing::before{
         background-color: rgb(46, 39, 150);
     }
 }
+

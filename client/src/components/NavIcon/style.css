@@ -1,7 +1,7 @@
 #burger-icon{
     margin-top:1em;
     margin-right: 2em;
-    z-index: 200;
+    z-index: 255;
 }
 
 #burger-icon i{
@@ -12,6 +12,23 @@
     background-color: rgb(192, 192, 192);
     border-radius: 2px;
     transition: transform .6s cubic-bezier(0.23, 1, 0.32, 1),translate .6s cubic-bezier(0.23, 1, 0.32, 1), background-color 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#burger-icon.page-is-changing i:nth-child(n){
+    transition: transform 0.9s cubic-bezier(0.895, 0.03, 0.685, 0.22) ;
+}
+
+#burger-icon.page-is-changing i:nth-child(1){
+    transition-delay: 0.4s;
+    transform: translateX(100px);
+}
+#burger-icon.page-is-changing i:nth-child(2){
+    transition-delay: 0.2s;
+    transform: translateX(100px);
+}
+#burger-icon.page-is-changing i:nth-child(3){
+    
+    transform: translateX(100px);
 }
 
 /*  #burger-icon:hover > i:nth-child(1){

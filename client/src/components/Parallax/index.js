@@ -1,77 +1,107 @@
 
-import React, {Component} from "react";
+import React, { Component } from "react";
 import ParallaxHelper from "../../helpers/ParallaxHelper";
 import Circle from "../../assets/SVG/Parallax/Circle.svg";
 import Triangle from "../../assets/SVG/Parallax/Triangle.svg";
 import Square from "../../assets/SVG/Parallax/Square.svg";
 import X from "../../assets/SVG/Parallax/X.svg";
 
+import Circle2 from "../../assets/SVG/circle.svg";
+import Triangle2 from "../../assets/SVG/triangle.svg";
+import Square2 from '../../assets/SVG/square.svg';
+import Rectangle from "../../assets/SVG/rectangle.svg";
+
+
 import "./style.css";
+
+let ParallaxEffect;
 
 
 class Parallax extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            amount:12,
-            createElements : [],
-            icons:[Circle,Triangle, Square, X],
-            height:25,
+            amount: 10,
+            canAppear: false,
+            createElements: [],
+            icons: [Circle, Triangle, Square, X],
+            height: 25,
             width: 25,
-            readyToDump: false
+            readyToDump: false,
+            readyToKill: false,
+
         }
     }
     componentDidMount = () => {
-        if(!this.state.readyToDump){
+        if (!this.state.readyToDump) {
             let imgArr = [];
-            for(let i = 0; i < this.state.amount; i++){
+            for (let i = 0; i < this.state.amount; i++) {
                 imgArr.push(this.createElement(this.state.amount - i));
             }
-            this.setState({createElements : imgArr, readyToDump: true});
+            this.setState({ createElements: imgArr, readyToDump: true });
+            /* ParallaxHelper.watch(); */
+
+            this.startParallax();
+
+            setTimeout(() => {
+                let newState = { ...this.state };
+                newState.canAppear = true;
+                this.setState(newState);
+            }, 1000);
+
         }
     }
-    componentDidUpdate = () => {
-        console.log(this.state.createElements)
+    startParallax =  async () => {
+        await this.instantiateParallax();
+        this.watchParallax();
+
+    }
+    instantiateParallax = () => {
+        ParallaxEffect = new ParallaxHelper();
+    }
+    watchParallax = () => {
+        ParallaxEffect.watch();
+    }
+    killParallax = () => {
+        ParallaxEffect.kill();
+    }
+
+    componentWillUnmount = () => {
+        this.killParallax();
+        clearTimeout(this.opacityTimer);
+        
+        
     }
     createElement = (key) => {
-            return(
-                <img 
-                className="parallax-img" 
-                src={this.state.icons[this.getRandomNumber(4)]}  
+        return (
+            <img
+                className={`base-parallax parallax-img-${key}`}
+                src={this.state.icons[this.getRandomNumber(4)]}
                 width={this.state.width}
                 height={this.state.height}
-                alt="icon" 
+                alt="icon"
                 key={key}
-                />
-            );
+            />
+        );
     }
     getRandomNumber = (int) => {
         return Math.floor(Math.random() * Math.floor(int));
     }
     getImgElements = () => {
-        for(let i = 0; i < this.state.amount; i++){
+        for (let i = 0; i < this.state.amount; i++) {
             this.createElement();
         }
     }
     render = () => {
         let elem;
-        if(this.state.readyToDump){
-            /* elem = this.state.createElements; */
-           
-            
+        if (this.state.readyToDump) {
+            elem = this.state.createElements;
         }
-        let test = new ParallaxHelper();
-        test.watch();
-        return(
-                <img 
-                className="parallax-img" 
-                src={this.state.icons[this.getRandomNumber(4)]}  
-                width={this.state.width}
-                height={this.state.height}
-                alt="icon" 
-                key={1}
-                />
-            
+
+        return (
+            <div id="img-container" className={`${this.state.canAppear ? "ease-opacity" : ""}`}>
+                {elem || null}
+            </div>
         );
     }
 }

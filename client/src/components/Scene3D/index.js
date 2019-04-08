@@ -3,6 +3,7 @@ import PinkImage from "../../assets/images/pink.png";
 import BlueImage from "../../assets/images/blue.png";
 import GreenImage from "../../assets/images/green.png";
 import PurpleImage from "../../assets/images/purple.png";
+import {SpanGenerator} from "../Customs/index";
 import "./style.css";
 
 
@@ -221,9 +222,7 @@ class Scene3D extends Component {
     render = () => {
     if (this.state.releaseContain) {
             this.removeContainerVisibility();
-/*             setTimeout(() => {
-                document.getElementById("3D-contain").classList.add("hideall");
-            }, 100); */
+
         } 
 
         return (
@@ -234,6 +233,9 @@ class Scene3D extends Component {
                         <p id="text2" className="subtitle">About</p>
                         <p id="text3" className="subtitle">Labs</p>
                         <p id="text4" className="subtitle">Contact</p>
+                    </div>
+                    <div className="sub-intro">
+                        <p>Click on one of the cards to begin</p>
                     </div>
                     <div className="scene">
                         <div className="parent-container">

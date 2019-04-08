@@ -2,7 +2,7 @@
     position: relative;
     height: 60px;
     width:100px;
-    background-color:rgb(7, 70, 70);
+    /* background-color:rgb(7, 70, 70); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,6 +61,20 @@
 }
 .fix-test{
     position: fixed;
+}
+
+#arrow-box.page-is-changing #arrow-head img,#arrow-box.page-is-changing i {
+    transition: transform 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.5s;
+
+}
+
+#arrow-box.page-is-changing{
+    transition: transform 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.5s;
+    transform: translateX(300px);
+}
+
+.arrow-project{
+    bottom: 50vh;
 }
 
 /* Start and Reset animations */
