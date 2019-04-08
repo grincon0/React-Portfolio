@@ -1,4 +1,4 @@
-.ad-vision-container{
+#AD-VISION{
     
 }
 
@@ -64,7 +64,7 @@
     align-items: center;
     justify-content: center;
     justify-items: center;
-    flex-direction: row;
+    flex-direction: column;
     color:#fff;
     width: 100%;
     
@@ -89,6 +89,7 @@
     font-family: LeagueSpartan, sans-serif;
     display: inline;
     margin-left: 100px;
+    margin-right:5px;
 }
 
 .ad-title-lower p{
@@ -107,6 +108,7 @@
     width: 100%;
     background-color: rgb(29, 94, 94);
     color: #fff;
+    padding-bottom: 30px;
 }
 .ad-about .about-header{
     margin-top:30px;
@@ -134,6 +136,7 @@
 }
 
 .ad-role{
+    display: flex;
     height: 60vh;
     background-color: #6B78B4;
     flex-direction: row;
@@ -142,7 +145,7 @@
 }
 
 .ad-role p{
-    font-family: LeagueSpartan, sans-serif;
+    
     font-size: 15pt;
 }
 
@@ -214,6 +217,14 @@
 
 .stack-list ul li{
     list-style-type: circle;
+}
+
+.role-info{
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    align-items: center;
+
 }
 
 @keyframes movecat{

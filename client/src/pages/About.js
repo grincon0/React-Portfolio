@@ -35,7 +35,7 @@ class About extends Component {
 
         setTimeout(() => {
             this.props.history.push('/projects');
-        }, 3000);
+        }, 2300);
 
     }
     /* old version for body pseudos */
