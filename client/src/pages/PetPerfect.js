@@ -23,7 +23,7 @@ export default class PetPerfect extends Component {
                 role:{
                     paragraph : {
                         one: "As the first project we tackled as web developers, our team wanted to created web that provides a solution to users. Our love and apprecitate for our furry compantion motivated us to create a web concept around the idea of a one-stop shop for the needs of pet owner",
-                        two: "In addition to UI Design, my main focus was intergrating the Google Maps API for the Front-end and allowing the user to select which category of pet-related service they want to search for within a 10 miles radius of their inputed location",
+                        two: "In addition to UI Design, my main focus was intergrating the Google Maps API for the Front-end. The user is able to select from category of pet-related services to search for within a 10 miles radius of their inputed location",
 
                     }
                 } ,
@@ -73,7 +73,8 @@ export default class PetPerfect extends Component {
                 </Flexbox>
                 <Flexbox classes={`ad-role`}>
                     <div className={`role-info`}>
-                        <p>{this.state.data.role}</p>
+                        <p>{this.state.data.role.paragraph.one}</p>
+                        <p>{this.state.data.role.paragraph.two}</p>
                     </div>
                 </Flexbox>
                 <Flexbox classes={`ad-stack`}>
