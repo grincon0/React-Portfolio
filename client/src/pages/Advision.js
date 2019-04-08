@@ -43,13 +43,14 @@ export default class Advision extends Component {
 
         if(this.state.showAbout === false && scrollTop > 400){
             this.setState({showAbout: true});
-            console.log(this.state.showAbout);
+            
         }
 
         if(this.state.showDetail === false && scrollTop > 800){
             this.setState({showDetail: true});
         }
-        if(this.state.showDetail === false && scrollTop > 1270){
+        if(this.state.showStack === false && scrollTop > 1200){
+            console.log(this.state.showAbout);
             this.setState({showStack: true});
         }
     }
@@ -107,7 +108,7 @@ export default class Advision extends Component {
 
 
                 </Flexbox>
-                <Flexbox classes={`ad-role ${this.state.showAbout ? "show-this" : ""}`}>
+                <Flexbox classes={`ad-role ${this.state.showDetail ? "show-this" : ""}`}>
                     <div className={`about-header`}>
                         <h1>Details</h1><span>.</span>
                     </div>
@@ -115,7 +116,7 @@ export default class Advision extends Component {
                         <p>{this.state.data.role}</p>
                     </div>
                 </Flexbox>
-                <Flexbox classes={`ad-stack ${this.state.showAbout ? "show-this" : ""}`}>
+                <Flexbox classes={`ad-stack ${this.state.showStack? "show-this" : ""}`}>
                     <div className={`stack-header`}>
                         <h1>Tech Stack</h1>
                     </div>
