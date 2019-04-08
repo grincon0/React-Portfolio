@@ -29,7 +29,7 @@ export default class PixelSmash extends Component {
                 description: "Pixel-Smash is a fun, yet competitive , JavaScript-powered platform fighter where you can test your mettle against online players or the relentless CPU.",
                 role: {
                     paragraph: {
-                        one: "As lead designer, I spearheaded the development of the game design, battle mechanics, and the arrangement of the game's soundtrack. The focus of this project was to create a fun and competitive figthting game written completely in JavaScript, where you can not only battle the computer, but also each other through online play. ",
+                        one: "As lead designer, I spearheaded the development of the game design, battle mechanics, and the arrangement of the game's soundtrack.",
                         two: "As a fan of the older generations of gaming, I wanted this game's design to evoke a classic 16-bit feel to the player. Ensuring that combat was fast-paced was my top priority, so I made sure to program the battle mechanics that allowed the play to perform quick combos and evasion techniques that can devastate the opponent.",
 
                     }
@@ -136,6 +136,7 @@ export default class PixelSmash extends Component {
                     </div>
                     <div className={`about-wrap`}>
                         <p>{this.state.data.role.paragraph.one}</p>
+                        <p>{this.state.data.role.paragraph.two}</p>
                     </div>
                 </Flexbox>
                 <Flexbox classes={`ad-stack ${this.state.showStack ? "show-this" : ""}`}>

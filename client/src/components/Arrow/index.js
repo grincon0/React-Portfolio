@@ -27,7 +27,7 @@ class Arrow extends Component {
 
 
         return (
-            <div id="arrow-box" className={`${this.state.hover ? "hover-box" : ""} ${this.props.transition ? "page-is-changing" : ""} ${this.props.classes ? this.props.classes : ""}`} onMouseOver={this.handleHover} onMouseOut={this.handleOut} onClick={this.props.onClick}>
+            <div id="arrow-box" className={` ${this.props.reverse ? "reverse-arrow" : ""} ${this.state.hover ? "hover-box" : ""} ${this.props.transition ? "page-is-changing" : ""} ${this.props.classes ? this.props.classes : ""}`} onMouseOver={this.handleHover} onMouseOut={this.handleOut} onClick={this.props.onClick}>
                 <div id="arrow-head" className={`starting-point ${this.state.hover ? "hover-arrow" : ""} `}>
                     <img src={SVGArrow} alt="arrow" />
                 </div>

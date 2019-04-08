@@ -67,6 +67,7 @@ class About extends Component {
                 <div className={`box-size overflow-fix `} scroll='no'>
                     <Menu collapseMenu={this.state.collapseMenu} />
                     <FlexContainer classes="nav-height-fix " direction="row" justify="end">
+                        
                         <NavIcon
                             toggleMenu={this.toggleMenu}
                             transition={this.state.transition}

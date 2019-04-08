@@ -20,9 +20,9 @@ export default class PetPerfect extends Component {
                 time: "Early 2019",
                 github: "https://github.com/grincon0/React-NYT-Search",
                 link: "https://react-googlebooks-search.herokuapp.com/",
-                sub: "Converse with your text-based Liri-Bot",
-                description: "React Books MERN-stack application that allows the user to search for their literature of chose saved them. ",
-                role: "I had a hands-on role with Ad-Vision. One of my focuses was to simplyify ",
+                sub: "Search for literature and save them for later.",
+                description: "React Books is a MERN-stack application that allows the user to search for books by their Titie, Author, other revelant keywords for the purposes of saving them into ht edatabse for later viewing.",
+                role: "",
                 stack: ["Full Stack Development", "JavaScript ES6", "Mongoose", "MongoDB", "React.js", "axios.js", "Express.js", "Node.js"]
             },
             showAbout: false,

@@ -311,12 +311,7 @@
     animation: reverseL 1s 0.6s cubic-bezier(.694,.048,.335,1);
 }
 
-.arrow-project{
-    position: absolute;
-    
-    top:0;
-    bottom:0;
-    left:90vw;
-    transform: translateY(-100vh);
-}
+
+
+
 

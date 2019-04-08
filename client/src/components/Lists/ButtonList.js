@@ -41,7 +41,7 @@ export class ButtonList extends Component {
                     name: "Mongo Scraper",
                     link:"mongoscraper",
                     count: 4,
-                    skill: ["FrontEnd", "BackEnd", "Mongodb", "NodeJS"]
+                    skill: ["FrontEnd", "BackEnd", "MongoDB", "NodeJS"]
                 },
                 {
                     name: "Bamazon",
@@ -53,10 +53,10 @@ export class ButtonList extends Component {
                     name: "React-Books",
                     link:"reactbooks",
                     count: 6,
-                    skill: ["FrontEnd","BackEnd", "ReactJS", "NodeJS", "JavaScript"]
+                    skill: ["FrontEnd","BackEnd","MongoDB", "ReactJS", "NodeJS", "JavaScript"]
                 },
             ],
-            content: [{ name: "ALL", key: 1 }, { name: "ReactJS", key: 2 }, { name: "NodeJS", key: 3 }, { name: "JavaScript", key: 4 }, { name: "FrontEnd", key: 5 }, { name: "BackEnd", key: 6 }, { name: "Mongodb", key: 7 }, { name: "SQL", key: 8 },
+            content: [{ name: "ALL", key: 1 }, { name: "ReactJS", key: 2 }, { name: "NodeJS", key: 3 }, { name: "FrontEnd", key: 5 }, { name: "BackEnd", key: 6 }, { name: "MongoDB", key: 7 }, { name: "SQL", key: 8 },
             { name: "Game Design", key: 9 }, { name: "Augmented Reality", key: 10 }, { name: "React Native", key: 11 }, { name: "Sockets.io", key: 12 }]
         }
     }
