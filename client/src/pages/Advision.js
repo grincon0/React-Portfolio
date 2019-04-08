@@ -13,13 +13,14 @@ export default class Advision extends Component {
             transition: false,
             data: {
                 tier: "High",
+                id: "1",
                 name: "Ad-Vision",
                 type: ["Native", "Mobile Augmented Reality"],
                 time: "Early 2019",
                 github: "https://github.com/Wizkym/Ad-Vision",
                 sub: "An ViroReact AR application that render realtime information on your smart phone",
                 description: "Ad-Vision is an Augmented Reality object and text recogniztion mobile application that renders ads to the user. Using real-world objects/images that the it recognizes, the application will be able to render different forms of media, such as textual information, 3-D objects, and even graphical effects on the screen.",
-                role: "I was responsible for creating an easy to use abstration for ViroReact's built in particle effect generators. Along with testing and creating 3D compenents that rendered text, video formats, and 3-diemnsional meshes, I created animations that seamlessly brought the user experience to life",
+                role: "I was responsible for creating an easy to use abstration for ViroReact's built in particle effect generators. Along with testing and creating all 3D compenents that rendered text, video formats, and 3-diemnsional meshes, I created animations that seamlessly brought the user experience to life",
                 stack: ["ViroReact", "React Native", "Objective-C", "Android SDK", "Xcode", "Node.js", "Express.js", "JavaScript ES6", "Google Cloud Platform", "Bing Custom Search API"]
             }
         }
@@ -38,20 +39,20 @@ export default class Advision extends Component {
                     </div>
                 </Flexbox>
                 <Flexbox classes={`ad-title-box`}>
-                    <div>
+                    <div className={`color-${this.state.data.id}`}>
                         <h1>{this.state.data.name}</h1>
                     </div>
-                    <div>
+
+                    <div className={`color-${this.state.data.id}`}>
                         <p>{this.state.data.sub}</p>
                     </div>
 
-
                 </Flexbox>
                 <Flexbox classes={`ad-title-lower`}>
-                    <div>
+                    <div className={`lower-left`}>
                         <span>Period:</span><p>{this.state.data.time}</p>
                     </div>
-                    <div>
+                    <div className={`lower-right`}>
                         <span>Type:</span><p>{this.state.data.type[1]}</p>
                     </div>
                 </Flexbox>
@@ -71,6 +72,9 @@ export default class Advision extends Component {
 
                 </Flexbox>
                 <Flexbox classes={`ad-role`}>
+                    <div className={`about-header`}>
+                        <h1>Details</h1><span>.</span>
+                    </div>
                     <div className={`about-wrap`}>
                         <p>{this.state.data.role}</p>
                     </div>
@@ -79,6 +83,9 @@ export default class Advision extends Component {
                     <div className={`stack-header`}>
                         <h1>Tech Stack</h1>
                     </div>
+                    <i className={`portal`}>
+
+                    </i>
                     <div className={`stack-list`}>
                         <ul>
                             {techStack}
