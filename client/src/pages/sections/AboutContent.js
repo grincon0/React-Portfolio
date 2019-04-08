@@ -41,7 +41,6 @@ class AboutContent extends Component {
         let element = document.querySelector(query);
 
         element.addEventListener(`${type}end`, () => {
-            console.log(`${type} ended`);
 
             let newState = { ...this.state };
 
@@ -67,7 +66,7 @@ class AboutContent extends Component {
     handleSpanHover = (e) => {
         switch (e.target.id) {
             case "span1":
-                console.log('leu')
+               
                 document.getElementById("span1").classList.add("hover-span");
                 break;
             default:
@@ -96,7 +95,7 @@ class AboutContent extends Component {
                 let newState = { ...this.state };
                 newState.pageTransition = true;
                 this.setState(newState);
-                console.log(newState);
+                
                 clearInterval(this.transitionInterval);
 
             }

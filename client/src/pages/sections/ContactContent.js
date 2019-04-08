@@ -41,7 +41,7 @@ class ContactContent extends Component {
         }, 100);
     }
     componentWillUnmount = () => {
-        console.log(spanBlocks);
+     
         clearTimeout(this.animateTimer);
     }
     transitionChecker = () => {
@@ -50,7 +50,6 @@ class ContactContent extends Component {
                 let newState = { ...this.state };
                 newState.transition = true;
                 this.setState(newState);
-                console.log(newState);
                 clearInterval(this.transitionInterval);
 
             }
@@ -61,7 +60,7 @@ class ContactContent extends Component {
         let element = document.querySelector(query);
 
         element.addEventListener(`${type}end`, () => {
-            console.log(`${type} ended`);
+            
 
             let newState = { ...this.state };
 

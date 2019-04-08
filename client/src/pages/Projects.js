@@ -51,15 +51,8 @@ class Projects extends Component {
             default:
                 break;
         }
-
-        /* setTimeout(() => {
-            this.props.history.push('/contact');
-        }, 2300); */
-
     }
-    componentWillUnmount = () => {
-        console.log("Project component unmounted");
-    }
+  
     testLoader = () => {
 
         this.setState({ toContact: true });
@@ -79,7 +72,6 @@ class Projects extends Component {
         let newState = { ...this.state };
         newState.transition = true;
         this.setState(newState);
-        console.log('new state about ran');
     }
     render = () => {
         return (

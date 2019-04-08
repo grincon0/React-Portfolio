@@ -222,9 +222,7 @@ class Scene3D extends Component {
     render = () => {
     if (this.state.releaseContain) {
             this.removeContainerVisibility();
-/*             setTimeout(() => {
-                document.getElementById("3D-contain").classList.add("hideall");
-            }, 100); */
+
         } 
 
         return (
