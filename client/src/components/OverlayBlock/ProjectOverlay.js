@@ -30,7 +30,7 @@ export class ProjectOverlay extends Component {
     render = () => {
         return (
 
-            <div id={this.props.blockID} className={`item-container ${this.state.show ? "move-in" : ""}`}>
+            <div id={this.props.blockID} onClick={this.props.onClick} className={`item-container ${this.state.show ? "move-in" : ""}`}>
                 <div className="project-box">
 
                     <div className={`project-mask mask-${this.props.count}`}>

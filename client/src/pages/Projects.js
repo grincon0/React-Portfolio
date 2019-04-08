@@ -97,6 +97,7 @@ class Projects extends Component {
                         )} />
                     </FlexContainer>
                 </div>
+                
             </section>
         );
     }

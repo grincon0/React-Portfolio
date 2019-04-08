@@ -300,6 +300,24 @@ i.portal{
     animation-delay: 0.5s;
 }
 
+.ad-title-box .color-2 h1:before{
+    background-color: #5faaff;
+}
+
+.ad-title-box .color-2 h1:after{
+    background-color: rgb(28, 18, 161);
+    animation-delay: 0.5s;
+}
+
+.ad-title-box .color-3 h1:before{
+    background-color: #6f5fff;
+}
+
+.ad-title-box .color-3 h1:after{
+    background-color: rgb(228, 52, 125);
+    animation-delay: 0.5s;
+}
+
 .ad-title-box  h1:before{
     animation: revealR 1.8s cubic-bezier(.694,.048,.335,1);
 }
@@ -331,6 +349,24 @@ i.portal{
     animation-delay: 0.5s;
 }
 
+.ad-title-box .color-2 p:before{
+    background-color: #ff5f5f;
+}
+
+.ad-title-box .color-2 p:after{
+    background-color: rgb(190, 32, 27);
+    animation-delay: 0.5s;
+}
+
+
+.ad-title-box .color-3 p:before{
+    background-color: #7e1e6e;
+}
+
+.ad-title-box .color-3 p:after{
+    background-color: rgb(157, 27, 190);
+    animation-delay: 0.5s;
+}
 .ad-title-box  p:before{
     animation: revealL 1.8s cubic-bezier(.694,.048,.335,1);
 }
@@ -366,6 +402,7 @@ i.portal{
 
 .ad-role .about-header{
     opacity: 0;
+    transform: translateY(8px);
 }
 .ad-about.show-this .about-wrap{
     transition: all 0.5s cubic-bezier(.52,.01,.16,1);
@@ -431,6 +468,17 @@ i.portal{
 
 .stack-list{
     list-style-type: none;
+}
+
+.stack-header{
+    font-family: LeagueSpartan, sans-serif;
+}
+
+.hide-now{
+    opacity: 0;
+    width: 0;
+    height: 0;
+    transition: all 0.4s ease;
 }
 
 

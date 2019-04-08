@@ -63,8 +63,8 @@ class About extends Component {
     render = () => {
 
         return (
-            <section id="ABOUT">
-                <div className={`box-size overflow-fix ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"} ${this.props.classes}`}>
+            <section id="ABOUT" className={'overflow-fix'}>
+                <div className={`box-size overflow-fix `} scroll='no'>
                     <Menu collapseMenu={this.state.collapseMenu} />
                     <FlexContainer classes="nav-height-fix " direction="row" justify="end">
                         <NavIcon
@@ -87,6 +87,7 @@ class About extends Component {
                         <FlexContainer
                             direction="column"
                             justify="center"
+                            style={{overflow:"hidden"}}
 
                         >
                             <Route render={({ history }) => (

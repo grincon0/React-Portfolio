@@ -5,6 +5,8 @@ import { SpanGenerator } from "../components/Customs/index";
 import SVGIcon from "../components/SVGIcon/index"
 import "./styles/Advision.css";
 
+import { Route, withRouter, Redirect } from 'react-router-dom';
+
 
 
 export default class Advision extends Component {
@@ -65,15 +67,28 @@ export default class Advision extends Component {
             document.removeEventListener('scroll', this.boundScrollTop);
         
     }
+    handleTransition = async (event, history) => {
+        event.preventDefault();
+        /* old version for body */
+        /* await this.doTransitionEffect(); */
+
+        /* await this.runTransition(); */
+
+        setTimeout(() => {
+            this.props.history.push('/projects');
+        }, 2300);
+
+    }
     render = () => {
         let techStack = this.state.data.stack.map((tech, i) => <li key={i}>{tech}</li>)
 
         return (
             <section id="AD-VISION">
                 <Flexbox classes={`nav-section`}>
-                    <div className={`h2-block`}>
+                <Route render={({ history }) => (
+                    <div onClick={(e) => this.handleTransition(e)} className={`h2-block`}>
                         <h2>Go back</h2>
-                    </div>
+                    </div>)}/>
                 </Flexbox>
                 <Flexbox classes={`ad-title-box`}>
                     <div className={`color-${this.state.data.id}`}>
@@ -83,7 +98,6 @@ export default class Advision extends Component {
                     <div className={`color-${this.state.data.id}`}>
                         <p>{this.state.data.sub}</p>
                     </div>
-
                 </Flexbox>
                 <Flexbox classes={`ad-title-lower`}>
                     <div className={`lower-left`}>
@@ -105,8 +119,6 @@ export default class Advision extends Component {
                         {this.state.data.link ? <a className={`web-link`} href={this.state.data.link} target="_blank"><SVGIcon classes="web-dark" src="internet" height={75} width={75} /></a> : ""}
 
                     </div>
-
-
                 </Flexbox>
                 <Flexbox classes={`ad-role ${this.state.showDetail ? "show-this" : ""}`}>
                     <div className={`about-header`}>
@@ -132,7 +144,7 @@ export default class Advision extends Component {
 
                 </Flexbox>
 
-
+            <div id={`parallax-container`} className={`hide-now`}></div>
             </section>
         );
     }

@@ -4,11 +4,14 @@ import FlexBox from "../Flexbox/index";
 import { ProjectOverlay } from "../OverlayBlock/index";
 import "./styles/ButtonList.css";
 
+import { Route, Redirect } from "react-router-dom";
+
 export class ButtonList extends Component {
     constructor(props) {
         super(props);
         this.state = {
             animate: false,
+            move:false,
             animationComplete : {
                 title: false,
                 buttons : false,
@@ -18,31 +21,37 @@ export class ButtonList extends Component {
             projects: [
                 {
                     name: "Ad-Vision",
+                    link:"advision",
                     count: 1,
                     skill: ["React Native", "NodeJS", "Augmented Reality", "JavaScript"],
                 },
                 {
                     name: "Pixel-Smash",
+                    link:"pixelsmash",
                     count: 2,
                     skill: ["NodeJS", "Game Design", "JavaScript", "BackEnd", "Sockets.io"]
                 },
                 {
                     name: "Pet-Perfect",
+                    link:"petperfect",
                     count: 3,
                     skill: ["FrontEnd", "JavaScript", "Web Design"]
                 },
                 {
                     name: "Space Scraper",
+                    link:"mongoscraper",
                     count: 4,
                     skill: ["FrontEnd", "BackEnd", "Mongodb", "NodeJS", "ReactJS"]
                 },
                 {
                     name: "Bamazon",
+                    link:"bamazon",
                     count: 5,
                     skill: ["BackEnd", "SQL", "NodeJS", "JavaScript"]
                 },
                 {
                     name: "Liri-Bot",
+                    link:"liribot",
                     count: 6,
                     skill: ["BackEnd", "NodeJS", "JavaScript"]
                 },
@@ -79,8 +88,20 @@ export class ButtonList extends Component {
 
 
     }
+    handleProjectClick = async (event, history, link) => {
+        const value = link;
+        console.log(value);
+
+        
+        await setTimeout(() => {
+            history.push(`/${value}`);
+        }, 300);
+    }
     dumpListItems = () => {
-        return this.state.content.map((item) => <li key={item.key} ><Button onClick={(event) => this.handleButtonClick(event)} key={item.key} value={item.name} text={item.name} /></li>);
+        if(!this.state.move){
+            return this.state.content.map((item) => <li key={item.key} ><Button onClick={(event) => this.handleButtonClick(event)} key={item.key} value={item.name} text={item.name} /></li>);
+        }
+       
 
     }
     filterProjectItems = () => {
@@ -98,22 +119,25 @@ export class ButtonList extends Component {
                 }
             }
             console.log('filtered', filteredList)
-            return filteredList.map((item, i) => <ProjectOverlay blockID={`p-${i}`} count={item.count}key={item.count} name={item.name} />);
-
-
+            return filteredList.map((item, i) => <Route key={i} render={({ history }) => (<ProjectOverlay onClick={(event) => this.handleProjectClick(event, history, item.link)} blockID={`p-${i}`} id={item.count} count={item.count}key={item.count} value={item.link} name={item.name} /> )} />);
 
         } else {
 
 
             let projectData = [...this.state.projects];
-            return projectData.map((item, i) => <ProjectOverlay blockID={`p-${i}`} count={item.count} key={item.count} name={item.name} />);
+            return projectData.map((item, i) => <Route key={i} render={({ history }) =>  (<ProjectOverlay onClick={(event) => this.handleProjectClick(event, history, item.link)} blockID={`p-${i}`} id={item.count} count={item.count} key={item.count} value={item.link} name={item.name} /> )} /> );
         }
 
     }
 
     render = () => {
-        let dumpList = this.dumpListItems();
-        let dumpProjects = this.filterProjectItems();
+        let dumpList;
+        let dumpProjects;
+        if(!this.state.move){
+            dumpList = this.dumpListItems();
+            dumpProjects = this.filterProjectItems();
+        }
+
 
 
         return (
