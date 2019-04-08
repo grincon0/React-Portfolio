@@ -20,8 +20,14 @@ export default class PixelSmash extends Component {
                 link: "https://my-pixel-smash.herokuapp.com/",
                 sub: "Combo yourself to victory.",
                 description: "Pixel-Smash is a fun, yet competitive , JavaScript-powered platform fighter where you can test your mettle against online players or the relentless CPU.",
-                role: "",
-                stack: ["Phaser.CE", "Sockets.io", "Gulp", "Node.js", "Express.js", "JavaScript ES6", "Fl Studio"]
+                role: {
+                    paragraph: {
+                        one: "As lead designer, I spearheaded the development of the game design, battle mechanics, and the arrangement of the game's soundtrack. The focus of this project was to create a fun and competitive figthting game written completely in JavaScript, where you can not only battle the computer, but also each other through online play. ",
+                        two: "As a fan of the older generations of gaming, I wanted this game's design to evoke a classic 16-bit feel to the player. Ensuring that combat was fast-paced was my top priority, so I made sure to program the battle mechanics that allowed the play to perform quick combos and evasion techniques that can devastate the opponent.",
+                        
+                    }
+                } ,
+                stack: ["Phaser.CE", "Sockets.io", "Gulp", "Node.js", "Express.js", "Fl Studio"]
             }
         }
     }
@@ -32,7 +38,7 @@ export default class PixelSmash extends Component {
         let techStack = this.state.data.stack.map((tech, i) => <li key={i}>{tech}</li>)
 
         return (
-            <section id="AD-VISION">
+            <section id="PIXEL-SMASH">
                 <Flexbox classes={`nav-section`}>
                     <div className={`h2-block`}>
                         <h2>Go back</h2>
@@ -67,7 +73,8 @@ export default class PixelSmash extends Component {
                 </Flexbox>
                 <Flexbox classes={`ad-role`}>
                     <div className={`role-info`}>
-                        <p>{this.state.data.role}</p>
+                        <p>{this.state.data.role.paragraph.one}</p>
+                        <p>{this.state.data.role.paragraph.two}</p>
                     </div>
                 </Flexbox>
                 <Flexbox classes={`ad-stack`}>

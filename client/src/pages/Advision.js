@@ -19,8 +19,8 @@ export default class Advision extends Component {
                 github: "https://github.com/Wizkym/Ad-Vision",
                 sub: "An ViroReact AR application that render realtime information on your smart phone",
                 description: "Ad-Vision is an Augmented Reality object and text recogniztion mobile application that renders ads to the user. Using real-world objects/images that the it recognizes, the application will be able to render different forms of media, such as textual information, 3-D objects, and even graphical effects on the screen.",
-                role: "I had a hands-on role with Ad-Vision. One of my focuses was to simplyify ",
-                stack: ["ViroReact", "React Native", "Objective-C", "Node.js", "Express.js", "JavaScript ES6", "Google Cloud Vision API", "Bing Custom Search API"]
+                role: "As **** ***** ****, I was responsible for creating an easy to use abstration for ViroReact's built in particle effect generators. Along with testing and creating 3D compenents that rendered text, video formats, and 3-diemnsional meshes, I created animations that seamlessly brought the user experienceto life" ,
+                stack: ["ViroReact", "React Native", "Objective-C", "Android SDK", "Xcode", "Node.js", "Express.js", "JavaScript ES6", "Google Cloud Platform", "Bing Custom Search API"]
             }
         }
     }

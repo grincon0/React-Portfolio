@@ -35,7 +35,7 @@ class Projects extends Component {
         document.body.className += 'page-is-changing';
         setTimeout(() => {
             document.body.className = '';
-        }, 3000);
+        }, 2300);
     }
     handleTransition = async (event, history) => {
         event.preventDefault();
@@ -45,7 +45,7 @@ class Projects extends Component {
 
         setTimeout(() => {
             this.props.history.push('/contact');
-        }, 3000);
+        }, 2300);
 
     }
     componentWillUnmount = () => {

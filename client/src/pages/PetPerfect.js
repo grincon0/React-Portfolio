@@ -20,8 +20,14 @@ export default class PetPerfect extends Component {
                 link: "https://pet-perfect.herokuapp.com/",
                 sub: "The Perfect Site for the passionate pet owner.",
                 description: "Pet Perfect is an website that allows users to find local pet shops, veterinarians, pet-friendly parks within a 10-mile radius. The user will input his/her zip-code in a input field. Once the zip code is submitted, the webpage will use the Google Maps API to generate a map that will show the nearest veterinarians, pet shops, and pet-friendly parks around the user.",
-                role: "I had a hands-on role with Ad-Vision. One of my focuses was to simplyify ",
-                stack: ["Front-End Development", "Google Maps API", "Petfinder API", "Vue.js","Bootstrap 5", "HTML5 - Semantic UI", "Responsive Web Design"]
+                role:{
+                    paragraph : {
+                        one: "As the first project we tackled as web developers, our team wanted to created web that provides a solution to users. Our love and apprecitate for our furry compantion motivated us to create a web concept around the idea of a one-stop shop for the needs of pet owner",
+                        two: "In addition to UI Design, my main focus was intergrating the Google Maps API for the Front-end and allowing the user to select which category of pet-related service they want to search for within a 10 miles radius of their inputed location",
+
+                    }
+                } ,
+                stack: ["Front-End Development", "Google Maps API", "Petfinder API", "Vue.js","Sass", "Bootstrap 5", "HTML5 - Semantic UI", "Responsive Web Design"]
             }
         }
     }
