@@ -38,10 +38,10 @@ export class ButtonList extends Component {
                     skill: ["FrontEnd", "JavaScript", "Web Design"]
                 },
                 {
-                    name: "Space Scraper",
+                    name: "Mongo Scraper",
                     link:"mongoscraper",
                     count: 4,
-                    skill: ["FrontEnd", "BackEnd", "Mongodb", "NodeJS", "ReactJS"]
+                    skill: ["FrontEnd", "BackEnd", "Mongodb", "NodeJS"]
                 },
                 {
                     name: "Bamazon",
@@ -50,10 +50,10 @@ export class ButtonList extends Component {
                     skill: ["BackEnd", "SQL", "NodeJS", "JavaScript"]
                 },
                 {
-                    name: "Liri-Bot",
-                    link:"liribot",
+                    name: "React-Books",
+                    link:"reactbooks",
                     count: 6,
-                    skill: ["BackEnd", "NodeJS", "JavaScript"]
+                    skill: ["FrontEnd","BackEnd", "ReactJS", "NodeJS", "JavaScript"]
                 },
             ],
             content: [{ name: "ALL", key: 1 }, { name: "ReactJS", key: 2 }, { name: "NodeJS", key: 3 }, { name: "JavaScript", key: 4 }, { name: "FrontEnd", key: 5 }, { name: "BackEnd", key: 6 }, { name: "Mongodb", key: 7 }, { name: "SQL", key: 8 },

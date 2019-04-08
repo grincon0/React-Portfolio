@@ -6,23 +6,24 @@ import SVGIcon from "../components/SVGIcon/index"
 import "./styles/Advision.css";
 import { Route, Redirect } from "react-router-dom";
 
-export default class Bamazon extends Component {
+export default class PetPerfect extends Component {
     constructor() {
         super();
         this.state = {
             animated: false,
             transition: false,
             data: {
-                tier: "Mid",
-                id:"5",
-                name: "Bamazon",
-                type: ["CLI app", "Command Line CRUD application"],
-                time: "Fall 2018",
-                github: "https://github.com/grincon0/bamazon",
-                sub: "Manage your business inventory with Bamazon",
-                description: "Bamazon is a multi-purpose command line appication ",
-                role: " Bamazon can take in orders from customers and deplete stock from the store's inventory. Using MySQL, it can also track product sales across departments and then provide a summary of the highest-grossing departments in the store.",
-                stack: ["Back-End Development","JavaScript ES6" ,"inquirer.js", "MySQL", "MySQL Server", "Express.js", "Node.js"]
+                tier: "mid",
+                id:"6",
+                name: "React-Books",
+                type: ["Web app", "MERN Web App"],
+                time: "Early 2019",
+                github: "https://github.com/grincon0/React-NYT-Search",
+                link: "https://react-googlebooks-search.herokuapp.com/",
+                sub: "Converse with your text-based Liri-Bot",
+                description: "React Books MERN-stack application that allows the user to search for their literature of chose saved them. ",
+                role: "I had a hands-on role with Ad-Vision. One of my focuses was to simplyify ",
+                stack: ["Full Stack Development", "JavaScript ES6", "Mongoose", "MongoDB", "React.js", "axios.js", "Express.js", "Node.js"]
             },
             showAbout: false,
             showDetail: false,

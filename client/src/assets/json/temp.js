@@ -66,15 +66,16 @@ const data = [{
     role: "I had a hands-on role with Ad-Vision. One of my focuses was to simplyify ",
     stack: ["Back-End Development","JavaScript ES6" ,"inquirer", "mySQL", "Express.js", "Node.js"]
 },{
-    tier: "Low",
-    name: "Liri-Bot",
-    type: ["CLI app", "Command Line Application"],
-    time: "Fall 2018",
-    github: "https://github.com/grincon0/bamazon",
+    tier: "mid",
+    name: "React-Books",
+    type: ["Web app", "MERN Web Applcation"],
+    time: "Early 2019",
+    github: "https://github.com/grincon0/React-NYT-Search",
+    link: "https://react-googlebooks-search.herokuapp.com/",
     sub: "Converse with your text-based Liri-Bot",
-    description: "Pet Perfect is an website that allows users to find local pet shops, veterinarians, pet-friendly parks within a 10-mile radius. The user will input his/her zip-code in a input field. Once the zip code is submitted, the webpage will use the Google Maps API to generate a map that will show the nearest veterinarians, pet shops, and pet-friendly parks around the user.",
+    description: "React Books MERN-stack application that allows the user to search for their literature of chose saved them. ",
     role: "I had a hands-on role with Ad-Vision. One of my focuses was to simplyify ",
-    stack: ["Back-End Development","JavaScript ES6" ,"inquirer", "Express.js", "Node.js"]
+    stack: ["Full Stack Development","JavaScript ES6" ,"Mongoose","MongoDB","React.js","axios.js", "Express.js", "Node.js"]
 },
 
 ]
