@@ -91,7 +91,7 @@ class ContactContent extends Component {
                     direction="column"
                     justify="center"
                     classes="align-fix">
-                    <div className="testi">
+                    <div className="contact-title-parent">
                         <div className={`contact-title-div ${this.state.animate ? "run-anim-first" : ""} ${this.props.transition ? "page-is-changing" : ""}`}>
                             <h1 className="contact-title">Contact</h1>
                             <div className="contact-title-front">

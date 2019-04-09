@@ -30,7 +30,7 @@ export default class PixelSmash extends Component {
                 role: {
                     paragraph: {
                         one: "As lead designer, I spearheaded the development of the game design, battle mechanics, and the arrangement of the game's soundtrack.",
-                        two: "As a fan of the older generations of gaming, I wanted this game's design to evoke a classic 16-bit feel to the player. Ensuring that combat was fast-paced was my top priority, so I made sure to program the battle mechanics in a way that allowsthe player to perform quick combos and evasion techniques that can devastate the opponent.",
+                        two: "As a fan of the older generations of gaming, I wanted this game's design to evoke a classic 16-bit feel to the player. Ensuring that combat was fast-paced was my top priority, so I made sure to program the battle mechanics in a way that allows the player to perform quick combos and evasion techniques that can devastate the opponent.",
 
                     }
                 },
