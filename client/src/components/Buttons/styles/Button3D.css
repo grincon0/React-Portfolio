@@ -5,10 +5,26 @@
     overflow: hidden;
   }
 
+  .scene-button button{
+position:relative
+;
+    height: 4em;
+    width: 10em;
+    border: none;
+
+  }
+
+  .btn-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .cube {
+    border: none;
     color: #ccc;
     cursor: pointer;
     font-family: LeagueSpartan, sans-serif;
+    text-decoration: none;
     transition: all 0.4s cubic-bezier(.17,.67,.14,.93);
       transform-style: preserve-3d;
     transform-origin: 100% 50%;
@@ -16,14 +32,19 @@
     height: 4em;
   }
 
-  .cube:active{
+  .cube.clicked{
     transform: rotateX(-90deg);
   }
+  /* .cube:active{
+    transform: rotateX(-90deg);
+  } */
 
   .side {
     box-sizing: border-box;
     position: absolute;
     display: inline-block;
+    top:0;
+    left:0;
     height: 4em;
     width: 10em;
     text-align: center;

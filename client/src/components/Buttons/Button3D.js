@@ -5,17 +5,32 @@ export class Button3D extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            test: false
+            clicked: false
         }
     }
+    componentDidUpdate = () => {
+        this.handleClickReset();
+    }
+    handleClickEvent = () => {
 
+        this.setState({ clicked: true });
+    }
+    handleClickReset = () => {
+        this.resetTimer = setTimeout(() => {
+            this.setState({ clicked: false })
+            clearTimeout(this.resetTimer);
+        }, 2000);
+    }
     render = () => {
         return (
-            <div type="submit" className="scene-button">
-                <div onClick={this.props.onClick} className="cube">
-                    <span className="side top">Sent!</span>
-                    <span className="side front">Submit</span>
+            <div className="btn-box">
+                <div className="scene-button">
+                    <button onClick={this.handleClickEvent} className={`cube ${this.state.clicked ? "clicked" : ""}`}>
+                        <span className="side top">Sent!</span>
+                        <span className="side front">Submit</span>
+                    </button >
                 </div>
+
             </div>
         )
 
