@@ -15,6 +15,7 @@ import PixelSmash from "./pages/PixelSmash";
 import MongoScraper from "./pages/MongoScraper";
 import Bamazon from "./pages/Bamazon";
 import ReactBooks from "./pages/ReactBooks";
+import Slider from "./components/Slider/index";
 import Parallax from "./components/Parallax/index";
 import {
   CSSTransition,
@@ -37,10 +38,10 @@ class App extends Component {
     return (
 
       <div className="App">
-  
-     {/*  <Parallax />  */}
-      
-    
+
+        {/*  <Parallax />  */}
+
+        <Slider />
         <Route render={({ location }) => (
           <TransitionGroup>
             <CSSTransition
@@ -48,7 +49,7 @@ class App extends Component {
               timeout={900}
               classNames="fade"
             >
-            
+
               <Switch location={location}>
                 <Route exact path="/" component={Landing} />
                 <Route path="/about" component={About} />
@@ -59,7 +60,7 @@ class App extends Component {
                 <Route path="/mongoscraper" component={MongoScraper} />
                 <Route path="/bamazon" component={Bamazon} />
                 <Route path="/reactbooks" component={ReactBooks} />
-                
+
                 <Route path="/contact" component={Contact} />
               </Switch>
             </CSSTransition>

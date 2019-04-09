@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Button } from "../Buttons/index";
 import FlexBox from "../Flexbox/index";
 import { ProjectOverlay } from "../OverlayBlock/index";
+import GlobalStates from "../../assets/js/global";
 import "./styles/ButtonList.css";
 
 import { Route, Redirect } from "react-router-dom";
@@ -69,6 +70,10 @@ export class ButtonList extends Component {
         newState.animate = true;
         this.setState(newState);
     } */
+    changeSliderState = () => {
+        console.log(GlobalStates)
+        GlobalStates.setAnimate(true);
+    }
     handleButtonClick = (event) => {
         /* const { value } = event.target; */
         const value = event.target.value;
@@ -90,12 +95,11 @@ export class ButtonList extends Component {
     }
     handleProjectClick = async (event, history, link) => {
         const value = link;
-      
-
         
+        this.changeSliderState();
         await setTimeout(() => {
             history.push(`/${value}`);
-        }, 300);
+        }, 2500);
     }
     dumpListItems = () => {
         if(!this.state.move){
