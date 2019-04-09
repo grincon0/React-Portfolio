@@ -11,13 +11,13 @@ class Form extends Component {
             email: "",
             msg: "",
             test: false,
-            animate:false
+            animate: false
         }
     }
     componentDidMount = () => {
         this.animateTimer = setTimeout(() => {
-            if(this.state.animate === false){
-                this.setState({animate :true});
+            if (this.state.animate === false) {
+                this.setState({ animate: true });
             }
         }, 1000);
     }
@@ -49,7 +49,7 @@ class Form extends Component {
                         className={`form-name`}
                         name="name"
                         value={this.state.name}
-                        onChange={this.handleInputChange}/>
+                        onChange={this.handleInputChange} />
                 </div>
                 <div id="second">
                     <input
@@ -59,7 +59,7 @@ class Form extends Component {
                         className={`form-email`}
                         name="email"
                         value={this.state.email}
-                        onChange={this.handleInputChange}/>
+                        onChange={this.handleInputChange} />
                 </div>
                 <div className={`text-box end-pos`}>
                     <textarea
@@ -71,10 +71,10 @@ class Form extends Component {
                         onChange={this.handleInputChange}
                     ></textarea>
                 </div>
-                <div className={`btn-box`} >
-                    <Button3D onClick={this.handleFormSubmit} />
-                    {/* <button onClick={this.handleFormSubmit}>Submit</button> */}
-                </div>
+
+                <Button3D onClick={this.handleFormSubmit} />
+                {/* <button onClick={this.handleFormSubmit}>Submit</button> */}
+
             </form>
 
         );
