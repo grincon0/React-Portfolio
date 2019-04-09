@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const path = require('path');
 //const routes = require('./routes');
 
 // Middleware
@@ -13,7 +14,13 @@ if(process.env.NODE_ENV === "production"){
     app.use(express.static("client/build"));
 }
 
-app.get('*', (req, res) => res.sendFile(path.resolve('build', 'index.html')));
+app.get('/*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'client/build/index.html'), function(err) {
+      if (err) {
+        res.status(500).send(err)
+      }
+    })
+  })
 
 // Add routes, both API and View
 //app.use(routes);
