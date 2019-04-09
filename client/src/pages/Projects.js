@@ -5,6 +5,7 @@ import Flexbox from "../components/Flexbox/index";
 import FlexContainer from "../components/FlexContainer/index";
 import Menu from "../components/Menu/index";
 import NavIcon from "../components/NavIcon/index";
+import Slider from "../components/Slider/index";
 import "../pages/sections/section-styles/About.css";
 
 import { Route, Redirect } from "react-router-dom";
@@ -77,6 +78,7 @@ class Projects extends Component {
         return (
             <section id="ABOUT">
                 <div className={`box-size ${this.state.section === 'about' ? "overflow-fix " : "overflowX-fix"} ${this.props.classes}`}>
+                    <Slider />
                     <Menu collapseMenu={this.state.collapseMenu} />
                     <FlexContainer classes="nav-height-fix" direction="row" justify="end">
                         <NavIcon

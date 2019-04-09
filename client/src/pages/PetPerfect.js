@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import FlexContainer from "../components/FlexContainer/index";
 import Flexbox from "../components/Flexbox/index";
 import { SpanGenerator } from "../components/Customs/index";
+import Slider from '../components/Slider/index';
 import SVGIcon from "../components/SVGIcon/index"
 import "./styles/Advision.css";
 import { Route, Redirect } from "react-router-dom";
@@ -88,6 +89,7 @@ export default class PetPerfect extends Component {
 
         return (
             <section id="AD-VISION">
+                <Slider />
                 <Flexbox classes={`nav-section`}>
                 <Route render={({ history }) => (
                     <div onClick={(e) => this.handleTransition(e)} className={`h2-block`}>
