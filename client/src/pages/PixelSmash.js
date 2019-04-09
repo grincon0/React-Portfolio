@@ -46,12 +46,12 @@ export default class PixelSmash extends Component {
         this.removeScrollEventListener();
     }
     handleClassesScrollTop = () => {
-        console.log(document.documentElement.scrollTop || document.body.scrollTop);
+     
 
         const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
 
         if (this.state.showAbout === false && scrollTop > 400) {
-            console.log(this.state.showAbout);
+         
             this.setState({ showAbout: true });
 
         }
@@ -60,7 +60,7 @@ export default class PixelSmash extends Component {
             this.setState({ showDetail: true });
         }
         if (this.state.showStack === false && scrollTop > 1200) {
-            console.log(this.state.showAbout);
+           
             this.setState({ showStack: true });
         }
     }

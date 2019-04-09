@@ -38,7 +38,7 @@ class Scene3D extends Component {
         this.handleImageExpansion(ident);
     }
     handleImageExpansion = (id) => {
-        console.log(id);
+
         if (this.state.releaseContain) {
             document.getElementById(id).classList.add("image-size");
             document.getElementById(id).classList.remove("expand");

@@ -46,7 +46,7 @@ class About extends Component {
         let newState = { ...this.state };
         newState.transition = true;
         this.setState(newState);
-        console.log('new state about ran');
+    
     }
 
     toggleMenu = () => {

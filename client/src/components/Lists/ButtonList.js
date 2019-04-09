@@ -90,7 +90,7 @@ export class ButtonList extends Component {
     }
     handleProjectClick = async (event, history, link) => {
         const value = link;
-        console.log(value);
+      
 
         
         await setTimeout(() => {
@@ -109,7 +109,7 @@ export class ButtonList extends Component {
         if (this.state.filter !== "") {
             let filteredList = [];
             let data = [...this.state.projects];
-            console.log('state', data);
+           
 
 
             for (let elem of data) {
@@ -118,7 +118,7 @@ export class ButtonList extends Component {
                     filteredList.push(elem);
                 }
             }
-            console.log('filtered', filteredList)
+       
             return filteredList.map((item, i) => <Route key={i} render={({ history }) => (<ProjectOverlay onClick={(event) => this.handleProjectClick(event, history, item.link)} blockID={`p-${i}`} id={item.count} count={item.count}key={item.count} value={item.link} name={item.name} /> )} />);
 
         } else {

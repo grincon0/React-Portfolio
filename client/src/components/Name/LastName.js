@@ -16,7 +16,7 @@ export class LastName extends Component {
         this.animateInterval = setInterval(() => {
             if (this.props.animate === true) {
                 this.setState({ animate: true });
-                console.log('done');
+            
                 clearInterval(this.animateInterval);
             }
 
