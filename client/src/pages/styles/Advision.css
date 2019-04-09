@@ -337,6 +337,16 @@ i.portal{
     animation-delay: 0.5s;
 }
 
+.ad-title-box .color-6 h1:before{
+    background-color: #05c705;
+}
+
+.ad-title-box .color-6 h1:after{
+    background-color: rgb(10, 160, 5);
+    animation-delay: 0.5s;
+}
+
+
 .ad-title-box  h1:before{
     animation: revealR 1.8s cubic-bezier(.694,.048,.335,1);
 }
@@ -402,6 +412,15 @@ i.portal{
 
 .ad-title-box .color-5 p:after{
     background-color: rgb(214, 10, 10);
+    animation-delay: 0.5s;
+}
+
+.ad-title-box .color-6 p:before{
+    background-color: #1c88e0;
+}
+
+.ad-title-box .color-6 p:after{
+    background-color: rgb(6, 4, 161);
     animation-delay: 0.5s;
 }
 .ad-title-box  p:before{
