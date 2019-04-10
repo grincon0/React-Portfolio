@@ -29,7 +29,9 @@ class Scene3D extends Component {
         clearTimeout(this.renderTimer);
     }
     handleStateChange = (e) => {
-        this.props.transitioner();
+        const path = e.target.getAttribute("value")
+
+        this.props.transitioner(path);
 
         
         let ident = e.target.id;
@@ -241,10 +243,10 @@ class Scene3D extends Component {
                         <div className="parent-container">
                             <div id="card-container" className={`container-3d ${this.state.releaseContain ? "" : "container-3d-width"} overflow-hide-all ${this.state.addclass ? "container-3d-origin" : ""}`}>
                                 <div className="card-3d" >
-                                    <img data-ident="1" id="image1" className="image-size image-opacity" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={PinkImage} alt="atl" />
-                                    <img data-ident="2" id="image2" className="image-size image-opacity" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={PurpleImage} alt="atl" />
-                                    <img data-ident="3" id="image3" className="image-size image-opacity" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={BlueImage} alt="atl" />
-                                   <img data-ident="4" id="image4" className="image-size image-opacity image-position-4" onClick={this.handleStateChange} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={GreenImage}
+                                    <img data-ident="1" value="contact" id="image1" className="image-size image-opacity" onClick={(e) => this.handleStateChange(e)} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={PinkImage} alt="atl" />
+                                    <img data-ident="2" value="projects" id="image2" className="image-size image-opacity" onClick={(e) => this.handleStateChange(e)} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={PurpleImage} alt="atl" />
+                                    <img data-ident="3" value="about" id="image3" className="image-size image-opacity" onClick={(e) => this.handleStateChange(e)} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={BlueImage} alt="atl" />
+                                   <img data-ident="4" value="about"id="image4" className="image-size image-opacity image-position-4" onClick={(e) => this.handleStateChange(e)} onMouseOver={this.handleTextAppear} onMouseOut={this.handleTestReset} src={GreenImage}
                                         alt="atl"></img> 
                                 </div>
                             </div>

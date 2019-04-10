@@ -31,7 +31,7 @@ export class ProjectOverlay extends Component {
         return (
 
             <div id={this.props.blockID} onClick={this.props.onClick} className={`item-container ${this.state.show ? "move-in" : ""}`}>
-                <div className="project-box">
+                <div data-colorA={this.props.colorA} data-colorB={this.props.colorB} className="project-box">
 
                     <div className={`project-mask mask-${this.props.count}`}>
                         <h1>{this.props.name}</h1>

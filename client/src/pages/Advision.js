@@ -1,6 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
 import FlexContainer from "../components/FlexContainer/index";
 import Flexbox from "../components/Flexbox/index";
+import GlobalStates from "../assets/js/global";
 import { SpanGenerator } from "../components/Customs/index";
 import SVGIcon from "../components/SVGIcon/index"
 import "./styles/Advision.css";
@@ -52,7 +53,7 @@ export default class Advision extends Component {
             this.setState({showDetail: true});
         }
         if(this.state.showStack === false && scrollTop > 1200){
-            console.log(this.state.showAbout);
+         
             this.setState({showStack: true});
         }
     }
@@ -67,13 +68,13 @@ export default class Advision extends Component {
             document.removeEventListener('scroll', this.boundScrollTop);
         
     }
-    handleTransition = async (event, history) => {
-        event.preventDefault();
+    handleGlobalState = () => {
+        GlobalStates.setAnimate(true);
+    }
+    handleTransition = (event, history) => {
+        /* event.preventDefault(); */
         /* old version for body */
-        /* await this.doTransitionEffect(); */
-
-        /* await this.runTransition(); */
-
+        this.handleGlobalState();
         setTimeout(() => {
             this.props.history.push('/projects');
         }, 2300);
@@ -87,7 +88,7 @@ export default class Advision extends Component {
                 <Flexbox classes={`nav-section`}>
                 <Route render={({ history }) => (
                     <div onClick={(e) => this.handleTransition(e)} className={`h2-block`}>
-                        <h2>Go back</h2>
+                        <h2 >Go back</h2>
                     </div>)}/>
                 </Flexbox>
                 <Flexbox classes={`ad-title-box`}>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import FlexContainer from "../components/FlexContainer/index";
 import Flexbox from "../components/Flexbox/index";
+import GlobalStates from "../assets/js/global";
 import { SpanGenerator } from "../components/Customs/index";
 import SVGIcon from "../components/SVGIcon/index"
 import "./styles/Advision.css";
@@ -81,11 +82,14 @@ export default class PixelSmash extends Component {
         /* await this.doTransitionEffect(); */
 
         /* await this.runTransition(); */
-
+        this.handleGlobalState();
         setTimeout(() => {
             this.props.history.push('/projects');
         }, 2300);
 
+    }
+    handleGlobalState = () => {
+        GlobalStates.setAnimate(true);
     }
     render = () => {
         let techStack = this.state.data.stack.map((tech, i) => <li key={i}>{tech}</li>)

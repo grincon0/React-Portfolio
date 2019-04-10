@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import FlexContainer from "../components/FlexContainer/index";
 import Flexbox from "../components/Flexbox/index";
+import GlobalStates from "../assets/js/global";
 import { SpanGenerator } from "../components/Customs/index";
 import SVGIcon from "../components/SVGIcon/index"
 import "./styles/Advision.css";
@@ -37,8 +38,6 @@ export default class MongoScraper extends Component {
         this.removeScrollEventListener();
     }
     handleClassesScrollTop = () => {
-        /*  console.log(document.documentElement.scrollTop || document.body.scrollTop); */
-
         const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
 
         if (this.state.showAbout === false && scrollTop > 400) {
@@ -53,6 +52,9 @@ export default class MongoScraper extends Component {
             console.log(this.state.showAbout);
             this.setState({ showStack: true });
         }
+    }
+    handleGlobalState = () => {
+        GlobalStates.setAnimate(true);
     }
     boundScrollTop = () => {
         this.handleClassesScrollTop();
@@ -71,7 +73,7 @@ export default class MongoScraper extends Component {
         /* await this.doTransitionEffect(); */
 
         /* await this.runTransition(); */
-
+        this.handleGlobalState();
         setTimeout(() => {
             this.props.history.push('/projects');
         }, 2300);

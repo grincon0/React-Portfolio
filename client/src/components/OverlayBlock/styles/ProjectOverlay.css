@@ -84,7 +84,7 @@
 }
 
 .project-mask.mask-1:before{
-    background-color: rgba(0, 168, 235, 0.74);
+    background-color: rgba(0, 168, 234, 0.741);
 }
 
 .project-mask.mask-1:after{
@@ -96,7 +96,7 @@
 }
 
 .project-mask.mask-2:after{
-    background-color: rgba(235, 0, 235, 0.753);
+    background-color: rgba(145, 0, 145, 0.753);
 }
 
 .project-mask.mask-3:before{

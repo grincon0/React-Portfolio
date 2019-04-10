@@ -12,12 +12,10 @@ class Landing extends Component {
       document.body.className = '';
     }
   }
-  handleTransition = async (event, history) => {
-  
-    /* await this.doTransitionEffect(); */
+  handleTransition = (path, history) => {
 
     setTimeout(() => {
-      this.props.history.push('/about');
+      this.props.history.push(`/${path}`);
     }, 2000);
 
   }
@@ -32,7 +30,7 @@ class Landing extends Component {
     return (
       <div>
         <Scene3D
-          transitioner={()=> this.handleTransition()}
+          transitioner={(path)=> this.handleTransition(path)}
         />
         <div id={`parallax-container`} className={`hide-now`}></div>
       </div>

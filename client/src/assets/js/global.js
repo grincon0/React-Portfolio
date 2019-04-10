@@ -2,11 +2,18 @@
 const GlobalStates = {
     constructor(){
         this.slider = false;
+        this.colorA = "";
+        this.colorB = "";
     } ,
     setAnimate : (boolean) => {
         return GlobalStates.slider = boolean;
-        
-    } 
+    } ,
+    setColors : (stringA, stringB) => {
+        return(
+            GlobalStates.colorA = stringA,
+            GlobalStates.colorB = stringB
+        );
+    }
     
 }
 /* 
