@@ -34,17 +34,17 @@
 
 
 
-.project-mask{
+ .project-mask{
     display: flex;
     font-family: LeagueSpartan, sans-serif;
     position: relative;
     justify-content: center;
     align-items: center;
-    width: 380px;
-    height: 260px;
+    /* width: 380px;
+    height: 260px; */
     color: #f3f3f3;
     
-}
+} 
 
 .project-mask h1{
     z-index: 111;
@@ -67,7 +67,7 @@
     width: 0;
     height: 100%;
     z-index:60;
-    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1); */
     background-color: rgba(0, 168, 235, 0.74);
 }
 
@@ -79,7 +79,7 @@
     top:0;
     right: 0;
     z-index:60;
-    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1); */
     background-color: rgba(0, 235, 106, 0.753);
 }
 
@@ -140,4 +140,28 @@
     right: 0;
     width: 100%;
 
+}
+
+@media screen and (max-width: 1570px){
+    .project-mask{
+        width: 380px;
+        height: 260px;
+    }
+
+    .project-mask:before, .project-mask:after{
+        transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+}
+@media screen and (max-width: 550px){
+    .project-mask{
+        width: 75vw;
+        height: 230px;
+    }
+    .project-mask h1{
+        font-size: 25pt;
+    }
+    .project-mask:before, .project-mask:after{
+        transition: all 0.8s linear;
+    }
 }

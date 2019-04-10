@@ -214,7 +214,7 @@
 .project-header h1{
     position: relative;
     font-family: LeagueSpartan, sans-serif;
-    font-size: 60pt;
+    
     color: transparent;
 }
 
@@ -301,6 +301,31 @@
     animation: reverseL 1s 0.6s cubic-bezier(.694,.048,.335,1);
 }
 
+
+@media screen and (max-width: 1570px){
+    .project-header h1{
+        font-size: 60pt;
+    }
+
+}
+
+@media screen and (max-width: 550px){
+    .project-header h1{
+        font-size: 40pt;
+    }
+
+    .project-page-text{
+        display: flex;
+        width: 70vw;
+        flex-wrap: wrap;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+    }
+    .project-page-text p{
+        font-size:12pt;
+    }
+}
 
 
 
