@@ -51,7 +51,7 @@ svg .layer2 .volcano-top{
         opacity: 1;
     }
 }
-@media screen and (max-width: 550px){
+@media screen and (max-width: 479px){
     .palm{
         transform:translate(-200px, -300px);
         opacity: 1;
