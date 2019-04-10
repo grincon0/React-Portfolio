@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import FlexContainer from "../components/FlexContainer/index";
 import Flexbox from "../components/Flexbox/index";
+import GlobalStates from "../assets/js/global";
 import { SpanGenerator } from "../components/Customs/index";
-import SVGIcon from "../components/SVGIcon/index"
+import SVGIcon from "../components/SVGIcon/index";
 import "./styles/Advision.css";
 import { Route, Redirect } from "react-router-dom";
 
@@ -53,6 +54,9 @@ export default class Bamazon extends Component {
             this.setState({ showStack: true });
         }
     }
+    handleGlobalState = () => {
+        GlobalStates.setAnimate(true);
+    }
     boundScrollTop = () => {
         this.handleClassesScrollTop();
     }
@@ -64,13 +68,16 @@ export default class Bamazon extends Component {
         document.removeEventListener('scroll', this.boundScrollTop);
 
     }
+    handleGlobalState = () => {
+        GlobalStates.setAnimate(true);
+    }
     handleTransition = async (event, history) => {
         event.preventDefault();
         /* old version for body */
         /* await this.doTransitionEffect(); */
 
         /* await this.runTransition(); */
-
+        this.handleGlobalState();
         setTimeout(() => {
             this.props.history.push('/projects');
         }, 2300);

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import FlexContainer from "../components/FlexContainer/index";
 import Flexbox from "../components/Flexbox/index";
+import GlobalStates from "../assets/js/global";
 import { SpanGenerator } from "../components/Customs/index";
 import Slider from '../components/Slider/index';
 import SVGIcon from "../components/SVGIcon/index"
@@ -61,6 +62,9 @@ export default class PetPerfect extends Component {
             this.setState({ showStack: true });
         }
     }
+    handleGlobalState = () => {
+        GlobalStates.setAnimate(true);
+    }
     boundScrollTop = () => {
         this.handleClassesScrollTop();
     }
@@ -78,7 +82,7 @@ export default class PetPerfect extends Component {
         /* await this.doTransitionEffect(); */
 
         /* await this.runTransition(); */
-
+        this.handleGlobalState();
         setTimeout(() => {
             this.props.history.push('/projects');
         }, 2300);

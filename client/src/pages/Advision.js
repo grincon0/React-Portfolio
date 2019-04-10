@@ -71,13 +71,10 @@ export default class Advision extends Component {
     handleGlobalState = () => {
         GlobalStates.setAnimate(true);
     }
-    handleTransition = async (event, history) => {
-        event.preventDefault();
+    handleTransition = (event, history) => {
+        /* event.preventDefault(); */
         /* old version for body */
-        await this.handleGlobalState();
-        
-        console.log(GlobalStates);
-
+        this.handleGlobalState();
         setTimeout(() => {
             this.props.history.push('/projects');
         }, 2300);
@@ -91,7 +88,7 @@ export default class Advision extends Component {
                 <Flexbox classes={`nav-section`}>
                 <Route render={({ history }) => (
                     <div onClick={(e) => this.handleTransition(e)} className={`h2-block`}>
-                        <h2>Go back</h2>
+                        <h2 >Go back</h2>
                     </div>)}/>
                 </Flexbox>
                 <Flexbox classes={`ad-title-box`}>

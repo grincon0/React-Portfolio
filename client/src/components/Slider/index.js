@@ -13,10 +13,7 @@ export default class Slider extends Component{
         this.checker();
         
     }
-    componentDidUpdate = () => {
-        this.checker();
-        
-    }
+
     componentWillUnmount = () => {
         clearInterval(this.globalInterval);
     }
@@ -25,6 +22,8 @@ export default class Slider extends Component{
             if(GlobalStates.slider === true && this.state.animate === false){
                 this.setState({animate : true});
                 this.resetStates();
+                clearInterval(this.globalInterval);
+                console.log(GlobalStates.slider);
             }
         }, 175);
     }
@@ -32,6 +31,8 @@ export default class Slider extends Component{
         this.stateTimeout = setTimeout(() => {
             this.setState({animate : false});
             GlobalStates.setAnimate(false);
+            this.checker();
+            clearTimeout(this.stateTimeout);
             
         }, 2200);
     }

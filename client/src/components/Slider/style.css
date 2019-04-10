@@ -10,7 +10,7 @@
 
 .begins:before{
     content: '';
-    background-color: /* #e0e0e0 */ rgb(104, 104, 104);
+    background-color: /* #e0e0e0 */ rgb(44, 44, 44);
     position: absolute;
     width: 0;
 /*     top: 0;
