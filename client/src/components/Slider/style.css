@@ -67,42 +67,52 @@
     position: relative;
     left:43%;
     top: 33%;
+    z-index: 801;
+    transition: opacity 0.3s ease;
+}
+
+.roll-out .column{
+    opacity: 1;
+}
+
+.roll-in .column{
+    opacity: 0;
 }
 
 .column:nth-child(1){
     background: linear-gradient(45deg, #23d674, #f80000);
-    animation: pulse 0.5s 0.1s ease-out alternate infinite,
-               disappear 0.5s 2.1s ease forwards;
+    animation: pulse 0.5s 0.1s ease-out alternate infinite;
+            
 }
 .column:nth-child(2){
     background: linear-gradient(45deg, #d62323, #4200f8);
-    animation: pulse 0.5s 0.2s ease-out alternate infinite,
-                disappear 0.5s 2.1s ease forwards;
+    animation: pulse 0.5s 0.2s ease-out alternate infinite;
+                
 }
 .column:nth-child(3){
     background: linear-gradient(45deg, #d623be, #f8be00);
-    animation: pulse 0.5s 0.3s ease-out alternate infinite,
-                 disappear 0.5s 2.1s ease forwards;
+    animation: pulse 0.5s 0.3s ease-out alternate infinite;
+                 
 }
 .column:nth-child(4){
     background: linear-gradient(45deg, #d62323, #00f815);
-    animation: pulse 0.5s 0.4s ease-out alternate infinite,
-                 disappear 0.5s 2.1s ease forwards;
+    animation: pulse 0.5s 0.4s ease-out alternate infinite;
+                 
 }
 .column:nth-child(5){
     background: linear-gradient(45deg, #d3d623, #0063f8);
-    animation: pulse 0.5s 0.5s ease-out alternate infinite,
-                 disappear 0.5s 2.1s ease forwards;
+    animation: pulse 0.5s 0.5s ease-out alternate infinite;
+                 
 }
 .column:nth-child(6){
     background: linear-gradient(45deg, #8523d6, #f800e3);
-    animation: pulse 0.5s 0.6s ease-out alternate infinite,
-                disappear 0.5s 2.1s ease forwards;
+    animation: pulse 0.5s 0.6s ease-out alternate infinite;
+            
 }
 .column:nth-child(7){
     background: linear-gradient(45deg, #ff0000, #f8e800);
-    animation: pulse 0.5s 0.7s ease-out alternate infinite,
-                 disappear 0.5s 2.1s ease forwards;
+    animation: pulse 0.5s 0.7s ease-out alternate infinite;
+                 
 }
 @keyframes pulse {
     from{
