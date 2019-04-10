@@ -52,7 +52,7 @@ export default class Advision extends Component {
         if(this.state.showDetail === false && scrollTop > 800){
             this.setState({showDetail: true});
         }
-        if(this.state.showStack === false && scrollTop > 1200){
+        if(this.state.showStack === false && scrollTop > 1100){
          
             this.setState({showStack: true});
         }

@@ -57,7 +57,7 @@ export default class PetPerfect extends Component {
         if (this.state.showDetail === false && scrollTop > 800) {
             this.setState({ showDetail: true });
         }
-        if (this.state.showStack === false && scrollTop > 1200) {
+        if (this.state.showStack === false && scrollTop > 1100) {
             console.log(this.state.showAbout);
             this.setState({ showStack: true });
         }
