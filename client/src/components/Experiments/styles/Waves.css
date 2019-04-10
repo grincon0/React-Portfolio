@@ -5,17 +5,19 @@
     pointer-events: none;
 } */
 
-/* .wave-adjust{
+
+.wave-adjust{
     position: absolute;
     transform: translateY(500px);
     overflow: hidden;
-    top:0;
     
-} */
+    
+} 
 
 .move-wave{
-    transition: all 3s ease;
+    transition: all 2s ease;
     transform: translateY(200px);
+    
 }
 
 
@@ -38,21 +40,26 @@
         transform: translateY(200px);
     }
 }
-@media screen and (max-width: 479px){
+@media screen and (max-width: 550px){
     canvas{
+        top:100vh;
         left:0;
         width: calc(100vw);
-        height: calc(100vh - 330px);
+        height: calc(100vh - 370px);
+        opacity: 0;
+        
     }
     .wave-adjust{
         position: absolute;
         transform: translateY(248px);
         overflow: hidden;
         top:0;
+
         
     }
     .move-wave{
-        transition: all 3s ease;
-        transform: translateY(270px);
+        transition: all 1s ease;
+        transform: translateY(370px);
+        opacity: 1;
     }
 }
