@@ -31,7 +31,7 @@
 #Headline-1 span:nth-child(n), #Headline-2 span:nth-child(n){
     display: inline-block;
     font-family: LeagueSpartan, sans-serif;
-    font-size: 1.5em;
+    
     color:white;
     margin-left: 2px;
     margin-right: 2px;
@@ -360,12 +360,21 @@
    }
 }
 
+@media screen and (max-width: 1570px){
+    #Headline-1 span, #Headline-2 span{
+        font-size: 1.5em;
+    }
+    
+}
+
 @media screen and (max-width: 550px){
-    #Headline-1 span{
-        font-size: 10pt;
+    #Headline-1 span, #Headline-2 span{
+        font-size:1.0em;
     }
     #Top-Text-Container{
-        height: 155px;
+        width: 100vw;
+        height: 100px;
+        margin-bottom: 0;
         
     }
     #Bottom-Text-Container{

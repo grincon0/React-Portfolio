@@ -42,7 +42,7 @@
     canvas{
         left:0;
         width: calc(100vw);
-        height: 300px;
+        height: calc(100vh - 330px);
     }
     .wave-adjust{
         position: absolute;

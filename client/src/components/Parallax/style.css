@@ -106,34 +106,34 @@
     .parallax-img-1{
         display: none;
         top: 550px;
-        left:80vw;
+        left:20vw;
     }
     .parallax-img-2{
       
         top: 145px;
-        left: 350px;
+        left: 40vw;
     }
     
     .parallax-img-3{
        
         top: 40px;
-        left: 100px;
+        left: 10vw;
     }
     
     .parallax-img-4{
       
         top:400px;
-        left:300px;
+        left:30vw;
     }
     
     .parallax-img-5{
         display: none;
         top:600px;
-        left:80vw;
+        left:70vw;
     }
     
     .parallax-img-6{
-       
+        display: none;
         top:450px;
         left:10vw;
     }
@@ -151,13 +151,13 @@
     }
     
     .parallax-img-9{
-      
+        display: none;
         top:230px;
-        left:85vw;
+        left:74vw;
     }
     
     .parallax-img-10{
-      
+        display: none;
         top:350px;
         left:60vw;
     }
