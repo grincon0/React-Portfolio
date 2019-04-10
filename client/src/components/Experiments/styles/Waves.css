@@ -38,11 +38,12 @@
         transform: translateY(200px);
     }
 }
-@media screen and (max-width: 479px){
+@media screen and (max-width: 550px){
     canvas{
         left:0;
         width: calc(100vw);
-        height: calc(100vh - 330px);
+        height: calc(100vh - 370px);
+        
     }
     .wave-adjust{
         position: absolute;
@@ -53,6 +54,6 @@
     }
     .move-wave{
         transition: all 3s ease;
-        transform: translateY(270px);
+        transform: translateY(370px);
     }
 }
