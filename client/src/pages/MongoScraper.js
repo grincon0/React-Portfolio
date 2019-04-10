@@ -37,8 +37,6 @@ export default class MongoScraper extends Component {
         this.removeScrollEventListener();
     }
     handleClassesScrollTop = () => {
-        /*  console.log(document.documentElement.scrollTop || document.body.scrollTop); */
-
         const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
 
         if (this.state.showAbout === false && scrollTop > 400) {

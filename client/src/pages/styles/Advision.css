@@ -280,7 +280,7 @@ i.portal{
 
 .ad-title-box h1{
     position: relative;
-    animation: show-anim 0.4s cubic-bezier(.694,.048,.335,1) 1s forwards;
+    animation: show-anim 0.4s cubic-bezier(.694,.048,.335,1) 1.4s forwards;
 }
 
 .ad-title-box h1::before, .ad-title-box h1::after{
@@ -358,7 +358,7 @@ i.portal{
 
 .ad-title-box p{
     position: relative;
-    animation: show-anim 0.4s cubic-bezier(.694,.048,.335,1) 1s forwards;
+    animation: show-anim 0.4s cubic-bezier(.694,.048,.335,1) 1.5s forwards;
 }
 
 .ad-title-box p::before, .ad-title-box p::after{
@@ -428,17 +428,17 @@ i.portal{
 }
 
 .ad-title-box  p:after{
-    animation: revealL 1s 0.6s cubic-bezier(.694,.048,.335,1);
+    animation: revealL 1s  cubic-bezier(.694,.048,.335,1) 0.6s;
 }
 
 .lower-left {
     opacity: 0;
-    animation: lower-left 0.6s cubic-bezier(.694,.048,.335,1) 1.2s forwards;
+    animation: lower-left 0.6s cubic-bezier(.694,.048,.335,1) 1.5s forwards;
 }
 
 .lower-right{
     opacity: 0;
-    animation: lower-right 0.4s cubic-bezier(.694,.048,.335,1) 1.2s forwards;
+    animation: lower-right 0.4s cubic-bezier(.694,.048,.335,1) 1.5s forwards;
 }
 
 .ad-about .about-links{
