@@ -7,7 +7,7 @@ import SVGIcon from "../components/SVGIcon/index"
 import "./styles/Advision.css";
 import { Route, Redirect } from "react-router-dom";
 
-export default class PetPerfect extends Component {
+export default class ReactBooks extends Component {
     constructor() {
         super();
         this.state = {
@@ -24,7 +24,7 @@ export default class PetPerfect extends Component {
                 sub: "Search for literature and save them for later.",
                 description: "React Books is a MERN-stack application that allows the user to search for books by their titie, author, and other revelant keywords for the purposes of saving them into Mongo for later viewing.",
                 role: "",
-                stack: ["Full Stack Development", "JavaScript ES6", "Mongoose", "MongoDB", "React.js", "axios.js", "Express.js", "Node.js"]
+                stack: ["JavaScript ES6", "Mongoose", "MongoDB", "React.js", "axios.js", "Express.js", "Node.js"]
             },
             showAbout: false,
             showDetail: false,
