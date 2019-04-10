@@ -217,7 +217,7 @@
 
 .ad-role{
     display: flex;
-    height: 65vh;
+    height: 80vh;
     background-color: rgb(213, 214, 219);
     flex-direction: column;
     justify-content: center;
@@ -631,8 +631,53 @@ i.portal{
 
     }
 
-    .about-header h1{
+    .ad-about .about-header h1{
+        font-size: 30pt;
+    
+    }
+    .ad-about .about-header{
+        padding-top: 50px;
+    }
+    .ad-about .about-wrap{
+        width: 70vw;
+        text-align: center;
+        height: 100px;
+    }
+    .ad-about .about-wrap p{
         font-size: 10pt;
     }
+
+    .ad-about .about-links{
+        margin-top: 50px;
+        margin-bottom: 100px;
+        
+    }
+    .ad-about .about-links a {
+        top:-20px;
+    }
+
+    .ad-role .about-header h1{
+        font-size: 30pt;
+        position: relative;
+        top:-100px;
+    }
+    .ad-role .about-header span{
+        position: relative;
+        top:-100px;
+    }
+
+    .ad-role .about-wrap{
+        position: relative;
+        width: 70vw;
+        text-align: center;
+        height: 100px;
+        top:-100px;
+    }
+
+    .ad-role .about-wrap p{
+        font-size: 10pt;
+    }
+
+
 }
 
