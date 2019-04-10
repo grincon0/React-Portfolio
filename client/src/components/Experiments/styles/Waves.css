@@ -5,16 +5,16 @@
     pointer-events: none;
 } */
 
-/* .wave-adjust{
+.wave-adjust{
     position: absolute;
     transform: translateY(500px);
     overflow: hidden;
     top:0;
     
-} */
+} 
 
 .move-wave{
-    transition: all 3s ease;
+    transition: all 2s ease;
     transform: translateY(200px);
 }
 
