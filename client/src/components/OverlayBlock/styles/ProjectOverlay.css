@@ -162,6 +162,6 @@
         font-size: 25pt;
     }
     .project-mask:before, .project-mask:after{
-        transition: all 0.8s ease;
+        transition: all 0.8s linear;
     }
 }
