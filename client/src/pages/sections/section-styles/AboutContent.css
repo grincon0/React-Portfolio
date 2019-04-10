@@ -359,3 +359,21 @@
         right: 100%;
    }
 }
+
+@media screen and (max-width: 550px){
+    #Headline-1 span{
+        font-size: 10pt;
+    }
+    #Top-Text-Container{
+        height: 155px;
+        
+    }
+    #Bottom-Text-Container{
+        height: 90px;
+    }
+
+    .palm img{
+        transform: translateY(-100px);
+        
+    }
+}

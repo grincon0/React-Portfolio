@@ -53,7 +53,7 @@ class SVGIcon extends Component {
         let SVGimage = this.handleSVGProp();
 
         return (
-            <img className={this.props.classes} src={SVGimage} width={this.props.width} height={this.props.height} alt="icon"></img>
+            <img id="svg-image" className={this.props.classes} src={SVGimage} width={this.props.width} height={this.props.height} alt="icon"></img>
 
         )
     }
