@@ -1,19 +1,53 @@
 
-canvas {
-    display: felx;	
+/* canvas {
+    display: flex;	
     overflow: hidden;
     pointer-events: none;
-}
+} */
 
-.wave-adjust{
+/* .wave-adjust{
     position: absolute;
     transform: translateY(500px);
     overflow: hidden;
     top:0;
     
-}
+} */
 
 .move-wave{
     transition: all 3s ease;
     transform: translateY(200px);
+}
+
+
+@media screen and (max-width:1570px){
+    canvas {
+        display: flex;	
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    .wave-adjust{
+        position: absolute;
+        transform: translateY(500px);
+        overflow: hidden;
+        top:0;
+        
+    }
+    .move-wave{
+        transition: all 3s ease;
+        transform: translateY(200px);
+    }
+}
+@media screen and (max-width: 550px){
+    .wave-adjust{
+        position: absolute;
+        transform: translateY(248px);
+        overflow: hidden;
+        top:0;
+        
+    }
+    .move-wave{
+        transition: all 3s ease;
+        transform: translateY(270px);
+    }
 }
