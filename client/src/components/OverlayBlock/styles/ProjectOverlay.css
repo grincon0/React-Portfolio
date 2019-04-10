@@ -34,17 +34,17 @@
 
 
 
-.project-mask{
+ .project-mask{
     display: flex;
     font-family: LeagueSpartan, sans-serif;
     position: relative;
     justify-content: center;
     align-items: center;
-    width: 380px;
-    height: 260px;
+    /* width: 380px;
+    height: 260px; */
     color: #f3f3f3;
     
-}
+} 
 
 .project-mask h1{
     z-index: 111;
@@ -140,4 +140,21 @@
     right: 0;
     width: 100%;
 
+}
+
+@media screen and (max-width: 1570px){
+    .project-mask{
+        width: 380px;
+        height: 260px;
+    }
+
+}
+@media screen and (max-width: 550px){
+    .project-mask{
+        width: 70vw;
+        height: 230px;
+    }
+    .project-mask h1{
+        font-size: 25pt;
+    }
 }
