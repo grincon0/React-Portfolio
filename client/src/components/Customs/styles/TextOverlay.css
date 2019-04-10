@@ -207,11 +207,11 @@
 @media screen and (max-width: 550px){
     #Text-Container{
         letter-spacing: 9px;
-        width:20px;
-        height:75px;
+        width:25px;
+        height:30px;
     }
     #Text-Container h1{
-        font-size:15pt !important;
+        font-size:20pt !important;
         
     }
 }
