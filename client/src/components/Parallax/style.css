@@ -106,7 +106,7 @@
     .parallax-img-1{
         display: none;
         top: 550px;
-        left:60vw;
+        left:20vw;
     }
     .parallax-img-2{
       
@@ -123,7 +123,7 @@
     .parallax-img-4{
       
         top:400px;
-        left:300px;
+        left:200px;
     }
     
     .parallax-img-5{
@@ -157,7 +157,7 @@
     }
     
     .parallax-img-10{
-      
+        display: none;
         top:350px;
         left:60vw;
     }
