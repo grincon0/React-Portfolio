@@ -91,7 +91,7 @@ export default class MongoScraper extends Component {
                         </div>
                     )} />
                 </Flexbox>
-                <Flexbox classes={`ad-title-box`}>
+                <Flexbox classes={`title-header ad-title-box`}>
                     <div className={`color-${this.state.data.id}`}>
                         <h1>{this.state.data.name}</h1>
                     </div>

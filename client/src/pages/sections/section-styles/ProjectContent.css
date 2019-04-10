@@ -325,6 +325,10 @@
     .project-page-text p{
         font-size:12pt;
     }
+    .project-page-text p:after{
+        top:0;
+        height: 100%;
+    }
 }
 
 

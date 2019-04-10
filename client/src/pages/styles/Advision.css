@@ -528,6 +528,7 @@ i.portal{
 
 .stack-header{
     font-family: LeagueSpartan, sans-serif;
+    
 }
 
 .hide-now{
@@ -675,6 +676,14 @@ i.portal{
     }
 
     .ad-role .about-wrap p{
+        font-size: 10pt;
+    }
+
+    .ad-stack .stack-header h1{
+        font-size: 25pt;
+    }
+
+    .ad-stack .stack-list li{
         font-size: 10pt;
     }
 

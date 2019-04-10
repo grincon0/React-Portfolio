@@ -31,7 +31,7 @@ export default class PetPerfect extends Component {
 
                     }
                 },
-                stack: ["Front-End Development", "Google Maps API", "Petfinder API", "Vue.js", "Sass", "Bootstrap 5", "HTML5 - Semantic UI", "Responsive Web Design"]
+                stack: ["Google Maps API", "Petfinder API", "Vue.js", "Sass", "Bootstrap 5", "HTML5 - Semantic UI", "Responsive Web Design"]
             },
             showAbout: false,
             showDetail: false,
@@ -57,7 +57,7 @@ export default class PetPerfect extends Component {
         if (this.state.showDetail === false && scrollTop > 800) {
             this.setState({ showDetail: true });
         }
-        if (this.state.showStack === false && scrollTop > 1200) {
+        if (this.state.showStack === false && scrollTop > 1100) {
             console.log(this.state.showAbout);
             this.setState({ showStack: true });
         }
@@ -102,7 +102,7 @@ export default class PetPerfect extends Component {
                 )}/>
                 </Flexbox>
                 <Flexbox classes={`ad-title-box`}>
-                    <div className={`color-${this.state.data.id}`}>
+                    <div className={`title-header color-${this.state.data.id}`}>
                         <h1>{this.state.data.name}</h1>
                     </div>
 

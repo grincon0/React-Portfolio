@@ -52,7 +52,7 @@ export default class Advision extends Component {
         if(this.state.showDetail === false && scrollTop > 800){
             this.setState({showDetail: true});
         }
-        if(this.state.showStack === false && scrollTop > 1200){
+        if(this.state.showStack === false && scrollTop > 1100){
          
             this.setState({showStack: true});
         }
@@ -92,7 +92,7 @@ export default class Advision extends Component {
                     </div>)}/>
                 </Flexbox>
                 <Flexbox classes={`ad-title-box`}>
-                    <div className={`color-${this.state.data.id}`}>
+                    <div className={`title-header color-${this.state.data.id}`}>
                         <h1>{this.state.data.name}</h1>
                     </div>
 
