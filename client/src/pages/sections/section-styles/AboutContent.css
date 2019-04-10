@@ -362,9 +362,10 @@
 
 @media screen and (max-width: 550px){
     #Headline-1 span{
-        font-size: 10pt;
+        font-size:10pt;
     }
     #Top-Text-Container{
+        width: 100vw;
         height: 155px;
         
     }
