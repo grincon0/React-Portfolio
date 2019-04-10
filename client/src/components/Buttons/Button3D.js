@@ -23,7 +23,7 @@ export class Button3D extends Component {
     }
     render = () => {
         return (
-            <div className="btn-box">
+            <div className={`btn-box ${this.props.transition ? "page-is-changing": ""}`}>
                 <div className="scene-button">
                     <button onClick={this.handleClickEvent} className={`cube ${this.state.clicked ? "clicked" : ""}`}>
                         <span className="side top">Sent!</span>

@@ -72,7 +72,7 @@ class Form extends Component {
                     ></textarea>
                 </div>
 
-                <Button3D onClick={this.handleFormSubmit} />
+                <Button3D transition={this.props.transition} onClick={this.handleFormSubmit} />
                 {/* <button onClick={this.handleFormSubmit}>Submit</button> */}
 
             </form>
