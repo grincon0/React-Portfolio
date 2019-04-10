@@ -155,7 +155,7 @@
 }
 @media screen and (max-width: 550px){
     .project-mask{
-        width: 70vw;
+        width: 75vw;
         height: 230px;
     }
     .project-mask h1{
