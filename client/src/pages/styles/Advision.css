@@ -615,12 +615,15 @@ i.portal{
     .ad-title-lower .lower-left{
         display: flex;
         flex-direction: row;
-        
         font-size: 10pt;
         
        
         
     }
+    .ad-title-lower .lower-left p{
+        display: inline-block;
+    }
+    
     .ad-title-lower .lower-right{
         display: flex;
         flex-direction: row;
