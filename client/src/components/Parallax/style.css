@@ -1,7 +1,7 @@
 .base-parallax{
     position: absolute;
     display: block;
-    z-index: 0;
+    z-index: -5;
     top:0;
     left:0;
     overflow: hidden;
@@ -11,7 +11,7 @@
 }
 
 #img-container{
-
+    overflow: hidden;
     opacity: 0;
     z-index: -2;
 }
@@ -25,64 +25,7 @@
     animation: show-images 0.6s ease-in forwards;
 }
  */
-.parallax-img-1{
-   
-    top: 550px;
-    left:95vw;
-}
-.parallax-img-2{
-  
-    top: 145px;
-    left: 350px;
-}
 
-.parallax-img-3{
-   
-    top: 78px;
-    left: 200px;
-}
-
-.parallax-img-4{
-  
-    top:400px;
-    left:500px;
-}
-
-.parallax-img-5{
-  
-    top:600px;
-    left:80vw;
-}
-
-.parallax-img-6{
-   
-    top:450px;
-    left:10vw;
-}
-
-.parallax-img-7{
- 
-    top:110px;
-    left:70vw;
-}
-
-.parallax-img-8{
-
-    top:580px;
-    left:90px;
-}
-
-.parallax-img-9{
-  
-    top:230px;
-    left:85vw;
-}
-
-.parallax-img-10{
-  
-    top:350px;
-    left:60vw;
-}
 
 @keyframes show-images{
     0%{
@@ -92,6 +35,131 @@
     100%{
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+
+@media screen and (max-width:1570px){
+    .parallax-img-1{
+   
+        top: 550px;
+        left:95vw;
+    }
+    .parallax-img-2{
+      
+        top: 145px;
+        left: 350px;
+    }
+    
+    .parallax-img-3{
+       
+        top: 78px;
+        left: 200px;
+    }
+    
+    .parallax-img-4{
+      
+        top:400px;
+        left:500px;
+    }
+    
+    .parallax-img-5{
+      
+        top:600px;
+        left:80vw;
+    }
+    
+    .parallax-img-6{
+       
+        top:450px;
+        left:10vw;
+    }
+    
+    .parallax-img-7{
+     
+        top:110px;
+        left:70vw;
+    }
+    
+    .parallax-img-8{
+    
+        top:580px;
+        left:90px;
+    }
+    
+    .parallax-img-9{
+      
+        top:230px;
+        left:85vw;
+    }
+    
+    .parallax-img-10{
+      
+        top:350px;
+        left:60vw;
+    }
+    
+}
+
+@media screen and (max-width: 550px){
+
+    .parallax-img-1{
+        display: none;
+        top: 550px;
+        left:80vw;
+    }
+    .parallax-img-2{
+      
+        top: 145px;
+        left: 350px;
+    }
+    
+    .parallax-img-3{
+       
+        top: 40px;
+        left: 100px;
+    }
+    
+    .parallax-img-4{
+      
+        top:400px;
+        left:300px;
+    }
+    
+    .parallax-img-5{
+        display: none;
+        top:600px;
+        left:80vw;
+    }
+    
+    .parallax-img-6{
+       
+        top:450px;
+        left:10vw;
+    }
+    
+    .parallax-img-7{
+     
+        top:110px;
+        left:20vw;
+    }
+    
+    .parallax-img-8{
+        display: none;
+        top:580px;
+        left:90px;
+    }
+    
+    .parallax-img-9{
+      
+        top:230px;
+        left:85vw;
+    }
+    
+    .parallax-img-10{
+      
+        top:350px;
+        left:60vw;
     }
 }
 

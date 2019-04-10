@@ -39,6 +39,11 @@
     }
 }
 @media screen and (max-width: 550px){
+    canvas{
+        left:0;
+        width: calc(100vw);
+        height: 300px;
+    }
     .wave-adjust{
         position: absolute;
         transform: translateY(248px);
