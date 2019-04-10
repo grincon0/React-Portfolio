@@ -39,7 +39,7 @@ export default class Slider extends Component{
     render = () => {
         return (
             <div>
-                <div style={{backgroundColor: GlobalStates.colorA}} className={`begins ${this.state.animate ? "rollout" : "roll-in"}`}>
+                <div style={{backgroundColor: GlobalStates.colorA}} className={`begins ${this.state.animate ? "rollout show-column" : "roll-in"}`}>
                     <div className="column"></div>
                     <div className="column"></div>
                     <div className="column"></div>

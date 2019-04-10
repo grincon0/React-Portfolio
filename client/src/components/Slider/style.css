@@ -68,10 +68,13 @@
     left:43%;
     top: 33%;
     z-index: 801;
+    opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-.roll-out .column{
+
+.rollout.show-column .column{
+    transition: opacity 0.3s ease 0.9s;
     opacity: 1;
 }
 
