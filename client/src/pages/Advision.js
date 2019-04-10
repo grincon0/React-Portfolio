@@ -92,7 +92,7 @@ export default class Advision extends Component {
                     </div>)}/>
                 </Flexbox>
                 <Flexbox classes={`ad-title-box`}>
-                    <div className={`color-${this.state.data.id}`}>
+                    <div className={`title-header color-${this.state.data.id}`}>
                         <h1>{this.state.data.name}</h1>
                     </div>
 
