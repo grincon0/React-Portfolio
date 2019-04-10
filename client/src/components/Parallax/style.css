@@ -133,7 +133,7 @@
     }
     
     .parallax-img-6{
-       
+        display: none;
         top:450px;
         left:10vw;
     }
@@ -151,7 +151,7 @@
     }
     
     .parallax-img-9{
-      
+        display: none;
         top:230px;
         left:74vw;
     }
