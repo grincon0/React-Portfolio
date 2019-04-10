@@ -31,7 +31,7 @@ export default class PetPerfect extends Component {
 
                     }
                 },
-                stack: ["Front-End Development", "Google Maps API", "Petfinder API", "Vue.js", "Sass", "Bootstrap 5", "HTML5 - Semantic UI", "Responsive Web Design"]
+                stack: ["Google Maps API", "Petfinder API", "Vue.js", "Sass", "Bootstrap 5", "HTML5 - Semantic UI", "Responsive Web Design"]
             },
             showAbout: false,
             showDetail: false,
