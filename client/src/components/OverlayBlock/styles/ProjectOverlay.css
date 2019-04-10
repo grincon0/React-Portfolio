@@ -67,7 +67,7 @@
     width: 0;
     height: 100%;
     z-index:60;
-    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1); */
     background-color: rgba(0, 168, 235, 0.74);
 }
 
@@ -79,7 +79,7 @@
     top:0;
     right: 0;
     z-index:60;
-    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1); */
     background-color: rgba(0, 235, 106, 0.753);
 }
 
@@ -148,6 +148,10 @@
         height: 260px;
     }
 
+    .project-mask:before, .project-mask:after{
+        transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
 }
 @media screen and (max-width: 550px){
     .project-mask{
@@ -156,5 +160,8 @@
     }
     .project-mask h1{
         font-size: 25pt;
+    }
+    .project-mask:before, .project-mask:after{
+        transition: all 0.8s ease;
     }
 }
