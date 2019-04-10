@@ -5,17 +5,19 @@
     pointer-events: none;
 } */
 
+
 .wave-adjust{
     position: absolute;
     transform: translateY(500px);
     overflow: hidden;
-    top:0;
+    
     
 } 
 
 .move-wave{
     transition: all 2s ease;
     transform: translateY(200px);
+    
 }
 
 
@@ -40,9 +42,11 @@
 }
 @media screen and (max-width: 550px){
     canvas{
+        top:100vh;
         left:0;
         width: calc(100vw);
         height: calc(100vh - 370px);
+        opacity: 0;
         
     }
     .wave-adjust{
@@ -50,10 +54,12 @@
         transform: translateY(248px);
         overflow: hidden;
         top:0;
+
         
     }
     .move-wave{
-        transition: all 3s ease;
+        transition: all 1s ease;
         transform: translateY(370px);
+        opacity: 1;
     }
 }
