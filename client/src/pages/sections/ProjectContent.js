@@ -110,7 +110,7 @@ class ProjectContent extends Component {
                     >
                         <div className={`project-page-subtitle ${this.state.animationComplete.title ? "rollout" : ""} ${this.props.transition ? "page-is-changing" : ""}`}>
                             <div className={`project-page-text ${this.state.animate ? "show-header" : ""} ${this.props.transition ? "text-disappear" : ""} `}>
-                                <p>From web development to game design, and apps in between. Click on the buttons below to filter my projects by technology or skill.</p>
+                                <p>From <span className={`project-highlight-1`}>web development</span> to <span className={`project-highlight-2`}>game design</span>, and apps in between. Click on the buttons below to filter my projects by technology or skill.</p>
                             </div>
 
                         </div>
