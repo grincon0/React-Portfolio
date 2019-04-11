@@ -505,6 +505,25 @@ body {
     }
 }
 
+/* @media screen and (max-width: 550px){
+    .scene{
+        perspective: 2000px;
+        
+    }
+    .container-3d-width{
+        width:400px;
+        
+    }
+    .card-3d {
+        width:220px;
+        margin: 1px;
+        opacity: 0.8;
+        
+    }
+    
+    
+} */
+
 
 
 
