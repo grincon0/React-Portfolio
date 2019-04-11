@@ -23,7 +23,7 @@ export default class Bamazon extends Component {
                 sub: "Manage your business inventory with Bamazon.",
                 description: "Bamazon is multi-purspose command line application with CRUD functionality.",
                 role: " Bamazon can take in orders from customers and deplete stock from the store's inventory. Using MySQL, it can also track product sales across departments and then provide a summary of the highest-grossing departments in the store.",
-                stack: ["Back-End Development","JavaScript ES6" ,"inquirer.js", "MySQL", "MySQL Server", "Express.js", "Node.js"]
+                stack: ["JavaScript ES6" ,"inquirer.js", "MySQL", "MySQL Server", "Express.js", "Node.js"]
             },
             showAbout: false,
             showDetail: false,
@@ -49,7 +49,7 @@ export default class Bamazon extends Component {
         if (this.state.showDetail === false && scrollTop > 800) {
             this.setState({ showDetail: true });
         }
-        if (this.state.showStack === false && scrollTop > 1200) {
+        if (this.state.showStack === false && scrollTop > 1100) {
             console.log(this.state.showAbout);
             this.setState({ showStack: true });
         }
