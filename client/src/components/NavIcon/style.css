@@ -89,7 +89,7 @@
 }
 
 #burger-icon.x-out i:nth-child(3){
-    transform: translate3d(0,10px,0) rotate(45deg) scale(1.5);
+    transform: translate3d(0,-2px,0) rotate(45deg) scale(1.5);
 }
 
 #burger-icon.x-out:hover i:nth-child(n){
