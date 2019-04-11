@@ -109,7 +109,7 @@
     align-items: center;
     justify-content: center;
     transform: translateY(100px);
-    height: 62vh;
+    height: 100%;
     width: 100%;
     background-color: rgb(94, 94, 94);
     color: #fff;
@@ -609,8 +609,10 @@ i.portal{
     .ad-title-lower{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center; 
+        justify-content: center;
         transform: translateY(-90px);
+        width: 100%;
     }
 
     .ad-title-lower .lower-left{
@@ -642,7 +644,7 @@ i.portal{
     .ad-about .about-wrap{
         width: 70vw;
         text-align: center;
-        height: 100px;
+        height: 150px;
     }
     .ad-about .about-wrap p{
         font-size: 10pt;
