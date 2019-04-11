@@ -249,15 +249,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
 @keyframes revealSpan{
     0%{
         transform: scale(0);
@@ -273,3 +264,13 @@
     }
 }
 
+@media screen and (max-width: 550px){
+   #Span-Container.span-default  {
+      color:#fff;
+      font-size: 10pt;
+      
+   } 
+   #Span-Container::after{
+      top:0;
+   }
+}

@@ -48,7 +48,7 @@ export default class MongoScraper extends Component {
         if (this.state.showDetail === false && scrollTop > 800) {
             this.setState({ showDetail: true });
         }
-        if (this.state.showStack === false && scrollTop > 1200) {
+        if (this.state.showStack === false && scrollTop > 1100) {
             console.log(this.state.showAbout);
             this.setState({ showStack: true });
         }
@@ -91,8 +91,8 @@ export default class MongoScraper extends Component {
                         </div>
                     )} />
                 </Flexbox>
-                <Flexbox classes={`title-header ad-title-box`}>
-                    <div className={`color-${this.state.data.id}`}>
+                <Flexbox classes={`ad-title-box`}>
+                    <div className={`title-header color-${this.state.data.id}`}>
                         <h1>{this.state.data.name}</h1>
                     </div>
 

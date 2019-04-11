@@ -101,7 +101,7 @@ class ContactContent extends Component {
 
                         </div>
                     </div>
-                    <div >
+                    <div className={`span-wrapper`} >
                         <SpanGenerator
                             text="Want to work together? Need a developer for your team? Let's talk."
                             blocks={spanBlocks}

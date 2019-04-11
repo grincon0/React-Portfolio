@@ -174,4 +174,19 @@
     transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1) ,-webkit-transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
+@media screen and (max-width: 550px){
+    .contact-title{
+        font-size: 30pt;
+    }
+    .span-wrapper{
+        display: flex;
+        width:48vw;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    
+    }
+}
+
 
