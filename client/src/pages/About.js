@@ -46,7 +46,7 @@ class About extends Component {
         let newState = { ...this.state };
         newState.transition = true;
         this.setState(newState);
-    
+
     }
 
     toggleMenu = () => {
@@ -65,9 +65,29 @@ class About extends Component {
         return (
             <section id="ABOUT" className={'overflow-fix'}>
                 <div className={`box-size overflow-fix `} scroll='no'>
+
                     <Menu collapseMenu={this.state.collapseMenu} />
-                    <FlexContainer classes="nav-height-fix " direction="row" justify="end">
-                        
+                    <FlexContainer classes="nav-height-fix " direction="row" justify="between">
+                        <Flexbox className={`about-flexbox`}>
+                            <a className={`a-first `} target="_blank" href="https://github.com/grincon0">
+
+
+                                <SVGIcon
+                                    classes={`about-icon ${this.state.transition ? "about-remove" : "about-show"}`}
+                                    src="github"
+                                    height={30}
+                                    width={25}
+                                />
+                            </a>
+                            <a className={`about-a`} target="_blank" href="https://www.linkedin.com/in/george-rincon">
+                                <SVGIcon
+                                    classes={`about-icon ${this.state.transition ? "about-remove" : "about-show"}`}
+                                    src="linkedin"
+                                    height={30}
+                                    width={25}
+                                />
+                            </a>
+                        </Flexbox>
                         <NavIcon
                             toggleMenu={this.toggleMenu}
                             transition={this.state.transition}
@@ -88,7 +108,7 @@ class About extends Component {
                         <FlexContainer
                             direction="column"
                             justify="center"
-                            style={{overflow:"hidden"}}
+                            style={{ overflow: "hidden" }}
 
                         >
                             <Route render={({ history }) => (
