@@ -95,8 +95,8 @@ export default class Bamazon extends Component {
                         </div>
                     )} />
                 </Flexbox>
-                <Flexbox classes={`title-header ad-title-box`}>
-                    <div className={`color-${this.state.data.id}`}>
+                <Flexbox classes={`ad-title-box`}>
+                    <div className={`title-header color-${this.state.data.id}`}>
                         <h1>{this.state.data.name}</h1>
                     </div>
 
