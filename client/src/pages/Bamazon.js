@@ -17,7 +17,7 @@ export default class Bamazon extends Component {
                 tier: "Mid",
                 id:"5",
                 name: "Bamazon",
-                type: ["CLI app", "CLI CRUD application"],
+                type: ["CLI app", "CLI CRUD app"],
                 time: "Fall 2018",
                 github: "https://github.com/grincon0/bamazon",
                 sub: "Manage your business inventory with Bamazon.",
