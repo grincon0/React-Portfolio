@@ -112,12 +112,15 @@ body.page-is-changing::after, body.page-is-changing::before{
 }
 
 .a-first{
+    margin-top:15px;
     margin-left:20px;
+    
 
 }
 .about-a{
     text-decoration: none;
     color:inherit;
+    margin-top:15px;
     margin-left:10px;
 
     

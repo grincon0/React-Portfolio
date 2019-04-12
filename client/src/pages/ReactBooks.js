@@ -19,7 +19,7 @@ export default class ReactBooks extends Component {
                 name: "React-Books",
                 type: ["Web app", "MERN Web App"],
                 time: "Early 2019",
-                github: "https://github.com/grincon0/React-NYT-Search",
+                github: "https://github.com/grincon0/React-Books",
                 link: "https://react-googlebooks-search.herokuapp.com/",
                 sub: "Search for literature and save them for later.",
                 description: "React Books is a MERN-stack application that allows the user to search for books by their titie, author, and other revelant keywords for the purposes of saving them into Mongo for later viewing.",
