@@ -109,7 +109,7 @@
     align-items: center;
     justify-content: center;
     transform: translateY(100px);
-    height: 100%;
+    height: calc(75vh);
     width: 100%;
     background-color: rgb(94, 94, 94);
     color: #fff;
@@ -633,7 +633,9 @@ i.portal{
         font-size: 10pt;
 
     }
-
+    .ad-about{
+        height: calc(75vh + 75px);
+    }
     .ad-about .about-header h1{
         font-size: 30pt;
     
@@ -657,6 +659,10 @@ i.portal{
     }
     .ad-about .about-links a {
         top:-20px;
+    }
+
+    .ad-role{
+        height: calc(90vh + 75px);
     }
 
     .ad-role .about-header h1{
@@ -683,7 +689,7 @@ i.portal{
 
     .ad-stack .stack-header h1{
     
-        font-size: 25pt;
+        font-size: 20pt;
     }
 
     .ad-stack .stack-list li{
