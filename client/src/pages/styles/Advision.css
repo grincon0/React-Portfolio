@@ -109,7 +109,7 @@
     align-items: center;
     justify-content: center;
     transform: translateY(100px);
-    height: 100%;
+    height: calc(75vh);
     width: 100%;
     background-color: rgb(94, 94, 94);
     color: #fff;
