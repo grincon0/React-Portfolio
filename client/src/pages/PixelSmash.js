@@ -100,7 +100,7 @@ export default class PixelSmash extends Component {
 
                 <Route render={({ history }) => (
                     <div onClick={(e) => this.handleTransition(e)} className={`h2-block`}>
-                        <h2>Go back</h2>
+                        <h2 className={`ad-return`}>Go back</h2>
                     </div>
                 )}/>
                 </Flexbox>

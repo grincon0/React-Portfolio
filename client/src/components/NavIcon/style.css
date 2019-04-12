@@ -2,6 +2,7 @@
     margin-top:1em;
     margin-right: 2em;
     z-index: 255;
+    cursor: pointer;
 }
 
 #burger-icon i{

@@ -13,6 +13,7 @@
 }
 .project-box{
     position: relative;
+    cursor: pointer;
 
 }
 .project-box:before{
