@@ -24,7 +24,7 @@ export default class PixelSmash extends Component {
                 type: ["Video Game", "Game Design"],
                 time: "Winter 2018",
                 github: "https://github.com/grincon0/Pixel_Smash",
-                link: "https://my-pixel-smash.herokuapp.com/",
+                link: "https://pixelsmash-demo.herokuapp.com/",
                 sub: "Combo yourself to victory.",
 
                 description: "Pixel-Smash is a fun, yet competitive , JavaScript-powered platform fighter where you can test your mettle against online players or the relentless CPU.",
