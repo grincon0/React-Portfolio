@@ -20,6 +20,19 @@
     
 }
 
+.page-is-changing{
+    
+}
+
+@keyframes wavesOut{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
 
 @media screen and (max-width:1570px){
     canvas {
