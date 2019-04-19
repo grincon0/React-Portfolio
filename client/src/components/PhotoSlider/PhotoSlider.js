@@ -14,28 +14,28 @@ export class PhotoSlider extends Component {
     }
 
     handleClickEvent = (e) => {
-        const {value} = e.target.attributes.value;
+        const { value } = e.target.attributes.value;
         console.log(value)
-        if(value === "left"){
-            if(this.state.currentPhoto === 1){
-                this.setState({currentPhoto : 3 });
-            }else{
+        if (value === "left") {
+            if (this.state.currentPhoto === 1) {
+                this.setState({ currentPhoto: 3 });
+            } else {
                 let decrement = this.state.currentPhoto;
                 decrement--;
-                this.setState({currentPhoto : decrement});
+                this.setState({ currentPhoto: decrement });
             }
-        }else{
-            if(this.state.currentPhoto === 3){
-                this.setState({currentPhoto : 1});
-            }else{
+        } else {
+            if (this.state.currentPhoto === 3) {
+                this.setState({ currentPhoto: 1 });
+            } else {
                 let increment = this.state.currentPhoto;
                 increment++;
-                this.setState({currentPhoto : increment});
+                this.setState({ currentPhoto: increment });
             }
         }
-    
+
     }
-    changeCurrentPhoto =(value) => {
+    changeCurrentPhoto = (value) => {
 
     }
     render = () => {
@@ -44,9 +44,17 @@ export class PhotoSlider extends Component {
         console.log(which);
         return (
             <Flexbox classes={`photo-slider-parent`}>
-                <SVGIcon onClick={(e) => this.handleClickEvent(e)} value="left" src="left" width={50} height={50} />
 
                 <div className={`photo-slider-box`}>
+                <div className={`photo-button-flex`}>
+                            <div className={`photo-button-left`}>
+                                <SVGIcon onClick={(e) => this.handleClickEvent(e)} value="left" src="left" width={30} height={30} />
+                            </div>
+
+                            <div className={`photo-button-right`}>
+                                <SVGIcon onClick={(e) => this.handleClickEvent(e)} value="right" src="right" width={30} height={30} />
+                            </div>
+                        </div>
 
                     <div className={`photo-slider slide-on-${which}`}>
 
@@ -57,9 +65,16 @@ export class PhotoSlider extends Component {
                         <div className={`photo-three`}>
                         </div>
 
+                        
+
                     </div>
+                    
+
+
+
                 </div>
-                <SVGIcon onClick={(e) => this.handleClickEvent(e)} value="right" src="right" width={50} height={50} />
+
+
             </Flexbox>
         );
     }

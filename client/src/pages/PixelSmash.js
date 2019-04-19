@@ -123,7 +123,7 @@ export default class PixelSmash extends Component {
                     </div>
                 </Flexbox>
                 
-                    <PhotoSlider />
+                    
                 
                 <Flexbox classes={`ad-about ${this.state.showAbout ? "show-this" : ""} `}>
                     <div className={`about-header`}>
@@ -142,6 +142,7 @@ export default class PixelSmash extends Component {
                     <div className={`about-header`}>
                         <h1>Details</h1><span>.</span>
                     </div>
+                    <PhotoSlider />
                     <div className={`about-wrap`}>
                         <p>{this.state.data.role.paragraph.one}</p>
                         <p>{this.state.data.role.paragraph.two}</p>
