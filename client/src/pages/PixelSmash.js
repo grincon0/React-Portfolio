@@ -3,7 +3,8 @@ import FlexContainer from "../components/FlexContainer/index";
 import Flexbox from "../components/Flexbox/index";
 import GlobalStates from "../assets/js/global";
 import { SpanGenerator } from "../components/Customs/index";
-import SVGIcon from "../components/SVGIcon/index"
+import SVGIcon from "../components/SVGIcon/index";
+import {PhotoSlider} from "../components/PhotoSlider/index";
 import "./styles/Advision.css";
 
 import { Route, Redirect } from "react-router-dom";
@@ -121,6 +122,9 @@ export default class PixelSmash extends Component {
                         <span>Type:</span><p>{this.state.data.type[1]}</p>
                     </div>
                 </Flexbox>
+                
+                    <PhotoSlider />
+                
                 <Flexbox classes={`ad-about ${this.state.showAbout ? "show-this" : ""} `}>
                     <div className={`about-header`}>
                         <h1>About</h1><span>.</span>

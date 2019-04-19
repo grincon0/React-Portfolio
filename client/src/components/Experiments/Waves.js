@@ -20,7 +20,7 @@ export class Waves extends Component {
     }
     render = () => {
         return(
-            <canvas className={`wave-adjust ${this.state.move ? "move-wave" : ""}`}></canvas>
+            <canvas className={`wave-adjust ${this.state.move ? "move-wave" : ""} `}></canvas>
         );
     }
 

@@ -1,0 +1,68 @@
+.photo-slider-box{
+    overflow: hidden;
+
+    width: 60vw;
+    height: 700px;
+    
+}
+
+.photo-slider-parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+  
+
+
+.photo-slider{
+    
+   position: relative;
+    height: 100%;
+   
+    width: 334%;
+    transition: all 1s ease;
+    margin:auto;
+}
+
+.photo-slider.slide-on-1{
+    right:0%;
+}
+.photo-slider.slide-on-2{
+    right:100%;
+}
+.photo-slider.slide-on-3{
+    right:200%;
+}
+.photo-one{
+    content: "";
+    background-image: url("../../../assets/images/projects/pixelsmash/one.png");
+    float:left;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 100%;
+    
+
+}
+
+.photo-two{
+    content: "";
+    background-image: url("../../../assets/images/projects/pixelsmash/two.jpg");
+    float:left;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 100%;
+}
+
+.photo-three{
+    content: "";
+    background-image: url("../../../assets/images/projects/pixelsmash/three.jpg");
+    float:left;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 100%;
+}
+

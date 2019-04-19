@@ -182,7 +182,7 @@ class AboutContent extends Component {
                         height={100}
                         width={100}
                     /> */}
-                    <Waves />
+                    <Waves  />
                 </FlexContainer>
 
 

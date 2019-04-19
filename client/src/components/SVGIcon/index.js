@@ -4,6 +4,7 @@ import art from "../../assets/SVG/Icons/art.svg";
 import github from "../../assets/SVG/Logos/githublogo2.svg";
 import ideaa from "../../assets/SVG/Icons/ideaa.svg";
 import octocat from "../../assets/SVG/Logos/github-octocat.svg";
+import left from "../../assets/SVG/nav/left.svg";
 import liftoff from "../../assets/SVG/Icons/liftoff.svg";
 import linkedin from '../../assets/SVG/Logos/linkedin2.svg';
 import internet from "../../assets/SVG/Logos/internet.svg";
@@ -11,6 +12,7 @@ import paint from "../../assets/SVG/Icons/paint.svg";
 import performance from "../../assets/SVG/Icons/performance.svg";
 import car from "../../assets/SVG/Icons/car.svg";
 import palm from "../../assets/SVG/palm2.svg";
+import right from "../../assets/SVG/nav/right.svg";
 import volcan from "../../assets/SVG/volcan.svg";
 
 import "./style.css";
@@ -44,6 +46,10 @@ class SVGIcon extends Component {
                 return linkedin;
             case "github":
                 return github;
+            case "left":
+                return left;
+            case "right":
+                return right;
             default:
                 break;
         }
@@ -53,7 +59,14 @@ class SVGIcon extends Component {
         let SVGimage = this.handleSVGProp();
 
         return (
-            <img id="svg-image" className={this.props.classes} src={SVGimage} width={this.props.width} height={this.props.height} alt="icon"></img>
+            <img id="svg-image" 
+            className={this.props.classes} 
+            src={SVGimage} 
+            width={this.props.width} 
+            height={this.props.height} 
+            onClick={this.props.onClick} 
+            value={this.props.value}
+            alt="icon"></img>
 
         )
     }
