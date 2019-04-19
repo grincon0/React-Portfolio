@@ -39,11 +39,13 @@ export class PhotoSlider extends Component {
 
     }
     render = () => {
-
         const which = this.state.currentPhoto;
+        const project = this.props.project;
+
         console.log(which);
         return (
-            <Flexbox classes={`photo-slider-parent`}>
+            <Flexbox classes={`photo-slider-parent ${this.props.show ? "show" : ""} `}>
+            
 
                 <div className={`photo-slider-box`}>
                     <div className={`photo-button-flex`}>
@@ -56,7 +58,7 @@ export class PhotoSlider extends Component {
                         </div>
                     </div>
 
-                    <div className={`photo-slider slide-on-${which}`}>
+                    <div className={`photo-slider ${project ? project : ""} slide-on-${which}`}>
 
                         <div className={`photo-one`}>
                         </div>
