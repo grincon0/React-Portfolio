@@ -638,6 +638,7 @@ i.portal{
     }
     .ad-about{
         height: calc(75vh + 75px);
+        padding-bottom: 90px;
     }
     .ad-about .about-header h1{
         font-size: 30pt;
@@ -650,6 +651,7 @@ i.portal{
         width: 70vw;
         text-align: center;
         height: 150px;
+        
     }
     .ad-about .about-wrap p{
         font-size: 10pt;
@@ -657,7 +659,7 @@ i.portal{
 
     .ad-about .about-links{
         margin-top: 50px;
-        margin-bottom: 100px;
+        /* margin-bottom: 100px; */
         
     }
     .ad-about .about-links a {
@@ -666,16 +668,19 @@ i.portal{
 
     .ad-role{
         height: calc(90vh + 75px);
+        
+      
     }
 
     .ad-role .about-header h1{
         font-size: 30pt;
         position: relative;
-        top:-100px;
+        top:-50px;
+        
     }
     .ad-role .about-header span{
         position: relative;
-        top:-100px;
+        top:-50px;
     }
 
     .ad-role .about-wrap{
@@ -684,6 +689,7 @@ i.portal{
         text-align: center;
         height: 100px;
         top:-100px;
+        padding-bottom: 200px;
     }
 
     .ad-role .about-wrap p{

@@ -46,15 +46,15 @@ export class PhotoSlider extends Component {
             <Flexbox classes={`photo-slider-parent`}>
 
                 <div className={`photo-slider-box`}>
-                <div className={`photo-button-flex`}>
-                            <div className={`photo-button-left`}>
-                                <SVGIcon onClick={(e) => this.handleClickEvent(e)} value="left" src="left" width={30} height={30} />
-                            </div>
-
-                            <div className={`photo-button-right`}>
-                                <SVGIcon onClick={(e) => this.handleClickEvent(e)} value="right" src="right" width={30} height={30} />
-                            </div>
+                    <div className={`photo-button-flex`}>
+                        <div className={`photo-button-left`}>
+                            <SVGIcon onClick={(e) => this.handleClickEvent(e)} value="left" src="left" width={30} height={30} />
                         </div>
+
+                        <div className={`photo-button-right`}>
+                            <SVGIcon onClick={(e) => this.handleClickEvent(e)} value="right" src="right" width={30} height={30} />
+                        </div>
+                    </div>
 
                     <div className={`photo-slider slide-on-${which}`}>
 
@@ -65,10 +65,10 @@ export class PhotoSlider extends Component {
                         <div className={`photo-three`}>
                         </div>
 
-                        
+
 
                     </div>
-                    
+
 
 
 
