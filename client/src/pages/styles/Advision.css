@@ -135,6 +135,8 @@
     transform: translateY(8px);
     opacity: 0;
     width: 580px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .about-wrap p{
@@ -218,12 +220,13 @@
 
 .ad-role{
     display: flex;
-    height: 80vh;
+    height: 100%;
     background-color: rgb(213, 214, 219);
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top:30px;
+    padding-top: 100px;
     
 }
 
@@ -231,9 +234,7 @@
     font-size: 18px;
 }
 
-.ad-role .about-header{
-    margin-top:30px;
-}
+
 .ad-role .about-header h1{
     display:inline;
     font-family: LeagueSpartan, sans-serif;
@@ -247,6 +248,7 @@
 
 .ad-role .about-header{
     margin-top:30px;
+    padding-bottom: 40px;
 }
 .ad-role .about-header h1{
     display:inline;
