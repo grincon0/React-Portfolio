@@ -44,7 +44,7 @@ export class PhotoSlider extends Component {
         console.log(which);
         return (
             <Flexbox classes={`photo-slider-parent`}>
-                <SVGIcon onClick={(e) => this.handleClickEvent(e)} value="left" src="left" width={50} height={50} />
+                <SVGIcon classes={`photo-left-icon`} onClick={(e) => this.handleClickEvent(e)} value="left" src="left" width={50} height={50} />
 
                 <div className={`photo-slider-box`}>
 
@@ -59,7 +59,7 @@ export class PhotoSlider extends Component {
 
                     </div>
                 </div>
-                <SVGIcon onClick={(e) => this.handleClickEvent(e)} value="right" src="right" width={50} height={50} />
+                <SVGIcon classes={`photo-right-icon`} onClick={(e) => this.handleClickEvent(e)} value="right" src="right" width={50} height={50} />
             </Flexbox>
         );
     }
