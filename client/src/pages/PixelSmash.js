@@ -142,7 +142,10 @@ export default class PixelSmash extends Component {
                     <div className={`about-header`}>
                         <h1>Details</h1><span>.</span>
                     </div>
-                    <PhotoSlider />
+                    <PhotoSlider 
+                    project={this.state.data.name} 
+                    show={this.state.showDetail}
+                    />
                     <div className={`about-wrap`}>
                         <p>{this.state.data.role.paragraph.one}</p>
                         <p>{this.state.data.role.paragraph.two}</p>
