@@ -15,7 +15,8 @@ export default class LaxHelper{
     }
     setUpScrollEvent = () => {
         document.addEventListener('scroll', function(x){
-            lax.update(window.pageYOffset);
+            lax.update(window.scrollY);
+            console.log(window.scrollY);
         }, false);
 
         window.addEventListener("resize", function() {

@@ -20,7 +20,9 @@ export class Square extends Component{
 
     render = () => {
         return(
-            <div className={`lax ${this.props.classes ? this.props.classes : ""}`} data-lax-translate-x={`${this.props.translateX} ${this.props.speed ? this.props.speed : null}`} data-lax-opacity={`${this.props.opacity}`} data-lax-rotate="(vh) 0, (-elh) 500"></div>
+            <div className={`lax ${this.props.classes ? this.props.classes : ""}`} data-lax-translate-x={`${this.props.translateX} ${this.props.options? this.props.options : null}`} 
+            data-lax-opacity={`${this.props.opacity}`} 
+            data-lax-rotate={`${this.props.rotate ? "(vh) 0, 2000 1200" : "0 0"}`}></div>
         );
     }
    

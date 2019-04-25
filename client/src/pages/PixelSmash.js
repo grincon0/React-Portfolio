@@ -148,24 +148,45 @@ export default class PixelSmash extends Component {
                         <a className={`github-link`} href={this.state.data.github} target="_blank"><SVGIcon classes="octo-dark" src="octocat" height={75} width={75} /></a>
                         {this.state.data.link ? <a className={`web-link`} href={this.state.data.link} target="_blank"><SVGIcon classes="web-dark" src="internet" height={75} width={75} /></a> : ""}
                     </div>
+                    <Square 
+                    classes={`big-box-1`}
+                    translateX="0 vw, 485 vw, 735 (window.innerWidth*0.5)"
+                    opacity="0 1"
+                    />
                     <Square
                         classes={`box-1`}
-                        translateX="0 0, 350 0, 900 900"
-                        opacity="0 0, 350 0, 500 1" />
+                        translateX="0 0, 485 0, 735 (window.innerWidth*0.17)"
+                        opacity="0 0, 485 0, 780 1"
+                        rotate={true}
+                        />
                     <Square
                         classes={`box-4`}
-                        translateX="0 0, 350 0, 900 900"
-                        opacity="0 0, 350 0, 500 1"
-                        speed={100} />
+                        translateX="0 0, 485 0, 735 (window.innerWidth*0.17)"
+                        opacity="0 0, 485 0, 780 1"
+                        rotate={true}
+                    />
 
                     <Square
                         classes={`box-2`}
-                        translateX="0 0, 350 0, 900 900"
-                        opacity="0 0, 350 0, 500 1" />
+                        translateX="0 0, 485 0, 735 (window.innerWidth*0.17)"
+                        opacity="0 0, 485 0, 780 1"
+                        options="| speed=0.93"
+                        rotate={true}
+                         />
                     <Square
                         classes={`box-3`}
-                        translateX="0 0, 350 0, 900 900"
-                        opacity="0 0, 350 0, 500 1" />
+                        translateX="0 0, 485 0, 735 (window.innerWidth*0.17)"
+                        opacity="0 0, 485 0, 780 1"
+                        rotate={true}
+                        />
+
+                    <Square
+                        classes={`box-5`}
+                        translateX="0 0, 485 0, 735 (window.innerWidth*0.17)"
+                        opacity="0 0, 485 0, 780 1"
+                        rotate={true}
+                        
+                        />
 
                 </Flexbox>
                 <Flexbox classes={`ad-role ${this.state.showDetail ? "show-this" : ""}`}>

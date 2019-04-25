@@ -109,7 +109,7 @@
     align-items: center;
     justify-content: center;
     transform: translateY(100px);
-    height: calc(75vh);
+    height: calc(100vh);
     width: 100%;
     background: transparent;
     color: #fff;
@@ -548,6 +548,10 @@ i.portal{
     position: relative;
 }
 
+.box-1, .box-2, .box-3, .box-4, .box-5{
+    z-index: -1;
+}
+
 .box-1{
     position: absolute;
     width: 30pt;
@@ -555,6 +559,7 @@ i.portal{
     background-color: #e01c77;
     margin-top: 90px;
     left:0;
+    top:360px;
    
 
 }
@@ -565,7 +570,7 @@ i.portal{
     height: 20pt;
     background-color: #1cc9e0;
     margin-top:45px;
-    left:-20px;
+    left:-50px;
  
 }
 
@@ -583,14 +588,46 @@ i.portal{
 
 .box-4{
     position: absolute;
-    width: 60pt;
-    height: 60pt;
+    width: 55pt;
+    height: 55pt;
     background-color: #e09b1c;
-  
+    margin-bottom: 25px;
     margin-left: 20px;
     left:0;
 }
 
+.box-5{
+    position: absolute;
+    width: 25pt;
+    height: 25pt;
+    background-color: #e01cd0;
+    margin-top: 80px;
+    margin-left: 20px;
+    left:0;
+}
+
+.box-6{
+    position: absolute;
+    width: 20pt;
+    height: 20pt;
+    background-color: #1cc3e0;
+  
+    margin-top: 20px;
+    left:0;
+}
+
+.big-box-1{
+    position: absolute;
+    background: #1ce07491;
+    width: 600px;
+    height:300px;
+
+    z-index: -2;
+}
+
+.ad-about{
+    overflow: hidden;
+}
 
 
 
@@ -653,7 +690,12 @@ i.portal{
 }
 
 @media screen and (max-width: 1570px){
-
+    .big-box-1{
+        width: 700px;
+        height:400px;
+        left:-100px;
+        top:200px;
+    }
 }
 
 @media screen and (max-width: 550px){
