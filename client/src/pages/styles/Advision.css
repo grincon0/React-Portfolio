@@ -11,7 +11,7 @@
 
 .h2-block{
     position: relative;
-    color: rgb(134, 134, 134);
+    color: #f3f3f3;
     margin-top:25px;
     margin-right: 25px;
 }
@@ -60,7 +60,7 @@
 
 .ad-title-box{
     position: relative;
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    background: transparent;
     height: calc(100vh - 150px);
     align-items: center;
     justify-content: center;
@@ -111,7 +111,7 @@
     transform: translateY(100px);
     height: calc(75vh);
     width: 100%;
-    background-color: rgb(94, 94, 94);
+    background: transparent;
     color: #fff;
     padding-bottom: 30px;
 }
@@ -150,10 +150,11 @@
 
 .ad-stack{
     height: 60vh;
-    background-color: #E4EBDD;
+    background: transparent;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    color: #f3f3f3;
 }
 
 .github-link{
@@ -221,7 +222,7 @@
 .ad-role{
     display: flex;
     height: 100%;
-    background-color: rgb(213, 214, 219);
+    background: transparent;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -232,6 +233,7 @@
 
 .ad-role p{
     font-size: 18px;
+    color:#f3f3f3;
 }
 
 
@@ -540,6 +542,55 @@ i.portal{
     height: 0;
     transition: all 0.4s ease;
 }
+
+
+.box-container{
+    position: relative;
+}
+
+.box-1{
+    position: absolute;
+    width: 30pt;
+    height: 30pt;
+    background-color: #e01c77;
+    margin-top: 90px;
+    left:0;
+   
+
+}
+
+.box-2{
+    position: absolute;
+    width: 20pt;
+    height: 20pt;
+    background-color: #1cc9e0;
+    margin-top:45px;
+    left:-20px;
+ 
+}
+
+
+
+.box-3{
+    position: absolute;
+    width: 40pt;
+    height: 40pt;
+    background-color: #1ce07e;
+    margin-top: 30px;
+    left:0;
+    
+}
+
+.box-4{
+    position: absolute;
+    width: 60pt;
+    height: 60pt;
+    background-color: #e09b1c;
+  
+    margin-left: 20px;
+    left:0;
+}
+
 
 
 

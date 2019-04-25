@@ -70,8 +70,6 @@ class About extends Component {
                     <FlexContainer classes="nav-height-fix " direction="row" justify="between">
                         <Flexbox className={`about-flexbox`}>
                             <a className={`a-first `} target="_blank" href="https://github.com/grincon0">
-
-
                                 <SVGIcon
                                     classes={`about-icon ${this.state.transition ? "about-remove" : "about-show"}`}
                                     src="github"

@@ -233,7 +233,7 @@ class Scene3D extends Component {
                     <div className="sub-text">
                         <p id="text1" className="subtitle">Home</p>
                         <p id="text2" className="subtitle">About</p>
-                        <p id="text3" className="subtitle">Labs</p>
+                        <p id="text3" className="subtitle">Projects</p>
                         <p id="text4" className="subtitle">Contact</p>
                     </div>
                     <div className="sub-intro">
