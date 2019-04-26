@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import FlexContainer from "../components/FlexContainer/index";
 import Flexbox from "../components/Flexbox/index";
 import GlobalStates from "../assets/js/global";
 import LaxHelper from "../helpers/LaxHelper";
-import { Square } from "../components/Lax/index";
+import { Square, Text } from "../components/Lax/index";
 import { SpanGenerator } from "../components/Customs/index";
 import SVGIcon from "../components/SVGIcon/index";
 import { PhotoSlider } from "../components/PhotoSlider/index";
 import "./styles/Advision.css";
+import "./styles/tester.css";
 
 import { Route, Redirect } from "react-router-dom";
 
@@ -64,19 +64,40 @@ export default class PixelSmash extends Component {
 
         const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
 
-        if (this.state.showAbout === false && scrollTop > 400) {
-
-            this.setState({ showAbout: true });
-
+        if(this.state.showAbout === false){
+            if(400 < scrollTop && scrollTop < 849){
+                this.setState({ showAbout: true });
+            }
+    
+        }else if(this.state.showAbout === true){
+            if( 308 > scrollTop || (1200 < scrollTop && scrollTop < 1600)){
+                this.setState({ showAbout : false});
+            }
         }
 
-        if (this.state.showDetail === false && scrollTop > 800) {
-            this.setState({ showDetail: true });
+        if (this.state.showDetail === false){
+            if(1500 < scrollTop && scrollTop < 2400){
+                this.setState({ showDetail: true });
+            }
+        }else if(this.state.showDetail === true){
+            if(0 < scrollTop && scrollTop < 1000){
+                this.setState({ showDetail : false});
+            }
         }
-        if (this.state.showStack === false && scrollTop > 1100) {
+    
+        if(this.state.showStack === false){
+            if(scrollTop > 1900){
+                this.setState({ showStack: true });
+            }
+        }else if(this.state.showStack === true){
+            if(scrollTop < 1900){
+                this.setState({ showStack: false });
+            }
+        }
+        /* if (this.state.showStack === false && scrollTop > 1100) {
 
             this.setState({ showStack: true });
-        }
+        } */
     }
     boundScrollTop = () => {
         this.handleClassesScrollTop();
@@ -139,10 +160,10 @@ export default class PixelSmash extends Component {
                 </Flexbox>
                 <Flexbox classes={`ad-about ${this.state.showAbout ? "show-this" : ""} `}>
                     <div className={`about-header`}>
-                        <h1>About</h1><span>.</span>
+                        <h1>About</h1>
                     </div>
                     <div className={`about-wrap`}>
-                        <p>{this.state.data.description}</p>
+                        <p className={`lax`} data-lax-preset="blurInOut fadeInOut">{this.state.data.description}</p>
                     </div>
                     <div className={`about-links`}>
                         <a className={`github-link`} href={this.state.data.github} target="_blank"><SVGIcon classes="octo-dark" src="octocat" height={75} width={75} /></a>
@@ -151,7 +172,7 @@ export default class PixelSmash extends Component {
                     <Square 
                     classes={`big-box-1`}
                     translateX="0 vw, 485 vw, 735 (window.innerWidth*0.5)"
-                    opacity="0 1"
+                    opacity="0 0, 485 0, 780 1"
                     />
                     <Square
                         classes={`box-1`}

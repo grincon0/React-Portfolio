@@ -115,11 +115,11 @@
     color: #fff;
     padding-bottom: 30px;
 }
-.ad-about .about-header{
+/* .ad-about .about-header{
     margin-top:30px;
     transform: translateY(8px);
     opacity: 0;
-}
+} */
 .ad-about .about-header h1{
     display:inline;
     font-family: LeagueSpartan, sans-serif;
@@ -453,7 +453,8 @@ i.portal{
 }
 /* scroll transitions*/
 
-.ad-about.show-this .about-header{
+/* old version */
+/* .ad-about.show-this .about-header{
     transition: all 0.5s cubic-bezier(.52,.01,.16,1);
     transition-delay: 0.2s;
     transform: translateY(0);
@@ -464,7 +465,31 @@ i.portal{
 .ad-role .about-header{
     opacity: 0;
     transform: translateY(8px);
+} */
+
+
+/* new version */
+
+.ad-about.show-this .about-header{
+    transition: all 0.6s cubic-bezier(.52,.01,.16,1);
+    transition-delay: 0.2s;
+    transform: translateX(0);
+    opacity: 1;
+    
 }
+
+.ad-about .about-header{
+    transition: all 0.6s cubic-bezier(.52,.01,.16,1);
+    opacity: 0;
+    transform: translateX(50vw);
+    
+}
+
+.ad-role .about-header{
+    opacity: 0;
+    transform: translateY(8px);
+}
+
 .ad-about.show-this .about-wrap{
     transition: all 0.5s cubic-bezier(.52,.01,.16,1);
     transition-delay: 0.3s;
@@ -481,13 +506,13 @@ i.portal{
 
 
 
-.ad-role.show-this .about-header{
+/* .ad-role.show-this .about-header{
     transition: all 0.5s cubic-bezier(.52,.01,.16,1);
     transition-delay: 0.2s;
     transform: translateY(0);
     opacity: 1;
     
-}
+} */
 
 .ad-role.show-this .about-wrap{
     transition: all 0.5s cubic-bezier(.52,.01,.16,1);
@@ -627,6 +652,14 @@ i.portal{
 
 .ad-about{
     overflow: hidden;
+}
+
+.new-header{
+    position: absolute;
+    font-family: LeagueSpartan, sans-serif;
+    font-size: 30px;
+    opacity: 1;
+    z-index: 20;
 }
 
 
