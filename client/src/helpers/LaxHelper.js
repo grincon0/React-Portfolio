@@ -21,9 +21,13 @@ export default class LaxHelper{
         }, false);
 
         window.addEventListener("resize", function() {
-            lax.updateElements()
+            lax.updateElements();
         });
         
+    }
+    updateLaxElements = () => {
+        lax.updateElements();
+
     }
 
     handleLaxScrollUpdate = () => {

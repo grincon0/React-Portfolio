@@ -10,7 +10,7 @@ import "./styles/Advision.css";
 import "./styles/tester.css";
 
 import { Route, Redirect } from "react-router-dom";
-
+const laxHelper = new LaxHelper();
 
 
 export default class PixelSmash extends Component {
@@ -48,12 +48,16 @@ export default class PixelSmash extends Component {
     componentDidMount = () => {
         this.setScrollEventListener();
 
-        const laxHelper = new LaxHelper();
+        
         laxHelper.init();
         laxHelper.setUpScrollEvent();
+        laxHelper.updateLaxElements();
 
 
 
+    }
+    componentDidUpdate = () => {
+        laxHelper.updateLaxElements();
     }
     componentWillUnmount = () => {
         this.removeScrollEventListener();
@@ -212,7 +216,7 @@ export default class PixelSmash extends Component {
                 </Flexbox>
                 <Flexbox classes={`ad-role ${this.state.showDetail ? "show-this" : ""}`}>
                     <div className={`about-header`}>
-                        <h1>Details</h1><span>.</span>
+                        <h1>Details</h1>
                     </div>
                     <PhotoSlider
                         project={this.state.data.name}

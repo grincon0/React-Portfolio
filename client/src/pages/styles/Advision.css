@@ -115,11 +115,11 @@
     color: #fff;
     padding-bottom: 30px;
 }
-/* .ad-about .about-header{
+ .ad-about .about-header{
     margin-top:30px;
     transform: translateY(8px);
     opacity: 0;
-} */
+} 
 .ad-about .about-header h1{
     display:inline;
     font-family: LeagueSpartan, sans-serif;
@@ -251,6 +251,7 @@
 .ad-role .about-header{
     margin-top:30px;
     padding-bottom: 40px;
+    transition: all 0.6s ease;
 }
 .ad-role .about-header h1{
     display:inline;
@@ -448,6 +449,7 @@ i.portal{
 
 .ad-about .about-links{
     opacity: 0;
+    transition: all 0.6s ease;
     transform: translateY(8px);
     
 }
@@ -486,7 +488,7 @@ i.portal{
 }
 
 .ad-role .about-header{
-    opacity: 0;
+    opacity: 1;
     transform: translateY(8px);
 }
 
@@ -506,13 +508,14 @@ i.portal{
 
 
 
-/* .ad-role.show-this .about-header{
+.ad-role.show-this .about-header{
     transition: all 0.5s cubic-bezier(.52,.01,.16,1);
     transition-delay: 0.2s;
     transform: translateY(0);
     opacity: 1;
+    color: #f3f3f3;
     
-} */
+} 
 
 .ad-role.show-this .about-wrap{
     transition: all 0.5s cubic-bezier(.52,.01,.16,1);
