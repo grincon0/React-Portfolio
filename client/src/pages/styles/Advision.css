@@ -665,7 +665,59 @@ i.portal{
     z-index: 20;
 }
 
+.circle{
+    position: absolute;
+    border-radius: 95px;
+}
 
+.circle-width-1{
+    width: 25px;
+    height:25px;
+}
+
+.circle-width-2{
+    width: 200px;
+    height:200px;
+}
+
+.circle-width-3{
+    width: 70px;
+    height:70px;
+}
+
+.circle-color-1{
+    background-color: #e01c77;
+}
+
+.circle-color-2{
+    background-color: #1cc9e0;
+ 
+}
+
+
+
+.circle-color-3{
+    background-color: #1ce07e;
+    
+}
+
+.circle-color-4{
+  
+    background-color: #e09b1c;
+}
+
+.circle-color-5{
+    background-color: #e01cd0;
+}
+
+.circle-color-5{
+    background-color: #1cc3e0;
+
+}
+
+.circle-offset-1 {
+
+}
 
 
 

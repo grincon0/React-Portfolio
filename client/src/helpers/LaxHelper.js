@@ -1,11 +1,6 @@
 import lax from "lax.js";
 
 export default class LaxHelper{
-    constructor(){
-       
-  
-    }
-
     init = () => {
         lax.setup();
        

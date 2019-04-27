@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Flexbox from "../components/Flexbox/index";
 import GlobalStates from "../assets/js/global";
 import LaxHelper from "../helpers/LaxHelper";
-import { Square, Text } from "../components/Lax/index";
+import { Circle, Square, Text } from "../components/Lax/index";
 import { SpanGenerator } from "../components/Customs/index";
 import SVGIcon from "../components/SVGIcon/index";
 import { PhotoSlider } from "../components/PhotoSlider/index";
@@ -48,7 +48,7 @@ export default class PixelSmash extends Component {
     componentDidMount = () => {
         this.setScrollEventListener();
 
-        
+
         laxHelper.init();
         laxHelper.setUpScrollEvent();
         laxHelper.updateLaxElements();
@@ -68,33 +68,33 @@ export default class PixelSmash extends Component {
 
         const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
 
-        if(this.state.showAbout === false){
-            if(400 < scrollTop && scrollTop < 849){
+        if (this.state.showAbout === false) {
+            if (400 < scrollTop && scrollTop < 849) {
                 this.setState({ showAbout: true });
             }
-    
-        }else if(this.state.showAbout === true){
-            if( 308 > scrollTop || (1200 < scrollTop && scrollTop < 1600)){
-                this.setState({ showAbout : false});
+
+        } else if (this.state.showAbout === true) {
+            if (308 > scrollTop || (1200 < scrollTop && scrollTop < 1600)) {
+                this.setState({ showAbout: false });
             }
         }
 
-        if (this.state.showDetail === false){
-            if(1500 < scrollTop && scrollTop < 2400){
+        if (this.state.showDetail === false) {
+            if (1500 < scrollTop && scrollTop < 2400) {
                 this.setState({ showDetail: true });
             }
-        }else if(this.state.showDetail === true){
-            if(0 < scrollTop && scrollTop < 1000){
-                this.setState({ showDetail : false});
+        } else if (this.state.showDetail === true) {
+            if (0 < scrollTop && scrollTop < 1000) {
+                this.setState({ showDetail: false });
             }
         }
-    
-        if(this.state.showStack === false){
-            if(scrollTop > 1900){
+
+        if (this.state.showStack === false) {
+            if (scrollTop > 1900) {
                 this.setState({ showStack: true });
             }
-        }else if(this.state.showStack === true){
-            if(scrollTop < 1900){
+        } else if (this.state.showStack === true) {
+            if (scrollTop < 1900) {
                 this.setState({ showStack: false });
             }
         }
@@ -173,17 +173,51 @@ export default class PixelSmash extends Component {
                         <a className={`github-link`} href={this.state.data.github} target="_blank"><SVGIcon classes="octo-dark" src="octocat" height={75} width={75} /></a>
                         {this.state.data.link ? <a className={`web-link`} href={this.state.data.link} target="_blank"><SVGIcon classes="web-dark" src="internet" height={75} width={75} /></a> : ""}
                     </div>
-                    <Square 
+                    {/*    <Square 
                     classes={`big-box-1`}
-                    translateX="0 vw, 485 vw, 735 (window.innerWidth*0.5)"
+                    translateX="0 vw, 485 vw, 735 (window.innerWidth*0.6)"
                     opacity="0 0, 485 0, 780 1"
+                    /> */}
+
+                    {/* left */}
+                    <Square
+                        classes={`box-3`}
+                        translateX="0 vw, 485 vw, 735 (window.innerWidth*0.73)"
+                        opacity="0 0, 485 0, 780 1"
+                        rotate={true}
                     />
+                    <Square
+                        classes={`box-2`}
+                        translateX="0 vw, 485 vw, 735 (window.innerWidth*0.73)"
+                        opacity="0 0, 485 0, 780 1"
+                        rotate={true}
+                    />
+                    <Square
+                        classes={`box-1`}
+                        translateX="0 vw, 485 vw, 735 (window.innerWidth*0.73)"
+                        opacity="0 0, 485 0, 780 1"
+                        rotate={true}
+                    />
+                    <Square
+                        classes={`box-4`}
+                        translateX="0 vw, 485 vw, 735 (window.innerWidth*0.73)"
+                        opacity="0 0, 485 0, 780 1"
+                        rotate={true}
+                    />
+                    <Square
+                        classes={`box-5`}
+                        translateX="0 vw, 485 vw, 735 (window.innerWidth*0.73)"
+                        opacity="0 0, 485 0, 780 1"
+                        rotate={true}
+                    />
+
+
                     <Square
                         classes={`box-1`}
                         translateX="0 0, 485 0, 735 (window.innerWidth*0.17)"
                         opacity="0 0, 485 0, 780 1"
                         rotate={true}
-                        />
+                    />
                     <Square
                         classes={`box-4`}
                         translateX="0 0, 485 0, 735 (window.innerWidth*0.17)"
@@ -197,24 +231,25 @@ export default class PixelSmash extends Component {
                         opacity="0 0, 485 0, 780 1"
                         options="| speed=0.93"
                         rotate={true}
-                         />
+                    />
                     <Square
                         classes={`box-3`}
                         translateX="0 0, 485 0, 735 (window.innerWidth*0.17)"
                         opacity="0 0, 485 0, 780 1"
                         rotate={true}
-                        />
+                    />
 
                     <Square
                         classes={`box-5`}
                         translateX="0 0, 485 0, 735 (window.innerWidth*0.17)"
                         opacity="0 0, 485 0, 780 1"
                         rotate={true}
-                        
-                        />
+
+                    />
 
                 </Flexbox>
                 <Flexbox classes={`ad-role ${this.state.showDetail ? "show-this" : ""}`}>
+
                     <div className={`about-header`}>
                         <h1>Details</h1>
                     </div>
@@ -226,6 +261,11 @@ export default class PixelSmash extends Component {
                         <p>{this.state.data.role.paragraph.one}</p>
                         <p>{this.state.data.role.paragraph.two}</p>
                     </div>
+                    <Circle 
+                    classes={`circle-width-2 circle-color-2`}
+                    opacity="0 0, 1300 0, 1550 1"
+
+                    />
                 </Flexbox>
                 <Flexbox classes={`ad-stack ${this.state.showStack ? "show-this" : ""}`}>
                     <div className={`stack-header`}>
