@@ -154,7 +154,7 @@
     text-align: center;
 }
 
-.ad-about .about-wrap p{
+.ad-role .about-wrap p{
     margin-right: 30px;
 }
 
@@ -549,7 +549,7 @@ i.portal{
 
 .ad-role.show-this .about-wrap{
     transition: all 0.5s cubic-bezier(.52,.01,.16,1);
-    transition-delay: 0.3s;
+    transition-delay: 0.6s;
     transform: translateY(0);
     opacity: 1;
 
