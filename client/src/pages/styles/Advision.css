@@ -523,6 +523,10 @@ i.portal{
     transform: translateX(0);
 }
 
+.ad-about .about-wrap p{
+    margin-right: 30px;
+}
+
 .ad-about.show-this .about-wrap{
     transition: all 0.5s cubic-bezier(.52,.01,.16,1);
     transition-delay: 0.3s;
