@@ -80,7 +80,7 @@ export default class PixelSmash extends Component {
         }
 
         if (this.state.showDetail === false) {
-            if (1500 < scrollTop && scrollTop < 2400) {
+            if (1230 < scrollTop && scrollTop < 2400) {
                 this.setState({ showDetail: true });
             }
         } else if (this.state.showDetail === true) {
@@ -180,6 +180,7 @@ export default class PixelSmash extends Component {
                     /> */}
 
                     {/* left */}
+                  
                     <Square
                         classes={`box-3`}
                         translateX="0 vw, 485 vw, 735 (window.innerWidth*0.73)"
@@ -263,7 +264,8 @@ export default class PixelSmash extends Component {
                     </div>
                     <Circle 
                     classes={`circle-width-2 circle-color-2`}
-                    opacity="0 0, 1300 0, 1550 1"
+                    translateX="0 0, 1500 500, 1700 1100"
+                    opacity="0 0, 1300 0, 1500 1, 2200 0"
 
                     />
                 </Flexbox>

@@ -484,12 +484,21 @@ i.portal{
     transition: all 0.6s cubic-bezier(.52,.01,.16,1);
     opacity: 0;
     transform: translateX(50vw);
-    
+}
+
+.ad-role{
+    overflow: hidden;
 }
 
 .ad-role .about-header{
+    transition: all 0.6s cubic-bezier(.52,.01,.16,1);
+    opacity: 0;
+    transform: translateX(50vw);
+}
+
+.ad-role.show-this .about-header{
     opacity: 1;
-    transform: translateY(8px);
+    transform: translateX(0);
 }
 
 .ad-about.show-this .about-wrap{
@@ -713,6 +722,27 @@ i.portal{
 .circle-color-5{
     background-color: #1cc3e0;
 
+}
+
+.rect{
+    position: absolute;
+    height:20px;
+    width: 100px;
+    opacity: 0;
+}
+
+.rect-right{
+transform: translateX(90vw);
+}
+
+.rect-left{
+transform: translateX(-90vw);
+}
+
+.ad-about.show-this rect{
+    transition: all 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .circle-offset-1 {
