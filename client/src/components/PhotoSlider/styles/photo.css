@@ -24,11 +24,11 @@
 }
 
 .photo-slider-parent:before{
-    background-color: #f1a90f;
+    background-color: #ff86d1;
 }
 
 .photo-slider-parent:after{
-    background-color: rgb(33, 19, 158);
+    background-color: rgb(12, 233, 130);
     animation-delay: 0.5s;
 }
 
@@ -80,9 +80,15 @@
 }
 
 .photo-one, .photo-two, .photo-three{
-    background-size: 100% 70vh;
+    background-size: cover;
     
 }
+
+.photo-slider{
+    height:100%;
+}
+
+
 .photo-one{
     display: block;
     content: "";
@@ -104,7 +110,7 @@
     
     background-repeat: no-repeat;
     width: 30%;
-    height: 80vh;
+    height: 100%;
 }
 
 .photo-three{
@@ -114,7 +120,7 @@
     float:left;
     background-repeat: no-repeat;
     width: 30%;
-    height: 80vh;
+    height: 100%;
     z-index: 15;
 }
 

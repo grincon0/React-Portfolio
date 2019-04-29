@@ -245,11 +245,13 @@ export default class PixelSmash extends Component {
 
                 </Flexbox>
                 <Flexbox classes={`ad-role ${this.state.showDetail ? "show-this" : ""}`}>
+                        
+                     
 
                     <div className={`about-header`}>
                         <h1>Details</h1>
                     </div>
-                    <Flexbox id="Slider-Box">
+                    <Flexbox classes={`slider-box`}id="Slider-Box">
 
                         <div className={`about-wrap`}>
                             <p>{this.state.data.role.paragraph.one}</p>
@@ -262,13 +264,14 @@ export default class PixelSmash extends Component {
                         />
 
                     </Flexbox>
-{/* 
+                    {/* 
                     <Circle
                         classes={`circle-width-2 circle-color-2`}
                         translateX="0 0, 1500 500, 1700 1100"
                         opacity="0 0, 1300 0, 1500 1, 2200 0"
 
                     /> */}
+                    
                 </Flexbox>
                 <Flexbox classes={`ad-stack ${this.state.showStack ? "show-this" : ""}`}>
                     <div className={`stack-header`}>

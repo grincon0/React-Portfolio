@@ -510,6 +510,7 @@ i.portal{
 .ad-role{
     overflow: hidden;
     padding-bottom: 30px;
+    
 }
 
 .ad-role .about-header{
@@ -565,8 +566,9 @@ i.portal{
 }
 
 
-#Slider-box{
+.slider-box{
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
@@ -785,6 +787,11 @@ transform: translateX(-90vw);
 
 .circle-offset-1 {
 
+}
+
+.bg-pixel{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
 }
 
 
