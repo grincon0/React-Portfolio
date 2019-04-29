@@ -135,8 +135,9 @@
     transform: translateY(8px);
     opacity: 0;
     width: 580px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    
+    
+    
 }
 
 .about-wrap p{
@@ -145,6 +146,26 @@
     margin-bottom:30px;
     font-size:18px;
     line-height:1.5;
+    margin-left: 30px;
+    
+}
+
+.ad-about .about-wrap{
+    text-align: center;
+}
+
+.ad-about .about-wrap p{
+    margin-right: 30px;
+}
+
+.ad-role .flex-box .about-wrap{
+  
+    margin: auto;
+}
+
+.ad-role .flex-box .about-wrap p{
+    text-align: center;
+  
 }
 
 
@@ -531,8 +552,20 @@ i.portal{
     transition-delay: 0.3s;
     transform: translateY(0);
     opacity: 1;
+
 }
 
+.ad-role.show-this #Slider-box {
+
+}
+
+
+#Slider-box{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
 .ad-stack .stack-header{
     transition: all 0.5s cubic-bezier(.52,.01,.16,1) 0.6s;
     opacity: 0;

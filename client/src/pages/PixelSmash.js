@@ -173,14 +173,9 @@ export default class PixelSmash extends Component {
                         <a className={`github-link`} href={this.state.data.github} target="_blank"><SVGIcon classes="octo-dark" src="octocat" height={75} width={75} /></a>
                         {this.state.data.link ? <a className={`web-link`} href={this.state.data.link} target="_blank"><SVGIcon classes="web-dark" src="internet" height={75} width={75} /></a> : ""}
                     </div>
-                    {/*    <Square 
-                    classes={`big-box-1`}
-                    translateX="0 vw, 485 vw, 735 (window.innerWidth*0.6)"
-                    opacity="0 0, 485 0, 780 1"
-                    /> */}
 
                     {/* left */}
-                  
+
                     <Square
                         classes={`box-3`}
                         translateX="0 vw, 485 vw, 735 (window.innerWidth*0.73)"
@@ -254,20 +249,26 @@ export default class PixelSmash extends Component {
                     <div className={`about-header`}>
                         <h1>Details</h1>
                     </div>
-                    <PhotoSlider
-                        project={this.state.data.name}
-                        show={this.state.showDetail}
-                    />
-                    <div className={`about-wrap`}>
-                        <p>{this.state.data.role.paragraph.one}</p>
-                        <p>{this.state.data.role.paragraph.two}</p>
-                    </div>
-                    <Circle 
-                    classes={`circle-width-2 circle-color-2`}
-                    translateX="0 0, 1500 500, 1700 1100"
-                    opacity="0 0, 1300 0, 1500 1, 2200 0"
+                    <Flexbox id="Slider-Box">
 
-                    />
+                        <div className={`about-wrap`}>
+                            <p>{this.state.data.role.paragraph.one}</p>
+                            <p>{this.state.data.role.paragraph.two}</p>
+                        </div>
+
+                        <PhotoSlider
+                            project={this.state.data.name}
+                            show={this.state.showDetail}
+                        />
+
+                    </Flexbox>
+{/* 
+                    <Circle
+                        classes={`circle-width-2 circle-color-2`}
+                        translateX="0 0, 1500 500, 1700 1100"
+                        opacity="0 0, 1300 0, 1500 1, 2200 0"
+
+                    /> */}
                 </Flexbox>
                 <Flexbox classes={`ad-stack ${this.state.showStack ? "show-this" : ""}`}>
                     <div className={`stack-header`}>
