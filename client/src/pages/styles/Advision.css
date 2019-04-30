@@ -11,7 +11,7 @@
 
 .h2-block{
     position: relative;
-    color: rgb(134, 134, 134);
+    color: #f3f3f3;
     margin-top:25px;
     margin-right: 25px;
 }
@@ -60,7 +60,7 @@
 
 .ad-title-box{
     position: relative;
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    background: transparent;
     height: calc(100vh - 150px);
     align-items: center;
     justify-content: center;
@@ -109,17 +109,17 @@
     align-items: center;
     justify-content: center;
     transform: translateY(100px);
-    height: calc(75vh);
+    height: calc(100vh);
     width: 100%;
-    background-color: rgb(94, 94, 94);
+    background: transparent;
     color: #fff;
     padding-bottom: 30px;
 }
-.ad-about .about-header{
+ .ad-about .about-header{
     margin-top:30px;
     transform: translateY(8px);
     opacity: 0;
-}
+} 
 .ad-about .about-header h1{
     display:inline;
     font-family: LeagueSpartan, sans-serif;
@@ -135,8 +135,9 @@
     transform: translateY(8px);
     opacity: 0;
     width: 580px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    
+    
+    
 }
 
 .about-wrap p{
@@ -145,15 +146,36 @@
     margin-bottom:30px;
     font-size:18px;
     line-height:1.5;
+    margin-left: 30px;
+    
+}
+
+.ad-about .about-wrap{
+    text-align: center;
+}
+
+.ad-role .about-wrap p{
+    margin-right: 30px;
+}
+
+.ad-role .flex-box .about-wrap{
+  
+    margin: auto;
+}
+
+.ad-role .flex-box .about-wrap p{
+    text-align: center;
+  
 }
 
 
 .ad-stack{
     height: 60vh;
-    background-color: #E4EBDD;
+    background: transparent;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    color: #f3f3f3;
 }
 
 .github-link{
@@ -221,7 +243,7 @@
 .ad-role{
     display: flex;
     height: 100%;
-    background-color: rgb(213, 214, 219);
+    background: transparent;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -232,6 +254,7 @@
 
 .ad-role p{
     font-size: 18px;
+    color:#f3f3f3;
 }
 
 
@@ -249,6 +272,7 @@
 .ad-role .about-header{
     margin-top:30px;
     padding-bottom: 40px;
+    transition: all 0.6s ease;
 }
 .ad-role .about-header h1{
     display:inline;
@@ -446,12 +470,14 @@ i.portal{
 
 .ad-about .about-links{
     opacity: 0;
+    transition: all 0.6s ease;
     transform: translateY(8px);
     
 }
 /* scroll transitions*/
 
-.ad-about.show-this .about-header{
+/* old version */
+/* .ad-about.show-this .about-header{
     transition: all 0.5s cubic-bezier(.52,.01,.16,1);
     transition-delay: 0.2s;
     transform: translateY(0);
@@ -462,7 +488,46 @@ i.portal{
 .ad-role .about-header{
     opacity: 0;
     transform: translateY(8px);
+} */
+
+
+/* new version */
+
+.ad-about.show-this .about-header{
+    transition: all 0.6s cubic-bezier(.52,.01,.16,1);
+    transition-delay: 0.2s;
+    transform: translateX(0);
+    opacity: 1;
+    
 }
+
+.ad-about .about-header{
+    transition: all 0.6s cubic-bezier(.52,.01,.16,1);
+    opacity: 0;
+    transform: translateX(50vw);
+}
+
+.ad-role, .ad-about{
+    overflow: hidden;
+    padding-bottom: 30px;
+    
+}
+
+.ad-role .about-header{
+    transition: all 0.6s cubic-bezier(.52,.01,.16,1);
+    opacity: 0;
+    transform: translateX(50vw);
+}
+
+.ad-role.show-this .about-header{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.ad-about .about-wrap p{
+    margin-right: 30px;
+}
+
 .ad-about.show-this .about-wrap{
     transition: all 0.5s cubic-bezier(.52,.01,.16,1);
     transition-delay: 0.3s;
@@ -484,16 +549,30 @@ i.portal{
     transition-delay: 0.2s;
     transform: translateY(0);
     opacity: 1;
+    color: #f3f3f3;
     
-}
+} 
 
 .ad-role.show-this .about-wrap{
     transition: all 0.5s cubic-bezier(.52,.01,.16,1);
-    transition-delay: 0.3s;
+    transition-delay: 0.6s;
     transform: translateY(0);
     opacity: 1;
+
 }
 
+.ad-role.show-this #Slider-box {
+
+}
+
+
+.slider-box{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
 .ad-stack .stack-header{
     transition: all 0.5s cubic-bezier(.52,.01,.16,1) 0.6s;
     opacity: 0;
@@ -542,6 +621,226 @@ i.portal{
 }
 
 
+.box-container{
+    position: relative;
+}
+
+.box-1, .box-2, .box-3, .box-4, .box-5{
+    z-index: -1;
+}
+
+.box-1{
+    position: absolute;
+    width: 30pt;
+    height: 30pt;
+    background-color: #e01c77;
+    margin-top: 90px;
+    left:0;
+    top:360px;
+   
+
+}
+
+.box-2{
+    position: absolute;
+    width: 20pt;
+    height: 20pt;
+    background-color: #1cc9e0;
+    margin-top:45px;
+    left:-50px;
+ 
+}
+
+
+
+.box-3{
+    position: absolute;
+    width: 40pt;
+    height: 40pt;
+    background-color: #1ce07e;
+    margin-top: 30px;
+    left:0;
+    
+}
+
+.box-4{
+    position: absolute;
+    width: 55pt;
+    height: 55pt;
+    background-color: #e09b1c;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    left:0;
+}
+
+.box-5{
+    position: absolute;
+    width: 25pt;
+    height: 25pt;
+    background-color: #e01cd0;
+    margin-top: 80px;
+    margin-left: 20px;
+    left:0;
+}
+
+.box-6{
+    position: absolute;
+    width: 20pt;
+    height: 20pt;
+    background-color: #1cc3e0;
+  
+    margin-top: 20px;
+    left:0;
+}
+
+.big-box-1{
+    position: absolute;
+    background: #1ce07491;
+    width: 600px;
+    height:300px;
+
+    z-index: -2;
+}
+
+/* .ad-about{
+    overflow: hidden;
+} */
+
+.new-header{
+    position: absolute;
+    font-family: LeagueSpartan, sans-serif;
+    font-size: 30px;
+    opacity: 1;
+    z-index: 20;
+}
+
+.circle{
+    position: absolute;
+    border-radius: 95px;
+}
+
+.circle-width-1{
+    width: 25px;
+    height:25px;
+}
+
+.circle-width-2{
+    width: 200px;
+    height:200px;
+}
+
+.circle-width-3{
+    width: 70px;
+    height:70px;
+}
+
+.circle-color-1{
+    background-color: #e01c77;
+}
+
+.circle-color-2{
+    background-color: #1cc9e0;
+ 
+}
+
+
+
+.circle-color-3{
+    background-color: #1ce07e;
+    
+}
+
+.circle-color-4{
+  
+    background-color: #e09b1c;
+}
+
+.circle-color-5{
+    background-color: #e01cd0;
+}
+
+.circle-color-5{
+    background-color: #1cc3e0;
+
+}
+
+.rect{
+    position: absolute;
+    height:20px;
+    width: 100px;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+.rect-right{
+    bottom:0;
+    transform: translateX(50vw);
+
+}
+
+.rect-left{
+    top:0;
+    transform: translateX(-50vw);
+}
+
+.ad-about.show-this figure{
+    
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.circle-offset-1 {
+
+}
+
+#PIXEL-SMASH{
+    transition: background-image 0.5s ease;
+}
+.bg-pixel{
+    background: rgb(2,0,36);
+    background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+.bg-test-1{
+    background: rgb(2,0,36);
+    background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+.bg-test-2{
+    background: rgb(2,0,36);
+    background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(176,167,221,1) 0%, rgba(247,47,176,1) 100%);
+}
+
+.bg-test-3{
+    background-image:
+    linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
+
+.bg-test-4{
+    background-image: linear-gradient(to right top, #2d0537, #40005c, #4f0087, #5400b6, #4912eb);
+}
+
+.bg-test-5{
+    background-image: linear-gradient( 135deg, #4da86e 10%, #0E5CAD 100%);
+}
+
+.bg-test-6{
+    background-image: linear-gradient( 135deg, #F05F57 10%, #360940 100%);
+}
+.bg-test-7{
+    background-image: linear-gradient( 135deg, rgb(92, 202, 92) 10%, rgb(25, 110, 1) 100%);
+}
+
+.bg-test-8{
+    background-image: linear-gradient( 135deg, rgb(179, 148, 36) 10%, rgb(204, 68, 68) 100%);
+}
+
+.bg-test-9{
+    background-image: linear-gradient( 135deg, rgb(46, 108, 179) 10%, rgb(0, 215, 235) 100%);
+}
+
 
 
 
@@ -555,7 +854,7 @@ i.portal{
     }
     100%{
         opacity: 1;
-        transform: translateX(0)
+        transform: translateX(0);
     }
 }
 
@@ -602,7 +901,12 @@ i.portal{
 }
 
 @media screen and (max-width: 1570px){
-
+    .big-box-1{
+        width: 700px;
+        height:400px;
+        left:-100px;
+        top:200px;
+    }
 }
 
 @media screen and (max-width: 550px){
@@ -667,7 +971,7 @@ i.portal{
     }
 
     .ad-role{
-        height: calc(90vh + 75px);
+        height: calc(90vh + 155px);
         
       
     }

@@ -3,8 +3,6 @@
     justify-content: center;
 }
 
-
-
 #Top-Text-Container:before {
     content: "";
     position: absolute;
@@ -18,15 +16,6 @@
     background-color: rgba(17, 17, 77, 0.226);
   /*   animation: reveal 1.8s ease forwards; */
 }
-
-/* #Headline-1 span, #Headline-2 span{
-    font-family: LeagueSpartan, sans-serif;
-    font-size: 28px;
-    color:white;
-    margin-left: 2px;
-    margin-right: 2px;
-   
-} */
 
 #Headline-1 span:nth-child(n), #Headline-2 span:nth-child(n){
     display: inline-block;

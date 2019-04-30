@@ -17,6 +17,7 @@ import Bamazon from "./pages/Bamazon";
 import ReactBooks from "./pages/ReactBooks";
 import Slider from "./components/Slider/index";
 import Parallax from "./components/Parallax/index";
+
 import {
   CSSTransition,
   TransitionGroup,
@@ -33,6 +34,8 @@ class App extends Component {
       instructorID: props.match.params.instructorID
     };
   }
+
+
 
   render() {
     return (
