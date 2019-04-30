@@ -1,5 +1,6 @@
 
 import Parallax from "parallax-js";
+import GlobalStates from '../components/Global/index';
 import TweenMax from "gsap";
 
 export default class ParallaxHelper {
@@ -24,9 +25,12 @@ export default class ParallaxHelper {
     boundWatch = (e) => {
         this.enableSet(e);
     }
+    setType = (type) => {
+        this.type = type;
+    }
     enableSet = (e) =>{
-        console.log(this.type);
-        if(this.type === "img"){
+      
+        if(GlobalStates.parallax.type === "img"){
             this.enableParallax(e,"parallax-container", ".parallax-img-1", -50);
             this.enableParallax(e,"parallax-container", ".parallax-img-2", -20);
             this.enableParallax(e,"parallax-container", ".parallax-img-3", -40);
@@ -37,7 +41,7 @@ export default class ParallaxHelper {
             this.enableParallax(e,"parallax-container", ".parallax-img-8", -20);
             this.enableParallax(e,"parallax-container", ".parallax-img-9", -35);
             this.enableParallax(e,"parallax-container", ".parallax-img-10", 33);
-        }else if(this.type ==="figure"){
+        }else if(GlobalStates.parallax.type === "figure"){
             this.enableParallax(e,"parallax-container", ".parallax-figure-1", -30);
             this.enableParallax(e,"parallax-container", ".parallax-figure-2", -30);
         }
@@ -45,6 +49,7 @@ export default class ParallaxHelper {
     }
     kill = () =>{
         document.removeEventListener('mousemove', this.boundWatch);
+        this.setType("img");
     }
 }
 

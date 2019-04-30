@@ -26,7 +26,7 @@
 }
  */
 
- .parallax-img-1{
+ /* .parallax-img-1{
    
     top: 550px;
     left:95vw;
@@ -83,7 +83,7 @@
   
     top:350px;
     left:60vw;
-}
+} */
 
 
 
@@ -96,6 +96,7 @@
     
     background-image: linear-gradient(-136deg,#f83600,#9d00ee);
     box-shadow: 0 0 62px 31px rgba(157,0,238,.38);
+    z-index: 80;
 }
 .parallax-figure-2{
     width: 74px;

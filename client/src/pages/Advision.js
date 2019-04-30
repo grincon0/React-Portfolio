@@ -1,7 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
 import FlexContainer from "../components/FlexContainer/index";
 import Flexbox from "../components/Flexbox/index";
-import GlobalStates from "../assets/js/global";
+import GlobalStates from "../components/Global/index";
 import LaxHelper from "../helpers/LaxHelper";
 import { Circle, Square, Text } from "../components/Lax/index";
 import { SpanGenerator } from "../components/Customs/index";

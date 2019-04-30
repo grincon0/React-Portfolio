@@ -5,6 +5,7 @@ import Circle from "../../assets/SVG/Parallax/Circle.svg";
 import Triangle from "../../assets/SVG/Parallax/Triangle.svg";
 import Square from "../../assets/SVG/Parallax/Square.svg";
 import X from "../../assets/SVG/Parallax/X.svg";
+import GlobalStates from "../Global/index";
 
 import Circle2 from "../../assets/SVG/circle.svg";
 import Triangle2 from "../../assets/SVG/triangle.svg";
@@ -14,7 +15,10 @@ import Rectangle from "../../assets/SVG/rectangle.svg";
 
 import "./style.css";
 
-let ParallaxEffect;
+
+
+    let ParallaxEffect;
+
 
 
 class Parallax extends Component {
@@ -31,11 +35,17 @@ class Parallax extends Component {
             width: 25,
             readyToDump: false,
             readyToKill: false,
+            ParallaxEffect: ""
 
         }
     }
     componentDidMount = () => {
+        console.log(GlobalStates.parallax);
+        
         if(!this.props.shapes){
+            this.setState({type:"img"});
+           
+
             if (!this.state.readyToDump) {
                 let imgArr = [];
                 for (let i = 0; i < this.state.amount; i++) {
@@ -55,7 +65,8 @@ class Parallax extends Component {
             }
         }else{
             console.log("shapes");
-            this.setState({type: "figure"});
+            this.setState({type:"figure"});
+            
 
             if (!this.state.readyToDump) {
                 let figureArr = [];
@@ -63,9 +74,8 @@ class Parallax extends Component {
                     figureArr.push(this.createElement(i += 1));
                 }
                 this.setState({ createElements: figureArr, readyToDump: true });
-                /* ParallaxHelper.watch(); */
-    
                 this.startParallax();
+                
     
                 setTimeout(() => {
                     let newState = { ...this.state };
@@ -77,26 +87,49 @@ class Parallax extends Component {
         }
         
     }
-    startParallax =  async () => {
-        await this.instantiateParallax();
-        this.watchParallax();
+    componentDidUpdate = () => {
+     
+       
+    }
+    changeGlobalState = (typeElement) => {
+        console.log(typeElement);
+        if( (this.props.shapes) || (GlobalStates.parallax.type !== typeElement)){
+            GlobalStates.parallax.type = typeElement;
+        }else{
+            return;
+        }
+    }
+    startParallax = async () => {
+       await this.instantiateParallax();
+        //this.watchParallax();
 
     }
     instantiateParallax = () => {
-        let typeElem;
-        
+        let typeElem = "";
+
         if(this.props.shapes){
-            typeElem = "figure"
+            typeElem = "figure";
         }else{
-            typeElem = "img"
+            typeElem = "img";
         }
+        console.log(typeElem);
+
+        this.changeGlobalState(typeElem);
+
         
-        ParallaxEffect = new ParallaxHelper(typeElem);
+        
+        /* if(!GlobalStates.parallax.init){ */
+            ParallaxEffect = new ParallaxHelper();
+
+        this.watchParallax();
+        
+    
     }
     watchParallax = () => {
         ParallaxEffect.watch();
     }
     killParallax = () => {
+        
         ParallaxEffect.kill();
     }
 
@@ -152,6 +185,7 @@ class Parallax extends Component {
             </div>
         );
     }
+    
 }
 
 export default Parallax;
