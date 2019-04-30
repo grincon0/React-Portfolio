@@ -2,11 +2,15 @@ import React, { Component, useState, useEffect } from "react";
 import FlexContainer from "../components/FlexContainer/index";
 import Flexbox from "../components/Flexbox/index";
 import GlobalStates from "../assets/js/global";
+import LaxHelper from "../helpers/LaxHelper";
+import { Circle, Square, Text } from "../components/Lax/index";
 import { SpanGenerator } from "../components/Customs/index";
 import SVGIcon from "../components/SVGIcon/index"
 import "./styles/Advision.css";
+import "./styles/tester.css";
 
 import { Route, withRouter, Redirect } from 'react-router-dom';
+const laxHelper = new LaxHelper();
 
 
 
@@ -35,6 +39,11 @@ export default class Advision extends Component {
     }
     componentDidMount = () => {
         this.setScrollEventListener();
+
+        laxHelper.init();
+        laxHelper.setUpScrollEvent();
+        laxHelper.updateLaxElements();
+
     }
     componentWillUnmount = () => {
         this.removeScrollEventListener();
@@ -42,20 +51,38 @@ export default class Advision extends Component {
     handleClassesScrollTop = () => {
        /*  console.log(document.documentElement.scrollTop || document.body.scrollTop); */
 
-        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+       const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
 
-        if(this.state.showAbout === false && scrollTop > 400){
-            this.setState({showAbout: true});
-            
-        }
+       if (this.state.showAbout === false) {
+           if (400 < scrollTop && scrollTop < 849) {
+               this.setState({ showAbout: true });
+           }
 
-        if(this.state.showDetail === false && scrollTop > 800){
-            this.setState({showDetail: true});
-        }
-        if(this.state.showStack === false && scrollTop > 1100){
-         
-            this.setState({showStack: true});
-        }
+       } else if (this.state.showAbout === true) {
+           if (308 > scrollTop || (1200 < scrollTop && scrollTop < 1600)) {
+               this.setState({ showAbout: false });
+           }
+       }
+
+       if (this.state.showDetail === false) {
+           if (1230 < scrollTop && scrollTop < 2400) {
+               this.setState({ showDetail: true });
+           }
+       } else if (this.state.showDetail === true) {
+           if (0 < scrollTop && scrollTop < 1000) {
+               this.setState({ showDetail: false });
+           }
+       }
+
+       if (this.state.showStack === false) {
+           if (scrollTop > 1500) {
+               this.setState({ showStack: true });
+           }
+       } else if (this.state.showStack === true) {
+           if (scrollTop < 1500) {
+               this.setState({ showStack: false });
+           }
+       }
     }
     boundScrollTop = () => {
         this.handleClassesScrollTop();
@@ -84,7 +111,7 @@ export default class Advision extends Component {
         let techStack = this.state.data.stack.map((tech, i) => <li key={i}>{tech}</li>)
 
         return (
-            <section id="AD-VISION">
+            <section id="AD-VISION" className={`bg-test-5`}>
                 <Flexbox classes={`nav-section`}>
                 <Route render={({ history }) => (
                     <div onClick={(e) => this.handleTransition(e)} className={`h2-block`}>
@@ -120,6 +147,76 @@ export default class Advision extends Component {
                         {this.state.data.link ? <a className={`web-link`} href={this.state.data.link} target="_blank"><SVGIcon classes="web-dark" src="internet" height={75} width={75} /></a> : ""}
 
                     </div>
+
+                    
+                    <Square
+                        classes={`box-3`}
+                        translateX="0 vw, 485 vw, 735 (window.innerWidth*0.73)"
+                        opacity="0 0, 485 0, 780 1"
+                        rotate={true}
+                    />
+                    <Square
+                        classes={`box-2`}
+                        translateX="0 vw, 485 vw, 735 (window.innerWidth*0.73)"
+                        opacity="0 0, 485 0, 780 1"
+                        rotate={true}
+                    />
+                    <Square
+                        classes={`box-1`}
+                        translateX="0 vw, 485 vw, 735 (window.innerWidth*0.73)"
+                        opacity="0 0, 485 0, 780 1"
+                        rotate={true}
+                    />
+                    <Square
+                        classes={`box-4`}
+                        translateX="0 vw, 485 vw, 735 (window.innerWidth*0.73)"
+                        opacity="0 0, 485 0, 780 1"
+                        rotate={true}
+                    />
+                    <Square
+                        classes={`box-5`}
+                        translateX="0 vw, 485 vw, 735 (window.innerWidth*0.73)"
+                        opacity="0 0, 485 0, 780 1"
+                        rotate={true}
+                    />
+
+
+
+                    <Square
+                        classes={`box-3`}
+                        translateX="0 0, 485 0, 735 (window.innerWidth*0.17)"
+                        opacity="0 0, 485 0, 780 1"
+                        rotate={true}
+                    />
+                    <Square
+                        classes={`box-1`}
+                        translateX="0 0, 485 0, 735 (window.innerWidth*0.17)"
+                        opacity="0 0, 485 0, 780 1"
+                        rotate={true}
+                    />
+                    <Square
+                        classes={`box-4`}
+                        translateX="0 0, 485 0, 735 (window.innerWidth*0.17)"
+                        opacity="0 0, 485 0, 780 1"
+                        rotate={true}
+                    />
+
+                    <Square
+                        classes={`box-2`}
+                        translateX="0 0, 485 0, 735 (window.innerWidth*0.17)"
+                        opacity="0 0, 485 0, 780 1"
+                        options="| speed=0.93"
+                        rotate={true}
+                    />
+
+
+                    <Square
+                        classes={`box-5`}
+                        translateX="0 0, 485 0, 735 (window.innerWidth*0.17)"
+                        opacity="0 0, 485 0, 780 1"
+                        rotate={true}
+                    />
+
                 </Flexbox>
                 <Flexbox classes={`ad-role ${this.state.showDetail ? "show-this" : ""}`}>
                     <div className={`about-header`}>
