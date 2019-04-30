@@ -143,7 +143,7 @@ export default class PixelSmash extends Component {
         let techStack = this.state.data.stack.map((tech, i) => <li key={i}>{tech}</li>)
 
         return (
-            <section id={`PIXEL-SMASH`} className={`bg-test-3`}>
+            <section id={`PIXEL-SMASH`} className={`bg-test-4`}>
                 <Flexbox classes={`nav-section`}>
 
                     <Route render={({ history }) => (
