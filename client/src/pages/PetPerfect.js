@@ -5,6 +5,7 @@ import GlobalStates from "../assets/js/global";
 import LaxHelper from "../helpers/LaxHelper";
 import { Circle, Square, Text } from "../components/Lax/index";
 import { SpanGenerator } from "../components/Customs/index";
+import { PhotoSlider } from "../components/PhotoSlider/index";
 import Slider from '../components/Slider/index';
 import SVGIcon from "../components/SVGIcon/index"
 import "./styles/Advision.css";
@@ -233,9 +234,15 @@ export default class PetPerfect extends Component {
                     <div className={`about-header`}>
                         <h1>Details</h1>
                     </div>
+                    <Flexbox classes={`slider-box`} id="Slider-Box">
                     <div className={`about-wrap`}>
                         <p>{this.state.data.role.paragraph.two}</p>
                     </div>
+                    <PhotoSlider
+                            project={this.state.data.tier}
+                            show={this.state.showDetail}
+                        />
+                        </Flexbox>
                 </Flexbox>
                 <Flexbox classes={`ad-stack ${this.state.showStack ? "show-this" : ""}`}>
                     <div className={`stack-header`}>

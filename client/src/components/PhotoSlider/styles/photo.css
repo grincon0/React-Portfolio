@@ -83,7 +83,7 @@
  
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
     
 }
 
@@ -192,6 +192,18 @@
 
 .Pixel-Smash .photo-three {
     background-image: url("../../../assets/images/projects/pixelsmash/three.jpg");
+}
+
+.Mid .photo-one{
+    background-image: url("../../../assets/images/projects/petperfect/one.png");
+}
+
+.Mid .photo-two{
+    background-image: url("../../../assets/images/projects/petperfect/two.png");
+}
+
+.React-Books .photo-one{
+    background-image: url("../../../assets/images/projects/reactbooks/one.png");
 }
 
 

@@ -1,0 +1,34 @@
+
+.sea {
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    left: 0;
+    top: 72%;
+    /* border-radius: 0 0 50% 50%; */
+    background: linear-gradient(to bottom, rgb(0, 3, 26) 0%, rgb(9, 15, 97) 25%, rgba(12, 5, 122, 0.534) 50%, rgba(14, 1, 124, 0.596) 75%, rgba(65, 1, 168, 0.521) 100%);
+   /*  animation: waveanim ease-in-out 10s; */
+   box-shadow: 0px 0px 70px 10px rgb(6, 1, 34);
+    animation-iteration-count: infinite;
+    transform-origin: 50% 0%;
+    overflow: hidden;
+    z-index: -125;
+    opacity: 0;
+}
+
+.sea.appear{
+    transition: all 0.6s ease;
+    opacity: 1;
+}
+.palm{
+    z-index: -130;
+}
+
+
+/* 
+@keyframes waveanim{
+    0% {    transform:  scaleY(1.00) ;  }
+    35% {    transform:  scaleY(1.3) ;  }
+    69% {    transform:  scaleY(1.00) ;  }
+    100% {    transform:  scaleY(1.00) ;  }
+  } */
