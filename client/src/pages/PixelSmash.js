@@ -176,6 +176,8 @@ export default class PixelSmash extends Component {
 
                     {/* left */}
 
+
+
                     <Square
                         classes={`box-3`}
                         translateX="0 vw, 485 vw, 735 (window.innerWidth*0.73)"
@@ -208,6 +210,13 @@ export default class PixelSmash extends Component {
                     />
 
 
+
+                    <Square
+                        classes={`box-3`}
+                        translateX="0 0, 485 0, 735 (window.innerWidth*0.17)"
+                        opacity="0 0, 485 0, 780 1"
+                        rotate={true}
+                    />
                     <Square
                         classes={`box-1`}
                         translateX="0 0, 485 0, 735 (window.innerWidth*0.17)"
@@ -228,30 +237,25 @@ export default class PixelSmash extends Component {
                         options="| speed=0.93"
                         rotate={true}
                     />
-                    <Square
-                        classes={`box-3`}
-                        translateX="0 0, 485 0, 735 (window.innerWidth*0.17)"
-                        opacity="0 0, 485 0, 780 1"
-                        rotate={true}
-                    />
+
 
                     <Square
                         classes={`box-5`}
                         translateX="0 0, 485 0, 735 (window.innerWidth*0.17)"
                         opacity="0 0, 485 0, 780 1"
                         rotate={true}
-
                     />
+
 
                 </Flexbox>
                 <Flexbox classes={`ad-role ${this.state.showDetail ? "show-this" : ""}`}>
-                        
-                     
+
+
 
                     <div className={`about-header`}>
                         <h1>Details</h1>
                     </div>
-                    <Flexbox classes={`slider-box`}id="Slider-Box">
+                    <Flexbox classes={`slider-box`} id="Slider-Box">
 
                         <div className={`about-wrap`}>
                             <p>{this.state.data.role.paragraph.one}</p>
@@ -271,7 +275,7 @@ export default class PixelSmash extends Component {
                         opacity="0 0, 1300 0, 1500 1, 2200 0"
 
                     /> */}
-                    
+
                 </Flexbox>
                 <Flexbox classes={`ad-stack ${this.state.showStack ? "show-this" : ""}`}>
                     <div className={`stack-header`}>

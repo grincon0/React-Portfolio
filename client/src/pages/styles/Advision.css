@@ -507,7 +507,7 @@ i.portal{
     transform: translateX(50vw);
 }
 
-.ad-role{
+.ad-role, .ad-about{
     overflow: hidden;
     padding-bottom: 30px;
     
@@ -702,9 +702,9 @@ i.portal{
     z-index: -2;
 }
 
-.ad-about{
+/* .ad-about{
     overflow: hidden;
-}
+} */
 
 .new-header{
     position: absolute;
@@ -769,18 +769,22 @@ i.portal{
     height:20px;
     width: 100px;
     opacity: 0;
+    transition: all 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
 
 .rect-right{
-transform: translateX(90vw);
+    bottom:0;
+    transform: translateX(50vw);
+
 }
 
 .rect-left{
-transform: translateX(-90vw);
+    top:0;
+    transform: translateX(-50vw);
 }
 
-.ad-about.show-this rect{
-    transition: all 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+.ad-about.show-this figure{
+    
     transform: translateX(0);
     opacity: 1;
 }
@@ -806,7 +810,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0
     }
     100%{
         opacity: 1;
-        transform: translateX(0)
+        transform: translateX(0);
     }
 }
 
@@ -923,7 +927,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0
     }
 
     .ad-role{
-        height: calc(90vh + 75px);
+        height: calc(90vh + 155px);
         
       
     }
