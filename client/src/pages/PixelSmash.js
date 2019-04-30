@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Flexbox from "../components/Flexbox/index";
-import GlobalStates from "../assets/js/global";
+import GlobalStates from "../components/Global/index";
 import LaxHelper from "../helpers/LaxHelper";
 import { Circle, Square, Text } from "../components/Lax/index";
 import { SpanGenerator } from "../components/Customs/index";
@@ -185,9 +185,6 @@ export default class PixelSmash extends Component {
                     </div>
 
                     {/* left */}
-
-
-
                     <Square
                         classes={`box-3`}
                         translateX="0 vw, 485 vw, 735 (window.innerWidth*0.73)"

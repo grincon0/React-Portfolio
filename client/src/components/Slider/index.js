@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import GlobalStates from '../../assets/js/global';
+import GlobalStates from '../Global/index';
 import "./style.css"
 
 export default class Slider extends Component{

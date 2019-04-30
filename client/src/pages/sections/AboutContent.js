@@ -5,9 +5,10 @@ import Flexbox from "../../components/Flexbox/index";
 import FlexContainer from "../../components/FlexContainer/index";
 
 import { FirstName, LastName } from "../../components/Name/index";
-import { Name, TextOverlay } from "../../components/Customs/index";
+import { Name, TextOverlay  } from "../../components/Customs/index";
+
 import Parallax from "../../components/Parallax/index";
-import { Waves } from "../../components/Experiments/index";
+import { Sea ,Waves } from "../../components/Experiments/index";
 import SVGIcon from "../../components/SVGIcon/index";
 import "./section-styles/About.css";
 import "./section-styles/AboutContent.css";
@@ -169,6 +170,16 @@ class AboutContent extends Component {
                         <span>e</span>
                         <span className={`lastname-final`}>r</span>
                     </div>
+
+                    {/*                     <SVGIcon 
+                        classes={`volcan`}
+                        src="volcan"
+                        height={100}
+                        width={100}
+                    /> */}
+                    
+                    <Waves  />
+                    <Sea />
                     <SVGIcon
                         id="palmTree"
                         classes={`palm ${this.state.pageTransition ? "page-is-changing" : ""}`}
@@ -176,17 +187,11 @@ class AboutContent extends Component {
                         height={180}
                         width={180}
                     />
-                    {/*                     <SVGIcon 
-                        classes={`volcan`}
-                        src="volcan"
-                        height={100}
-                        width={100}
-                    /> */}
-                    <Waves  />
+                    
                 </FlexContainer>
 
 
-             <Parallax /> 
+             <Parallax shapes={true} /> 
 
             </div>
 

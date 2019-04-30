@@ -39,6 +39,11 @@
         display: flex;	
         overflow: hidden;
         pointer-events: none;
+        z-index: 210;
+        left: 0;
+        height: 78vh;
+        width: 100%;
+        overflow: hidden;
     }
 
     .wave-adjust{

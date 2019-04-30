@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FlexContainer from "../components/FlexContainer/index";
 import Flexbox from "../components/Flexbox/index";
-import GlobalStates from "../assets/js/global";
+import GlobalStates from "../components/Global/index";
 import LaxHelper from "../helpers/LaxHelper";
 import { Circle, Square, Text } from "../components/Lax/index";
 import { SpanGenerator } from "../components/Customs/index";
@@ -143,7 +143,7 @@ export default class MongoScraper extends Component {
                 </Flexbox>
                 <Flexbox classes={`ad-about ${this.state.showAbout ? "show-this" : ""} `}>
                     <div className={`about-header`}>
-                        <h1>About</h1><span>.</span>
+                        <h1>About</h1>
                     </div>
                     <div className={`about-wrap`}>
                         <p>{this.state.data.description}</p>
@@ -223,7 +223,7 @@ export default class MongoScraper extends Component {
                 </Flexbox>
                 <Flexbox classes={`ad-role ${this.state.showDetail ? "show-this" : ""}`}>
                     <div className={`about-header`}>
-                        <h1>Details</h1><span>.</span>
+                        <h1>Details</h1>
                     </div>
                     <div className={`about-wrap`}>
                         <p>{this.state.data.role}</p>

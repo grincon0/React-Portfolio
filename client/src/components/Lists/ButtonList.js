@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Button } from "../Buttons/index";
 import FlexBox from "../Flexbox/index";
 import { ProjectOverlay } from "../OverlayBlock/index";
-import GlobalStates from "../../assets/js/global";
+import GlobalStates from "../Global/index";
 import "./styles/ButtonList.css";
 
 import { Route, Redirect } from "react-router-dom";
