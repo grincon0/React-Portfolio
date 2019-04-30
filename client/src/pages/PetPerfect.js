@@ -151,7 +151,7 @@ export default class PetPerfect extends Component {
                 </Flexbox>
                 <Flexbox classes={`ad-about ${this.state.showAbout ? "show-this" : ""} `}>
                     <div className={`about-header`}>
-                        <h1>About</h1><span>.</span>
+                        <h1>About</h1>
                     </div>
                     <div className={`about-wrap`}>
                         <p>{this.state.data.description}</p>
@@ -231,7 +231,7 @@ export default class PetPerfect extends Component {
                 </Flexbox>
                 <Flexbox classes={`ad-role ${this.state.showDetail ? "show-this" : ""}`}>
                     <div className={`about-header`}>
-                        <h1>Details</h1><span>.</span>
+                        <h1>Details</h1>
                     </div>
                     <div className={`about-wrap`}>
                         <p>{this.state.data.role.paragraph.two}</p>

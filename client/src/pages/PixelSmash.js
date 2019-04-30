@@ -185,9 +185,6 @@ export default class PixelSmash extends Component {
                     </div>
 
                     {/* left */}
-
-
-
                     <Square
                         classes={`box-3`}
                         translateX="0 vw, 485 vw, 735 (window.innerWidth*0.73)"
