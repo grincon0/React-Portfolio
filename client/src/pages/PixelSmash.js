@@ -64,8 +64,6 @@ export default class PixelSmash extends Component {
         //laxHelper.kill();
     }
     handleClassesScrollTop = () => {
-
-
         const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
 
         if (this.state.showAbout === false) {
@@ -129,11 +127,23 @@ export default class PixelSmash extends Component {
     handleGlobalState = () => {
         GlobalStates.setAnimate(true);
     }
+    handleBackgroundColor = () => {
+        if(this.state.showStack){
+            return "bg-test-1";
+        }else if(this.state.showDetail){
+            return "bg-test-2";
+        }else if(this.state.showAbout){
+            return "bg-test-3";
+        }else{
+            return "bg-test-3";
+        }
+    }
     render = () => {
+        /* let bgColor = this.handleBackgroundColor(); */
         let techStack = this.state.data.stack.map((tech, i) => <li key={i}>{tech}</li>)
 
         return (
-            <section id="PIXEL-SMASH">
+            <section id={`PIXEL-SMASH`} className={`bg-test-3`}>
                 <Flexbox classes={`nav-section`}>
 
                     <Route render={({ history }) => (
