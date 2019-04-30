@@ -22,6 +22,8 @@ class Parallax extends Component {
         super(props);
         this.state = {
             amount: 10,
+            amountFigure: 2,
+            type: "img",
             canAppear: false,
             createElements: [],
             icons: [Circle, Triangle, Square, X],
@@ -33,23 +35,47 @@ class Parallax extends Component {
         }
     }
     componentDidMount = () => {
-        if (!this.state.readyToDump) {
-            let imgArr = [];
-            for (let i = 0; i < this.state.amount; i++) {
-                imgArr.push(this.createElement(this.state.amount - i));
+        if(!this.props.shapes){
+            if (!this.state.readyToDump) {
+                let imgArr = [];
+                for (let i = 0; i < this.state.amount; i++) {
+                    imgArr.push(this.createElement(this.state.amount - i));
+                }
+                this.setState({ createElements: imgArr, readyToDump: true });
+                /* ParallaxHelper.watch(); */
+    
+                this.startParallax();
+    
+                setTimeout(() => {
+                    let newState = { ...this.state };
+                    newState.canAppear = true;
+                    this.setState(newState);
+                }, 1000);
+    
             }
-            this.setState({ createElements: imgArr, readyToDump: true });
-            /* ParallaxHelper.watch(); */
+        }else{
+            console.log("shapes");
+            this.setState({type: "figure"});
 
-            this.startParallax();
-
-            setTimeout(() => {
-                let newState = { ...this.state };
-                newState.canAppear = true;
-                this.setState(newState);
-            }, 1000);
-
+            if (!this.state.readyToDump) {
+                let figureArr = [];
+                for (let i = 0; i < this.state.amountFigure; i++) {
+                    figureArr.push(this.createElement(i += 1));
+                }
+                this.setState({ createElements: figureArr, readyToDump: true });
+                /* ParallaxHelper.watch(); */
+    
+                this.startParallax();
+    
+                setTimeout(() => {
+                    let newState = { ...this.state };
+                    newState.canAppear = true;
+                    this.setState(newState);
+                }, 1000);
+    
+            }
         }
+        
     }
     startParallax =  async () => {
         await this.instantiateParallax();
@@ -57,7 +83,15 @@ class Parallax extends Component {
 
     }
     instantiateParallax = () => {
-        ParallaxEffect = new ParallaxHelper();
+        let typeElem;
+        
+        if(this.props.shapes){
+            typeElem = "figure"
+        }else{
+            typeElem = "img"
+        }
+        
+        ParallaxEffect = new ParallaxHelper(typeElem);
     }
     watchParallax = () => {
         ParallaxEffect.watch();
@@ -73,16 +107,30 @@ class Parallax extends Component {
         
     }
     createElement = (key) => {
-        return (
-            <img
-                className={`base-parallax parallax-img-${key}`}
-                src={this.state.icons[this.getRandomNumber(4)]}
-                width={this.state.width}
-                height={this.state.height}
-                alt="icon"
-                key={key}
-            />
-        );
+
+        if(!this.props.shapes){
+            return (
+                <img
+                    className={`base-parallax parallax-img-${key}`}
+                    src={this.state.icons[this.getRandomNumber(4)]}
+                    width={this.state.width}
+                    height={this.state.height}
+                    alt="icon"
+                    key={key}
+                />
+            );
+        }else{
+            return(
+                <figure
+                    className={`base-parallax parallax-figure-${key}`}
+                    alt="icon"
+                    key={key}
+                />
+
+                
+            );
+        }
+  
     }
     getRandomNumber = (int) => {
         return Math.floor(Math.random() * Math.floor(int));

@@ -191,7 +191,7 @@ class AboutContent extends Component {
                 </FlexContainer>
 
 
-             <Parallax /> 
+             <Parallax shapes={true} /> 
 
             </div>
 

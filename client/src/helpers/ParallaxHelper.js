@@ -3,8 +3,9 @@ import Parallax from "parallax-js";
 import TweenMax from "gsap";
 
 export default class ParallaxHelper {
-    constructor(){
+    constructor(type){
         this.watch = this.watch.bind(this);
+        this.type=type;
     }
     enableParallax = (e, container, target, movement) => {
         let cont = document.getElementById(container);
@@ -24,6 +25,8 @@ export default class ParallaxHelper {
         this.enableSet(e);
     }
     enableSet = (e) =>{
+        console.log(this.type);
+        if(this.type === "img"){
             this.enableParallax(e,"parallax-container", ".parallax-img-1", -50);
             this.enableParallax(e,"parallax-container", ".parallax-img-2", -20);
             this.enableParallax(e,"parallax-container", ".parallax-img-3", -40);
@@ -34,6 +37,11 @@ export default class ParallaxHelper {
             this.enableParallax(e,"parallax-container", ".parallax-img-8", -20);
             this.enableParallax(e,"parallax-container", ".parallax-img-9", -35);
             this.enableParallax(e,"parallax-container", ".parallax-img-10", 33);
+        }else if(this.type ==="figure"){
+            this.enableParallax(e,"parallax-container", ".parallax-figure-1", -30);
+            this.enableParallax(e,"parallax-container", ".parallax-figure-2", -30);
+        }
+
     }
     kill = () =>{
         document.removeEventListener('mousemove', this.boundWatch);
