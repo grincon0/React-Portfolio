@@ -15,7 +15,7 @@ export class PhotoSlider extends Component {
 
     handleClickEvent = (e) => {
         const { value } = e.target.attributes.value;
-        console.log(value)
+    
         if (value === "left") {
             if (this.state.currentPhoto === 1) {
                 this.setState({ currentPhoto: 3 });
@@ -42,7 +42,7 @@ export class PhotoSlider extends Component {
         const which = this.state.currentPhoto;
         const project = this.props.project;
 
-        console.log(which);
+        
         return (
             <Flexbox classes={`photo-slider-parent ${this.props.show ? "show" : ""} `}>
             

@@ -40,7 +40,7 @@ class Parallax extends Component {
         }
     }
     componentDidMount = () => {
-        console.log(GlobalStates.parallax);
+        
         
         if(!this.props.shapes){
             this.setState({type:"img"});
@@ -64,7 +64,7 @@ class Parallax extends Component {
     
             }
         }else{
-            console.log("shapes");
+          
             this.setState({type:"figure"});
             
 
@@ -92,7 +92,7 @@ class Parallax extends Component {
        
     }
     changeGlobalState = (typeElement) => {
-        console.log(typeElement);
+      
         if( (this.props.shapes) || (GlobalStates.parallax.type !== typeElement)){
             GlobalStates.parallax.type = typeElement;
         }else{
@@ -112,7 +112,7 @@ class Parallax extends Component {
         }else{
             typeElem = "img";
         }
-        console.log(typeElem);
+     
 
         this.changeGlobalState(typeElem);
 

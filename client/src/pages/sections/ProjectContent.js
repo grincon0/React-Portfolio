@@ -40,7 +40,7 @@ class ProjectContent extends Component {
         let element = document.querySelector(query);
 
         element.addEventListener(`${type}end`, () => {
-            console.log(`${type} ended`);
+            /* console.log(`${type} ended`); */
 
             let newState = { ...this.state };
 
@@ -67,11 +67,7 @@ class ProjectContent extends Component {
         event.preventDefault();
 
         const value = event.target.value;
-        
-        console.log(value);
-       /*  setTimeout(() => {
-            this.props.history.push('/contact');
-        }, 2300); */
+
 
     }
     transitionChecker = () => {
@@ -80,7 +76,6 @@ class ProjectContent extends Component {
                 let newState = { ...this.state };
                 newState.pageTransition = true;
                 this.setState(newState);
-                console.log(newState);
                 clearInterval(this.transitionInterval);
 
             }
