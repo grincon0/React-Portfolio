@@ -46,7 +46,7 @@
 
 
 /* page transition starts */
-body::after, body::before{
+/* body::after, body::before{
     content: "";
     height: 50vh;
     width:100%;
@@ -69,7 +69,7 @@ body::after{
 
 body.page-is-changing::after, body.page-is-changing::before{
     transform: translateX(0);
-}
+} */
 
 /* .cd-loading-bar {
     content: "";
