@@ -1,7 +1,7 @@
 .nav-block-flex{
     position: fixed;
     display: flex;
-    background-image: linear-gradient( 135deg, rgb(0, 0, 0) 10%, rgb(0, 8, 58) 100%);
+    background: black;
 
     flex-direction: column;
     justify-content: center;
@@ -24,6 +24,10 @@
     z-index:5;
     display: none;
     pointer-events: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    
     
 }
 
@@ -46,6 +50,7 @@
 
 #nav-menu i:nth-child(n){
     content: "";
+    position: relative;
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
     overflow: hidden;
     width:0;
@@ -54,9 +59,26 @@
     transition: width 0.3s cubic-bezier(.694,.048,.335,1);
 }
 
+#nav-menu a{
+    overflow: hidden;
+}
+
+#nav-menu a:before{
+    content: "";
+    position: absolute;
+    background-image: linear-gradient( to right, #ff0095 10%, rgb(4, 63, 255) 100%);
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+}
+
 /* edit with font size */
-#nav-menu a:hover + i{
-    width: 195px;
+#nav-menu a:hover:before{
+   
+    transition: all 0.5s ease;
+    transform: translateX(200%);
 }
 
 #nav-menu a:hover{
