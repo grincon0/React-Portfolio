@@ -40,7 +40,7 @@
 }
 
 .firstname-overlay:after{
-    background-color: aquamarine;
+    background-image: linear-gradient( 135deg, #3C8CE7 10%, #00EAFF 100%);
     animation-delay: 0.5s;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .lastname-overlay:after{
-    background-color: rgb(42, 29, 114);
+    background-image: linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%);
     animation-delay: 0.5s;
 }
 

@@ -121,19 +121,29 @@
     width: 30px;
     height: 30px;
     border-radius: 45px;
-    top: 10%;
+    top: 15%;
     left: 60%;
     background-image: linear-gradient(-231deg, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
     box-shadow: 0 0 32px 20px rgba(248, 68, 188, 0.18);
 }
 .parallax-figure-5{
-    width: 38px;
-    height: 38px;
-    border-radius: 45px;
+    width: 44px;
+    height: 44px;
+    border-radius: 48px;
     top: 50%;
-    left: 20%;
+    left: 16%;
     background-image: linear-gradient( 135deg, #FDD819 10%, #E80505 100%);
     box-shadow: 0 0 31px 20px rgba(248, 68, 68, 0.18);
+}
+
+.parallax-figure-6{
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    top: 60%;
+    left: 78%;
+    background-image: linear-gradient(to top, #ff0808 0%, #eb0c3c 100%);
+    box-shadow: 0 0 45px 25px rgba(255, 0, 0, 0.18);
 }
 
 

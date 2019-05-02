@@ -3,6 +3,7 @@
     position: absolute;
     opacity: 0;
     transform: translateX(-200px);
+    z-index: 55;
 }
 .volcan{
     position: absolute;

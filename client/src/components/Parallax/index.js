@@ -26,7 +26,7 @@ class Parallax extends Component {
         super(props);
         this.state = {
             amount: 10,
-            amountFigure: 5,
+            amountFigure: 7,
             type: "img",
             canAppear: false,
             createElements: [],
