@@ -23,7 +23,7 @@ export default class Slider extends Component{
                 this.setState({animate : true});
                 this.resetStates();
                 clearInterval(this.globalInterval);
-                console.log(GlobalStates.slider);
+            
             }
         }, 175);
     }

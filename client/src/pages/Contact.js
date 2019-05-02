@@ -53,7 +53,6 @@ class Contact extends Component {
     }
     testLoader = () => {
         this.setState({ toAbout: true });
-        console.log(this.state);
 
     }
     toggleMenu = () => {
@@ -71,7 +70,6 @@ class Contact extends Component {
         let newState = { ...this.state };
         newState.transition = true;
         this.setState(newState);
-        console.log('new state about ran');
     }
 
     render = () => {

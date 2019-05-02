@@ -26,7 +26,7 @@ class Parallax extends Component {
         super(props);
         this.state = {
             amount: 10,
-            amountFigure: 2,
+            amountFigure: 7,
             type: "img",
             canAppear: false,
             createElements: [],
@@ -40,7 +40,7 @@ class Parallax extends Component {
         }
     }
     componentDidMount = () => {
-        console.log(GlobalStates.parallax);
+        
         
         if(!this.props.shapes){
             this.setState({type:"img"});
@@ -64,14 +64,14 @@ class Parallax extends Component {
     
             }
         }else{
-            console.log("shapes");
+          
             this.setState({type:"figure"});
             
 
             if (!this.state.readyToDump) {
                 let figureArr = [];
-                for (let i = 0; i < this.state.amountFigure; i++) {
-                    figureArr.push(this.createElement(i += 1));
+                for (let i = 0; i <= this.state.amountFigure; i++) {
+                    figureArr.push(this.createElement(i));
                 }
                 this.setState({ createElements: figureArr, readyToDump: true });
                 this.startParallax();
@@ -92,7 +92,7 @@ class Parallax extends Component {
        
     }
     changeGlobalState = (typeElement) => {
-        console.log(typeElement);
+      
         if( (this.props.shapes) || (GlobalStates.parallax.type !== typeElement)){
             GlobalStates.parallax.type = typeElement;
         }else{
@@ -112,7 +112,7 @@ class Parallax extends Component {
         }else{
             typeElem = "img";
         }
-        console.log(typeElem);
+     
 
         this.changeGlobalState(typeElem);
 

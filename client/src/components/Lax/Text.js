@@ -10,7 +10,7 @@ export class Text extends Component {
     componentDidMount() {
         this.el = ReactDOM.findDOMNode(this);
         lax.addElement(this.el);
-        console.log(this.el);
+        
     }
 
     componentWillUnmount() {

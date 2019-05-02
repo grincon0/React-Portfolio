@@ -112,7 +112,7 @@ class ContactContent extends Component {
                     <Form
                         transition={this.props.transition}
                     />
-                    <Parallax />
+                    <Parallax shapes={true} />
 
                 </FlexContainer>
 

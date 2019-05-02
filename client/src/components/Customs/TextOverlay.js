@@ -33,7 +33,7 @@ export class TextOverlay extends Component {
     addTransitionEndListener = () => {
         const transtion = document.querySelector('.last-char');
         transtion.addEventListener('animationend', () => {
-            console.log('Animation ended');
+         
             this.setState({ loadBefore: true });
         });
     }
@@ -41,7 +41,7 @@ export class TextOverlay extends Component {
         this.animateInterval = setInterval(() => {
             if (this.props.animate === true) {
                 this.setState({ animate: true });
-                console.log('done');
+                
                 clearInterval(this.animateInterval);
             }
 

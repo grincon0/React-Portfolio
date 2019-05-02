@@ -99,23 +99,51 @@
     z-index: 80;
 }
 .parallax-figure-2{
-    width: 74px;
-    height: 74px;
+    width: 50px;
+    height: 50px;
     border-radius: 45px;
     top: 15%;
-    left: 70%;
+    left: 30%;
 
     background-image: linear-gradient(48deg,#1a47ea,#9713db 94%);
-    box-shadow: 0 0 60px 20px rgba(26,71,234,.38);
+    box-shadow: 0 0 50px 20px rgba(26,71,234,.38);
 }
 .parallax-figure-3{
-    
+    width: 40px;
+    height: 40px;
+    border-radius: 45px;
+    top: 40%;
+    left: 50%;
+    background-image: linear-gradient(-231deg,#0f8ee1,#00ee2e 92%);
+    box-shadow: 0 0 42px 21px rgba(0,238,46,.18);
 }
 .parallax-figure-4{
-    
+    width: 30px;
+    height: 30px;
+    border-radius: 45px;
+    top: 15%;
+    left: 60%;
+    background-image: linear-gradient(-231deg, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+    box-shadow: 0 0 32px 20px rgba(248, 68, 188, 0.18);
 }
 .parallax-figure-5{
-    
+    width: 44px;
+    height: 44px;
+    border-radius: 48px;
+    top: 50%;
+    left: 16%;
+    background-image: linear-gradient( 135deg, #FDD819 10%, #E80505 100%);
+    box-shadow: 0 0 31px 20px rgba(248, 68, 68, 0.18);
+}
+
+.parallax-figure-6{
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    top: 60%;
+    left: 71%;
+    background-image: linear-gradient(to top, #ff0808 0%, #eb0c3c 100%);
+    box-shadow: 0 0 60px 35px rgba(255, 0, 0, 0.18);
 }
 
 
