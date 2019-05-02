@@ -42,10 +42,10 @@ export default class ParallaxHelper {
             this.enableParallax(e,"parallax-container", ".parallax-img-9", -35);
             this.enableParallax(e,"parallax-container", ".parallax-img-10", 33);
         }else if(GlobalStates.parallax.type === "figure"){
-            this.enableParallax(e,"parallax-container", ".parallax-figure-1", -10);
-            this.enableParallax(e,"parallax-container", ".parallax-figure-2", -40);
-            this.enableParallax(e,"parallax-container", ".parallax-figure-3", -80);
-            this.enableParallax(e,"parallax-container", ".parallax-figure-4", -90);
+            this.enableParallax(e,"parallax-container", ".parallax-figure-1", -20);
+            this.enableParallax(e,"parallax-container", ".parallax-figure-2", -50);
+            this.enableParallax(e,"parallax-container", ".parallax-figure-3", -90);
+            this.enableParallax(e,"parallax-container", ".parallax-figure-4", -100);
             this.enableParallax(e,"parallax-container", ".parallax-figure-5", -30);
             this.enableParallax(e,"parallax-container", ".parallax-figure-6", -5);
         }
