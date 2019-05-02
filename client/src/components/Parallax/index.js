@@ -26,7 +26,7 @@ class Parallax extends Component {
         super(props);
         this.state = {
             amount: 10,
-            amountFigure: 2,
+            amountFigure: 5,
             type: "img",
             canAppear: false,
             createElements: [],
@@ -70,8 +70,8 @@ class Parallax extends Component {
 
             if (!this.state.readyToDump) {
                 let figureArr = [];
-                for (let i = 0; i < this.state.amountFigure; i++) {
-                    figureArr.push(this.createElement(i += 1));
+                for (let i = 0; i <= this.state.amountFigure; i++) {
+                    figureArr.push(this.createElement(i));
                 }
                 this.setState({ createElements: figureArr, readyToDump: true });
                 this.startParallax();

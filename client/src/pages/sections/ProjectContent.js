@@ -120,7 +120,7 @@ class ProjectContent extends Component {
 
                         </FlexBox>
                     </FlexContainer>
-                    <Parallax />
+                    <Parallax shapes={true} />
                 </FlexContainer>
                 
             </section>
