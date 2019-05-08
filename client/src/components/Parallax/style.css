@@ -282,6 +282,15 @@
         top:350px;
         left:60vw;
     }
+    .parallax-figure-6{
+        width: 120px;
+        height: 120px;
+        border-radius: 60px;
+        top: 60%;
+        left: 60%;
+        background-image: linear-gradient(to top, #ff0808 0%, #eb0c3c 100%);
+        box-shadow: 0 0 60px 35px rgba(255, 0, 0, 0.18);
+    }
 }
 
 
