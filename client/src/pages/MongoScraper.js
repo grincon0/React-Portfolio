@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import FlexContainer from "../components/FlexContainer/index";
 import Flexbox from "../components/Flexbox/index";
 import GlobalStates from "../components/Global/index";
+import { PhotoSlider } from "../components/PhotoSlider/index";
 import LaxHelper from "../helpers/LaxHelper";
 import { Circle, Square, Text } from "../components/Lax/index";
 import { SpanGenerator } from "../components/Customs/index";
@@ -22,13 +23,14 @@ export default class MongoScraper extends Component {
                 tier: "Mid",
                 id: "4",
                 name: "Mongo Scraper",
+                className: "mongo",
                 type: ["Web App", "Full Stack Web Application"],
                 time: "Fall 2018",
                 github: "https://github.com/grincon0/mongo_scraper",
                 link: "https://floating-oasis-57961.herokuapp.com/home",
                 sub: "Scraping sites for the information we love.",
                 description: "Mongo Scraper is a lightweight web application designed to scrape images and text from articles on space.com.  Utilizing MongoDB and powered by Express, the application stores and retrieves the scraped data stored on the databse and passes it the user through the Handlebars templating engine",
-                role: "Users are able to leave comments on the articles displayed and revisit them later. The comments are saved to the database as well and associated with their articles.",
+                role: "Users are able to leave comments on the articles displayed and revisit them later. The comments are saved to the database and associated with their articles.",
                 stack: ["Back-End Development", "MongoDB", "Mongoose", "Cheerio", "Nodemon", "Axios.js", "Handlebars.js", "Express.js", "Node.js"]
             },
             showAbout: false,
@@ -225,9 +227,18 @@ export default class MongoScraper extends Component {
                     <div className={`about-header`}>
                         <h1>Details</h1>
                     </div>
-                    <div className={`about-wrap`}>
-                        <p>{this.state.data.role}</p>
-                    </div>
+                    <Flexbox classes={`slider-box`} id="Slider-Box">
+
+                        <div className={`about-wrap`}>
+                            <p>{this.state.data.role}</p>
+                        </div>
+
+                        <PhotoSlider
+                            project={this.state.data.className}
+                            show={this.state.showDetail}
+                        />
+
+                    </Flexbox>
                 </Flexbox>
                 <Flexbox classes={`ad-stack ${this.state.showStack ? "show-this" : ""}`}>
                     <div className={`stack-header`}>
