@@ -182,6 +182,8 @@
 
 }
 
+
+
 .Pixel-Smash .photo-one{
     background-image: url("../../../assets/images/projects/pixelsmash/one.png");
 }
@@ -202,8 +204,30 @@
     background-image: url("../../../assets/images/projects/petperfect/two.png");
 }
 
+.Mid .photo-three {
+    background-image: url("../../../assets/images/projects/petperfect/three.png");
+}
+
+.mongo .photo-one{
+    background-image: url("../../../assets/images/projects/mongoscraper/one.PNG");
+}
+
+.mongo .photo-two{
+    background-image: url("../../../assets/images/projects/mongoscraper/two.png");
+}
+
+.mongo .photo-three{
+    background-image: url("../../../assets/images/projects/mongoscraper/three.PNG");
+}   
+
 .React-Books .photo-one{
     background-image: url("../../../assets/images/projects/reactbooks/one.png");
+}
+.React-Books .photo-two{
+    background-image: url("../../../assets/images/projects/reactbooks/two.PNG");
+}
+.React-Books .photo-three{
+    background-image: url("../../../assets/images/projects/reactbooks/three.PNG");
 }
 
 
