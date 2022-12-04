@@ -2938,9 +2938,9 @@ decamelize@^2.0.0:
     xregexp "4.0.0"
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
-  integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
+  integrity sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==
 
 deep-equal@^1.0.1:
   version "1.0.1"
@@ -5797,6 +5797,11 @@ last-call-webpack-plugin@^3.0.0:
   dependencies:
     lodash "^4.17.5"
     webpack-sources "^1.1.0"
+
+lax.js@^1.2.3:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/lax.js/-/lax.js-1.2.5.tgz#cf4279be9f604a0bb20fd3e808af97879c246c3d"
+  integrity sha512-Ytf7ZUhn2YLtyYoUFT8KpoRYvzw0awTr66J0vrp4NpwPaXPp504yhvsrqtP6ZDny3/Y7UOQsWHylV9iLl3cuoQ==
 
 lazy-cache@^0.2.3:
   version "0.2.7"
