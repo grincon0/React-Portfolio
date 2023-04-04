@@ -9,8 +9,8 @@
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && yarn start",
     "seed": "node scripts/seedDB.js",
-    "install": "cd client && npm install",
-    "build": "cd client && GENERATE_SOURCEMAP=false npm run build",
+    "install": "cd client && npm install --force",
+    "build": "cd client && GENERATE_SOURCEMAP=false npm run build --force",
     "heroku-postbuild": "npm run build",
     "start-watch": "nodemon index.js",
     "dev": "concurrently \"yarn run start-watch\" \"cd client && yarn start\""
