@@ -1,112 +1,100 @@
-#arrow-box{
-    cursor: pointer;
+#arrow-box {
+  cursor: pointer;
 }
 
-
-
-#arrow-box img{
-    position: relative;
-    height:15px;
-    width: 15px;
-    left:16px;
-    bottom: 2px;
-
- 
+#arrow-box img {
+  position: relative;
+  height: 15px;
+  width: 15px;
+  left: 16px;
+  bottom: 2px;
 }
 
-#arrow-bar{
-    overflow: none;
+#arrow-bar {
+  overflow: none;
 }
 
-#arrow-head.starting-point img{
-    transition: transform 0.6s ease;
+#arrow-head.starting-point img {
+  transition: transform 0.6s ease;
 }
 
-#arrow-head.hover-arrow img{
-    transition: transform 0.6s ease;
-    transform: translateX(30px);
+#arrow-head.hover-arrow img {
+  transition: transform 0.6s ease;
+  transform: translateX(30px);
 }
 
-#arrow-bar{
-    content: "";
-    position: absolute;
-    background-color: #ebebeb;
-    height: 2px;
-    width:33px;
-    border-radius: 3px;
-    transition: width 600ms cubic-bezier(1, 0, 0, 1);
+#arrow-bar {
+  content: "";
+  position: absolute;
+  background-color: #ebebeb;
+  height: 2px;
+  width: 33px;
+  border-radius: 3px;
+  transition: width 600ms cubic-bezier(1, 0, 0, 1);
 }
-
 
 /* #arrow-box.hover-box i{
     transition: width 600ms cubic-bezier(1, 0, 0, 1);
     width:63px;
 } */
 
-.hover-bar-out{
-    animation: testWidth-out 0.4s cubic-bezier(0.6, 1, 0.6, 1) forwards;
+.hover-bar-out {
+  animation: testWidth-out 0.4s cubic-bezier(0.6, 1, 0.6, 1) forwards;
 }
 
-.hover-bar-in{
-    animation: testWidth-in 0.4s cubic-bezier(0.6, 1, 0.6, 1) forwards;
+.hover-bar-in {
+  animation: testWidth-in 0.4s cubic-bezier(0.6, 1, 0.6, 1) forwards;
 }
-.fix-test{
-    position: fixed;
-}
-
-#arrow-box.page-is-changing #arrow-head img,#arrow-box.page-is-changing i {
-    transition: transform 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.5s;
-
+.fix-test {
+  position: fixed;
 }
 
-#arrow-box.page-is-changing{
-    transition: transform 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.5s;
-    transform: translateX(300px);
+#arrow-box.page-is-changing #arrow-head img,
+#arrow-box.page-is-changing i {
+  transition: transform 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.5s;
 }
 
-.arrow-project{
-    position: absolute;
-    top:0;
-    cursor: pointer;
-    bottom: 0;
-    transform: translateY(-95vh);
+#arrow-box.page-is-changing {
+  transition: transform 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.5s;
+  transform: translateX(300px);
+}
+
+.arrow-project {
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  bottom: 0;
+  transform: translateY(-95vh);
 }
 
 /* Start and Reset animations */
 
-@keyframes testWidth-out{
-
-    0%{
-        width:33px;
-    }
-    50%{
-        width:40px;
-        
-    }
-    100%{
-        transform: translateX(30px);
-        width:30px;
-    }
+@keyframes testWidth-out {
+  0% {
+    width: 33px;
+  }
+  50% {
+    width: 40px;
+  }
+  100% {
+    transform: translateX(30px);
+    width: 30px;
+  }
 }
 
-@keyframes testWidth-in{
-
-    0%{
-        transform: translateX(30px);
-        width:30px;
-    }
-    50%{
-        
-        width: 40px;
-        
-    }
-    100%{
-        transform: translateX(0);
-        width:33px;
-    }
+@keyframes testWidth-in {
+  0% {
+    transform: translateX(30px);
+    width: 30px;
+  }
+  50% {
+    width: 40px;
+  }
+  100% {
+    transform: translateX(0);
+    width: 33px;
+  }
 }
-
-
 
 /* #arrow-head{
     transform: rotate(90deg);
@@ -149,33 +137,31 @@
     
 } */
 
-@media screen and (max-width: 1570px){
-    #arrow-box{
-        position: relative;
-        height: 60px;
-        width:100px;
-        /* background-color:rgb(7, 70, 70); */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        bottom: 15%;
-        left: calc(45% - 20px);
-    
-    }
+@media screen and (max-width: 6070px) {
+  #arrow-box {
+    position: relative;
+    height: 60px;
+    width: 100px;
+    /* background-color:rgb(7, 70, 70); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 15%;
+    left: calc(45% - 20px);
+  }
 }
 
-@media screen and (max-width: 550px){
-    #arrow-box{
-        position: relative;
-        height: 60px;
-        width:100px;
-        
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        bottom: 15%;
-        left: calc(45% - 50px);
-        transform: translateY(20px);
-    
-    }
+@media screen and (max-width: 550px) {
+  #arrow-box {
+    position: relative;
+    height: 60px;
+    width: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 15%;
+    left: calc(45% - 50px);
+    transform: translateY(20px);
+  }
 }

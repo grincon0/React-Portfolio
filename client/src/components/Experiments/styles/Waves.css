@@ -34,7 +34,7 @@
 }
 
 
-@media screen and (max-width:1570px){
+@media screen and (max-width:9999px){
     canvas {
         display: flex;	
         overflow: hidden;
@@ -55,7 +55,7 @@
     }
     .move-wave{
         transition: all 3s ease;
-        transform: translateY(200px);
+        transform: translateY(29vh);
     }
 }
 @media screen and (max-width: 550px){

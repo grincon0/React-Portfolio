@@ -1,63 +1,66 @@
+.palm {
+  position: absolute;
+  opacity: 0;
+  transform: translateX(-200px);
+  z-index: 55;
+}
+.volcan {
+  position: absolute;
+  top: calc(100vh - 380px);
+}
 
-.palm{
-    position: absolute;
-    opacity: 0;
+svg .layer2 .volcano-top {
+  animation: volcanotest 1s ease infinite alternate;
+}
+
+@keyframes volcanotest {
+  0% {
+    fill: red;
+  }
+  100% {
+    fill: blue;
+  }
+}
+
+@keyframes smooth-right {
+  from {
     transform: translateX(-200px);
-    z-index: 55;
+  }
+  to {
+    transform: translateX(0);
+  }
 }
-.volcan{
+
+@media screen and (min-width: 1800px) {
+  .palm {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .palm {
+    left: 0;
+    top: calc(100vh - 380px);
+    animation: smooth-right 1s ease-in 0.5s forwards;
+    transform: translateX(-200px);
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .palm {
     position: absolute;
-    top:calc(100vh - 380px);
+    left: 0;
+    top: calc(100vh - 380px);
+    animation: smooth-right 1s ease-in 0.5s forwards;
+    transform: translateX(-200px);
+    opacity: 1;
+  }
 }
-
-svg .layer2 .volcano-top{
-    animation: volcanotest 1s ease infinite alternate;
+@media screen and (max-width: 479px) {
+  .palm {
+    transform: translate(-200px, -300px);
+    opacity: 1;
+    top: calc(100vh - 280px);
+    left: -25px;
+  }
 }
-
-@keyframes volcanotest{
-    0%{
-        fill: red;
-    }
-    100%{
-        fill: blue;
-    }
-}
-
-@keyframes smooth-right{
-    from{
-        transform: translateX(-200px);
-    }
-    to{
-        transform: translateX(0);
-    }
-}
-
-@media screen and (max-width: 1570px){
-
-    .palm{
-        left: 0;
-        top: calc(100vh - 380px);
-        animation: smooth-right 1s ease-in 0.5s forwards;
-        transform: translateX(-200px);
-        opacity: 1;
-    }
-}
-@media screen and (max-width: 1024px){
-    .palm{
-        position: absolute;
-        left: 0;
-        top: calc(100vh - 380px);
-        animation: smooth-right 1s ease-in 0.5s forwards;
-        transform: translateX(-200px);
-        opacity: 1;
-    }
-}
-@media screen and (max-width: 479px){
-    .palm{
-        transform:translate(-200px, -300px);
-        opacity: 1;
-        top:calc(100vh - 280px);
-        left:-25px;
-    }
-}
-

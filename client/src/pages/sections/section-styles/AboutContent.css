@@ -349,11 +349,10 @@
    }
 }
 
-@media screen and (max-width: 1570px){
+@media screen and (max-width: 9999px){
     #Headline-1 span, #Headline-2 span{
         font-size: 1.5em;
     }
-    
 }
 
 @media screen and (max-width: 550px){

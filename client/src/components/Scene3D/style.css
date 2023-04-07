@@ -1,508 +1,472 @@
-
 body {
-    margin: 0;
-    background-color: #edecf0;
-    animation: bgColor 10s ease alternate-reverse infinite;
+  margin: 0;
+  background-color: #edecf0;
+  animation: bgColor 10s ease alternate-reverse infinite;
 }
 
 .scene {
-    perspective: 1000px;
+  perspective: 1000px;
 }
 
-.parent-container{
-    height: 100vh;
+.parent-container {
+  height: 100vh;
+  transform: translateX(13vw);
 }
 
-.container-3d{
-    
-    margin:auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 100vh;
-    transition: 0.5s ease;
-    transform: rotateX(70deg) rotateZ(-43deg) rotateY(-5deg);
-    transform-style: preserve-3d;
+.container-3d {
+  overflow: visible;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100vh;
+  transition: 0.5s ease;
+  transform: rotateX(70deg) rotateZ(-43deg) rotateY(-5deg);
+  transform-style: preserve-3d;
 }
 
-.container-3d-origin{
-    transform: rotate(0);
+.container-3d-origin {
+  transform: rotate(0);
 }
 
-.container-3d-width{
-    width:680px;
+.container-3d-width {
+  width: 680px;
 }
 
-.sub-intro{
-    position: absolute;
-    top: 50px;
-    transform: translateX(calc(50vw - 100px));
-    color: #fefefe;
-    opacity:0;
-    z-index: 1;
-    animation: intro 3s ease forwards;
-
+.sub-intro {
+  position: absolute;
+  top: 50px;
+  transform: translateX(calc(50vw - 100px));
+  color: #fefefe;
+  opacity: 0;
+  z-index: 1;
+  animation: intro 3s ease forwards;
 }
 
-@keyframes intro{
-    0%{
-        opacity: 0;
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 /* .card-3d img {
     opacity: 0.8;
 } */
 
 .card-3d {
-    width:250px;
-    margin: 1px;
-    opacity: 0.8;
+  width: 250px;
+  margin: 1px;
+  opacity: 0.8;
 }
 
-.card-3d{
-    cursor: pointer;
-    
+.card-3d {
+  cursor: pointer;
 }
 
-.card-3d img:nth-child(1){
-    transition: transform 0.3s ease-in, opacity  0.3s ease-in;
-
+.card-3d img:nth-child(1) {
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
 }
 
-.card-3d img:nth-child(2){
-    transform-origin: 30px, -400px;
-    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
-  transform: translate(30px, -400px); 
-} 
-
-
-.card-3d img:nth-child(3){
-    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
-    transform: translate(70px, -800px);
-
-}
-.card-3d img:nth-child(4){
-    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
-    /* transform: translate(110px, -1200px); */
-
-
+.card-3d img:nth-child(2) {
+  transform-origin: 30px, -400px;
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  transform: translate(30px, -400px);
 }
 
-.card-3d img:hover:nth-child(1){
-    transition: transform 0.3s ease-in;
-    transform:  translateX(-70px);
+.card-3d img:nth-child(3) {
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  transform: translate(70px, -800px);
 }
-.card-3d img:hover:nth-child(2){
-    transition: 0.3s ease-in;
-    transform: translate(30px, -400px) translate(-80px);
-}
-.card-3d img:hover:nth-child(3){
-    transition: 0.3s ease-in;
-    transform: translate(70px, -800px) translate(-90px);
-}
-.card-3d img:hover:nth-child(4){
-    transition: 0.3s ease-in;
-    transform: translate(110px, -1200px) translate(-100px);
+.card-3d img:nth-child(4) {
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  /* transform: translate(110px, -1200px); */
 }
 
-
-.image-position-4{
-    transform: translate(110px, -1200px);
+.card-3d img:hover:nth-child(1) {
+  transition: transform 0.3s ease-in;
+  transform: translateX(-70px);
+}
+.card-3d img:hover:nth-child(2) {
+  transition: 0.3s ease-in;
+  transform: translate(30px, -400px) translate(-80px);
+}
+.card-3d img:hover:nth-child(3) {
+  transition: 0.3s ease-in;
+  transform: translate(70px, -800px) translate(-90px);
+}
+.card-3d img:hover:nth-child(4) {
+  transition: 0.3s ease-in;
+  transform: translate(110px, -1200px) translate(-100px);
 }
 
-.expand-position-4{
-    transform: translate(-500px, -1200px);
+.image-position-4 {
+  transform: translate(110px, -1200px);
 }
 
-.start-anim{
-    animation: moveExpandA 0.5s ease-out forwards;
+.expand-position-4 {
+  transform: translate(-500px, -1200px);
 }
 
-.start-animB{
-    animation: moveExpandB 0.5s ease-out forwards;
+.start-anim {
+  animation: moveExpandA 0.5s ease-out forwards;
 }
 
-.start-animC{
-    animation: moveExpandC 0.5s ease-out forwards;
+.start-animB {
+  animation: moveExpandB 0.5s ease-out forwards;
 }
 
-.start-animD{
-    animation: moveExpandD 0.5s ease-out forwards;
-}
-#image1:hover{
-    opacity: 1;
+.start-animC {
+  animation: moveExpandC 0.5s ease-out forwards;
 }
 
-#image2:hover{
-    opacity: 1;
+.start-animD {
+  animation: moveExpandD 0.5s ease-out forwards;
+}
+#image1:hover {
+  opacity: 1;
 }
 
-#image3:hover{
-    opacity: 1;
+#image2:hover {
+  opacity: 1;
 }
 
-#image4:hover{
-    opacity: 1;
+#image3:hover {
+  opacity: 1;
 }
 
-
-#image1:hover ~ #image2 { 
-    opacity: 0.1; 
-}
-#image1:hover ~ #image3 { 
-    opacity: 0.1; 
-}
-#image1:hover ~ #image4 { 
-    opacity: 0.1; 
+#image4:hover {
+  opacity: 1;
 }
 
-#image2:hover ~ #image1 { 
-    opacity: 0.1; 
+#image1:hover ~ #image2 {
+  opacity: 0.1;
 }
-#image2:hover ~ #image3 { 
-    opacity: 0.1; 
+#image1:hover ~ #image3 {
+  opacity: 0.1;
 }
-#image2:hover ~ #image4 { 
-    opacity: 0.1; 
-}
-
-
-#image3:hover ~ #image1 { 
-    opacity: 0.1; 
-}
-#image3:hover ~ #image2{ 
-    opacity: 0.1; 
-}
-#image3:hover ~ #image4 { 
-    opacity: 0.1; 
+#image1:hover ~ #image4 {
+  opacity: 0.1;
 }
 
-#image4:hover ~ #image1 { 
-    opacity: 0.1; 
+#image2:hover ~ #image1 {
+  opacity: 0.1;
 }
-#image4:hover ~ #image2{ 
-    opacity: 0.1; 
+#image2:hover ~ #image3 {
+  opacity: 0.1;
 }
-#image4:hover ~ #image3 { 
-    opacity: 0.1; 
-}
-
-.expand{
-    transition: width 1s, height 1s;
-    width: 100vw;
-    height:100vh;
-    transform: translate(-500px, 0px);
+#image2:hover ~ #image4 {
+  opacity: 0.1;
 }
 
-.image-size{
-    width: 100%;
+#image3:hover ~ #image1 {
+  opacity: 0.1;
+}
+#image3:hover ~ #image2 {
+  opacity: 0.1;
+}
+#image3:hover ~ #image4 {
+  opacity: 0.1;
 }
 
-.image-opacity{
-    opacity: 0.9;
+#image4:hover ~ #image1 {
+  opacity: 0.1;
+}
+#image4:hover ~ #image2 {
+  opacity: 0.1;
+}
+#image4:hover ~ #image3 {
+  opacity: 0.1;
 }
 
-
-
-
-
-
-.image4-a{
-    position: absolute;
+.expand {
+  transition: width 1s, height 1s;
+  width: 100vw;
+  transform: translate(-500px, 0px);
 }
 
-.disappear{
-    transition: opacity 0.2s;
-    opacity: 0;
-}
-.overflow-hide-all{
-    overflow: hidden;
+.image-size {
+  width: 100%;
 }
 
-
-.hideTest{
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0.6s cubic-bezier(0.7, 0, 0.3, 1) 1s, opacity 0.6s cubic-bezier(0.7, 0, 0.3, 1) 1s;
+.image-opacity {
+  opacity: 0.9;
 }
 
+.image4-a {
+  position: absolute;
+}
 
+.disappear {
+  transition: opacity 0.2s;
+  opacity: 0;
+}
+.overflow-hide-all {
+  overflow: hidden;
+}
+
+.hideTest {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.6s cubic-bezier(0.7, 0, 0.3, 1) 1s,
+    opacity 0.6s cubic-bezier(0.7, 0, 0.3, 1) 1s;
+}
 
 /* .image-marker{
     transform: rotate(0);
 }
  */
-.subtitle{
-    position: absolute;
-    color:rgb(243, 243, 243);
-    font-family: 'Open Sans', sans-serif;
-    font-size: 24px;
-    opacity: 0;
+.subtitle {
+  position: absolute;
+  color: rgb(243, 243, 243);
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  opacity: 0;
 }
 
-.subtitle-appear-1{
-    animation: textappearA .75s ease forwards;
+.subtitle-appear-1 {
+  animation: textappearA 0.75s ease forwards;
 }
 
-.subtitle-reset-1{
-    animation: textresetA .75s ease;
+.subtitle-reset-1 {
+  animation: textresetA 0.75s ease;
 }
 
-.subtitle-appear-2{
-    animation: textappearB .75s ease forwards;
+.subtitle-appear-2 {
+  animation: textappearB 0.75s ease forwards;
 }
 
-.subtitle-reset-2{
-    animation: textresetB .75s ease;
+.subtitle-reset-2 {
+  animation: textresetB 0.75s ease;
 }
 
-.subtitle-appear-3{
-    animation: textappearC .55s ease forwards;
+.subtitle-appear-3 {
+  animation: textappearC 0.55s ease forwards;
 }
 
-.subtitle-reset-3{
-    animation: textresetC .55s ease;
+.subtitle-reset-3 {
+  animation: textresetC 0.55s ease;
 }
 
-.subtitle-appear-4{
-    animation: textappearD .55s ease forwards;
+.subtitle-appear-4 {
+  animation: textappearD 0.55s ease forwards;
 }
 
-.subtitle-reset-4{
-    animation: textresetD .55s ease;
+.subtitle-reset-4 {
+  animation: textresetD 0.55s ease;
 }
 
-.sub-text p:nth-child(1){
-    transform: translate(1050px, 300px);
+.sub-text p:nth-child(1) {
+  transform: translate(1050px, 300px);
 }
 
-.sub-text p:nth-child(2){
-    /* opacity: 1; */
-    transform: translate(960px, 410px);
+.sub-text p:nth-child(2) {
+  /* opacity: 1; */
+  transform: translate(960px, 410px);
 }
 
-.sub-text p:nth-child(3){
-    /* opacity: 1;  */
-    transform: translate(530px, 400px);
+.sub-text p:nth-child(3) {
+  /* opacity: 1;  */
+  transform: translate(530px, 400px);
 }
 
-.sub-text p:nth-child(4){
-/*     opacity: 1;  */
-    transform: translate(500px, 420px);
+.sub-text p:nth-child(4) {
+  /*     opacity: 1;  */
+  transform: translate(500px, 420px);
 }
 
-.show-fix{
-    display: none;
+.show-fix {
+  display: none;
 }
 
 @keyframes moveExpandA {
-    0%{
-        opacity: 1;
-        transform: translate(110px, -1200px);
-
-    }
-    50%{
-        opacity: 1;
-        transform: rotateY(360deg);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(-644px, -1336px);
-    }
+  0% {
+    opacity: 1;
+    transform: translate(110px, -1200px);
+  }
+  50% {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-644px, -1336px);
+  }
 }
 @keyframes moveExpandB {
-    0%{
-        opacity: 1;
-        transform: translate(110px, -1200px);
-
-    }
-    50%{
-        opacity: 1;
-        transform: rotateY(360deg);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(-644px, -891px);
-    }
+  0% {
+    opacity: 1;
+    transform: translate(110px, -1200px);
+  }
+  50% {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-644px, -891px);
+  }
 }
 @keyframes moveExpandC {
-    0%{
-        opacity: 1;
-        transform: translate(110px, -1200px);
-
-    }
-    50%{
-        opacity: 1;
-        transform: rotateY(360deg);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(-644px, -446px);
-    }
+  0% {
+    opacity: 1;
+    transform: translate(110px, -1200px);
+  }
+  50% {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-644px, -446px);
+  }
 }
 @keyframes moveExpandD {
-    0%{
-        opacity: 1;
-        transform: translate(110px, -1200px);
-        
-
-    }
-    25%{
-        transform: rotateY(360deg);
-    }
-    50%{
-        opacity: 1;
-        
-    }
-    100%{
-        opacity: 1;
-        transform: translate(-643px, -1.5px);
-    }
+  0% {
+    opacity: 1;
+    transform: translate(110px, -1200px);
+  }
+  25% {
+    transform: rotateY(360deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-643px, -1.5px);
+  }
 }
-@keyframes bgColor{
-    0%{
-        background-color: #070606;
-    }
+@keyframes bgColor {
+  0% {
+    background-color: #070606;
+  }
 
-    50%{
-        background-color: #000000;
-    }
-    100%{
-        background-color: #000000;
-    }
+  50% {
+    background-color: #000000;
+  }
+  100% {
+    background-color: #000000;
+  }
 }
 
-@keyframes textappearA{
-    0%{
-        opacity: 0;
-        color: aqua;
-        transform: translate(1000px, 300px);
-        /* left: 0px; */
-       
-    }
-    100%{
-        opacity: 1;
-        color: rgb(153, 153, 153);
-        /* left:90px; */
-        transform: translate(1090px, 300px);
-      
-    }
+@keyframes textappearA {
+  0% {
+    opacity: 0;
+    color: aqua;
+    transform: translate(1000px, 300px);
+    /* left: 0px; */
+  }
+  100% {
+    opacity: 1;
+    color: rgb(153, 153, 153);
+    /* left:90px; */
+    transform: translate(1090px, 300px);
+  }
 }
 
-@keyframes textresetA{
-    0%{
-        opacity: 1;
-        transform: translate(1090px, 300px);
-        color: rgb(153, 153, 153);
-
-    }
-    100%{
-        opacity: 0;
-        transform: translate(1000px, 300px);
-        color: rgb(153, 153, 153);
-    }
+@keyframes textresetA {
+  0% {
+    opacity: 1;
+    transform: translate(1090px, 300px);
+    color: rgb(153, 153, 153);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(1000px, 300px);
+    color: rgb(153, 153, 153);
+  }
 }
 
-@keyframes textappearB{
-    0%{
-        opacity: 0;
-        color: aqua;
-        transform: translate(960px, 410px);
-        /* left: 0px; */
-       
-    }
-    100%{
-        opacity: 1;
-        color: rgb(153, 153, 153);
-        /* left:90px; */
-        transform: translate(1050px, 410px);
-      
-    }
+@keyframes textappearB {
+  0% {
+    opacity: 0;
+    color: aqua;
+    transform: translate(960px, 410px);
+    /* left: 0px; */
+  }
+  100% {
+    opacity: 1;
+    color: rgb(153, 153, 153);
+    /* left:90px; */
+    transform: translate(1050px, 410px);
+  }
 }
 
-@keyframes textresetB{
-    0%{
-        opacity: 1;
-        left: 0px;
-        transform: translate(1050px, 410px);
-        color: rgb(153, 153, 153);
-
-    }
-    100%{
-        opacity: 0;
-        transform: translate(960px, 410px);
-        color: rgb(153, 153, 153);
-    }
+@keyframes textresetB {
+  0% {
+    opacity: 1;
+    left: 0px;
+    transform: translate(1050px, 410px);
+    color: rgb(153, 153, 153);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(960px, 410px);
+    color: rgb(153, 153, 153);
+  }
 }
 
-@keyframes textappearC{
-    0%{
-        opacity: 0;
-        color: aqua;
-        transform: translate(530px, 400px);
-        /* left: 0px; */
-       
-    }
-    100%{
-        opacity: 1;
-        color: rgb(153, 153, 153);
-        /* left:90px; */
-        transform: translate(500px, 440px);
-      
-    }
+@keyframes textappearC {
+  0% {
+    opacity: 0;
+    color: aqua;
+    transform: translate(530px, 400px);
+    /* left: 0px; */
+  }
+  100% {
+    opacity: 1;
+    color: rgb(153, 153, 153);
+    /* left:90px; */
+    transform: translate(500px, 440px);
+  }
 }
 
-@keyframes textresetC{
-    0%{
-        opacity: 1;
-        left: 0px;
-        transform: translate(500px, 440px);
-        color: rgb(153, 153, 153);
-
-    }
-    100%{
-        opacity: 0;
-        transform: translate(530px, 400px);
-        color: rgb(153, 153, 153);
-    }
+@keyframes textresetC {
+  0% {
+    opacity: 1;
+    left: 0px;
+    transform: translate(500px, 440px);
+    color: rgb(153, 153, 153);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(530px, 400px);
+    color: rgb(153, 153, 153);
+  }
 }
 
-@keyframes textappearD{
-    0%{
-        opacity: 0;
-        color: aqua;
-        transform: translate(500px, 420px);
-        /* left: 0px; */
-       
-    }
-    100%{
-        opacity: 1;
-        color: rgb(153, 153, 153);
-        /* left:90px; */
-        transform: translate(430px, 450px);
-      
-    }
+@keyframes textappearD {
+  0% {
+    opacity: 0;
+    color: aqua;
+    transform: translate(500px, 420px);
+    /* left: 0px; */
+  }
+  100% {
+    opacity: 1;
+    color: rgb(153, 153, 153);
+    /* left:90px; */
+    transform: translate(430px, 450px);
+  }
 }
 
-@keyframes textresetD{
-    0%{
-        opacity: 1;
-        left: 0px;
-        transform: translate(430px, 450px);
-        color: rgb(153, 153, 153);
-
-    }
-    100%{
-        opacity: 0;
-        transform: translate(500px, 420px);
-        color: rgb(153, 153, 153);
-    }
+@keyframes textresetD {
+  0% {
+    opacity: 1;
+    left: 0px;
+    transform: translate(430px, 450px);
+    color: rgb(153, 153, 153);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(500px, 420px);
+    color: rgb(153, 153, 153);
+  }
 }
 
 /* @media screen and (max-width: 550px){
@@ -523,11 +487,3 @@ body {
     
     
 } */
-
-
-
-
-
-
-
-
