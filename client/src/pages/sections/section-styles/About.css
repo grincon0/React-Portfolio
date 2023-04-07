@@ -1,179 +1,129 @@
-.about-background{
-    background-color: rgb(19, 14, 46);
+.about-background {
+  background-color: rgb(19, 14, 46);
 }
 
-.box-size{
-    height: 100vh;
+.box-size {
+  height: 100vh;
 }
 
-.nav-height-fix{
-    height: 55px;
+.nav-height-fix {
+  height: 55px;
 }
 
-.height-fixer{
-    overflow: hidden;
+.height-fixer {
+  overflow: hidden;
 }
 
-.nav-flex{
-    position: fixed;
+.nav-flex {
+  position: fixed;
 }
 
-.overflow-fix{
-    overflow: hidden;
+.overflow-fix {
+  overflow: hidden;
 }
 
-.overflowX-fix{
-    overflow-x: hidden;
+.overflowX-fix {
+  overflow-x: hidden;
 }
 
-.show-trans{
-    position: absolute;
-    color: white;
-    transition: transform 0.8s ease, opacity 0.4s ease;
-    bottom:7px;
+.show-trans {
+  position: absolute;
+  color: white;
+  transition: transform 0.8s ease, opacity 0.4s ease;
+  bottom: 7px;
 }
 
-.left-trans-in{
+.left-trans-in {
+  opacity: 1;
+  transform: translateX(-50px);
+}
+
+.left-trans-out {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.page-is-changing .cd-loading-bar::before {
+  transform: scaleX(1);
+}
+
+.overflow-fix-about {
+  overflow-y: hidden;
+}
+
+.about-flexbox {
+}
+
+.about-icon img svg path {
+  fill: #f3f3f3;
+}
+
+.a-first {
+  margin-top: 15px;
+  margin-left: 20px;
+}
+.about-a {
+  text-decoration: none;
+  color: inherit;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.about-icon {
+  opacity: 0;
+}
+.about-a:hover svg path {
+  fill: aqua;
+}
+
+.about-show {
+  animation: showw 1s ease 0.5s forwards;
+}
+
+.about-remove {
+  animation: remove-opacity 1s ease forwards;
+}
+
+@media screen and (min-width: 1300px) {
+
+  .nav-height-fix {
+    margin-bottom: 14vh;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+
+  .nav-height-fix {
+    margin-bottom: 20vh;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    background-color: rgb(91, 39, 150);
+  }
+  50% {
+    background-color: rgb(39, 150, 150);
+  }
+  100% {
+    background-color: rgb(46, 39, 150);
+  }
+}
+
+@keyframes showw {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
-    transform: translateX(-50px); 
+  }
 }
 
-.left-trans-out{
+@keyframes remove-opacity {
+  from {
+    opacity: 1;
+  }
+  to {
     opacity: 0;
-    transform: translateX(50px);
+  }
 }
-
-
-
-/* page transition starts */
-/* body::after, body::before{
-    content: "";
-    height: 50vh;
-    width:100%;
-    position: fixed;
-    left:0;
-    z-index: 990;
-    transition: all 0.5s cubic-bezier(.694,.048,.335,1);
-    animation: rainbow 2s ease-in infinite reverse;
-}
-
-body::before{
-    top:0;
-    transform: translateX(-100%);
-}
-
-body::after{
-    bottom: 0;
-    transform: translateX(100%);
-}
-
-body.page-is-changing::after, body.page-is-changing::before{
-    transform: translateX(0);
-} */
-
-/* .cd-loading-bar {
-    content: "";
-    background-color: blue;
-    position: fixed;
-    height: 2px;
-    width: 90%;
- /*    z-index: 995; */
-/* }  */
-
-/* .cd-loading-bar::before{
-    background-color: red;
-    position: absolute;
-    top:0;
-    left:0;
-    height:100%;
-    width:100%;
-    transform: scaleX(0);
-    transform-origin: left center;
- /*    z-index: 995; */
-/* } */ 
-
-
-
-.page-is-changing .cd-loading-bar::before{
-    transform: scaleX(1);
-}
-
-.overflow-fix-about{
-    overflow-y: hidden;
-}
-
-.about-flexbox{
-    
-}
-
-.about-icon img svg path{
-    fill: #f3f3f3;
-    
-}
-
-.a-first{
-    margin-top:15px;
-    margin-left:20px;
-    
-
-}
-.about-a{
-    text-decoration: none;
-    color:inherit;
-    margin-top:15px;
-    margin-left:10px;
-
-    
-}
-
-
-.about-icon{
-    opacity: 0;
-}
-.about-a:hover svg path{
-    fill: aqua;
-}
-
-.about-show{
-    animation: showw 1s ease 0.5s forwards;
-    
-}
-
-.about-remove{
-    animation: remove-opacity 1s ease forwards;
-}
-
-/* #about{
-    z-index: 20;
-} */
-
-@keyframes rainbow{
-    0%{
-        background-color: rgb(91, 39, 150);
-    }
-    50%{
-        background-color: rgb(39, 150, 150);
-    }
-    100%{
-        background-color: rgb(46, 39, 150);
-    }
-}
-
-@keyframes showw{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-
-@keyframes remove-opacity{
-    from{
-        opacity: 1;
-    }
-    to{
-        opacity: 0;
-    }
-}
-
