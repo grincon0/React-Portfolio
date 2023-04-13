@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import {
   Route,
-  NavLink,
   Switch
 } from "react-router-dom";
-import Wrapper from "./components/Wrapper";
 import Landing from "./pages/Landing";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -16,15 +14,12 @@ import MongoScraper from "./pages/MongoScraper";
 import Bamazon from "./pages/Bamazon";
 import ReactBooks from "./pages/ReactBooks";
 import Slider from "./components/Slider/index";
-import Parallax from "./components/Parallax/index";
 
 import {
   CSSTransition,
   TransitionGroup,
 } from 'react-transition-group';
 import "./App.css";
-
-
 
 class App extends Component {
   constructor(props) {
@@ -39,11 +34,7 @@ class App extends Component {
 
   render() {
     return (
-
       <div className="App">
-
-        {/*  <Parallax />  */}
-
         <Slider />
         <Route render={({ location }) => (
           <TransitionGroup>
@@ -52,7 +43,6 @@ class App extends Component {
               timeout={900}
               classNames="fade"
             >
-
               <Switch location={location}>
                 <Route exact path="/" component={Landing} />
                 <Route path="/about" component={About} />
@@ -63,7 +53,6 @@ class App extends Component {
                 <Route path="/mongoscraper" component={MongoScraper} />
                 <Route path="/bamazon" component={Bamazon} />
                 <Route path="/reactbooks" component={ReactBooks} />
-
                 <Route path="/contact" component={Contact} />
               </Switch>
             </CSSTransition>

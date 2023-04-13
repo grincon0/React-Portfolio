@@ -1,75 +1,75 @@
-
-:root{
-    --tooltip-color: red;
+:root {
+  --tooltip-color: red;
 }
 
-
-
-.button-mask{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    width: 100%;
-    border: none;
-    border-radius: 3px;
-    overflow: hidden;
-    background-image: linear-gradient(to right, #434343 0%, rgb(77, 77, 77) 100%);
-    margin: 0;
-    
- 
+.button-mask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  overflow: hidden;
+  background-image: linear-gradient(to right, #434343 0%, rgb(77, 77, 77) 100%);
+  margin: 0;
 }
 
-.button-mask:before{
-    content: "";
-    position: absolute;
-    top:0;
-    left:0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    /* background-color: var(--tooltip-color); */
-    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
-    transition: transform 0.7s cubic-bezier(.694,.048,.335,1);
-    transform: translateX(calc(100% - 204%));
+.button-mask:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+  transition: transform 0.7s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transform: translateX(calc(100% - 204%));
 }
 
-.button-mask:after{
-    content: "";
-    position: absolute;
-    top:0;
-    left:0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
-    transition: transform 0.7s cubic-bezier(.694,.048,.335,1) 0.1s;
-    transform: translateX(calc(100% - 204%));
+.button-mask:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    #ff8177 0%,
+    #ff867a 0%,
+    #ff8c7f 21%,
+    #f99185 52%,
+    #cf556c 78%,
+    #b12a5b 100%
+  );
+  transition: transform 0.7s cubic-bezier(0.694, 0.048, 0.335, 1) 0.1s;
+  transform: translateX(calc(100% - 204%));
 }
 
-.button-container{
-    margin: 5px;
+.button-container {
+  margin: 5px;
 }
-.button-container button{
-    outline: none;
-}
-
-.button-container .button-text{
-    font-family:LeagueSpartan,sans-serif;
-    font-size: .875em;
-    letter-spacing: 3px;
-    color: #fff;
-    margin: 5px 10px;
-    pointer-events: none;
-    z-index: 100;
- 
-    
+.button-container button {
+  outline: none;
 }
 
-.button-container:hover .button-mask:before, .button-container:hover .button-mask:after{
-    transform: translateX(200px);
+.button-container .button-text {
+  font-family: LeagueSpartan, sans-serif;
+  font-size: 0.875em;
+  letter-spacing: 3px;
+  color: #fff;
+  margin: 5px 10px;
+  pointer-events: none;
+  z-index: 100;
 }
 
+.button-container:hover .button-mask:before,
+.button-container:hover .button-mask:after {
+  transform: translateX(200px);
+}

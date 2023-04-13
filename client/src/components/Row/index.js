@@ -1,11 +1,8 @@
 import React from "react";
 
-const Row = (props) => {
-    return(
-        <div className={`row${props.fluid ? "-fluid": ""}`}>
-            {props.children}
-        </div>
+const Row = ({fluid, children}) => {
+  const className = `row${fluid ? "-fluid" : ""}`;
+  return <div className={className}>{children}</div>;
+};
 
-    );
-}
 export default Row;

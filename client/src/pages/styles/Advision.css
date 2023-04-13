@@ -539,9 +539,6 @@ i.portal {
   opacity: 1;
 }
 
-.ad-role.show-this #Slider-box {
-}
-
 .slider-box {
   flex-direction: row;
   flex-wrap: wrap;
@@ -750,9 +747,6 @@ i.portal {
 .ad-about.show-this figure {
   transform: translateX(0);
   opacity: 1;
-}
-
-.circle-offset-1 {
 }
 
 #PIXEL-SMASH {

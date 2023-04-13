@@ -33,11 +33,6 @@
   transition: width 600ms cubic-bezier(1, 0, 0, 1);
 }
 
-/* #arrow-box.hover-box i{
-    transition: width 600ms cubic-bezier(1, 0, 0, 1);
-    width:63px;
-} */
-
 .hover-bar-out {
   animation: testWidth-out 0.4s cubic-bezier(0.6, 1, 0.6, 1) forwards;
 }
@@ -95,47 +90,6 @@
     width: 33px;
   }
 }
-
-/* #arrow-head{
-    transform: rotate(90deg);
-} */
-/* #arrow-head i:nth-child(n){
-    background-color: #ebebeb;
-    position: absolute;
-    content: "";
-    height: 1.5px;
-    width:8px;
-    margin: 0;
-    transition: bottom 0.5s ease;
-
-}
-#arrow-head i:nth-child(1){
-   
-    transform: rotate(-45deg);
-   
-
-}
-#arrow-head i:nth-child(2){
-    transform: rotate(225deg);
-}
-
-#arrow-head.starting-point i:nth-child(1){
-    right:0.01px;
-    bottom:30px;
-
-}
-
-#arrow-head.starting-point i:nth-child(2){
-    bottom: 30px;
-}
-
-
-
-#arrow-head.hover-arrow i:nth-child(n){
-    transition: all 0.5s ease;
-    bottom: 40px;
-    
-} */
 
 @media screen and (max-width: 6070px) {
   #arrow-box {

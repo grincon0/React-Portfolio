@@ -1,13 +1,10 @@
 import React from "react";
 import "./style.css";
 
-const Flexbox = (props) => {
-
-    return (
-        <div className={`flex-box ${props.classes ? props.classes : ""}`}>
-            {props.children}
-        </div>
-    );
-}
+const Flexbox = ({ classes, children }) => (
+  <div className={`flex-box ${classes ? classes : ""}`}>
+    {children}
+  </div>
+);
 
 export default Flexbox;

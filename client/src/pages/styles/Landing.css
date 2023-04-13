@@ -1,69 +1,64 @@
-
-
-.center{
-    color: #fcfcfc;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index:22;
+.center {
+  color: #fcfcfc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 22;
 }
-.center-reg-text{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: lighter;
-    font-size: 32pt;
-    line-height: 36pt;
+.center-reg-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-size: 32pt;
+  line-height: 36pt;
 }
 
- .center span{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: lighter;
-    font-size: 32pt;
-    line-height: 36pt;
+.center span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-size: 32pt;
+  line-height: 36pt;
 }
-.name{
-    font-weight: 300;
-    color: #5effff;
-}
-
-.test-bg-1{
-    background-color: red;
+.name {
+  font-weight: 300;
+  color: #5effff;
 }
 
-.inline{
-    display: inline-block;
-}
-.test-size{
-    height:500px;
-    width:500px;
+.test-bg-1 {
+  background-color: red;
 }
 
-.test-bg-2{
-    background-color: orange;
+.inline {
+  display: inline-block;
+}
+.test-size {
+  height: 500px;
+  width: 500px;
 }
 
-.test-bg-3{
-    background-color: blue;
-}
-.test-bg-4{
-    background-color: green;
+.test-bg-2 {
+  background-color: orange;
 }
 
-.test-bg-5{
-    background-color: rgb(212, 40, 169);
+.test-bg-3 {
+  background-color: blue;
+}
+.test-bg-4 {
+  background-color: green;
 }
 
-.hideall{
-    display: none;
+.test-bg-5 {
+  background-color: rgb(212, 40, 169);
 }
 
-.opacity-container{
-    opacity: 0;
+.hideall {
+  display: none;
 }
 
-
-
+.opacity-container {
+  opacity: 0;
+}

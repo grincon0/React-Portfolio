@@ -13,11 +13,9 @@ class Landing extends Component {
     }
   }
   handleTransition = (path, history) => {
-
     setTimeout(() => {
       this.props.history.push(`/${path}`);
     }, 2000);
-
   }
   handleStateChange = () => {
     console.log("this function works");
@@ -29,9 +27,7 @@ class Landing extends Component {
   render = () => {
     return (
       <div>
-        <Scene3D
-          transitioner={(path)=> this.handleTransition(path)}
-        />
+        <Scene3D transitioner={(path)=> this.handleTransition(path)}/>
         <div id={`parallax-container`} className={`hide-now`}></div>
       </div>
     );

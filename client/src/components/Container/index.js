@@ -1,13 +1,12 @@
 import React from "react";
 import "./style.css";
 
-const Container = (props) => {
+const Container = ({ children, ...restProps }) => {
     return (
-        <div className="tester" {...props} >
-            {props.children}
-        </div>
+      <div className="tester" {...restProps}>
+        {children}
+      </div>
     );
-
-}
+};
 
 export default Container;
