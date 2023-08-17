@@ -8,8 +8,6 @@ export class SpanGenerator extends Component {
             strings: [],
             styledSpans: [],
             animate: false,
-
-
         }
     }
 
@@ -29,10 +27,7 @@ export class SpanGenerator extends Component {
             }
 
         }
-
-
     }
-
     getSpanBlocks = (slicedStrings, arr) => {
 
         if (slicedStrings !== undefined) {
@@ -40,19 +35,10 @@ export class SpanGenerator extends Component {
             const chars = slicedStrings;
             let counter = 0;
 
-         
-
-
             for (let i = 0; i < chars.length; i++) {
 
                 let elementDisplay = this.checkIfEmpty(chars[i]);
-             
-
-
                 if (counter < arr.length && arr[counter].from <= i && i <= arr[counter].to) {
-
-
-
                     spansArray.push(<span 
                         id={`s-${i}`} 
                         style={{display:`${elementDisplay}`, animationName:"revealSpan", animationDuration:"0.6s" ,animationTimingFunction:"ease", animationFillMode:"forwards"}} 
@@ -60,13 +46,8 @@ export class SpanGenerator extends Component {
                         className={arr[counter].classes}>{chars[i]}</span>);
 
                     if (i === arr[counter].to && arr[counter].completed === false) {
-
-
                         arr[counter].completed = true;
                         counter++;
-
-
-
                     }
                 } else {
                     spansArray.push(<span style={{ display:`${elementDisplay}`, animationName:"revealSpan", animationDuration:"0.6s" ,animationTimingFunction:"ease", animationFillMode:"forwards" }} id={`s-${i}`} key={i}>{chars[i]}</span>);

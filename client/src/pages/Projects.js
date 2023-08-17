@@ -30,8 +30,14 @@ class Projects extends Component {
   };
   handleTransition = async (event, direction) => {
     event.preventDefault();
+    // console.log(direction);
     await this.runTransition();
-    switch (direction) {
+    setTimeout(() => {
+      this.props.history.push('/contact');
+      // console.log('go to contact');
+    }, 2300);
+
+/*     switch (direction) {
       case "back":
         setTimeout(() => {
           this.props.history.push('/about');
@@ -40,12 +46,13 @@ class Projects extends Component {
       case "forward":
         setTimeout(() => {
           this.props.history.push('/contact');
+          console.log('go to contact');
         }, 2300);
         break;
 
       default:
         break;
-    }
+    } */
   };
   testLoader = () => {
     this.setState({ toContact: true });
